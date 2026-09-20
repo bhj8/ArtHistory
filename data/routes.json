@@ -1,0 +1,99 @@
+[
+  {
+    "title": "为什么后来画得越来越不像？",
+    "desc": "从再现世界出发，观察光、结构、心理与观念怎样成为新的目标。不是一条进步阶梯。",
+    "ids": [
+      "renaissance",
+      "realism",
+      "impressionism",
+      "postimp",
+      "cubism",
+      "dada",
+      "conceptual"
+    ]
+  },
+  {
+    "title": "我喜欢有秩序的几何设计",
+    "desc": "先分清艺术追求、学校教育与排版方法，再看现代设计的几条相交路线。",
+    "ids": [
+      "suprematism",
+      "destijl",
+      "constructivism",
+      "bauhaus",
+      "newtype",
+      "swiss",
+      "ulm"
+    ]
+  },
+  {
+    "title": "中国画为什么不追求拍照一样？",
+    "desc": "从山水空间进入书写、人格、诗意与临古，看看另一种观看与创作逻辑。",
+    "ids": [
+      "songland",
+      "southernsong",
+      "calligraphy",
+      "literati",
+      "ming",
+      "qing",
+      "shanghai"
+    ]
+  },
+  {
+    "title": "被颜色、梦境与强烈情绪吸引",
+    "desc": "从浪漫主义走到当代，比较相似的视觉冲击背后不同的历史问题。",
+    "ids": [
+      "romanticism",
+      "symbolism",
+      "postimp",
+      "fauvism",
+      "expressionism",
+      "surrealism",
+      "abstractexp"
+    ]
+  },
+  {
+    "title": "艺术怎样跨过地域边界？",
+    "desc": "从佛教传播、日本版画到殖民收藏与全球当代，关注交流，也关注不平等。",
+    "ids": [
+      "indiaearly",
+      "dunhuang",
+      "ukiyoe",
+      "impressionism",
+      "mask",
+      "cubism",
+      "global"
+    ]
+  },
+  {
+    "title": "一张海报背后的设计史",
+    "desc": "从手工与彩色印刷，到网格、反文化和数字界面，建立能用于看图的参照。",
+    "ids": [
+      "crafts",
+      "litho",
+      "nouveau",
+      "deco",
+      "swiss",
+      "psychedelic",
+      "punk",
+      "flat"
+    ]
+  },
+  {
+    "title": "为什么一把椅子、一次行动也算艺术？",
+    "desc": "把注意力从“像不像”移到作者选择、观看空间、身体和参与关系。",
+    "ids": [
+      "dada",
+      "pop",
+      "minimal",
+      "conceptual",
+      "performance",
+      "video",
+      "relational"
+    ]
+  },
+  {
+    "title": "技术到底改变了什么？",
+    "desc": "复制、光学、材料、网络与算法改变了艺术的制作、传播以及作者的角色。",
+    "ids": ["print", "photo", "collage", "screen", "netart", "generative", "ai"]
+  }
+]

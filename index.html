@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>美术史漫游地图 · 从史前到当代</title>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="mark" aria-hidden="true"
+          ><i></i><i></i><i></i><i></i
+        ></span>
+        <div><b>美术史漫游地图</b><small>AN ATLAS FOR THE CURIOUS</small></div>
+      </div>
+      <div class="top-actions">
+        <button id="aboutBtn">读图说明</button
+        ><button id="sourcesBtn">资料与出处 ↗</button>
+      </div>
+    </header>
+    <section class="hero">
+      <div>
+        <div class="kicker">从史前到当代 · 艺术 × 设计 × 视觉文化</div>
+        <h1>先看见全貌，<br class="desktopbreak" />再走进你喜欢的地方。</h1>
+        <p>
+          不必从第一页开始。沿着时代、作品或一个感兴趣的词，<br
+            class="desktopbreak"
+          />找到入口，再顺着它的来处与去向继续探索。
+        </p>
+        <div class="hero-stats">
+          <span><b id="entryCount">—</b>个知识入口</span
+          ><span><b>6</b>条并行线索</span
+          ><span><b id="imageCount"></b>件实物图像</span>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt"></div>
+    </section>
+    <main class="app">
+      <div class="tools">
+        <div class="tooltop">
+          <nav class="tabs" aria-label="浏览方式">
+            <button class="on" data-view="map">全景地图</button
+            ><button data-view="gallery">作品入口</button
+            ><button data-view="routes">学习路线</button
+            ><button data-view="saved">
+              我的收藏 <span id="savedCount">0</span>
+            </button>
+          </nav>
+          <div class="search">
+            <label class="searchbox"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="search"
+                aria-label="搜索流派、人物、作品或视觉关键词"
+                placeholder="搜流派、人物、作品、视觉关键词…"
+              /><kbd>/</kbd></label
+            ><button id="random" title="随机打开一个知识入口">
+              随便逛逛 ↗
+            </button>
+          </div>
+        </div>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div id="content"></div>
+      <footer>
+        <span
+          >一张可以反复回来的导航图 · 中文为主，中英对照<br />日期为常用概略范围；传统会交叠，艺术史也没有唯一主线。</span
+        ><span
+          >作品图片：The Metropolitan Museum of Art，逐图链接至馆藏记录<br />收录范围：核心传统与主要运动的广角索引，非穷尽目录
+          · 2026.09</span
+        >
+      </footer>
+    </main>
+    <dialog id="detail" aria-labelledby="detailTitle">
+      <div class="drawer-top">
+        <span class="breadcrumb" id="crumb"></span>
+        <div>
+          <button id="backDetail" hidden>← 返回</button
+          ><button id="closeDetail" aria-label="关闭详情">关闭 ×</button>
+        </div>
+      </div>
+      <div class="detail-body" id="detailBody"></div>
+    </dialog>
+    <dialog id="info" class="modal" aria-labelledby="infoTitle"></dialog>
+    <dialog
+      id="comparison"
+      class="modal"
+      aria-labelledby="comparisonTitle"
+    ></dialog>
+    <dialog id="lightbox" aria-label="查看作品大图"></dialog>
+    <div id="comparebar" hidden>
+      <span id="compareSummary"></span><button id="doCompare">开始对照</button
+      ><button class="clear" id="clearCompare">清空 ×</button>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

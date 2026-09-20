@@ -1,0 +1,200 @@
+{
+  "impressionism-art-and-modernity": {
+    "slug": "impressionism-art-and-modernity",
+    "url": "https://www.metmuseum.org/essays/impressionism-art-and-modernity",
+    "title": "Impressionism: Art and Modernity - The Metropolitan Museum of Art",
+    "zh": "印象主义：艺术与现代性",
+    "org": "The Met"
+  },
+  "post-impressionism": {
+    "slug": "post-impressionism",
+    "url": "https://www.metmuseum.org/essays/post-impressionism",
+    "title": "Post-Impressionism - The Metropolitan Museum of Art",
+    "zh": "后印象主义",
+    "org": "The Met"
+  },
+  "cubism": {
+    "slug": "cubism",
+    "url": "https://www.metmuseum.org/essays/cubism",
+    "title": "Cubism - The Metropolitan Museum of Art",
+    "zh": "立体主义",
+    "org": "The Met"
+  },
+  "fauvism": {
+    "slug": "fauvism",
+    "url": "https://www.metmuseum.org/essays/fauvism",
+    "title": "Fauvism - The Metropolitan Museum of Art",
+    "zh": "野兽派",
+    "org": "The Met"
+  },
+  "symbolism": {
+    "slug": "symbolism",
+    "url": "https://www.metmuseum.org/essays/symbolism",
+    "title": "Symbolism - The Metropolitan Museum of Art",
+    "zh": "象征主义",
+    "org": "The Met"
+  },
+  "surrealism": {
+    "slug": "surrealism",
+    "url": "https://www.metmuseum.org/essays/surrealism",
+    "title": "Surrealism - The Metropolitan Museum of Art",
+    "zh": "超现实主义",
+    "org": "The Met"
+  },
+  "abstract-expressionism": {
+    "slug": "abstract-expressionism",
+    "url": "https://www.metmuseum.org/essays/abstract-expressionism",
+    "title": "Abstract Expressionism - The Metropolitan Museum of Art",
+    "zh": "抽象表现主义",
+    "org": "The Met"
+  },
+  "the-bauhaus-1919-1933": {
+    "slug": "the-bauhaus-1919-1933",
+    "url": "https://www.metmuseum.org/essays/the-bauhaus-1919-1933",
+    "title": "The Bauhaus, 1919–1933 - The Metropolitan Museum of Art",
+    "zh": "包豪斯：1919—1933",
+    "org": "The Met"
+  },
+  "art-nouveau": {
+    "slug": "art-nouveau",
+    "url": "https://www.metmuseum.org/essays/art-nouveau",
+    "title": "Art Nouveau - The Metropolitan Museum of Art",
+    "zh": "新艺术运动",
+    "org": "The Met"
+  },
+  "the-arts-and-crafts-movement-in-america": {
+    "slug": "the-arts-and-crafts-movement-in-america",
+    "url": "https://www.metmuseum.org/essays/the-arts-and-crafts-movement-in-america",
+    "title": "The Arts and Crafts Movement in America - The Metropolitan Museum of Art",
+    "zh": "美国的工艺美术运动",
+    "org": "The Met"
+  },
+  "landscape-painting-in-chinese-art": {
+    "slug": "landscape-painting-in-chinese-art",
+    "url": "https://www.metmuseum.org/essays/landscape-painting-in-chinese-art",
+    "title": "Landscape Painting in Chinese Art - The Metropolitan Museum of Art",
+    "zh": "中国艺术中的山水画",
+    "org": "The Met"
+  },
+  "chinese-calligraphy": {
+    "slug": "chinese-calligraphy",
+    "url": "https://www.metmuseum.org/essays/chinese-calligraphy",
+    "title": "Chinese Calligraphy - The Metropolitan Museum of Art",
+    "zh": "中国书法",
+    "org": "The Met"
+  },
+  "japonisme": {
+    "slug": "japonisme",
+    "url": "https://www.metmuseum.org/essays/japonisme",
+    "title": "Japonisme - The Metropolitan Museum of Art",
+    "zh": "日本主义：日本艺术的欧洲影响",
+    "org": "The Met"
+  },
+  "geometric-patterns-in-islamic-art": {
+    "slug": "geometric-patterns-in-islamic-art",
+    "url": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
+    "title": "Geometric Patterns in Islamic Art - The Metropolitan Museum of Art",
+    "zh": "伊斯兰艺术中的几何纹样",
+    "org": "The Met"
+  },
+  "south-asian-art-and-culture": {
+    "slug": "south-asian-art-and-culture",
+    "url": "https://www.metmuseum.org/essays/south-asian-art-and-culture",
+    "title": "South Asian Art and Culture - The Metropolitan Museum of Art",
+    "zh": "南亚艺术与文化",
+    "org": "The Met"
+  },
+  "african-influences-in-modern-art": {
+    "slug": "african-influences-in-modern-art",
+    "url": "https://www.metmuseum.org/essays/african-influences-in-modern-art",
+    "title": "African Influences in Modern Art - The Metropolitan Museum of Art",
+    "zh": "非洲艺术对现代艺术的影响",
+    "org": "The Met"
+  },
+  "gothic-art": {
+    "slug": "gothic-art",
+    "url": "https://www.metmuseum.org/essays/gothic-art",
+    "title": "Gothic Art - The Metropolitan Museum of Art",
+    "zh": "哥特式艺术",
+    "org": "The Met"
+  },
+  "baroque-rome": {
+    "slug": "baroque-rome",
+    "url": "https://www.metmuseum.org/essays/baroque-rome",
+    "title": "Baroque Rome - The Metropolitan Museum of Art",
+    "zh": "巴洛克时代的罗马",
+    "org": "The Met"
+  },
+  "romanticism": {
+    "slug": "romanticism",
+    "url": "https://www.metmuseum.org/essays/romanticism",
+    "title": "Romanticism - The Metropolitan Museum of Art",
+    "zh": "浪漫主义",
+    "org": "The Met"
+  },
+  "neoclassicism": {
+    "slug": "neoclassicism",
+    "url": "https://www.metmuseum.org/essays/neoclassicism",
+    "title": "Neoclassicism - The Metropolitan Museum of Art",
+    "zh": "新古典主义",
+    "org": "The Met"
+  },
+  "art-of-the-first-cities-in-the-third-millennium-b-c": {
+    "slug": "art-of-the-first-cities-in-the-third-millennium-b-c",
+    "url": "https://www.metmuseum.org/essays/art-of-the-first-cities-in-the-third-millennium-b-c",
+    "title": "Art of the First Cities in the Third Millennium B.C. - The Metropolitan Museum of Art",
+    "zh": "公元前第三千纪的早期城市艺术",
+    "org": "The Met"
+  },
+  "photography-and-the-civil-war-1861-1865": {
+    "slug": "photography-and-the-civil-war-1861-1865",
+    "url": "https://www.metmuseum.org/essays/photography-and-the-civil-war-1861-1865",
+    "title": "Photography and the Civil War, 1861–65 - The Metropolitan Museum of Art",
+    "zh": "摄影与美国内战",
+    "org": "The Met"
+  },
+  "the-art-of-the-mughals-after-1600": {
+    "slug": "the-art-of-the-mughals-after-1600",
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-mughals-after-1600",
+    "title": "The Art of the Mughals after 1600 - The Metropolitan Museum of Art",
+    "zh": "1600年后的莫卧儿艺术",
+    "org": "The Met"
+  },
+  "the-art-of-the-abbasid-period-750-1258": {
+    "slug": "the-art-of-the-abbasid-period-750-1258",
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-abbasid-period-750-1258",
+    "title": "The Art of the Abbasid Period (750–1258) - The Metropolitan Museum of Art",
+    "zh": "阿拔斯时期艺术",
+    "org": "The Met"
+  },
+  "va-crafts": {
+    "zh": "工艺美术运动入门",
+    "title": "Arts and Crafts: an introduction",
+    "url": "https://www.vam.ac.uk/articles/arts-and-crafts-an-introduction",
+    "org": "V&A"
+  },
+  "va-post": {
+    "zh": "什么是后现代主义",
+    "title": "What is Postmodernism?",
+    "url": "https://www.vam.ac.uk/articles/what-is-postmodernism",
+    "org": "V&A"
+  },
+  "moma-dada": {
+    "zh": "达达主义",
+    "title": "Dada",
+    "url": "https://www.moma.org/collection/terms/dada",
+    "org": "MoMA"
+  },
+  "moma-minimal": {
+    "zh": "极简主义",
+    "title": "Minimalism",
+    "url": "https://www.moma.org/collection/terms/minimalism",
+    "org": "MoMA"
+  },
+  "moma-concept": {
+    "zh": "观念艺术",
+    "title": "Conceptual art",
+    "url": "https://www.moma.org/collection/terms/conceptual-art",
+    "org": "MoMA"
+  }
+}

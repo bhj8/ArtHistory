@@ -1,0 +1,16 @@
+{
+  "name": "art-history-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A Chinese-first interactive art history atlas",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "npm run check && node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist"
+  }
+}
