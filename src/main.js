@@ -72,7 +72,7 @@ async function start() {
     saveProgress(saved, seen);
     $("savedCount").textContent = saved.size;
   }
-  function hits() {
+  function hits(ignoreQuery = false) {
     const words = state.q
       .toLocaleLowerCase()
       .trim()
@@ -82,7 +82,7 @@ async function start() {
       (d) =>
         (state.lane === "all" || d.lane === state.lane) &&
         (state.era === "all" || d.era === +state.era) &&
-        words.every((w) => SEARCH[d.id].includes(w)),
+        (ignoreQuery || words.every((w) => SEARCH[d.id].includes(w))),
     ).sort((a, b) =>
       state.sort === "name"
         ? a.zh.localeCompare(b.zh, "zh-CN")
@@ -92,7 +92,12 @@ async function start() {
     );
   }
   function currentItems() {
-    return hits().filter((d) => state.view !== "saved" || saved.has(d.id));
+    const items = hits(state.view === "routes");
+    if (state.view === "routes") {
+      const ids = new Set(views.matchingRoutes(items).flatMap((r) => r.ids));
+      return items.filter((d) => ids.has(d.id));
+    }
+    return items.filter((d) => state.view !== "saved" || saved.has(d.id));
   }
   function render({ url = true } = {}) {
     persist();
@@ -161,9 +166,7 @@ async function start() {
       $("content").innerHTML = views.map(items);
     } else if (state.view === "routes") {
       $("content").innerHTML = views.routes(items);
-      count =
-        ROUTES.filter((r) => r.ids.some((id) => ids.has(id))).length +
-        " 条路线";
+      count = views.matchingRoutes(items).length + " 条路线";
     } else $("content").innerHTML = views.cards(items);
     $("resultCount").textContent = count;
     if (url) syncURL();
@@ -222,7 +225,7 @@ async function start() {
     } else if (selected && selected !== id && !back) {
       detailHistory.push(selected);
     }
-    if (routeActive !== null && !ROUTES[routeActive].ids.includes(id)) {
+    if (!sequence.includes(id)) {
       routeActive = null;
       sequence = DATA.filter((d) => d.lane === BYID[id].lane).map((d) => d.id);
     }

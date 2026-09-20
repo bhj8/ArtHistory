@@ -1,6 +1,6 @@
 import { esc, imageHTML, empty } from "./helpers.js";
 export function createViews(c, state, saved, seen) {
-  const { ART, LANES, ERAS, ROUTES, BYID, L } = c;
+  const { ART, LANES, ERAS, ROUTES, BYID, L, SEARCH } = c;
   const node = (d) =>
     `<button class="map-node" data-node="${d.id}" title="${esc(d.en)}"><span>${esc(d.zh)}</span>${ART[d.id].length ? '<i aria-label="有作品图">▧</i>' : ""}${seen.has(d.id) ? '<i aria-label="已读">·</i>' : ""}</button>`;
   function cards(items) {
@@ -54,9 +54,20 @@ export function createViews(c, state, saved, seen) {
         "",
       )}</div>${works.length > limit ? `<div class="load-more"><button data-more>再显示 ${Math.min(48, works.length - limit)} 件作品</button><span>已显示 ${limit} / ${works.length}</span></div>` : ""}`;
   }
-  function routes(items) {
+  function matchingRoutes(items) {
     const ids = new Set(items.map((d) => d.id));
-    const rs = ROUTES.filter((r) => r.ids.some((id) => ids.has(id)));
+    const words = state.q.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
+    return ROUTES.filter((r) => {
+      const members = r.ids.filter((id) => ids.has(id));
+      const text = `${r.title} ${r.desc}`.toLocaleLowerCase();
+      return members.length && (
+        words.every((w) => text.includes(w)) ||
+        members.some((id) => words.every((w) => SEARCH[id].includes(w)))
+      );
+    });
+  }
+  function routes(items) {
+    const rs = matchingRoutes(items);
     if (!rs.length) return empty("没有符合条件的路线");
     return `<div class="route-grid">${rs
       .map((r) => {
@@ -65,5 +76,5 @@ export function createViews(c, state, saved, seen) {
       })
       .join("")}</div>`;
   }
-  return { cards, map, gallery, routes };
+  return { cards, map, gallery, routes, matchingRoutes };
 }
