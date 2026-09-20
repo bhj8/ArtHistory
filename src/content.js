@@ -1,6 +1,9 @@
 const dataRoot = new URL("../data/", import.meta.url);
 async function loadJSON(path) {
-  const response = await fetch(new URL(path, dataRoot));
+  const url = new URL(path, dataRoot);
+  const revision = new URL(import.meta.url).searchParams.get("v");
+  if (revision) url.searchParams.set("v", revision);
+  const response = await fetch(url);
   if (!response.ok)
     throw new Error(`Cannot load ${path}: HTTP ${response.status}`);
   return response.json();
