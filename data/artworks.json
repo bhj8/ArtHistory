@@ -10,7 +10,13 @@
     "publicDomain": true,
     "zh": "神奈川冲浪里",
     "artistZh": "葛饰北斋",
-    "image": "assets/artworks/ukiyoe.webp"
+    "image": "assets/artworks/ukiyoe.webp",
+    "entries": [
+      "ukiyoe"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 673
   },
   "impressionism": {
     "key": "impressionism",
@@ -23,7 +29,13 @@
     "publicDomain": false,
     "zh": "圣阿德雷斯的花园",
     "artistZh": "克洛德·莫奈",
-    "image": "assets/artworks/impressionism.webp"
+    "image": "assets/artworks/impressionism.webp",
+    "entries": [
+      "impressionism"
+    ],
+    "museum": "The Met",
+    "width": 600,
+    "height": 453
   },
   "postimp": {
     "key": "postimp",
@@ -36,7 +48,13 @@
     "publicDomain": true,
     "zh": "戴草帽的自画像",
     "artistZh": "文森特·梵高",
-    "image": "assets/artworks/postimp.webp"
+    "image": "assets/artworks/postimp.webp",
+    "entries": [
+      "postimp"
+    ],
+    "museum": "The Met",
+    "width": 683,
+    "height": 850
   },
   "cubism": {
     "key": "cubism",
@@ -49,7 +67,13 @@
     "publicDomain": false,
     "zh": "桌上的烛台与纸牌",
     "artistZh": "乔治·布拉克",
-    "image": "assets/artworks/cubism.webp"
+    "image": "assets/artworks/cubism.webp",
+    "entries": [
+      "cubism"
+    ],
+    "museum": "The Met",
+    "width": 497,
+    "height": 600
   },
   "fauvism": {
     "key": "fauvism",
@@ -62,7 +86,13 @@
     "publicDomain": false,
     "zh": "科利乌尔的渔船",
     "artistZh": "安德烈·德兰",
-    "image": "assets/artworks/fauvism.webp"
+    "image": "assets/artworks/fauvism.webp",
+    "entries": [
+      "fauvism"
+    ],
+    "museum": "The Met",
+    "width": 600,
+    "height": 492
   },
   "symbolism": {
     "key": "symbolism",
@@ -75,7 +105,13 @@
     "publicDomain": true,
     "zh": "俄狄浦斯与斯芬克斯",
     "artistZh": "古斯塔夫·莫罗",
-    "image": "assets/artworks/symbolism.webp"
+    "image": "assets/artworks/symbolism.webp",
+    "entries": [
+      "symbolism"
+    ],
+    "museum": "The Met",
+    "width": 441,
+    "height": 850
   },
   "surrealism": {
     "key": "surrealism",
@@ -88,7 +124,13 @@
     "publicDomain": false,
     "zh": "加拉·艾吕雅肖像",
     "artistZh": "马克斯·恩斯特",
-    "image": "assets/artworks/surrealism.webp"
+    "image": "assets/artworks/surrealism.webp",
+    "entries": [
+      "surrealism"
+    ],
+    "museum": "The Met",
+    "width": 496,
+    "height": 600
   },
   "abstractexp": {
     "key": "abstractexp",
@@ -101,7 +143,13 @@
     "publicDomain": false,
     "zh": "第28号，1950",
     "artistZh": "杰克逊·波洛克",
-    "image": "assets/artworks/abstractexp.webp"
+    "image": "assets/artworks/abstractexp.webp",
+    "entries": [
+      "abstractexp"
+    ],
+    "museum": "The Met",
+    "width": 600,
+    "height": 396
   },
   "bauhaus": {
     "key": "bauhaus",
@@ -114,7 +162,13 @@
     "publicDomain": false,
     "zh": "茶滤壶与滤网",
     "artistZh": "玛丽安娜·布兰特",
-    "image": "assets/artworks/bauhaus.webp"
+    "image": "assets/artworks/bauhaus.webp",
+    "entries": [
+      "bauhaus"
+    ],
+    "museum": "The Met",
+    "width": 600,
+    "height": 440
   },
   "nouveau": {
     "key": "nouveau",
@@ -127,7 +181,13 @@
     "publicDomain": true,
     "zh": "伞形花序柜",
     "artistZh": "埃米尔·加莱",
-    "image": "assets/artworks/nouveau.webp"
+    "image": "assets/artworks/nouveau.webp",
+    "entries": [
+      "nouveau"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 750
   },
   "crafts": {
     "key": "crafts",
@@ -140,7 +200,13 @@
     "publicDomain": true,
     "zh": "花瓶",
     "artistZh": "格鲁比陶器公司",
-    "image": "assets/artworks/crafts.webp"
+    "image": "assets/artworks/crafts.webp",
+    "entries": [
+      "crafts"
+    ],
+    "museum": "The Met",
+    "width": 638,
+    "height": 850
   },
   "songland": {
     "key": "songland",
@@ -153,7 +219,13 @@
     "publicDomain": true,
     "zh": "树色平远图",
     "artistZh": "郭熙",
-    "image": "assets/artworks/songland.webp"
+    "image": "assets/artworks/songland.webp",
+    "entries": [
+      "songland"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 533
   },
   "southernsong": {
     "key": "southernsong",
@@ -166,7 +238,13 @@
     "publicDomain": true,
     "zh": "观瀑图",
     "artistZh": "马远",
-    "image": "assets/artworks/southernsong.webp"
+    "image": "assets/artworks/southernsong.webp",
+    "entries": [
+      "southernsong"
+    ],
+    "museum": "The Met",
+    "width": 965,
+    "height": 850
   },
   "literati": {
     "key": "literati",
@@ -179,7 +257,13 @@
     "publicDomain": true,
     "zh": "双松平远图",
     "artistZh": "赵孟頫",
-    "image": "assets/artworks/literati.webp"
+    "image": "assets/artworks/literati.webp",
+    "entries": [
+      "literati"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 243
   },
   "ming": {
     "key": "ming",
@@ -192,7 +276,13 @@
     "publicDomain": true,
     "zh": "拙政园图册",
     "artistZh": "文徵明",
-    "image": "assets/artworks/ming.webp"
+    "image": "assets/artworks/ming.webp",
+    "entries": [
+      "ming"
+    ],
+    "museum": "The Met",
+    "width": 892,
+    "height": 850
   },
   "qing": {
     "key": "qing",
@@ -205,7 +295,13 @@
     "publicDomain": true,
     "zh": "暮色山林（题名意译）",
     "artistZh": "髡残",
-    "image": "assets/artworks/qing.webp"
+    "image": "assets/artworks/qing.webp",
+    "entries": [
+      "qing"
+    ],
+    "museum": "The Met",
+    "width": 520,
+    "height": 850
   },
   "calligraphy": {
     "key": "calligraphy",
@@ -218,7 +314,13 @@
     "publicDomain": true,
     "zh": "咏春七言绝句（题名意译）",
     "artistZh": "杨妹子皇后",
-    "image": "assets/artworks/calligraphy.webp"
+    "image": "assets/artworks/calligraphy.webp",
+    "entries": [
+      "calligraphy"
+    ],
+    "museum": "The Met",
+    "width": 924,
+    "height": 850
   },
   "islamic": {
     "key": "islamic",
@@ -231,7 +333,13 @@
     "publicDomain": true,
     "zh": "米哈拉布壁龛瓷砖",
     "artistZh": "伊朗工匠",
-    "image": "assets/artworks/islamic.webp"
+    "image": "assets/artworks/islamic.webp",
+    "entries": [
+      "islamic"
+    ],
+    "museum": "The Met",
+    "width": 637,
+    "height": 850
   },
   "indiaearly": {
     "key": "indiaearly",
@@ -244,7 +352,13 @@
     "publicDomain": true,
     "zh": "施无畏印立佛",
     "artistZh": "印度秣菟罗地区",
-    "image": "assets/artworks/indiaearly.webp"
+    "image": "assets/artworks/indiaearly.webp",
+    "entries": [
+      "indiaearly"
+    ],
+    "museum": "The Met",
+    "width": 680,
+    "height": 850
   },
   "hindutemple": {
     "key": "hindutemple",
@@ -257,7 +371,13 @@
     "publicDomain": true,
     "zh": "舞王湿婆",
     "artistZh": "印度泰米尔纳德地区",
-    "image": "assets/artworks/hindutemple.webp"
+    "image": "assets/artworks/hindutemple.webp",
+    "entries": [
+      "hindutemple"
+    ],
+    "museum": "The Met",
+    "width": 638,
+    "height": 850
   },
   "mask": {
     "key": "mask",
@@ -270,7 +390,13 @@
     "publicDomain": true,
     "zh": "祖先圣物守护像",
     "artistZh": "姆贝特—科塔艺术家",
-    "image": "assets/artworks/mask.webp"
+    "image": "assets/artworks/mask.webp",
+    "entries": [
+      "mask"
+    ],
+    "museum": "The Met",
+    "width": 550,
+    "height": 850
   },
   "gothic": {
     "key": "gothic",
@@ -283,7 +409,13 @@
     "publicDomain": true,
     "zh": "大卫王头像",
     "artistZh": "法国雕刻师",
-    "image": "assets/artworks/gothic.webp"
+    "image": "assets/artworks/gothic.webp",
+    "entries": [
+      "gothic"
+    ],
+    "museum": "The Met",
+    "width": 706,
+    "height": 850
   },
   "baroque": {
     "key": "baroque",
@@ -296,7 +428,13 @@
     "publicDomain": true,
     "zh": "圣彼得的否认",
     "artistZh": "卡拉瓦乔",
-    "image": "assets/artworks/baroque.webp"
+    "image": "assets/artworks/baroque.webp",
+    "entries": [
+      "baroque"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 744
   },
   "romanticism": {
     "key": "romanticism",
@@ -309,7 +447,13 @@
     "publicDomain": true,
     "zh": "无骑手赛马的起跑",
     "artistZh": "奥拉斯·韦尔内",
-    "image": "assets/artworks/romanticism.webp"
+    "image": "assets/artworks/romanticism.webp",
+    "entries": [
+      "romanticism"
+    ],
+    "museum": "The Met",
+    "width": 976,
+    "height": 850
   },
   "neoclassicism": {
     "key": "neoclassicism",
@@ -322,7 +466,13 @@
     "publicDomain": true,
     "zh": "苏格拉底之死",
     "artistZh": "雅克-路易·大卫",
-    "image": "assets/artworks/neoclassicism.webp"
+    "image": "assets/artworks/neoclassicism.webp",
+    "entries": [
+      "neoclassicism"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 666
   },
   "mesopotamia": {
     "key": "mesopotamia",
@@ -335,7 +485,13 @@
     "publicDomain": true,
     "zh": "记录大麦分配的原始楔形文字泥板",
     "artistZh": "苏美尔",
-    "image": "assets/artworks/mesopotamia.webp"
+    "image": "assets/artworks/mesopotamia.webp",
+    "entries": [
+      "mesopotamia"
+    ],
+    "museum": "The Met",
+    "width": 638,
+    "height": 850
   },
   "mughal": {
     "key": "mughal",
@@ -348,7 +504,13 @@
     "publicDomain": true,
     "zh": "阿周那与塔姆拉德瓦贾王交战",
     "artistZh": "莫卧儿画坊",
-    "image": "assets/artworks/mughal.webp"
+    "image": "assets/artworks/mughal.webp",
+    "entries": [
+      "mughal"
+    ],
+    "museum": "The Met",
+    "width": 525,
+    "height": 850
   },
   "egypt": {
     "key": "egypt",
@@ -361,7 +523,13 @@
     "publicDomain": true,
     "zh": "塔沃里特与穆特女神石碑",
     "artistZh": "古埃及工匠",
-    "image": "assets/artworks/egypt.webp"
+    "image": "assets/artworks/egypt.webp",
+    "entries": [
+      "egypt"
+    ],
+    "museum": "The Met",
+    "width": 655,
+    "height": 850
   },
   "classical": {
     "key": "classical",
@@ -374,7 +542,13 @@
     "publicDomain": true,
     "zh": "嵌银眼的工匠青铜小像",
     "artistZh": "希腊雕刻师",
-    "image": "assets/artworks/classical.webp"
+    "image": "assets/artworks/classical.webp",
+    "entries": [
+      "classical"
+    ],
+    "museum": "The Met",
+    "width": 562,
+    "height": 850
   },
   "renaissance": {
     "key": "renaissance",
@@ -387,7 +561,13 @@
     "publicDomain": true,
     "zh": "窗边的一对男女肖像",
     "artistZh": "弗拉·菲利波·利皮",
-    "image": "assets/artworks/renaissance.webp"
+    "image": "assets/artworks/renaissance.webp",
+    "entries": [
+      "renaissance"
+    ],
+    "museum": "The Met",
+    "width": 563,
+    "height": 850
   },
   "dutch": {
     "key": "dutch",
@@ -400,7 +580,13 @@
     "publicDomain": true,
     "zh": "亚里士多德凝视荷马胸像",
     "artistZh": "伦勃朗",
-    "image": "assets/artworks/dutch.webp"
+    "image": "assets/artworks/dutch.webp",
+    "entries": [
+      "dutch"
+    ],
+    "museum": "The Met",
+    "width": 806,
+    "height": 850
   },
   "photo": {
     "key": "photo",
@@ -413,7 +599,13 @@
     "publicDomain": true,
     "zh": "莱恩参议员夫妇肖像",
     "artistZh": "布雷迪摄影工作室",
-    "image": "assets/artworks/photo.webp"
+    "image": "assets/artworks/photo.webp",
+    "entries": [
+      "photo"
+    ],
+    "museum": "The Met",
+    "width": 744,
+    "height": 850
   },
   "mannerism": {
     "key": "mannerism",
@@ -426,6 +618,3101 @@
     "publicDomain": true,
     "zh": "五饼二鱼的奇迹",
     "artistZh": "丁托列托",
-    "image": "assets/artworks/mannerism.webp"
+    "image": "assets/artworks/mannerism.webp",
+    "entries": [
+      "mannerism"
+    ],
+    "museum": "The Met",
+    "width": 1000,
+    "height": 443
+  },
+  "met-256846": {
+    "oid": 256846,
+    "entries": [
+      "archaic"
+    ],
+    "title": "Terracotta dinos (mixing bowl)",
+    "zh": "陶制混酒器",
+    "artist": "Polyteleia Painter",
+    "date": "ca. 630–615 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/256846",
+    "credit": "The Bothmer Purchase Fund and Louis V. Bell Fund, 1997",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-256846.webp",
+    "width": 600,
+    "height": 480,
+    "artistZh": ""
+  },
+  "met-258449": {
+    "oid": 258449,
+    "entries": [
+      "archaic"
+    ],
+    "title": "Terracotta vase in the form of a ketos (sea monster)",
+    "zh": "海怪形陶瓶",
+    "artist": "Greek, Cretan or South Italian",
+    "date": "2nd half of the 7th century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/258449",
+    "credit": "Gift of Ariel Herrmann, in memory of Brian T. Aitken, 2009",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-258449.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "古希腊工匠"
+  },
+  "met-257817": {
+    "oid": 257817,
+    "entries": [
+      "archaic"
+    ],
+    "title": "Terracotta aryballos in the form of an eagle's head",
+    "zh": "鹰首形陶香油瓶",
+    "artist": "Greek, Rhodian",
+    "date": "ca. late 7th–early 6th century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/257817",
+    "credit": "Purchase, Anonymous Gift, in memory of Sleiman and Souad Aboutaam, 2006",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-257817.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "古希腊工匠"
+  },
+  "met-255548": {
+    "oid": 255548,
+    "entries": [
+      "etruscan"
+    ],
+    "title": "Terracotta barrel-shaped oinochoe (jug)",
+    "zh": "桶形陶酒壶",
+    "artist": "Etruscan, Italo-geometric",
+    "date": "ca. 725–700 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/255548",
+    "credit": "Gift of Schimmel Foundation Inc., 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-255548.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "伊特鲁里亚工匠"
+  },
+  "met-251482": {
+    "oid": 251482,
+    "entries": [
+      "etruscan"
+    ],
+    "title": "Terracotta vase in the shape of a cockerel",
+    "zh": "公鸡形陶瓶",
+    "artist": "Etruscan",
+    "date": "ca. 650–600 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/251482",
+    "credit": "Fletcher Fund, 1924",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-251482.webp",
+    "width": 468,
+    "height": 625,
+    "artistZh": "伊特鲁里亚工匠"
+  },
+  "met-256199": {
+    "oid": 256199,
+    "entries": [
+      "etruscan"
+    ],
+    "title": "Gold and enamel a baule earring",
+    "zh": "金与珐琅耳环",
+    "artist": "Etruscan",
+    "date": "6th century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/256199",
+    "credit": "Purchase, Jacob Bleibtreau Foundation Inc. Gift, 1994",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gold, enamel",
+    "image": "assets/artworks/met-256199.webp",
+    "width": 556,
+    "height": 625,
+    "artistZh": "伊特鲁里亚工匠"
+  },
+  "met-248002": {
+    "oid": 248002,
+    "entries": [
+      "mycenaean"
+    ],
+    "title": "Gold kantharos (drinking cup with two high vertical handles)",
+    "zh": "双高柄金饮杯",
+    "artist": "Helladic, Mycenaean",
+    "date": "ca. 1550–1500 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/248002",
+    "credit": "Rogers Fund, 1907",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gold",
+    "image": "assets/artworks/met-248002.webp",
+    "width": 600,
+    "height": 374,
+    "artistZh": "迈锡尼工匠"
+  },
+  "met-698244": {
+    "oid": 698244,
+    "entries": [
+      "mycenaean"
+    ],
+    "title": "3 Terracotta female figures",
+    "zh": "三件女性陶俑",
+    "artist": "Helladic, Mycenaean",
+    "date": "ca. 1400–1300 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/698244",
+    "credit": "Fletcher Fund, 1935",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-698244.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "迈锡尼工匠"
+  },
+  "met-255448": {
+    "oid": 255448,
+    "entries": [
+      "mycenaean"
+    ],
+    "title": "Terracotta stemmed cup with murex decoration",
+    "zh": "骨螺纹高足陶杯",
+    "artist": "Helladic, Mycenaean",
+    "date": "ca. 1400–1300 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/255448",
+    "credit": "Bequest of Walter C. Baker, 1971",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-255448.webp",
+    "width": 600,
+    "height": 619,
+    "artistZh": "迈锡尼工匠"
+  },
+  "met-435658": {
+    "oid": 435658,
+    "entries": [
+      "icons",
+      "proto"
+    ],
+    "title": "Madonna and Child",
+    "zh": "圣母与圣婴",
+    "artist": "Berlinghiero",
+    "date": "possibly 1230s",
+    "url": "https://www.metmuseum.org/art/collection/search/435658",
+    "credit": "Gift of Irma N. Straus, 1960",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Tempera on wood, gold ground",
+    "image": "assets/artworks/met-435658.webp",
+    "width": 436,
+    "height": 625,
+    "artistZh": "贝尔林吉耶罗"
+  },
+  "met-472562": {
+    "oid": 472562,
+    "entries": [
+      "icons"
+    ],
+    "title": "The Fieschi Morgan Staurotheke",
+    "zh": "菲耶斯基—摩根圣十字架圣物匣",
+    "artist": "Byzantine",
+    "date": "early 9th century",
+    "url": "https://www.metmuseum.org/art/collection/search/472562",
+    "credit": "Gift of J. Pierpont Morgan, 1917",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gilded silver, gold, enamel worked in cloisonné, and niello",
+    "image": "assets/artworks/met-472562.webp",
+    "width": 600,
+    "height": 480,
+    "artistZh": "拜占庭工坊"
+  },
+  "met-465946": {
+    "oid": 465946,
+    "entries": [
+      "icons"
+    ],
+    "title": "Icon with Saint Demetrios",
+    "zh": "圣德米特里圣像",
+    "artist": "Byzantine",
+    "date": "950–1000",
+    "url": "https://www.metmuseum.org/art/collection/search/465946",
+    "credit": "The Cloisters Collection, 1970",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Elephant ivory",
+    "image": "assets/artworks/met-465946.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "拜占庭工坊"
+  },
+  "met-464438": {
+    "oid": 464438,
+    "entries": [
+      "carolingian"
+    ],
+    "title": "Situla (Bucket for Holy Water)",
+    "zh": "圣水桶",
+    "artist": "Carolingian",
+    "date": "860–880",
+    "url": "https://www.metmuseum.org/art/collection/search/464438",
+    "credit": "Gift of J. Pierpont Morgan, 1917",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Elephant ivory with gilded copper-alloy mounts and foil inlays",
+    "image": "assets/artworks/met-464438.webp",
+    "width": 548,
+    "height": 624,
+    "artistZh": "加洛林工坊"
+  },
+  "met-469837": {
+    "oid": 469837,
+    "entries": [
+      "carolingian"
+    ],
+    "title": "Plaque with Saint John the Evangelist",
+    "zh": "福音书作者圣约翰饰板",
+    "artist": "Carolingian",
+    "date": "early 9th century",
+    "url": "https://www.metmuseum.org/art/collection/search/469837",
+    "credit": "The Cloisters Collection, 1977",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Elephant ivory",
+    "image": "assets/artworks/met-469837.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "加洛林工坊"
+  },
+  "met-471970": {
+    "oid": 471970,
+    "entries": [
+      "carolingian"
+    ],
+    "title": "Plaque with Scenes at Emmaus",
+    "zh": "以马忤斯故事饰板",
+    "artist": "Carolingian",
+    "date": "ca. 850–900",
+    "url": "https://www.metmuseum.org/art/collection/search/471970",
+    "credit": "The Cloisters Collection, 1970",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Elephant ivory",
+    "image": "assets/artworks/met-471970.webp",
+    "width": 600,
+    "height": 480,
+    "artistZh": "加洛林工坊"
+  },
+  "met-466254": {
+    "oid": 466254,
+    "entries": [
+      "ottonian"
+    ],
+    "title": "Plaque with the Holy Women at the Sepulchre",
+    "zh": "圣女探墓饰板",
+    "artist": "North Italian",
+    "date": "early 10th century",
+    "url": "https://www.metmuseum.org/art/collection/search/466254",
+    "credit": "Purchase, The Cloisters Collection and Lila Acheson Wallace Gift, 1993",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Elephant ivory",
+    "image": "assets/artworks/met-466254.webp",
+    "width": 490,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-467730": {
+    "oid": 467730,
+    "entries": [
+      "ottonian"
+    ],
+    "title": "Plaque with Christ Receiving Magdeburg Cathedral from Emperor Otto I",
+    "zh": "奥托一世向基督奉献马格德堡大教堂",
+    "artist": "Ottonian",
+    "date": "ca. 962–968",
+    "url": "https://www.metmuseum.org/art/collection/search/467730",
+    "credit": "Gift of George Blumenthal, 1941",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Elephant ivory",
+    "image": "assets/artworks/met-467730.webp",
+    "width": 548,
+    "height": 625,
+    "artistZh": "奥托时代工匠"
+  },
+  "met-469908": {
+    "oid": 469908,
+    "entries": [
+      "ottonian"
+    ],
+    "title": "Brooch with Intaglio of an Emperor",
+    "zh": "皇帝肖像凹雕胸针",
+    "artist": "Ottonian (Rhineland (?)) (setting); Byzantine (intaglio)",
+    "date": "ca. 950–1000 (setting); 337–50 (intaglio)",
+    "url": "https://www.metmuseum.org/art/collection/search/469908",
+    "credit": "The Cloisters Collection, 1988",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Star sapphire, pearls, gold",
+    "image": "assets/artworks/met-469908.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "奥托时代工匠"
+  },
+  "met-464015": {
+    "oid": 464015,
+    "entries": [
+      "romanesque"
+    ],
+    "title": "Panel with Byzantine Ivory Carving of the Crucifixion",
+    "zh": "嵌拜占庭象牙受难像的饰板",
+    "artist": "Byzantine (ivory); Spanish (setting)",
+    "date": "10th century (ivory); late 11th century (setting)",
+    "url": "https://www.metmuseum.org/art/collection/search/464015",
+    "credit": "Gift of J. Pierpont Morgan, 1917",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gilded silver on wood backing, inset with sapphire, glass, and crystal",
+    "image": "assets/artworks/met-464015.webp",
+    "width": 485,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-472381": {
+    "oid": 472381,
+    "entries": [
+      "romanesque"
+    ],
+    "title": "The Virgin and Child in Majesty and the Adoration of the Magi",
+    "zh": "威严的圣母圣婴与三王来朝",
+    "artist": "Master of Pedret",
+    "date": "ca. 1100",
+    "url": "https://www.metmuseum.org/art/collection/search/472381",
+    "credit": "The Cloisters Collection, 1950",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Fresco transferred to canvas",
+    "image": "assets/artworks/met-472381.webp",
+    "width": 600,
+    "height": 602,
+    "artistZh": ""
+  },
+  "met-471061": {
+    "oid": 471061,
+    "entries": [
+      "gothic"
+    ],
+    "title": "Lion",
+    "zh": "狮子",
+    "artist": "Spanish",
+    "date": "after 1200",
+    "url": "https://www.metmuseum.org/art/collection/search/471061",
+    "credit": "The Cloisters Collection, 1931",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Fresco, mounted on canvas",
+    "image": "assets/artworks/met-471061.webp",
+    "width": 600,
+    "height": 611,
+    "artistZh": "西班牙（作者不详）"
+  },
+  "met-477779": {
+    "oid": 477779,
+    "entries": [
+      "gothic"
+    ],
+    "title": "Limestone Head of Joseph",
+    "zh": "约瑟头像",
+    "artist": "French",
+    "date": "ca. 1230",
+    "url": "https://www.metmuseum.org/art/collection/search/477779",
+    "credit": "Purchase, Scher Chemicals Inc. and Audrey Love Charitable Foundation Gifts; Anonymous Gift, in honor of Charles T. Little; William and Toni Conte and Stephen K. Scher Gifts; and funds from various donors, 2007",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Limestone with traces of polychromy",
+    "image": "assets/artworks/met-477779.webp",
+    "width": 600,
+    "height": 619,
+    "artistZh": "法国（作者不详）"
+  },
+  "met-438754": {
+    "oid": 438754,
+    "entries": [
+      "proto"
+    ],
+    "title": "Madonna and Child",
+    "zh": "圣母与圣婴",
+    "artist": "Duccio di Buoninsegna",
+    "date": "ca. 1290–1300",
+    "url": "https://www.metmuseum.org/art/collection/search/438754",
+    "credit": "Purchase, Rogers Fund, Walter and Leonore Annenberg and The Annenberg Foundation Gift, Lila Acheson Wallace Gift, Annette de la Renta Gift, Harris Brisbane Dick, Fletcher, Louis V. Bell, and Dodge Funds, Joseph Pulitzer Bequest, several members of The Chairman's Council Gifts, Elaine L. Rosenberg and Stephenson Family Foundation Gifts, 2003 Benefit Fund, and other gifts and funds from various donors, 2004",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Tempera and gold on wood",
+    "image": "assets/artworks/met-438754.webp",
+    "width": 475,
+    "height": 624,
+    "artistZh": "杜乔"
+  },
+  "met-436504": {
+    "oid": 436504,
+    "entries": [
+      "proto"
+    ],
+    "title": "The Adoration of the Magi",
+    "zh": "三王来朝",
+    "artist": "Giotto di Bondone",
+    "date": "possibly ca. 1320",
+    "url": "https://www.metmuseum.org/art/collection/search/436504",
+    "credit": "John Stewart Kennedy Fund, 1911",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Tempera on wood, gold ground",
+    "image": "assets/artworks/met-436504.webp",
+    "width": 599,
+    "height": 617,
+    "artistZh": "乔托"
+  },
+  "met-437608": {
+    "oid": 437608,
+    "entries": [
+      "renaissance"
+    ],
+    "title": "Head of the Madonna",
+    "zh": "圣母头部习作",
+    "artist": "Franciabigio (Francesco di Cristofano)",
+    "date": "ca. 1509",
+    "url": "https://www.metmuseum.org/art/collection/search/437608",
+    "credit": "The Friedsam Collection, Bequest of Michael Friedsam, 1931",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on wood",
+    "image": "assets/artworks/met-437608.webp",
+    "width": 487,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-340669": {
+    "oid": 340669,
+    "entries": [
+      "mannerism"
+    ],
+    "title": "Bust of a Woman with an Elaborate Coiffure",
+    "zh": "精致发式的女子半身像",
+    "artist": "Rosso Fiorentino",
+    "date": "1530–37",
+    "url": "https://www.metmuseum.org/art/collection/search/340669",
+    "credit": "Rogers Fund, 1952",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Black chalk (Rosso Fiorentino). Probably another hand reinforced minute passages with pen and brown ink, adding also a tiny area of crosshatching within the hair arrangements. An early owner of the drawing (or an artist working for him) colored the background around the figure in brush and brown wash.",
+    "image": "assets/artworks/met-340669.webp",
+    "width": 498,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-339273": {
+    "oid": 339273,
+    "entries": [
+      "mannerism"
+    ],
+    "title": "Virgin and Child with Saint Elizabeth, the Infant Baptist, Saint Anthony of Padua, and a Female Martyr",
+    "zh": "圣母圣婴与诸圣",
+    "artist": "Jacopo da Pontormo (Jacopo Carucci)",
+    "date": "1514–22",
+    "url": "https://www.metmuseum.org/art/collection/search/339273",
+    "credit": "Frederick C. Hewitt Fund, 1917",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Red chalk, brush and red wash",
+    "image": "assets/artworks/met-339273.webp",
+    "width": 599,
+    "height": 589,
+    "artistZh": ""
+  },
+  "met-382608": {
+    "oid": 382608,
+    "entries": [
+      "stilllife"
+    ],
+    "title": "Still Life with Flowers, a Snail and Insects",
+    "zh": "花卉、蜗牛与昆虫静物",
+    "artist": "Joris Hoefnagel",
+    "date": "1589",
+    "url": "https://www.metmuseum.org/art/collection/search/382608",
+    "credit": "Purchase, Charles and Jessie Price, Jean A. Bonna, and Annette de la Renta Gifts, and The Elisha Whittelsey Collection, The Elisha Whittelsey Fund, 2008",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Watercolor, gouache, and shell gold on vellum",
+    "image": "assets/artworks/met-382608.webp",
+    "width": 510,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-436485": {
+    "oid": 436485,
+    "entries": [
+      "stilllife"
+    ],
+    "title": "Vanitas Still Life",
+    "zh": "虚空寓意静物",
+    "artist": "Jacques de Gheyn II",
+    "date": "1603",
+    "url": "https://www.metmuseum.org/art/collection/search/436485",
+    "credit": "Charles B. Curtis, Marquand, Victor Wilbour Memorial, and The Alfred N. Punnett Endowment Funds, 1974",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on wood",
+    "image": "assets/artworks/met-436485.webp",
+    "width": 408,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-437920": {
+    "oid": 437920,
+    "entries": [
+      "stilllife"
+    ],
+    "title": "A Vase with Flowers",
+    "zh": "花瓶",
+    "artist": "Jacob Vosmaer",
+    "date": "probably 1613",
+    "url": "https://www.metmuseum.org/art/collection/search/437920",
+    "credit": "Purchase, 1871",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on wood",
+    "image": "assets/artworks/met-437920.webp",
+    "width": 464,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-437261": {
+    "oid": 437261,
+    "entries": [
+      "northern"
+    ],
+    "title": "The Penitence of Saint Jerome",
+    "zh": "圣哲罗姆忏悔",
+    "artist": "Joachim Patinir",
+    "date": "ca. 1515",
+    "url": "https://www.metmuseum.org/art/collection/search/437261",
+    "credit": "Fletcher Fund, 1936",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on wood",
+    "image": "assets/artworks/met-437261.webp",
+    "width": 599,
+    "height": 443,
+    "artistZh": "约阿希姆·帕蒂尼尔"
+  },
+  "met-435809": {
+    "oid": 435809,
+    "entries": [
+      "northern"
+    ],
+    "title": "The Harvesters",
+    "zh": "收割者",
+    "artist": "Pieter Bruegel the Elder",
+    "date": "1565",
+    "url": "https://www.metmuseum.org/art/collection/search/435809",
+    "credit": "Rogers Fund, 1919",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on oak",
+    "image": "assets/artworks/met-435809.webp",
+    "width": 600,
+    "height": 442,
+    "artistZh": "老彼得·勃鲁盖尔"
+  },
+  "met-360269": {
+    "oid": 360269,
+    "entries": [
+      "northern"
+    ],
+    "title": "Landscape with Cottage",
+    "zh": "有农舍的风景",
+    "artist": "Hendrick Goltzius",
+    "date": "ca. 1597–98",
+    "url": "https://www.metmuseum.org/art/collection/search/360269",
+    "credit": "Rogers Fund, 1922",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Woodcut; second state",
+    "image": "assets/artworks/met-360269.webp",
+    "width": 600,
+    "height": 470,
+    "artistZh": "亨德里克·霍尔齐厄斯"
+  },
+  "met-438635": {
+    "oid": 438635,
+    "entries": [
+      "barbizon"
+    ],
+    "title": "Waterfall at Terni",
+    "zh": "特尔尼瀑布",
+    "artist": "Camille Corot",
+    "date": "1826",
+    "url": "https://www.metmuseum.org/art/collection/search/438635",
+    "credit": "The Whitney Collection, Gift of Wheelock Whitney III, and Purchase, Gift of Mr. and Mrs. Charles S. McVeigh, by exchange, 2003",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on paper, laid down on wood",
+    "image": "assets/artworks/met-438635.webp",
+    "width": 600,
+    "height": 526,
+    "artistZh": "卡米耶·柯罗"
+  },
+  "met-435970": {
+    "oid": 435970,
+    "entries": [
+      "barbizon"
+    ],
+    "title": "Fontainebleau: Oak Trees at Bas-Bréau",
+    "zh": "枫丹白：巴布雷奥的橡树",
+    "artist": "Camille Corot",
+    "date": "1832 or 1833",
+    "url": "https://www.metmuseum.org/art/collection/search/435970",
+    "credit": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1979",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on paper, laid down on wood",
+    "image": "assets/artworks/met-435970.webp",
+    "width": 599,
+    "height": 481,
+    "artistZh": "卡米耶·柯罗"
+  },
+  "met-435962": {
+    "oid": 435962,
+    "entries": [
+      "barbizon"
+    ],
+    "title": "Hagar in the Wilderness",
+    "zh": "旷野中的夏甲",
+    "artist": "Camille Corot",
+    "date": "1835",
+    "url": "https://www.metmuseum.org/art/collection/search/435962",
+    "credit": "Rogers Fund, 1938",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-435962.webp",
+    "width": 599,
+    "height": 443,
+    "artistZh": "卡米耶·柯罗"
+  },
+  "met-10499": {
+    "oid": 10499,
+    "entries": [
+      "hudson"
+    ],
+    "title": "The Titan's Goblet",
+    "zh": "泰坦之杯",
+    "artist": "Thomas Cole",
+    "date": "1833",
+    "url": "https://www.metmuseum.org/art/collection/search/10499",
+    "credit": "Gift of Samuel P. Avery Jr., 1904",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-10499.webp",
+    "width": 524,
+    "height": 624,
+    "artistZh": "托马斯·科尔"
+  },
+  "met-10497": {
+    "oid": 10497,
+    "entries": [
+      "hudson"
+    ],
+    "title": "View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm—The Oxbow",
+    "zh": "暴风雨后的康涅狄格河谷——牛轭湖",
+    "artist": "Thomas Cole",
+    "date": "1836",
+    "url": "https://www.metmuseum.org/art/collection/search/10497",
+    "credit": "Gift of Mrs. Russell Sage, 1908",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-10497.webp",
+    "width": 599,
+    "height": 409,
+    "artistZh": "托马斯·科尔"
+  },
+  "met-10786": {
+    "oid": 10786,
+    "entries": [
+      "hudson"
+    ],
+    "title": "The Beeches",
+    "zh": "山毛榉林",
+    "artist": "Asher Brown Durand",
+    "date": "1845",
+    "url": "https://www.metmuseum.org/art/collection/search/10786",
+    "credit": "Bequest of Maria DeWitt Jesup, from the collection of her husband, Morris K. Jesup, 1914",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-10786.webp",
+    "width": 500,
+    "height": 624,
+    "artistZh": "阿舍·布朗·杜兰德"
+  },
+  "met-11934": {
+    "oid": 11934,
+    "entries": [
+      "americanimp"
+    ],
+    "title": "A Bird's-Eye View",
+    "zh": "鸟瞰",
+    "artist": "Theodore Robinson",
+    "date": "1889",
+    "url": "https://www.metmuseum.org/art/collection/search/11934",
+    "credit": "Gift of George A. Hearn, 1910",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-11934.webp",
+    "width": 599,
+    "height": 486,
+    "artistZh": "西奥多·罗宾逊"
+  },
+  "met-13184": {
+    "oid": 13184,
+    "entries": [
+      "americanimp"
+    ],
+    "title": "The Red Bridge",
+    "zh": "红桥",
+    "artist": "Julian Alden Weir",
+    "date": "1895",
+    "url": "https://www.metmuseum.org/art/collection/search/13184",
+    "credit": "Gift of Mrs. John A. Rutherfurd, 1914",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-13184.webp",
+    "width": 599,
+    "height": 431,
+    "artistZh": "朱利安·奥尔登·韦尔"
+  },
+  "met-331619": {
+    "oid": 331619,
+    "entries": [
+      "mesopotamia"
+    ],
+    "title": "Striding figure with ibex horns, a raptor skin draped around the shoulders, and upturned boots",
+    "zh": "戴羱羊角、披猛禽皮的迈步人像",
+    "artist": "Proto-Elamite",
+    "date": "ca. 3000 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/331619",
+    "credit": "Purchase, Lila Acheson Wallace Gift, 2007",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Copper alloy, shell",
+    "image": "assets/artworks/met-331619.webp",
+    "width": 499,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-326655": {
+    "oid": 326655,
+    "entries": [
+      "mesopotamia"
+    ],
+    "title": "Head of a ram",
+    "zh": "公羊头",
+    "artist": "Unknown artist",
+    "date": "ca. 3500–3100 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/326655",
+    "credit": "Purchase, James N. Spear Gift, 1981",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic",
+    "image": "assets/artworks/met-326655.webp",
+    "width": 599,
+    "height": 466,
+    "artistZh": "作者不详"
+  },
+  "met-61820": {
+    "oid": 61820,
+    "entries": [
+      "sixdyn"
+    ],
+    "title": "Seated Buddha, probably Shakyamuni (Shijiamouni)",
+    "zh": "佛坐像（可能为释迦牟尼）",
+    "artist": "China",
+    "date": "late 4th–early 5th century",
+    "url": "https://www.metmuseum.org/art/collection/search/61820",
+    "credit": "Purchase, Arthur M. Sackler Gift, 1974",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gilt bronze; piece-mold cast",
+    "image": "assets/artworks/met-61820.webp",
+    "width": 482,
+    "height": 624,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-42733": {
+    "oid": 42733,
+    "entries": [
+      "sixdyn"
+    ],
+    "title": "Buddha Maitreya (Mile)",
+    "zh": "弥勒佛",
+    "artist": "China",
+    "date": "dated 486 (10th year of Taihe reign)",
+    "url": "https://www.metmuseum.org/art/collection/search/42733",
+    "credit": "John Stewart Kennedy Fund, 1926",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gilt bronze with traces of pigment; piece-mold cast",
+    "image": "assets/artworks/met-42733.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-42719": {
+    "oid": 42719,
+    "entries": [
+      "sixdyn"
+    ],
+    "title": "Buddha Dipankara (Randengfo)",
+    "zh": "燃灯佛",
+    "artist": "China",
+    "date": "dated 495",
+    "url": "https://www.metmuseum.org/art/collection/search/42719",
+    "credit": "The Sackler Collections, Purchase, The Sackler Fund, 1965",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Sandstone",
+    "image": "assets/artworks/met-42719.webp",
+    "width": 469,
+    "height": 625,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-44781": {
+    "oid": 44781,
+    "entries": [
+      "bronze"
+    ],
+    "title": "Wine pouring vessel (Gong)",
+    "zh": "青铜觥",
+    "artist": "China (Henan Province, possibly Anyang)",
+    "date": "13th–11th century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/44781",
+    "credit": "Rogers Fund, 1943",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Bronze",
+    "image": "assets/artworks/met-44781.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国工匠"
+  },
+  "met-49138": {
+    "oid": 49138,
+    "entries": [
+      "bronze"
+    ],
+    "title": "Jar (Zun)",
+    "zh": "青铜尊",
+    "artist": "China",
+    "date": "13th–11th century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/49138",
+    "credit": "Harris Brisbane Dick Fund, 1950",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Earthenware with incised and decoration",
+    "image": "assets/artworks/met-49138.webp",
+    "width": 599,
+    "height": 600,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-44778": {
+    "oid": 44778,
+    "entries": [
+      "bronze"
+    ],
+    "title": "Water buffalo",
+    "zh": "水牛形青铜器",
+    "artist": "China",
+    "date": "13th–11th century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/44778",
+    "credit": "Gift of John M. Crawford Jr., 1976",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Jade (nephrite)",
+    "image": "assets/artworks/met-44778.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-75244": {
+    "oid": 75244,
+    "entries": [
+      "cnneolithic"
+    ],
+    "title": "Plaque",
+    "zh": "玉牌",
+    "artist": "China",
+    "date": "年代未注明",
+    "url": "https://www.metmuseum.org/art/collection/search/75244",
+    "credit": "Purchase, The Vincent Astor Foundation Gift, 2009",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Jade (nephrite)",
+    "image": "assets/artworks/met-75244.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-44757": {
+    "oid": 44757,
+    "entries": [
+      "cnneolithic",
+      "jade"
+    ],
+    "title": "Ritual Object (Bi)",
+    "zh": "玉璧",
+    "artist": "China",
+    "date": "mid-3rd millennium BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/44757",
+    "credit": "Purchase, Friends of Asian Art Gifts, 1986",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Jade (nephrite)",
+    "image": "assets/artworks/met-44757.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-42178": {
+    "oid": 42178,
+    "entries": [
+      "qinhan"
+    ],
+    "title": "Female Dancer",
+    "zh": "舞女俑",
+    "artist": "China",
+    "date": "2nd century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/42178",
+    "credit": "Charlotte C. and John C. Weber Collection, Gift of Charlotte C. and John C. Weber, 1992",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Earthenware with slip and pigment",
+    "image": "assets/artworks/met-42178.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-49539": {
+    "oid": 49539,
+    "entries": [
+      "qinhan"
+    ],
+    "title": "Covered Jar (Hu)",
+    "zh": "带盖陶壶",
+    "artist": "China",
+    "date": "2nd–1st century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/49539",
+    "credit": "Charlotte C. and John C. Weber Collection, Gift of Charlotte C. and John C. Weber, 1992",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Earthenware with painted decoration",
+    "image": "assets/artworks/met-49539.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-50484": {
+    "oid": 50484,
+    "entries": [
+      "qinhan"
+    ],
+    "title": "Liubo Board and Pieces",
+    "zh": "六博棋盘与棋子",
+    "artist": "China",
+    "date": "1st century BCE–1st century CE",
+    "url": "https://www.metmuseum.org/art/collection/search/50484",
+    "credit": "Purchase, Eileen W. Bamberger Bequest, in memory of her husband, Max Bamberger, 1994",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Earthenware with pigment and bone",
+    "image": "assets/artworks/met-50484.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-41747": {
+    "oid": 41747,
+    "entries": [
+      "jade"
+    ],
+    "title": "Belt slide with a falcon attacking a swan",
+    "zh": "鹘攫天鹅纹玉带饰",
+    "artist": "China",
+    "date": "12th–14th century",
+    "url": "https://www.metmuseum.org/art/collection/search/41747",
+    "credit": "Purchase, Florence and Herbert Irving Gift, 1991",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Jade (nephrite)",
+    "image": "assets/artworks/met-41747.webp",
+    "width": 497,
+    "height": 624,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-39737": {
+    "oid": 39737,
+    "entries": [
+      "textile"
+    ],
+    "title": "Textile with Animals, Birds, and Flowers",
+    "zh": "动物、禽鸟与花卉纹织物",
+    "artist": "Eastern Central Asia",
+    "date": "late 12th–14th century",
+    "url": "https://www.metmuseum.org/art/collection/search/39737",
+    "credit": "Rogers Fund, 1988",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Silk embroidery on plain weave silk",
+    "image": "assets/artworks/met-39737.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": ""
+  },
+  "met-45659": {
+    "oid": 45659,
+    "entries": [
+      "ming"
+    ],
+    "title": "Dragon pine",
+    "zh": "龙松图",
+    "artist": "Wu Boli",
+    "date": "late 14th–early 15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/45659",
+    "credit": "Edward Elliott Family Collection, Gift of Douglas Dillon, 1984",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink on paper",
+    "image": "assets/artworks/met-45659.webp",
+    "width": 234,
+    "height": 624,
+    "artistZh": "吴伯理"
+  },
+  "met-60870": {
+    "oid": 60870,
+    "entries": [
+      "lacquer"
+    ],
+    "title": "Sutra box with dragons amid clouds",
+    "zh": "云龙纹经匣",
+    "artist": "China",
+    "date": "年代未注明",
+    "url": "https://www.metmuseum.org/art/collection/search/60870",
+    "credit": "Purchase, Sir Joseph Hotung and The Vincent Astor Foundation Gifts, 2001",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Red lacquer, incised decoration, gold inlay, damascened brass lock and key",
+    "image": "assets/artworks/met-60870.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-40215": {
+    "oid": 40215,
+    "entries": [
+      "garden"
+    ],
+    "title": "Tray with women and boys on a garden terrace",
+    "zh": "庭院仕女婴戏图漆盘",
+    "artist": "China",
+    "date": "14th century",
+    "url": "https://www.metmuseum.org/art/collection/search/40215",
+    "credit": "Gift of Florence and Herbert Irving, 2015",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Carved red lacquer",
+    "image": "assets/artworks/met-40215.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-41478": {
+    "oid": 41478,
+    "entries": [
+      "garden"
+    ],
+    "title": "Elegant Gathering in the Apricot Garden",
+    "zh": "杏园雅集图",
+    "artist": "Xie Huan",
+    "date": "ca. 1437",
+    "url": "https://www.metmuseum.org/art/collection/search/41478",
+    "credit": "Purchase, The Dillon Fund Gift, 1989",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink and color on silk",
+    "image": "assets/artworks/met-41478.webp",
+    "width": 600,
+    "height": 302,
+    "artistZh": "谢环"
+  },
+  "met-44590": {
+    "oid": 44590,
+    "entries": [
+      "garden"
+    ],
+    "title": "Windblown bamboo",
+    "zh": "风竹图",
+    "artist": "Xia Chang",
+    "date": "ca. 1460",
+    "url": "https://www.metmuseum.org/art/collection/search/44590",
+    "credit": "Edward Elliott Family Collection, Gift of Douglas Dillon, 1989",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink on paper",
+    "image": "assets/artworks/met-44590.webp",
+    "width": 432,
+    "height": 624,
+    "artistZh": "夏昶"
+  },
+  "met-39901": {
+    "oid": 39901,
+    "entries": [
+      "suitang",
+      "gongbi"
+    ],
+    "title": "Night-Shining White",
+    "zh": "照夜白图",
+    "artist": "Han Gan",
+    "date": "ca. 750",
+    "url": "https://www.metmuseum.org/art/collection/search/39901",
+    "credit": "Purchase, The Dillon Fund Gift, 1977",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink on paper",
+    "image": "assets/artworks/met-39901.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "韩干"
+  },
+  "met-39915": {
+    "oid": 39915,
+    "entries": [
+      "songland"
+    ],
+    "title": "Summer Mountains",
+    "zh": "夏山图",
+    "artist": "Qu Ding",
+    "date": "ca. 1050",
+    "url": "https://www.metmuseum.org/art/collection/search/39915",
+    "credit": "Ex coll.: C. C. Wang Family, Gift of The Dillon Fund, 1973",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink and color on silk",
+    "image": "assets/artworks/met-39915.webp",
+    "width": 598,
+    "height": 239,
+    "artistZh": "屈鼎"
+  },
+  "met-39936": {
+    "oid": 39936,
+    "entries": [
+      "flowersbirds",
+      "songacademy",
+      "gongbi"
+    ],
+    "title": "Finches and bamboo",
+    "zh": "竹禽图",
+    "artist": "Emperor Huizong",
+    "date": "early 12th century",
+    "url": "https://www.metmuseum.org/art/collection/search/39936",
+    "credit": "John M. Crawford Jr. Collection, Purchase, Douglas Dillon Gift, 1981",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink and color on silk",
+    "image": "assets/artworks/met-39936.webp",
+    "width": 598,
+    "height": 323,
+    "artistZh": "宋徽宗赵佶"
+  },
+  "met-40007": {
+    "oid": 40007,
+    "entries": [
+      "southernsong",
+      "literati"
+    ],
+    "title": "Cloudy Mountains",
+    "zh": "云山图",
+    "artist": "Mi Youren",
+    "date": "before 1200",
+    "url": "https://www.metmuseum.org/art/collection/search/40007",
+    "credit": "Ex coll.: C. C. Wang Family, Purchase, Gift of J. Pierpont Morgan, by exchange, 1973",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink on paper",
+    "image": "assets/artworks/met-40007.webp",
+    "width": 598,
+    "height": 257,
+    "artistZh": "米友仁"
+  },
+  "met-48949": {
+    "oid": 48949,
+    "entries": [
+      "ming"
+    ],
+    "title": "Shaded Dwellings among Streams and Mountains",
+    "zh": "山水间的幽居",
+    "artist": "Dong Qichang",
+    "date": "ca. 1622–25",
+    "url": "https://www.metmuseum.org/art/collection/search/48949",
+    "credit": "Gift of Douglas Dillon, 1979",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink on paper",
+    "image": "assets/artworks/met-48949.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "董其昌"
+  },
+  "met-39542": {
+    "oid": 39542,
+    "entries": [
+      "songland"
+    ],
+    "title": "Riverbank",
+    "zh": "溪岸图",
+    "artist": "Dong Yuan",
+    "date": "年代未注明",
+    "url": "https://www.metmuseum.org/art/collection/search/39542",
+    "credit": "Ex coll.: C. C. Wang Family, Gift of Oscar L. Tang Family, in memory of Douglas Dillon, 2016",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink and color on silk",
+    "image": "assets/artworks/met-39542.webp",
+    "width": 434,
+    "height": 625,
+    "artistZh": "董源（传统归属）"
+  },
+  "met-39918": {
+    "oid": 39918,
+    "entries": [
+      "calligraphy"
+    ],
+    "title": "Biographies of Lian Po and Lin Xiangru",
+    "zh": "廉颇蔺相如列传",
+    "artist": "Huang Tingjian",
+    "date": "ca. 1095",
+    "url": "https://www.metmuseum.org/art/collection/search/39918",
+    "credit": "Bequest of John M. Crawford Jr., 1988",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink on paper",
+    "image": "assets/artworks/met-39918.webp",
+    "width": 599,
+    "height": 279,
+    "artistZh": "黄庭坚"
+  },
+  "met-39895": {
+    "oid": 39895,
+    "entries": [
+      "calligraphy"
+    ],
+    "title": "The Classic of Filial Piety",
+    "zh": "孝经图",
+    "artist": "Li Gonglin",
+    "date": "ca. 1085",
+    "url": "https://www.metmuseum.org/art/collection/search/39895",
+    "credit": "Ex coll.: C. C. Wang Family, From the P. Y. and Kinmay W. Tang Family Collection, Gift of Oscar L. Tang Family, 1996",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Handscroll; ink and color on silk",
+    "image": "assets/artworks/met-39895.webp",
+    "width": 510,
+    "height": 624,
+    "artistZh": "李公麟"
+  },
+  "met-44857": {
+    "oid": 44857,
+    "entries": [
+      "zen"
+    ],
+    "title": "Orchids and Rock",
+    "zh": "兰石图",
+    "artist": "Gyokuen Bonpō",
+    "date": "late 14th–early 15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/44857",
+    "credit": "The Harry G. C. Packard Collection of Asian Art, Gift of Harry G. C. Packard, and Purchase, Fletcher, Rogers, Harris Brisbane Dick, and Louis V. Bell Funds, Joseph Pulitzer Bequest, and The Annenberg Fund Inc. Gift, 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink on paper",
+    "image": "assets/artworks/met-44857.webp",
+    "width": 219,
+    "height": 623,
+    "artistZh": "玉畹梵芳"
+  },
+  "met-44898": {
+    "oid": 44898,
+    "entries": [
+      "zen"
+    ],
+    "title": "Portrait of a Zen Master",
+    "zh": "禅师像",
+    "artist": "Japan",
+    "date": "15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/44898",
+    "credit": "Purchase, John D. Rockefeller 3rd Gift, 1963",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Lacquer on wood with inlaid crystal",
+    "image": "assets/artworks/met-44898.webp",
+    "width": 495,
+    "height": 625,
+    "artistZh": "日本（作者不详）"
+  },
+  "met-73193": {
+    "oid": 73193,
+    "entries": [
+      "zen"
+    ],
+    "title": "The Sixth Patriarch of Zen at the Moment of Enlightenment",
+    "zh": "六祖悟道图",
+    "artist": "Kano Tan'yū",
+    "date": "1635–45",
+    "url": "https://www.metmuseum.org/art/collection/search/73193",
+    "credit": "The Miriam and Ira D. Wallach Foundation Fund, 2006",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink on paper",
+    "image": "assets/artworks/met-73193.webp",
+    "width": 165,
+    "height": 623,
+    "artistZh": "狩野探幽"
+  },
+  "met-44861": {
+    "oid": 44861,
+    "entries": [
+      "rimpa"
+    ],
+    "title": "Poem by Kamo no Chōmei with Underpainting of Cherry Blossoms",
+    "zh": "樱花底绘鸭长明和歌",
+    "artist": "Hon'ami Kōetsu",
+    "date": "1606",
+    "url": "https://www.metmuseum.org/art/collection/search/44861",
+    "credit": "The Harry G. C. Packard Collection of Asian Art, Gift of Harry G. C. Packard, and Purchase, Fletcher, Rogers, Harris Brisbane Dick, and Louis V. Bell Funds, Joseph Pulitzer Bequest, and The Annenberg Fund Inc. Gift, 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Poem card (shikishi) mounted as a hanging scroll; ink, gold, and silver on paper",
+    "image": "assets/artworks/met-44861.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "本阿弥光悦"
+  },
+  "met-39664": {
+    "oid": 39664,
+    "entries": [
+      "rimpa"
+    ],
+    "title": "Irises at Yatsuhashi (Eight Bridges)",
+    "zh": "八桥图屏风",
+    "artist": "Ogata Kōrin",
+    "date": "after 1709",
+    "url": "https://www.metmuseum.org/art/collection/search/39664",
+    "credit": "Purchase, Louisa Eldridge McBurney Gift, 1953",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Pair of six-panel folding screens; ink and color on gold leaf on paper",
+    "image": "assets/artworks/met-39664.webp",
+    "width": 600,
+    "height": 291,
+    "artistZh": "尾形光琳"
+  },
+  "met-44918": {
+    "oid": 44918,
+    "entries": [
+      "rimpa"
+    ],
+    "title": "Rough Waves",
+    "zh": "怒涛图",
+    "artist": "Ogata Kōrin",
+    "date": "ca. 1704–9",
+    "url": "https://www.metmuseum.org/art/collection/search/44918",
+    "credit": "Fletcher Fund, 1926",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Two-panel folding screen; ink, color, and gold leaf on paper",
+    "image": "assets/artworks/met-44918.webp",
+    "width": 599,
+    "height": 534,
+    "artistZh": "尾形光琳"
+  },
+  "met-44858": {
+    "oid": 44858,
+    "entries": [
+      "zen"
+    ],
+    "title": "Old Plum",
+    "zh": "老梅图",
+    "artist": "Kano Sansetsu",
+    "date": "1646",
+    "url": "https://www.metmuseum.org/art/collection/search/44858",
+    "credit": "The Harry G. C. Packard Collection of Asian Art, Gift of Harry G. C. Packard, and Purchase, Fletcher, Rogers, Harris Brisbane Dick, and Louis V. Bell Funds, Joseph Pulitzer Bequest, and The Annenberg Fund Inc. Gift, 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Four sliding-door panels (fusuma); ink, color, gold, and gold leaf on paper",
+    "image": "assets/artworks/met-44858.webp",
+    "width": 598,
+    "height": 231,
+    "artistZh": "狩野山雪"
+  },
+  "met-55754": {
+    "oid": 55754,
+    "entries": [
+      "ukiyoe"
+    ],
+    "title": "Xu You and Chao Fu",
+    "zh": "许由与巢父",
+    "artist": "Okumura Masanobu",
+    "date": "18th century",
+    "url": "https://www.metmuseum.org/art/collection/search/55754",
+    "credit": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "\"White–line\" woodblock print; ink and color on paper",
+    "image": "assets/artworks/met-55754.webp",
+    "width": 316,
+    "height": 623,
+    "artistZh": "奥村政信"
+  },
+  "met-51137": {
+    "oid": 51137,
+    "entries": [
+      "ukiyoe"
+    ],
+    "title": "“Hour of the Rat: Mistress,” from the series Women’s Daily Customs (Fuzoku bijin tokei)",
+    "zh": "风俗美人时计：子时",
+    "artist": "Kitagawa Utamaro",
+    "date": "1790",
+    "url": "https://www.metmuseum.org/art/collection/search/51137",
+    "credit": "Rogers Fund, 1922",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Woodblock print; ink and color on paper",
+    "image": "assets/artworks/met-51137.webp",
+    "width": 430,
+    "height": 625,
+    "artistZh": "喜多川歌麿"
+  },
+  "met-45428": {
+    "oid": 45428,
+    "entries": [
+      "nihongaearly"
+    ],
+    "title": "Illustrated Legends of the Kitano Tenjin Shrine (Kitano Tenjin engi emaki)",
+    "zh": "北野天神缘起绘卷",
+    "artist": "Japan",
+    "date": "late 13th century",
+    "url": "https://www.metmuseum.org/art/collection/search/45428",
+    "credit": "Fletcher Fund, 1925",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Set of five handscrolls; ink, color, and cut gold leaf (kirikane) on paper",
+    "image": "assets/artworks/met-45428.webp",
+    "width": 600,
+    "height": 303,
+    "artistZh": "日本（作者不详）"
+  },
+  "met-44842": {
+    "oid": 44842,
+    "entries": [
+      "japanheian"
+    ],
+    "title": "Fudō Myōō (Achala Vidyaraja)",
+    "zh": "不动明王",
+    "artist": "Japan",
+    "date": "12th century",
+    "url": "https://www.metmuseum.org/art/collection/search/44842",
+    "credit": "The Harry G. C. Packard Collection of Asian Art, Gift of Harry G. C. Packard, and Purchase, Fletcher, Rogers, Harris Brisbane Dick, and Louis V. Bell Funds, Joseph Pulitzer Bequest, and The Annenberg Fund Inc. Gift, 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Wood with lacquer, gold leaf, and color; joined-woodblock construction (yosegi-zukuri)",
+    "image": "assets/artworks/met-44842.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "日本（作者不详）"
+  },
+  "met-39707": {
+    "oid": 39707,
+    "entries": [
+      "japanheian"
+    ],
+    "title": "Zaō Gongen",
+    "zh": "藏王权现",
+    "artist": "Japan",
+    "date": "11th century",
+    "url": "https://www.metmuseum.org/art/collection/search/39707",
+    "credit": "The Harry G. C. Packard Collection of Asian Art, Gift of Harry G. C. Packard, and Purchase, Fletcher, Rogers, Harris Brisbane Dick, and Louis V. Bell Funds, Joseph Pulitzer Bequest, and The Annenberg Fund Inc. Gift, 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gilt bronze with incised decoration",
+    "image": "assets/artworks/met-39707.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "日本（作者不详）"
+  },
+  "met-42455": {
+    "oid": 42455,
+    "entries": [
+      "tea",
+      "ceramics"
+    ],
+    "title": "Tea bowl",
+    "zh": "茶碗",
+    "artist": "China",
+    "date": "11th–12th century",
+    "url": "https://www.metmuseum.org/art/collection/search/42455",
+    "credit": "Edward C. Moore Collection, Bequest of Edward C. Moore, 1891",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Stoneware with \"hare's-fur\" glaze (Jian ware)",
+    "image": "assets/artworks/met-42455.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "中国（作者不详）"
+  },
+  "met-44637": {
+    "oid": 44637,
+    "entries": [
+      "tea"
+    ],
+    "title": "Large Storage Jar (Ōtsubo)",
+    "zh": "大储物罐",
+    "artist": "Japan",
+    "date": "late 15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/44637",
+    "credit": "The Harry G. C. Packard Collection of Asian Art, Gift of Harry G. C. Packard, and Purchase, Fletcher, Rogers, Harris Brisbane Dick, and Louis V. Bell Funds, Joseph Pulitzer Bequest, and The Annenberg Fund Inc. Gift, 1975",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Stoneware with natural ash glaze (Shigaraki ware)",
+    "image": "assets/artworks/met-44637.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "日本（作者不详）"
+  },
+  "met-42308": {
+    "oid": 42308,
+    "entries": [
+      "buncheong"
+    ],
+    "title": "Flask-shaped bottle decorated with peonies",
+    "zh": "牡丹纹扁瓶",
+    "artist": "Korea",
+    "date": "late 15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/42308",
+    "credit": "Rogers Fund, 1986",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Buncheong ware with incised and sgraffito design",
+    "image": "assets/artworks/met-42308.webp",
+    "width": 491,
+    "height": 624,
+    "artistZh": "朝鲜半岛工匠"
+  },
+  "met-42309": {
+    "oid": 42309,
+    "entries": [
+      "buncheong"
+    ],
+    "title": "Large jar decorated with peonies",
+    "zh": "牡丹纹大罐",
+    "artist": "Korea",
+    "date": "late 15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/42309",
+    "credit": "Rogers Fund, 1916",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Buncheong ware with incised and sgraffito design",
+    "image": "assets/artworks/met-42309.webp",
+    "width": 567,
+    "height": 624,
+    "artistZh": "朝鲜半岛工匠"
+  },
+  "met-39571": {
+    "oid": 39571,
+    "entries": [
+      "buncheong"
+    ],
+    "title": "Bowl",
+    "zh": "碗",
+    "artist": "Korea",
+    "date": "first half of the 16th century",
+    "url": "https://www.metmuseum.org/art/collection/search/39571",
+    "credit": "Gift of Mr. and Mrs. Michael Oliver, 1983",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Buncheong ware with white slip",
+    "image": "assets/artworks/met-39571.webp",
+    "width": 599,
+    "height": 444,
+    "artistZh": "朝鲜半岛工匠"
+  },
+  "met-59669": {
+    "oid": 59669,
+    "entries": [
+      "zen"
+    ],
+    "title": "Portrait of Shun'oku Myōha",
+    "zh": "春屋妙葩像",
+    "artist": "Unidentified artist",
+    "date": "ca. 1383",
+    "url": "https://www.metmuseum.org/art/collection/search/59669",
+    "credit": "Gift of Sylvan Barnet and William Burto, 2007",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Hanging scroll; ink, color, and gold on silk",
+    "image": "assets/artworks/met-59669.webp",
+    "width": 373,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-38119": {
+    "oid": 38119,
+    "entries": [
+      "gandhara",
+      "indiaearly"
+    ],
+    "title": "Fasting Buddha Shakyamuni",
+    "zh": "苦行释迦牟尼像",
+    "artist": "Pakistan (ancient region of Gandhara)",
+    "date": "3rd–5th century",
+    "url": "https://www.metmuseum.org/art/collection/search/38119",
+    "credit": "Samuel Eilenberg Collection, Ex Coll.: Columbia University, Purchase, Rogers, Dodge, Harris Brisbane Dick and Fletcher Funds, Joseph Pulitzer Bequest, and Lila Acheson Wallace Gift, 1987",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Schist",
+    "image": "assets/artworks/met-38119.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "犍陀罗地区工匠"
+  },
+  "met-38926": {
+    "oid": 38926,
+    "entries": [
+      "gandhara"
+    ],
+    "title": "Reliquary in the Shape of a Stupa",
+    "zh": "塔形舍利容器",
+    "artist": "Pakistan (ancient region of Gandhara)",
+    "date": "ca. 4th–5th century",
+    "url": "https://www.metmuseum.org/art/collection/search/38926",
+    "credit": "Gift of Mr. and Mrs. Donald J. Bruckmann, 1985",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Bronze",
+    "image": "assets/artworks/met-38926.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "犍陀罗地区工匠"
+  },
+  "met-38511": {
+    "oid": 38511,
+    "entries": [
+      "hindutemple"
+    ],
+    "title": "Krishna Killing the Horse Demon Keshi",
+    "zh": "克里希纳降伏马魔凯希",
+    "artist": "India (Uttar Pradesh)",
+    "date": "5th century",
+    "url": "https://www.metmuseum.org/art/collection/search/38511",
+    "credit": "Purchase, Florence and Herbert Irving Gift, 1991",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Terracotta",
+    "image": "assets/artworks/met-38511.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "印度工匠"
+  },
+  "met-38558": {
+    "oid": 38558,
+    "entries": [
+      "sea"
+    ],
+    "title": "Standing Four-Armed Vishnu",
+    "zh": "四臂毗湿奴立像",
+    "artist": "Vietnam (Mekong Delta area)",
+    "date": "second half of the 7th century",
+    "url": "https://www.metmuseum.org/art/collection/search/38558",
+    "credit": "Purchase, Lita Annenberg Hazen Charitable Trust Gift, 1992",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Stone",
+    "image": "assets/artworks/met-38558.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "越南工匠"
+  },
+  "met-38246": {
+    "oid": 38246,
+    "entries": [
+      "hindutemple"
+    ],
+    "title": "Linga with Face of Shiva (Ekamukhalinga)",
+    "zh": "湿婆单面林伽",
+    "artist": "Afghanistan",
+    "date": "9th century",
+    "url": "https://www.metmuseum.org/art/collection/search/38246",
+    "credit": "Rogers Fund, 1980",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "White marble",
+    "image": "assets/artworks/met-38246.webp",
+    "width": 475,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-38093": {
+    "oid": 38093,
+    "entries": [
+      "gandhara"
+    ],
+    "title": "Dish with Apollo and Daphne",
+    "zh": "阿波罗与达芙妮图案盘",
+    "artist": "Pakistan (ancient region of Gandhara)",
+    "date": "ca. 1st century BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/38093",
+    "credit": "Samuel Eilenberg Collection, Gift of Samuel Eilenberg, 1987",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Schist",
+    "image": "assets/artworks/met-38093.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "犍陀罗地区工匠"
+  },
+  "met-38111": {
+    "oid": 38111,
+    "entries": [
+      "gandhara"
+    ],
+    "title": "Inscribed Reliquary, Donated by King Indravarman",
+    "zh": "因陀罗跋摩王奉献的铭文舍利容器",
+    "artist": "Pakistan (ancient region of Gandhara, Bajaur)",
+    "date": "15–16 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/38111",
+    "credit": "Samuel Eilenberg Collection, Gift of Samuel Eilenberg, 1987",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Schist",
+    "image": "assets/artworks/met-38111.webp",
+    "width": 599,
+    "height": 599,
+    "artistZh": "犍陀罗地区工匠"
+  },
+  "met-38210": {
+    "oid": 38210,
+    "entries": [
+      "gandhara"
+    ],
+    "title": "Stair Riser with Marine Deities or Boatmen",
+    "zh": "海神或船夫题材阶梯立板",
+    "artist": "Pakistan (ancient region Gandhara (Swat Valley?)",
+    "date": "ca. 1st century",
+    "url": "https://www.metmuseum.org/art/collection/search/38210",
+    "credit": "Rogers Fund, 1913",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Serpentinite",
+    "image": "assets/artworks/met-38210.webp",
+    "width": 600,
+    "height": 600,
+    "artistZh": "犍陀罗地区工匠"
+  },
+  "met-454344": {
+    "oid": 454344,
+    "entries": [
+      "mughal"
+    ],
+    "title": "\"Rama Receives Sugriva and Jambavat, the Monkey and Bear Kings\", Folio from a Ramayana",
+    "zh": "罗摩接见猴王与熊王",
+    "artist": "Unknown artist",
+    "date": "ca. 1605",
+    "url": "https://www.metmuseum.org/art/collection/search/454344",
+    "credit": "Cynthia Hazen Polsky and Leon B. Polsky Fund, 2002",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ink, opaque watercolor, and gold on paper",
+    "image": "assets/artworks/met-454344.webp",
+    "width": 422,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-446999": {
+    "oid": 446999,
+    "entries": [
+      "carpets",
+      "mughal"
+    ],
+    "title": "Carpet with Palm Trees, Ibexes, and Birds",
+    "zh": "棕榈树、羱羊与鸟纹地毯",
+    "artist": "Unknown artist",
+    "date": "late 16th–early 17th century",
+    "url": "https://www.metmuseum.org/art/collection/search/446999",
+    "credit": "Gift of J. Pierpont Morgan, 1917",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Cotton (warp and weft), wool (pile); asymmetrically knotted pile",
+    "image": "assets/artworks/met-446999.webp",
+    "width": 210,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-447743": {
+    "oid": 447743,
+    "entries": [
+      "mughalearly"
+    ],
+    "title": "\"The Spy Zambur Brings Mahiya to the City of Tawariq\", Folio from a Hamzanama (Book of Hamza)",
+    "zh": "间谍赞布尔将玛希娅带到塔瓦里克城",
+    "artist": "Kesav Das",
+    "date": "ca. 1570",
+    "url": "https://www.metmuseum.org/art/collection/search/447743",
+    "credit": "Rogers Fund, 1923",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ink, opaque watercolor, and gold on cloth; mounted on paper",
+    "image": "assets/artworks/met-447743.webp",
+    "width": 505,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-448257": {
+    "oid": 448257,
+    "entries": [
+      "mughal"
+    ],
+    "title": "Inkpot of the Emperor Jahangir",
+    "zh": "贾汉吉尔皇帝的墨水瓶",
+    "artist": "Mu'min Jahangir",
+    "date": "dated 1028 AH/1618–19 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/448257",
+    "credit": "The Sylmaris Collection, Gift of George Coe Graves, 1929",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Nephrite, gold",
+    "image": "assets/artworks/met-448257.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": ""
+  },
+  "met-451283": {
+    "oid": 451283,
+    "entries": [
+      "mughal"
+    ],
+    "title": "\"The Emperor Shah Jahan with his Son Dara Shikoh\", Folio from the Shah Jahan Album",
+    "zh": "沙贾汗皇帝与王子达拉·舒科",
+    "artist": "Nanha",
+    "date": "verso: ca. 1620; recto: ca. 1530–50",
+    "url": "https://www.metmuseum.org/art/collection/search/451283",
+    "credit": "Purchase, Rogers Fund and The Kevorkian Foundation Gift, 1955",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ink, opaque watercolor, and gold on paper\r\nMargins: Gold and opaque watercolor on dyed paper",
+    "image": "assets/artworks/met-451283.webp",
+    "width": 429,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-449101": {
+    "oid": 449101,
+    "entries": [
+      "abbasid"
+    ],
+    "title": "Capital in the \"Beveled Style\"",
+    "zh": "斜面风格柱头",
+    "artist": "Unknown artist",
+    "date": "late 8th century",
+    "url": "https://www.metmuseum.org/art/collection/search/449101",
+    "credit": "Samuel D. Lee Fund, 1936",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Alabaster, gypsum; carved",
+    "image": "assets/artworks/met-449101.webp",
+    "width": 599,
+    "height": 473,
+    "artistZh": "作者不详"
+  },
+  "met-448652": {
+    "oid": 448652,
+    "entries": [
+      "abbasid"
+    ],
+    "title": "Pair of Doors Carved in the 'Beveled Style'",
+    "zh": "斜面风格雕刻门扇",
+    "artist": "Unknown artist",
+    "date": "9th century",
+    "url": "https://www.metmuseum.org/art/collection/search/448652",
+    "credit": "Fletcher Fund, 1931",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Wood (teak); carved",
+    "image": "assets/artworks/met-448652.webp",
+    "width": 307,
+    "height": 625,
+    "artistZh": "作者不详"
+  },
+  "met-448369": {
+    "oid": 448369,
+    "entries": [
+      "abbasid"
+    ],
+    "title": "Folio from a Qur'an Manuscript",
+    "zh": "古兰经抄本书页",
+    "artist": "Unknown artist",
+    "date": "late 9th–early 10th century",
+    "url": "https://www.metmuseum.org/art/collection/search/448369",
+    "credit": "Gift of Rudolf M. Riefstahl, 1930",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ink and gold on parchment",
+    "image": "assets/artworks/met-448369.webp",
+    "width": 599,
+    "height": 430,
+    "artistZh": "作者不详"
+  },
+  "met-454662": {
+    "oid": 454662,
+    "entries": [
+      "fatimid",
+      "islamcalligraphy"
+    ],
+    "title": "Folio from the \"Blue Qur'an\"",
+    "zh": "蓝色古兰经书页",
+    "artist": "Unknown artist",
+    "date": "second half 9th–mid-10th century",
+    "url": "https://www.metmuseum.org/art/collection/search/454662",
+    "credit": "Purchase, Lila Acheson Wallace Gift, 2004",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gold and silver on indigo-dyed parchment",
+    "image": "assets/artworks/met-454662.webp",
+    "width": 600,
+    "height": 457,
+    "artistZh": "作者不详"
+  },
+  "met-452271": {
+    "oid": 452271,
+    "entries": [
+      "fatimid"
+    ],
+    "title": "Tiraz Veil",
+    "zh": "提拉兹织物面纱",
+    "artist": "Unknown artist",
+    "date": "dated 373 AH/983–984 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/452271",
+    "credit": "Rogers Fund, 1971",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Silk; plain weave, tapestry weave",
+    "image": "assets/artworks/met-452271.webp",
+    "width": 599,
+    "height": 250,
+    "artistZh": "作者不详"
+  },
+  "met-451717": {
+    "oid": 451717,
+    "entries": [
+      "fatimid"
+    ],
+    "title": "Bowl with Eagle",
+    "zh": "鹰纹碗",
+    "artist": "Muslim Ibn al-Dahhan",
+    "date": "ca. 1000",
+    "url": "https://www.metmuseum.org/art/collection/search/451717",
+    "credit": "Gift of Charles K. and Irma B. Wilkinson, 1963",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Earthenware; luster-painted on opaque white glaze",
+    "image": "assets/artworks/met-451717.webp",
+    "width": 467,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-451909": {
+    "oid": 451909,
+    "entries": [
+      "seljuq"
+    ],
+    "title": "Standing Figure with Jeweled Headdress",
+    "zh": "戴珠饰冠的立像",
+    "artist": "Unknown artist",
+    "date": "12th–early 13th century",
+    "url": "https://www.metmuseum.org/art/collection/search/451909",
+    "credit": "Gift of Mr. and Mrs. Lester Wolfe, 1967",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gypsum plaster; modeled, carved, polychrome-painted, gilded",
+    "image": "assets/artworks/met-451909.webp",
+    "width": 325,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-706073": {
+    "oid": 706073,
+    "entries": [
+      "seljuq"
+    ],
+    "title": "Pair of Earrings",
+    "zh": "一对耳环",
+    "artist": "Unknown artist",
+    "date": "11th–12th century",
+    "url": "https://www.metmuseum.org/art/collection/search/706073",
+    "credit": "Purchase, Friends of Islamic Art Gifts and Harvey and Elizabeth Plotnick Gift, 2006",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gold; filigree and granulation",
+    "image": "assets/artworks/met-706073.webp",
+    "width": 600,
+    "height": 533,
+    "artistZh": "作者不详"
+  },
+  "met-456336": {
+    "oid": 456336,
+    "entries": [
+      "seljuq"
+    ],
+    "title": "Earrings and Pendant",
+    "zh": "耳环与吊坠",
+    "artist": "Unknown artist",
+    "date": "11th–12th century",
+    "url": "https://www.metmuseum.org/art/collection/search/456336",
+    "credit": "Purchase, Shamina Talyarkhan Gift, 2007",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gold; filigree and granulation",
+    "image": "assets/artworks/met-456336.webp",
+    "width": 599,
+    "height": 496,
+    "artistZh": "作者不详"
+  },
+  "met-445263": {
+    "oid": 445263,
+    "entries": [
+      "ottoman"
+    ],
+    "title": "Fragmentary Silk Velvet with Repeating Tiger-stripe and 'Chintamani' Design",
+    "zh": "虎纹与如意宝珠纹丝绒残片",
+    "artist": "Unknown artist",
+    "date": "second half 15th century",
+    "url": "https://www.metmuseum.org/art/collection/search/445263",
+    "credit": "Rogers Fund, 1908",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Silk, metal wrapped thread; cut and voided velvet (çatma), brocaded",
+    "image": "assets/artworks/met-445263.webp",
+    "width": 567,
+    "height": 625,
+    "artistZh": "作者不详"
+  },
+  "met-452364": {
+    "oid": 452364,
+    "entries": [
+      "ottoman"
+    ],
+    "title": "Mirror with Split-Leaf Palmette Design Inlaid with Gold",
+    "zh": "金嵌分叶棕榈纹镜",
+    "artist": "Unknown artist",
+    "date": "early 16th century",
+    "url": "https://www.metmuseum.org/art/collection/search/452364",
+    "credit": "Fletcher Fund, 1972",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Iron, inlaid with gold; ivory",
+    "image": "assets/artworks/met-452364.webp",
+    "width": 467,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-453563": {
+    "oid": 453563,
+    "entries": [
+      "ottoman"
+    ],
+    "title": "Tile",
+    "zh": "瓷砖",
+    "artist": "Unknown artist",
+    "date": "dated 824 AH/1421 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/453563",
+    "credit": "Purchase, Friends of Islamic Art Gifts, 1998",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Tempered earthenware; molded; polychrome glazed within black wax resist outlines (cuerda seca technique); gilded",
+    "image": "assets/artworks/met-453563.webp",
+    "width": 467,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-451091": {
+    "oid": 451091,
+    "entries": [
+      "safavid"
+    ],
+    "title": "Velvet with Figural Imagery",
+    "zh": "人物纹丝绒",
+    "artist": "Unknown artist",
+    "date": "mid-16th century",
+    "url": "https://www.metmuseum.org/art/collection/search/451091",
+    "credit": "Purchase, Joseph Pulitzer Bequest, 1952",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Silk, metal wrapped thread; cut and voided velvet",
+    "image": "assets/artworks/met-451091.webp",
+    "width": 279,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-444607": {
+    "oid": 444607,
+    "entries": [
+      "safavid"
+    ],
+    "title": "Dragon-Handled Jug with Inscription",
+    "zh": "带铭文的龙柄壶",
+    "artist": "Unknown artist",
+    "date": "early 16th century",
+    "url": "https://www.metmuseum.org/art/collection/search/444607",
+    "credit": "Edward C. Moore Collection, Bequest of Edward C. Moore, 1891",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Brass; cast and turned, engraved, and inlaid with silver, gold, and black organic compound",
+    "image": "assets/artworks/met-444607.webp",
+    "width": 468,
+    "height": 625,
+    "artistZh": "作者不详"
+  },
+  "met-450509": {
+    "oid": 450509,
+    "entries": [
+      "safavid",
+      "carpets"
+    ],
+    "title": "The Emperor's Carpet",
+    "zh": "皇帝的地毯",
+    "artist": "Unknown artist",
+    "date": "second half 16th century",
+    "url": "https://www.metmuseum.org/art/collection/search/450509",
+    "credit": "Rogers Fund, 1943",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Silk (warp and weft), wool (pile); asymmetrically knotted pile",
+    "image": "assets/artworks/met-450509.webp",
+    "width": 298,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-451715": {
+    "oid": 451715,
+    "entries": [
+      "islamcalligraphy"
+    ],
+    "title": "Bowl Emulating Chinese Stoneware",
+    "zh": "仿中国炻器碗",
+    "artist": "Unknown artist",
+    "date": "9th century",
+    "url": "https://www.metmuseum.org/art/collection/search/451715",
+    "credit": "Harris Brisbane Dick Fund, 1963",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Earthenware; painted in blue on opaque white glaze",
+    "image": "assets/artworks/met-451715.webp",
+    "width": 467,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-448294": {
+    "oid": 448294,
+    "entries": [
+      "islamcalligraphy"
+    ],
+    "title": "Tiraz Textile Fragment",
+    "zh": "提拉兹织物残片",
+    "artist": "Unknown artist",
+    "date": "late 9th–early 10th century",
+    "url": "https://www.metmuseum.org/art/collection/search/448294",
+    "credit": "Gift of George D. Pratt, 1929",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Cotton, ink, and gold; plain weave, resist-dyed (ikat), painted\r\nInscription: black ink and gold leaf; painted",
+    "image": "assets/artworks/met-448294.webp",
+    "width": 457,
+    "height": 624,
+    "artistZh": "作者不详"
+  },
+  "met-444286": {
+    "oid": 444286,
+    "entries": [
+      "textile"
+    ],
+    "title": "Fragment of a Cover with Geometric and Interlace Decoration",
+    "zh": "几何与交织纹织物残片",
+    "artist": "Unknown artist",
+    "date": "5th century",
+    "url": "https://www.metmuseum.org/art/collection/search/444286",
+    "credit": "Gift of George F. Baker, 1890",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Wool, linen; plain weave, tapestry weave",
+    "image": "assets/artworks/met-444286.webp",
+    "width": 599,
+    "height": 395,
+    "artistZh": "作者不详"
+  },
+  "met-449211": {
+    "oid": 449211,
+    "entries": [
+      "islamic"
+    ],
+    "title": "Panel",
+    "zh": "装饰板",
+    "artist": "Unknown artist",
+    "date": "second half 8th century",
+    "url": "https://www.metmuseum.org/art/collection/search/449211",
+    "credit": "Samuel D. Lee Fund, 1937",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Wood (fig); mosaic with bone and four different types of wood",
+    "image": "assets/artworks/met-449211.webp",
+    "width": 598,
+    "height": 180,
+    "artistZh": "作者不详"
+  },
+  "met-316721": {
+    "oid": 316721,
+    "entries": [
+      "moche"
+    ],
+    "title": "Bottle with Snake",
+    "zh": "蛇纹陶瓶",
+    "artist": "Moche",
+    "date": "2nd–5th century",
+    "url": "https://www.metmuseum.org/art/collection/search/316721",
+    "credit": "Gift of Conny and Fred Landmann, 1992",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic",
+    "image": "assets/artworks/met-316721.webp",
+    "width": 499,
+    "height": 624,
+    "artistZh": "莫切工匠"
+  },
+  "met-307474": {
+    "oid": 307474,
+    "entries": [
+      "moche"
+    ],
+    "title": "Stirrup-spout bottle with seated figure",
+    "zh": "坐姿人物马镫口陶瓶",
+    "artist": "Moche artist(s)",
+    "date": "200 CE–500 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/307474",
+    "credit": "Gift of Henry G. Marquand, 1882",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic",
+    "image": "assets/artworks/met-307474.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "莫切工匠"
+  },
+  "met-315678": {
+    "oid": 315678,
+    "entries": [
+      "moche"
+    ],
+    "title": "Stirrup-spout bottle with decapitation scene",
+    "zh": "斩首场景马镫口陶瓶",
+    "artist": "Moche",
+    "date": "200–500 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/315678",
+    "credit": "Bequest of Jane Costello Goldberg, from the Collection of Arnold I. Goldberg, 1986",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic, slip",
+    "image": "assets/artworks/met-315678.webp",
+    "width": 468,
+    "height": 624,
+    "artistZh": "莫切工匠"
+  },
+  "met-208035": {
+    "oid": 208035,
+    "entries": [
+      "nouveau"
+    ],
+    "title": "Vase",
+    "zh": "花瓶",
+    "artist": "Factory of Olivier de Sorra",
+    "date": "ca. 1885",
+    "url": "https://www.metmuseum.org/art/collection/search/208035",
+    "credit": "Gift of Lloyd and Barbara Macklowe, 1991",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Stoneware",
+    "image": "assets/artworks/met-208035.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-82154": {
+    "oid": 82154,
+    "entries": [
+      "fashion"
+    ],
+    "title": "Evening dress",
+    "zh": "晚礼服",
+    "artist": "French",
+    "date": "ca. 1810",
+    "url": "https://www.metmuseum.org/art/collection/search/82154",
+    "credit": "Rogers Fund, 1937",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "silk",
+    "image": "assets/artworks/met-82154.webp",
+    "width": 429,
+    "height": 625,
+    "artistZh": "法国（作者不详）"
+  },
+  "met-81112": {
+    "oid": 81112,
+    "entries": [
+      "fashion"
+    ],
+    "title": "Ball gown",
+    "zh": "舞会礼服",
+    "artist": "House of Worth",
+    "date": "ca. 1872",
+    "url": "https://www.metmuseum.org/art/collection/search/81112",
+    "credit": "Gift of Mrs. Philip K. Rhinelander, 1946",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "silk",
+    "image": "assets/artworks/met-81112.webp",
+    "width": 481,
+    "height": 624,
+    "artistZh": ""
+  },
+  "met-82076": {
+    "oid": 82076,
+    "entries": [
+      "fashion"
+    ],
+    "title": "Petticoat",
+    "zh": "衬裙",
+    "artist": "American",
+    "date": "1830s",
+    "url": "https://www.metmuseum.org/art/collection/search/82076",
+    "credit": "Gift of Judith and Ira L. Sommer, 1992",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "cotton",
+    "image": "assets/artworks/met-82076.webp",
+    "width": 402,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-435703": {
+    "oid": 435703,
+    "entries": [
+      "women19"
+    ],
+    "title": "Weaning the Calves",
+    "zh": "小牛断奶",
+    "artist": "Rosa Bonheur",
+    "date": "1879",
+    "url": "https://www.metmuseum.org/art/collection/search/435703",
+    "credit": "Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-435703.webp",
+    "width": 599,
+    "height": 485,
+    "artistZh": "罗莎·博纳尔"
+  },
+  "met-438009": {
+    "oid": 438009,
+    "entries": [
+      "women19"
+    ],
+    "title": "The Pink Dress (Albertie-Marguerite Carré, later Madame Ferdinand-Henri Himmes, 1854–1935)",
+    "zh": "粉红连衣裙",
+    "artist": "Berthe Morisot",
+    "date": "ca. 1870",
+    "url": "https://www.metmuseum.org/art/collection/search/438009",
+    "credit": "The Walter H. and Leonore Annenberg Collection, Bequest of Walter H. Annenberg, 2002",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-438009.webp",
+    "width": 599,
+    "height": 487,
+    "artistZh": "贝尔特·莫里索"
+  },
+  "met-288840": {
+    "oid": 288840,
+    "entries": [
+      "documentary"
+    ],
+    "title": "Lulah Falls, Lookout Mountain, Georgia",
+    "zh": "佐治亚州瞭望山的卢拉瀑布",
+    "artist": "Isaac H. Bonsall",
+    "date": "1864–65",
+    "url": "https://www.metmuseum.org/art/collection/search/288840",
+    "credit": "Purchase, Celia Tompkins Hegyi Gift, 2007",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Albumen silver print from glass negative",
+    "image": "assets/artworks/met-288840.webp",
+    "width": 599,
+    "height": 494,
+    "artistZh": "艾萨克·邦索尔"
+  },
+  "met-264880": {
+    "oid": 264880,
+    "entries": [
+      "documentary"
+    ],
+    "title": "Brigadier General Gustavus A. DeRussy and Staff on Steps of Arlington House, Arlington, Virginia",
+    "zh": "阿灵顿宅邸台阶上的德鲁西准将与幕僚",
+    "artist": "Alexander Gardner",
+    "date": "May 1864",
+    "url": "https://www.metmuseum.org/art/collection/search/264880",
+    "credit": "A. Hyatt Mayor Purchase Fund, Marjorie Phelps Starr Bequest, 1986",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Albumen silver print from glass negative",
+    "image": "assets/artworks/met-264880.webp",
+    "width": 600,
+    "height": 454,
+    "artistZh": "亚历山大·加德纳"
+  },
+  "met-357998": {
+    "oid": 357998,
+    "entries": [
+      "litho"
+    ],
+    "title": "Boxers",
+    "zh": "拳击手",
+    "artist": "Théodore Géricault",
+    "date": "1818",
+    "url": "https://www.metmuseum.org/art/collection/search/357998",
+    "credit": "Rogers Fund, 1922",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Lithograph",
+    "image": "assets/artworks/met-357998.webp",
+    "width": 600,
+    "height": 515,
+    "artistZh": "泰奥多尔·籍里柯"
+  },
+  "met-364375": {
+    "oid": 364375,
+    "entries": [
+      "litho"
+    ],
+    "title": "Sieben Gegenden aus Salzburg und Berchtesgaden Geordnet nach den sieben Tagen der Woche, verbunden durch zwey allegorische Blätter (Seven Places in Salzburg and Berchtesgaden, Arranged According to the Seven Days of the Week)",
+    "zh": "萨尔茨堡与贝希特斯加登的七处风景",
+    "artist": "(Johann Heinrich) Ferdinand Olivier",
+    "date": "1823",
+    "url": "https://www.metmuseum.org/art/collection/search/364375",
+    "credit": "Purchase, Anna-Maria and Stephen Kellen Foundation Gift, 2004",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Lithographs printed in gray and again with a light beige tone stone mounted on painted and gilt board with attached titles printed on brown paper. Printed portfolio with green ribbons.",
+    "image": "assets/artworks/met-364375.webp",
+    "width": 599,
+    "height": 462,
+    "artistZh": ""
+  },
+  "met-376771": {
+    "oid": 376771,
+    "entries": [
+      "litho"
+    ],
+    "title": "Pilgrim at the Gate (Einsiedler an der Pforte)",
+    "zh": "门前的朝圣者",
+    "artist": "Karl Blechen",
+    "date": "1827",
+    "url": "https://www.metmuseum.org/art/collection/search/376771",
+    "credit": "Janet Lee Kadesky Ruttenberg Fund, in honor of Colta Ives, 2007",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Lithograph",
+    "image": "assets/artworks/met-376771.webp",
+    "width": 427,
+    "height": 625,
+    "artistZh": ""
+  },
+  "met-436535": {
+    "oid": 436535,
+    "entries": [
+      "postimp"
+    ],
+    "title": "Wheat Field with Cypresses",
+    "zh": "有柏树的麦田",
+    "artist": "Vincent van Gogh",
+    "date": "1889",
+    "url": "https://www.metmuseum.org/art/collection/search/436535",
+    "credit": "Purchase, The Annenberg Foundation Gift, 1993",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-436535.webp",
+    "width": 599,
+    "height": 477,
+    "artistZh": "文森特·梵高"
+  },
+  "met-436524": {
+    "oid": 436524,
+    "entries": [
+      "postimp"
+    ],
+    "title": "Sunflowers",
+    "zh": "向日葵",
+    "artist": "Vincent van Gogh",
+    "date": "1887",
+    "url": "https://www.metmuseum.org/art/collection/search/436524",
+    "credit": "Rogers Fund, 1949",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-436524.webp",
+    "width": 599,
+    "height": 423,
+    "artistZh": "文森特·梵高"
+  },
+  "met-437998": {
+    "oid": 437998,
+    "entries": [
+      "postimp"
+    ],
+    "title": "Olive Trees",
+    "zh": "橄榄树",
+    "artist": "Vincent van Gogh",
+    "date": "1889",
+    "url": "https://www.metmuseum.org/art/collection/search/437998",
+    "credit": "The Walter H. and Leonore Annenberg Collection, Gift of Walter H. and Leonore Annenberg, 1998, Bequest of Walter H. Annenberg, 2002",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-437998.webp",
+    "width": 599,
+    "height": 478,
+    "artistZh": "文森特·梵高"
+  },
+  "met-435882": {
+    "oid": 435882,
+    "entries": [
+      "postimp",
+      "stilllife"
+    ],
+    "title": "Still Life with Apples and a Pot of Primroses",
+    "zh": "苹果与报春花静物",
+    "artist": "Paul Cézanne",
+    "date": "ca. 1890",
+    "url": "https://www.metmuseum.org/art/collection/search/435882",
+    "credit": "Bequest of Sam A. Lewisohn, 1951",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-435882.webp",
+    "width": 600,
+    "height": 476,
+    "artistZh": "保罗·塞尚"
+  },
+  "met-436121": {
+    "oid": 436121,
+    "entries": [
+      "impressionism"
+    ],
+    "title": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinçon?)",
+    "zh": "花瓶旁的女子",
+    "artist": "Edgar Degas",
+    "date": "1865",
+    "url": "https://www.metmuseum.org/art/collection/search/436121",
+    "credit": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-436121.webp",
+    "width": 600,
+    "height": 488,
+    "artistZh": "埃德加·德加"
+  },
+  "met-436947": {
+    "oid": 436947,
+    "entries": [
+      "impressionism",
+      "realism"
+    ],
+    "title": "Boating",
+    "zh": "划船",
+    "artist": "Edouard Manet",
+    "date": "1874",
+    "url": "https://www.metmuseum.org/art/collection/search/436947",
+    "credit": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-436947.webp",
+    "width": 599,
+    "height": 457,
+    "artistZh": "爱德华·马奈"
+  },
+  "met-437329": {
+    "oid": 437329,
+    "entries": [
+      "baroque"
+    ],
+    "title": "The Abduction of the Sabine Women",
+    "zh": "劫夺萨宾妇女",
+    "artist": "Nicolas Poussin",
+    "date": "probably 1633–34",
+    "url": "https://www.metmuseum.org/art/collection/search/437329",
+    "credit": "Harris Brisbane Dick Fund, 1946",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-437329.webp",
+    "width": 599,
+    "height": 445,
+    "artistZh": "尼古拉·普桑"
+  },
+  "met-437826": {
+    "oid": 437826,
+    "entries": [
+      "venetian"
+    ],
+    "title": "Venus and Adonis",
+    "zh": "维纳斯与阿多尼斯",
+    "artist": "Titian (Tiziano Vecellio)",
+    "date": "1550s",
+    "url": "https://www.metmuseum.org/art/collection/search/437826",
+    "credit": "The Jules Bache Collection, 1949",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-437826.webp",
+    "width": 600,
+    "height": 485,
+    "artistZh": "提香"
+  },
+  "met-437397": {
+    "oid": 437397,
+    "entries": [
+      "dutch"
+    ],
+    "title": "Self-Portrait",
+    "zh": "自画像",
+    "artist": "Rembrandt (Rembrandt van Rijn)",
+    "date": "1660",
+    "url": "https://www.metmuseum.org/art/collection/search/437397",
+    "credit": "Bequest of Benjamin Altman, 1913",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Oil on canvas",
+    "image": "assets/artworks/met-437397.webp",
+    "width": 515,
+    "height": 625,
+    "artistZh": "伦勃朗"
+  },
+  "met-310542": {
+    "oid": 310542,
+    "entries": [
+      "maya"
+    ],
+    "title": "Whistling vessel",
+    "zh": "哨音陶器",
+    "artist": "Maya artist(s)",
+    "date": "400–500 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/310542",
+    "credit": "The Michael C. Rockefeller Memorial Collection, Gift of Nelson A. Rockefeller, 1963",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic",
+    "image": "assets/artworks/met-310542.webp",
+    "width": 480,
+    "height": 624,
+    "artistZh": "玛雅工匠"
+  },
+  "met-310364": {
+    "oid": 310364,
+    "entries": [
+      "maya"
+    ],
+    "title": "Vessel with mythological scene",
+    "zh": "神话场景陶器",
+    "artist": "Metropolitan Painter",
+    "date": "600–800 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/310364",
+    "credit": "The Michael C. Rockefeller Memorial Collection, Purchase, Nelson A. Rockefeller Gift, 1968",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic, slip",
+    "image": "assets/artworks/met-310364.webp",
+    "width": 462,
+    "height": 625
+  },
+  "met-313240": {
+    "oid": 313240,
+    "entries": [
+      "maya"
+    ],
+    "title": "Relief with enthroned ruler",
+    "zh": "端坐统治者浮雕",
+    "artist": "Chakalte'",
+    "date": "770 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/313240",
+    "credit": "The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Limestone, paint",
+    "image": "assets/artworks/met-313240.webp",
+    "width": 600,
+    "height": 606
+  },
+  "met-309389": {
+    "oid": 309389,
+    "entries": [
+      "inca"
+    ],
+    "title": "Urpu (jar)",
+    "zh": "乌尔普陶罐",
+    "artist": "Inca artist(s)",
+    "date": "1400–1535 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/309389",
+    "credit": "Gift of Nathan Cummings, 1966",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ceramic, slip",
+    "image": "assets/artworks/met-309389.webp",
+    "width": 525,
+    "height": 624,
+    "artistZh": "印加工匠"
+  },
+  "met-313267": {
+    "oid": 313267,
+    "entries": [
+      "inca"
+    ],
+    "title": "Kero (beaker)",
+    "zh": "凯罗杯",
+    "artist": "Inca artist(s)",
+    "date": "1400–1535 CE",
+    "url": "https://www.metmuseum.org/art/collection/search/313267",
+    "credit": "The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Wood",
+    "image": "assets/artworks/met-313267.webp",
+    "width": 600,
+    "height": 602,
+    "artistZh": "印加工匠"
+  },
+  "met-312428": {
+    "oid": 312428,
+    "entries": [
+      "asante"
+    ],
+    "title": "Lion Ornament",
+    "zh": "狮形金饰",
+    "artist": "Asante-Akan artist",
+    "date": "19th century",
+    "url": "https://www.metmuseum.org/art/collection/search/312428",
+    "credit": "The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Gold",
+    "image": "assets/artworks/met-312428.webp",
+    "width": 600,
+    "height": 427,
+    "artistZh": "阿散蒂—阿肯工匠"
+  },
+  "met-321287": {
+    "oid": 321287,
+    "entries": [
+      "maori"
+    ],
+    "title": "Kapeu (ear ornament)",
+    "zh": "卡佩乌耳饰",
+    "artist": "Māori artist",
+    "date": "18th–early 19th century",
+    "url": "https://www.metmuseum.org/art/collection/search/321287",
+    "credit": "Purchase, Lenore M. Weber Gift, 2013",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Nephrite jade (pounamu)",
+    "image": "assets/artworks/met-321287.webp",
+    "width": 305,
+    "height": 624,
+    "artistZh": "毛利工匠"
+  },
+  "met-318622": {
+    "oid": 318622,
+    "entries": [
+      "benin"
+    ],
+    "title": "Pendant mask of Ìyọ́bà Idià",
+    "zh": "王太后伊迪娅面具佩饰",
+    "artist": "Ìgbèsànmwà (ivory- and wood- carving guild) artists",
+    "date": "16th century",
+    "url": "https://www.metmuseum.org/art/collection/search/318622",
+    "credit": "The Michael C. Rockefeller Memorial Collection, Gift of Nelson A. Rockefeller, 1972",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Ivory, iron, brass, coal, traces of iron oxides",
+    "image": "assets/artworks/met-318622.webp",
+    "width": 463,
+    "height": 624,
+    "artistZh": "贝宁象牙与木雕行会工匠"
+  },
+  "met-316555": {
+    "oid": 316555,
+    "entries": [
+      "benin"
+    ],
+    "title": "Altar bell with Portuguese heads",
+    "zh": "葡萄牙人头像祭坛铃",
+    "artist": "Ìgùn Ẹ́rọ̀nwwọ̀n (brass-casting guild) artists",
+    "date": "16th–17th century",
+    "url": "https://www.metmuseum.org/art/collection/search/316555",
+    "credit": "Gift of Mr. and Mrs. Klaus G. Perls, 1991",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Brass",
+    "image": "assets/artworks/met-316555.webp",
+    "width": 493,
+    "height": 624,
+    "artistZh": "贝宁铜铸行会工匠"
+  },
+  "met-57416": {
+    "oid": 57416,
+    "entries": [
+      "celadon"
+    ],
+    "title": "Bowl decorated with cranes, rain, and chrysanthemums",
+    "zh": "云鹤雨菊纹青瓷碗",
+    "artist": "Korea",
+    "date": "early 14th century",
+    "url": "https://www.metmuseum.org/art/collection/search/57416",
+    "credit": "Gift of Samuel T. Peters, 1915",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Stoneware with inlaid design under celadon glaze",
+    "image": "assets/artworks/met-57416.webp",
+    "width": 600,
+    "height": 450,
+    "artistZh": "朝鲜半岛工匠"
+  },
+  "met-38945": {
+    "oid": 38945,
+    "entries": [
+      "chola"
+    ],
+    "title": "Hanuman Conversing",
+    "zh": "交谈中的哈努曼",
+    "artist": "India (Tamil Nadu)",
+    "date": "11th century",
+    "url": "https://www.metmuseum.org/art/collection/search/38945",
+    "credit": "Purchase, Bequests of Mary Clarke Thompson, Fanny Shapiro, Susan Dwight Bliss, Isaac D. Fletcher, William Gedney Beatty, John L. Cadwalader and Kate Read Blacque, Gifts of Mrs. Samuel T. Peters, Ida H. Ogilvie, Samuel T. Peters and H. R. Bishop, F. C. Bishop and O. M. Bishop, Rogers, Seymour and Fletcher Funds, and other gifts, funds and bequests from various donors, by exchange, 1982",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Copper alloy",
+    "image": "assets/artworks/met-38945.webp",
+    "width": 500,
+    "height": 625,
+    "artistZh": "印度泰米尔地区工匠"
+  },
+  "met-551786": {
+    "oid": 551786,
+    "entries": [
+      "egypt"
+    ],
+    "title": "Book of the Dead of the Priest of Horus, Imhotep (Imuthes)",
+    "zh": "祭司伊姆霍特普的亡灵书",
+    "artist": "Unknown artist",
+    "date": "ca. 332–200 BCE",
+    "url": "https://www.metmuseum.org/art/collection/search/551786",
+    "credit": "Gift of  Edward S. Harkness, 1935",
+    "publicDomain": true,
+    "museum": "The Met",
+    "medium": "Papyrus, ink",
+    "image": "assets/artworks/met-551786.webp",
+    "width": 598,
+    "height": 145,
+    "artistZh": "作者不详"
+  },
+  "met-239367": {
+    "oid": 239367,
+    "entries": [
+      "nouveau"
+    ],
+    "title": "Vase with peacock feathers",
+    "zh": "孔雀羽毛纹花瓶",
+    "artist": "Auguste Delaherche",
+    "date": "ca. 1889",
+    "url": "https://www.metmuseum.org/art/collection/search/239367",
+    "credit": "Robert A. Ellison Jr. Collection, Purchase, Acquisitions Fund; Louis V. Bell, Harris Brisbane Dick, Fletcher, and Rogers Funds and Joseph Pulitzer Bequest; and 2011 Benefit Fund, 2013",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Stoneware",
+    "image": "assets/artworks/met-239367.webp",
+    "width": 600,
+    "height": 338,
+    "artistZh": "奥古斯特·德拉埃尔什"
+  },
+  "met-8160": {
+    "oid": 8160,
+    "entries": [
+      "crafts"
+    ],
+    "title": "Tall Clock",
+    "zh": "高座钟",
+    "artist": "Charles Rohlfs",
+    "date": "ca. 1900",
+    "url": "https://www.metmuseum.org/art/collection/search/8160",
+    "credit": "Gift of Roland Rohlfs, 1985",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Oak, copper",
+    "image": "assets/artworks/met-8160.webp",
+    "width": 401,
+    "height": 600,
+    "artistZh": "查尔斯·罗尔夫斯"
+  },
+  "met-1974": {
+    "oid": 1974,
+    "entries": [
+      "crafts"
+    ],
+    "title": "Chandelier",
+    "zh": "枝形吊灯",
+    "artist": "Louis C. Tiffany",
+    "date": "ca. 1899",
+    "url": "https://www.metmuseum.org/art/collection/search/1974",
+    "credit": "Gift of Mr. and Mrs. Douglas Williams, in memory of Mr. and Mrs. Robert W. de Forest, 1969",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Blown glass",
+    "image": "assets/artworks/met-1974.webp",
+    "width": 470,
+    "height": 600,
+    "artistZh": "路易斯·康福特·蒂芙尼"
+  },
+  "met-482715": {
+    "oid": 482715,
+    "entries": [
+      "bauhaus"
+    ],
+    "title": "Armchair",
+    "zh": "扶手椅",
+    "artist": "Marcel Breuer",
+    "date": "1922",
+    "url": "https://www.metmuseum.org/art/collection/search/482715",
+    "credit": "Purchase, Theodore R. Gamble Jr. Gift, in honor of his mother, Mrs. Theodore Robert Gamble, and Lita Annenberg Hazen Charitable Trust Fund, 1983",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Oak, wool upholstery",
+    "image": "assets/artworks/met-482715.webp",
+    "width": 480,
+    "height": 600,
+    "artistZh": "马塞尔·布劳耶"
+  },
+  "met-492179": {
+    "oid": 492179,
+    "entries": [
+      "bauhaus"
+    ],
+    "title": "\"Staatliches Bauhaus in Weimar 1919-1923\" Book",
+    "zh": "魏玛国立包豪斯1919—1923年书籍",
+    "artist": "Walter Gropius",
+    "date": "1923",
+    "url": "https://www.metmuseum.org/art/collection/search/492179",
+    "credit": "Cynthia Hazen Polsky and Leon B. Polsky Fund, 2001",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Book of printed halftone and lithographic printing on paper",
+    "image": "assets/artworks/met-492179.webp",
+    "width": 150,
+    "height": 145,
+    "artistZh": "瓦尔特·格罗皮乌斯"
+  },
+  "met-481128": {
+    "oid": 481128,
+    "entries": [
+      "deco"
+    ],
+    "title": "\"David-Weill\" Desk",
+    "zh": "大卫—韦尔书桌",
+    "artist": "Emile-Jacques Ruhlmann",
+    "date": "ca. 1918–19",
+    "url": "https://www.metmuseum.org/art/collection/search/481128",
+    "credit": "Purchase, Edgar Kaufmann Jr. Gift, 1973",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Amboyna, ivory, sharkskin, silk, metal, oak, lumber-core plywood, poplar, walnut, birch, macassar ebony",
+    "image": "assets/artworks/met-481128.webp",
+    "width": 600,
+    "height": 501,
+    "artistZh": "埃米尔-雅克·吕尔曼"
+  },
+  "met-487265": {
+    "oid": 487265,
+    "entries": [
+      "deco"
+    ],
+    "title": "\"La Moisson\" (The Harvester)",
+    "zh": "收获者",
+    "artist": "Raoul Dufy",
+    "date": "ca. 1912",
+    "url": "https://www.metmuseum.org/art/collection/search/487265",
+    "credit": "Purchase, Edward C. Moore Jr. Gift, 1923",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Printed linen",
+    "image": "assets/artworks/met-487265.webp",
+    "width": 102,
+    "height": 150,
+    "artistZh": "拉乌尔·杜飞"
+  },
+  "met-492388": {
+    "oid": 492388,
+    "entries": [
+      "deco"
+    ],
+    "title": "Dress ornament",
+    "zh": "服饰装饰件",
+    "artist": "Georges Fouquet",
+    "date": "ca. 1923",
+    "url": "https://www.metmuseum.org/art/collection/search/492388",
+    "credit": "Gift of Eva and Michael Chow, 2001",
+    "publicDomain": false,
+    "museum": "The Met",
+    "medium": "Jade, onyx, diamonds, enamel, platinum",
+    "image": "assets/artworks/met-492388.webp",
+    "width": 450,
+    "height": 600,
+    "artistZh": "乔治·富凯"
   }
 }

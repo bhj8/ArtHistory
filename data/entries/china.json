@@ -13,7 +13,7 @@
     "work": "人面鱼纹彩陶盆与良渚玉琮：比较图像和器物用途。",
     "distinguish": "各考古文化有各自的时间与地域，不能视为单线演进。",
     "tags": "陶器 玉 礼仪",
-    "source": "",
+    "source": "neolithic-period-in-china",
     "kind": "地区传统／历史专题"
   },
   {
@@ -30,7 +30,7 @@
     "work": "何尊：同时看器形、纹样与铭文。",
     "distinguish": "纹样意义并非都已确定，不能把所有兽面解释成同一象征。",
     "tags": "青铜 礼仪 纹样 文字",
-    "source": "",
+    "source": "shang-and-zhou-dynasties-the-bronze-age-of-china",
     "kind": "地区传统／历史专题"
   },
   {
@@ -47,7 +47,7 @@
     "work": "马王堆T形帛画：分层观察天上、人间与地下。",
     "distinguish": "这些对象跨材料、地域与用途，不是统一的“秦汉画风”。",
     "tags": "墓葬 雕塑 帛画",
-    "source": "",
+    "source": "han-dynasty-206-b-c-220-a-d",
     "kind": "地区传统／历史专题"
   },
   {
@@ -65,7 +65,12 @@
     "distinguish": "字体类别不是朝代依次淘汰，今天仍同时使用。",
     "tags": "线条 文字 笔墨",
     "source": "chinese-calligraphy",
-    "kind": "媒介传统"
+    "kind": "媒介传统",
+    "sources": [
+      "chinese-calligraphy"
+    ],
+    "context": "书法兼有文字交流、身体训练、人格评价和收藏展示的功能。篆、隶、楷、行、草并非简单的逐步替代序列，许多书体在同一时期并行使用。",
+    "reading": "先看一行字的行气，再看单字的疏密、转折和墨色。注意临摹、拓本与原迹的媒介差异。"
   },
   {
     "id": "sixdyn",
@@ -81,7 +86,7 @@
     "work": "《洛神赋图》传本：看人物怎样串起连续叙事。",
     "distinguish": "传世绘画多有摹本与归属问题，应区分原作与后世传本。",
     "tags": "人物 佛教 线描",
-    "source": "",
+    "source": "chinese-buddhist-sculpture",
     "kind": "地区传统／历史专题"
   },
   {
@@ -133,7 +138,12 @@
     "distinguish": "山水并非只有一个观看位置，不能简单套用西方透视标准。",
     "tags": "山水 笔墨 自然",
     "source": "landscape-painting-in-chinese-art",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "sources": [
+      "landscape-painting-in-chinese-art"
+    ],
+    "context": "五代至北宋的山水画与地区环境、宫廷赞助和文人观看有关。宏大山水通过道路、水流、建筑和人物安排可想象的行旅，而不只是描绘一个固定视点的实景。",
+    "reading": "沿山路与水流移动目光，比较前景、中景和远景如何连接；寻找小人物在巨大山体中的位置。"
   },
   {
     "id": "southernsong",
@@ -150,7 +160,9 @@
     "distinguish": "“马一角、夏半边”是提示，不是所有南宋画的构图公式。",
     "tags": "留白 山水 花鸟",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "context": "南宋宫廷和城市文化中的山水经常通过局部景物、斜向构图和大片留白产生诗意。现存作品包括团扇、册页与立轴，不同载体决定观看距离和叙事密度。",
+    "reading": "观察看似空白的水面、雾气和天空如何发挥作用，再看人物的视线是否指向未画出的部分。"
   },
   {
     "id": "literati",
@@ -167,7 +179,12 @@
     "distinguish": "文人画不是“画得简单”；它涉及身份、价值和笔墨传统。",
     "tags": "笔墨 山水 诗书画",
     "source": "landscape-painting-in-chinese-art",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "sources": [
+      "yuan-dynasty-1271-1368"
+    ],
+    "context": "文人画强调诗、书、画及个人修养之间的联系，但文人身份、职业出售和宫廷关系并非简单二分。元代画家借古代风格、书法笔意和题跋构造多样的自我表达。",
+    "reading": "将题跋、印章和后人收藏痕迹也纳入阅读；区分作品最初的画面与后来累积的观看历史。"
   },
   {
     "id": "ming",
@@ -183,7 +200,7 @@
     "work": "文徵明《拙政园图》：看园林与文人生活的联系。",
     "distinguish": "“吴门四家”媒介和身份差异明显，不宜当作一种画法。",
     "tags": "山水 园林 文人",
-    "source": "",
+    "source": "ming-dynasty-1368-1644",
     "kind": "地区传统／历史专题"
   },
   {
@@ -304,5 +321,270 @@
     "tags": "观念 城市 身份",
     "source": "",
     "kind": "地区传统／历史专题"
+  },
+  {
+    "id": "gongbi",
+    "lane": "china",
+    "era": 1,
+    "zh": "工笔与设色",
+    "en": "Gongbi and meticulous painting",
+    "date": "长期传统，唐宋以来尤其重要",
+    "hook": "以细密线描与层层设色组织形象。",
+    "look": "轮廓准确、色层细腻、衣纹花叶处理精密。",
+    "idea": "细致的制作如何同时承担叙事、观察和装饰？",
+    "people": "宫廷人物画、花鸟画、仇英",
+    "work": "比较同一片花瓣的轮廓线、色层和留白。",
+    "distinguish": "工笔是技法和风格范畴，不是一个单独朝代；也不必画得照片般写实。",
+    "kind": "艺术史专题",
+    "tags": "工笔与设色 Gongbi and meticulous painting 宫廷人物画、花鸟画、仇英 轮廓准确、色层细腻、衣纹花叶处理精密。",
+    "source": "chinese-painting"
+  },
+  {
+    "id": "flowersbirds",
+    "lane": "china",
+    "era": 1,
+    "zh": "花鸟画",
+    "en": "Bird-and-flower painting",
+    "date": "唐宋以来",
+    "hook": "花卉、禽鸟和季节变化构成独立的绘画世界。",
+    "look": "枝干穿插、羽毛与花瓣细节、工笔和写意并存。",
+    "idea": "自然物象如何承载品格、祝愿与季节经验？",
+    "people": "黄筌、徐熙、赵佶、林良、八大山人",
+    "work": "先辨认枝干的走向，再看鸟的目光如何引导构图。",
+    "distinguish": "花鸟画不是纯粹科学图鉴，寓意也需结合题款和语境判断。",
+    "kind": "艺术史专题",
+    "tags": "花鸟画 Bird-and-flower painting 黄筌、徐熙、赵佶、林良、八大山人 枝干穿插、羽毛与花瓣细节、工笔和写意并存。",
+    "source": "",
+    "sources": [
+      "chinese-painting"
+    ]
+  },
+  {
+    "id": "bluegreen",
+    "lane": "china",
+    "era": 1,
+    "zh": "青绿山水",
+    "en": "Blue-and-green landscape",
+    "date": "唐宋以来",
+    "hook": "矿物色彩与山水结构的结合。",
+    "look": "石青石绿、精细山石轮廓、金碧装饰与层叠景物。",
+    "idea": "设色如何建立山水的秩序、距离和理想性？",
+    "people": "李思训传统、王希孟、赵伯驹",
+    "work": "观察《千里江山图》中的山峰颜色与道路、水路的连续性。",
+    "distinguish": "青绿山水并非所有颜色鲜艳的山水画；与水墨也不是绝对对立。",
+    "kind": "艺术史专题",
+    "tags": "青绿山水 Blue-and-green landscape 李思训传统、王希孟、赵伯驹 石青石绿、精细山石轮廓、金碧装饰与层叠景物。",
+    "source": "",
+    "sources": [
+      "landscape-painting-in-chinese-art"
+    ]
+  },
+  {
+    "id": "songacademy",
+    "lane": "china",
+    "era": 1,
+    "zh": "宋代画院与院体",
+    "en": "Song court painting",
+    "date": "约10—13世纪",
+    "hook": "宫廷组织、观察训练与精致制作共同形成的绘画生态。",
+    "look": "细致物象、诗意命题、严谨构图与多种画科。",
+    "idea": "皇室品味和画院制度怎样塑造题材与标准？",
+    "people": "宋徽宗、李唐、马远、夏圭",
+    "work": "比较画院花鸟与山水的观察精度及留白使用。",
+    "distinguish": "“院体”不是只指一种工笔外观；宋代画院内部也有变化。",
+    "kind": "艺术史专题",
+    "tags": "宋代画院与院体 Song court painting 宋徽宗、李唐、马远、夏圭 细致物象、诗意命题、严谨构图与多种画科。",
+    "source": "",
+    "sources": [
+      "chinese-painting"
+    ]
+  },
+  {
+    "id": "garden",
+    "lane": "china",
+    "era": 2,
+    "zh": "中国园林与赏石",
+    "en": "Chinese gardens and scholars' rocks",
+    "date": "宋至明清尤盛",
+    "hook": "将山水经验压缩进可游、可居的空间。",
+    "look": "曲折路径、借景、漏窗、池水与奇石。",
+    "idea": "有限空间怎样组织连续变化的观看？",
+    "people": "苏州园林、文人园居、供石传统",
+    "work": "看一扇窗如何把远处建筑或树木变成画面。",
+    "distinguish": "园林不是自然景观的简单缩小复制，而有明确的人工选择和安排。",
+    "kind": "艺术史专题",
+    "tags": "中国园林与赏石 Chinese gardens and scholars' rocks 苏州园林、文人园居、供石传统 曲折路径、借景、漏窗、池水与奇石。",
+    "source": "chinese-gardens-and-collectors-rocks"
+  },
+  {
+    "id": "jade",
+    "lane": "china",
+    "era": 0,
+    "zh": "玉器与礼制",
+    "en": "Chinese jade",
+    "date": "新石器时代以来",
+    "hook": "坚韧石材中的权力、礼仪和身体装饰。",
+    "look": "抛光表面、几何器形、钻孔与动物纹。",
+    "idea": "材料的稀有性、加工时间与礼仪用途如何共同构成价值？",
+    "people": "红山、良渚、商周与汉代玉器",
+    "work": "比较玉璧与玉琮的圆方结构及表面纹饰。",
+    "distinguish": "古代“玉”的范围与现代矿物学分类并不完全相同。",
+    "kind": "艺术史专题",
+    "tags": "玉器与礼制 Chinese jade 红山、良渚、商周与汉代玉器 抛光表面、几何器形、钻孔与动物纹。",
+    "source": "",
+    "sources": [
+      "neolithic-period-in-china"
+    ]
+  },
+  {
+    "id": "lacquer",
+    "lane": "china",
+    "era": 2,
+    "zh": "中国漆器",
+    "en": "Chinese lacquerware",
+    "date": "战国至明清，持续发展",
+    "hook": "用涂层、雕刻和镶嵌塑造器物表面。",
+    "look": "深色或朱红光泽、层层髹涂、雕漆纹样和螺钿。",
+    "idea": "一件器物如何通过时间积累出可雕刻的表层？",
+    "people": "战国汉代漆器、元明清雕漆工坊",
+    "work": "看雕漆纹样的高低层次和边缘，区分绘饰与雕刻。",
+    "distinguish": "漆器不只是刷红色油漆，材质与工艺决定了不同视觉效果。",
+    "kind": "艺术史专题",
+    "tags": "中国漆器 Chinese lacquerware 战国汉代漆器、元明清雕漆工坊 深色或朱红光泽、层层髹涂、雕漆纹样和螺钿。",
+    "source": "",
+    "sources": [
+      "ming-dynasty-1368-1644"
+    ]
+  },
+  {
+    "id": "mingfurniture",
+    "lane": "china",
+    "era": 2,
+    "zh": "明式家具",
+    "en": "Ming-style furniture",
+    "date": "约16—17世纪及后续传承",
+    "hook": "比例、结构和木材纹理成为家具的主要表达。",
+    "look": "简洁线条、榫卯、适度曲面、硬木纹理。",
+    "idea": "结构本身如何产生审美，而不依赖密集装饰？",
+    "people": "黄花梨家具、圈椅、官帽椅与画案",
+    "work": "追踪椅背曲线与扶手、腿足的受力和比例关系。",
+    "distinguish": "明式是风格称谓，不能只凭风格断定生产于明代。",
+    "kind": "艺术史专题",
+    "tags": "明式家具 Ming-style furniture 黄花梨家具、圈椅、官帽椅与画案 简洁线条、榫卯、适度曲面、硬木纹理。",
+    "source": ""
+  },
+  {
+    "id": "bluewhite",
+    "lane": "china",
+    "era": 2,
+    "zh": "青花瓷与海上贸易",
+    "en": "Blue-and-white porcelain",
+    "date": "元代成熟，明清广泛传播",
+    "hook": "钴蓝图案在白瓷上连起工坊、宫廷与全球贸易。",
+    "look": "透明釉下蓝色纹饰、缠枝花、山水人物和外销器形。",
+    "idea": "异地原料与海外市场怎样改变本地器物？",
+    "people": "景德镇、元明青花、外销瓷",
+    "work": "比较器形与纹样：两者可能分别回应不同地区的使用习惯。",
+    "distinguish": "青花是釉下彩；不要与釉上蓝彩或任何蓝色陶器混为一谈。",
+    "kind": "艺术史专题",
+    "tags": "青花瓷与海上贸易 Blue-and-white porcelain 景德镇、元明青花、外销瓷 透明釉下蓝色纹饰、缠枝花、山水人物和外销器形。",
+    "source": "",
+    "sources": [
+      "ming-dynasty-1368-1644"
+    ]
+  },
+  {
+    "id": "xieyi",
+    "lane": "china",
+    "era": 2,
+    "zh": "写意花鸟与水墨",
+    "en": "Xieyi painting",
+    "date": "明清以来尤为突出",
+    "hook": "用笔墨的概括与运动表达物象。",
+    "look": "简化造型、墨色干湿、迅速笔势与大面积留白。",
+    "idea": "笔触如何既指向对象，又保留书写者的动作？",
+    "people": "徐渭、八大山人、石涛、吴昌硕、齐白石",
+    "work": "看一笔如何同时形成枝干形状和行笔的速度变化。",
+    "distinguish": "写意不等于随意；对结构、书法和墨性仍有训练要求。",
+    "kind": "艺术史专题",
+    "tags": "写意花鸟与水墨 Xieyi painting 徐渭、八大山人、石涛、吴昌硕、齐白石 简化造型、墨色干湿、迅速笔势与大面积留白。",
+    "source": "",
+    "sources": [
+      "chinese-painting"
+    ]
+  },
+  {
+    "id": "yangzhou",
+    "lane": "china",
+    "era": 3,
+    "zh": "扬州八怪",
+    "en": "Eight Eccentrics of Yangzhou",
+    "date": "约18世纪",
+    "hook": "商业城市中的个性笔墨与职业绘画。",
+    "look": "夸张书写、奇崛构图、花卉竹石与鲜明题款。",
+    "idea": "市场需求与文人身份如何同时进入画面？",
+    "people": "郑燮、金农、黄慎、李鱓、罗聘",
+    "work": "把题款当作构图的一部分，观察字与竹石的呼应。",
+    "distinguish": "“八怪”名单并不固定，也不是风格完全一致的八人组织。",
+    "kind": "艺术史专题",
+    "tags": "扬州八怪 Eight Eccentrics of Yangzhou 郑燮、金农、黄慎、李鱓、罗聘 夸张书写、奇崛构图、花卉竹石与鲜明题款。",
+    "source": "",
+    "sources": [
+      "chinese-painting"
+    ]
+  },
+  {
+    "id": "lingnan",
+    "lane": "china",
+    "era": 4,
+    "zh": "岭南画派",
+    "en": "Lingnan school",
+    "date": "约20世纪前半叶",
+    "hook": "在中国画中吸收写生、摄影和日本近代绘画经验。",
+    "look": "渲染光影、写生动物、时事题材与较强色彩。",
+    "idea": "如何以传统媒材回应现代经验？",
+    "people": "高剑父、高奇峰、陈树人、关山月",
+    "work": "比较动物的体积感与背景的水墨渲染。",
+    "distinguish": "岭南画派不等于所有在广东工作的画家。",
+    "kind": "艺术史专题",
+    "tags": "岭南画派 Lingnan school 高剑父、高奇峰、陈树人、关山月 渲染光影、写生动物、时事题材与较强色彩。",
+    "source": ""
+  },
+  {
+    "id": "seal",
+    "lane": "china",
+    "era": 2,
+    "zh": "篆刻与金石学",
+    "en": "Seal carving and epigraphy",
+    "date": "明清尤盛，源流更早",
+    "hook": "文字、刀法与古物研究在方寸之间相遇。",
+    "look": "朱白文对比、残破感、篆书变形与边款。",
+    "idea": "刻痕和历史感怎样成为个人表达？",
+    "people": "文彭、何震、丁敬、邓石如、吴昌硕",
+    "work": "对比印面原石与印蜕，观察阴阳和左右反转。",
+    "distinguish": "印章具有实际功能；篆刻作为文人艺术不能覆盖所有印章史。",
+    "kind": "艺术史专题",
+    "tags": "篆刻与金石学 Seal carving and epigraphy 文彭、何震、丁敬、邓石如、吴昌硕 朱白文对比、残破感、篆书变形与边款。",
+    "source": "",
+    "sources": [
+      "chinese-calligraphy"
+    ]
+  },
+  {
+    "id": "newyearprints",
+    "lane": "china",
+    "era": 3,
+    "zh": "年画与民间版画",
+    "en": "Chinese New Year prints",
+    "date": "明清至近现代",
+    "hook": "可复制图像进入节令、信仰与家庭空间。",
+    "look": "鲜明套色、门神、吉祥谐音、戏曲和生活场景。",
+    "idea": "图像怎样把祝愿、故事与日常消费联系起来？",
+    "people": "杨柳青、桃花坞、杨家埠、武强",
+    "work": "比较线版、色版与手工补绘各自留下的痕迹。",
+    "distinguish": "年画是用途和生产传统，不等于所有民间绘画。",
+    "kind": "艺术史专题",
+    "tags": "年画与民间版画 Chinese New Year prints 杨柳青、桃花坞、杨家埠、武强 鲜明套色、门神、吉祥谐音、戏曲和生活场景。",
+    "source": ""
   }
 ]

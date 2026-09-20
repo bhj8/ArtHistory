@@ -21,10 +21,9 @@
     "org": "The Met"
   },
   "fauvism": {
-    "slug": "fauvism",
     "url": "https://www.metmuseum.org/essays/fauvism",
-    "title": "Fauvism - The Metropolitan Museum of Art",
-    "zh": "野兽派",
+    "title": "Fauvism",
+    "zh": "野兽派 · 博物馆专题",
     "org": "The Met"
   },
   "symbolism": {
@@ -49,52 +48,45 @@
     "org": "The Met"
   },
   "the-bauhaus-1919-1933": {
-    "slug": "the-bauhaus-1919-1933",
     "url": "https://www.metmuseum.org/essays/the-bauhaus-1919-1933",
-    "title": "The Bauhaus, 1919–1933 - The Metropolitan Museum of Art",
-    "zh": "包豪斯：1919—1933",
+    "title": "The Bauhaus, 1919–1933",
+    "zh": "包豪斯 · 博物馆专题",
     "org": "The Met"
   },
   "art-nouveau": {
-    "slug": "art-nouveau",
     "url": "https://www.metmuseum.org/essays/art-nouveau",
-    "title": "Art Nouveau - The Metropolitan Museum of Art",
-    "zh": "新艺术运动",
+    "title": "Art Nouveau",
+    "zh": "新艺术运动 · 博物馆专题",
     "org": "The Met"
   },
   "the-arts-and-crafts-movement-in-america": {
-    "slug": "the-arts-and-crafts-movement-in-america",
     "url": "https://www.metmuseum.org/essays/the-arts-and-crafts-movement-in-america",
-    "title": "The Arts and Crafts Movement in America - The Metropolitan Museum of Art",
-    "zh": "美国的工艺美术运动",
+    "title": "The Arts and Crafts Movement in America",
+    "zh": "工艺美术运动 · 博物馆专题",
     "org": "The Met"
   },
   "landscape-painting-in-chinese-art": {
-    "slug": "landscape-painting-in-chinese-art",
     "url": "https://www.metmuseum.org/essays/landscape-painting-in-chinese-art",
-    "title": "Landscape Painting in Chinese Art - The Metropolitan Museum of Art",
-    "zh": "中国艺术中的山水画",
+    "title": "Landscape Painting in Chinese Art",
+    "zh": "五代北宋山水 · 博物馆专题",
     "org": "The Met"
   },
   "chinese-calligraphy": {
-    "slug": "chinese-calligraphy",
     "url": "https://www.metmuseum.org/essays/chinese-calligraphy",
-    "title": "Chinese Calligraphy - The Metropolitan Museum of Art",
-    "zh": "中国书法",
+    "title": "Chinese Calligraphy",
+    "zh": "书法传统 · 博物馆专题",
     "org": "The Met"
   },
   "japonisme": {
-    "slug": "japonisme",
     "url": "https://www.metmuseum.org/essays/japonisme",
-    "title": "Japonisme - The Metropolitan Museum of Art",
-    "zh": "日本主义：日本艺术的欧洲影响",
+    "title": "Japonisme",
+    "zh": "日本主义 · 博物馆专题",
     "org": "The Met"
   },
   "geometric-patterns-in-islamic-art": {
-    "slug": "geometric-patterns-in-islamic-art",
     "url": "https://www.metmuseum.org/essays/geometric-patterns-in-islamic-art",
-    "title": "Geometric Patterns in Islamic Art - The Metropolitan Museum of Art",
-    "zh": "伊斯兰艺术中的几何纹样",
+    "title": "Geometric Patterns in Islamic Art",
+    "zh": "伊斯兰艺术：文字与几何 · 博物馆专题",
     "org": "The Met"
   },
   "south-asian-art-and-culture": {
@@ -112,10 +104,9 @@
     "org": "The Met"
   },
   "gothic-art": {
-    "slug": "gothic-art",
     "url": "https://www.metmuseum.org/essays/gothic-art",
-    "title": "Gothic Art - The Metropolitan Museum of Art",
-    "zh": "哥特式艺术",
+    "title": "Gothic Art",
+    "zh": "哥特式艺术 · 博物馆专题",
     "org": "The Met"
   },
   "baroque-rome": {
@@ -140,31 +131,27 @@
     "org": "The Met"
   },
   "art-of-the-first-cities-in-the-third-millennium-b-c": {
-    "slug": "art-of-the-first-cities-in-the-third-millennium-b-c",
     "url": "https://www.metmuseum.org/essays/art-of-the-first-cities-in-the-third-millennium-b-c",
-    "title": "Art of the First Cities in the Third Millennium B.C. - The Metropolitan Museum of Art",
-    "zh": "公元前第三千纪的早期城市艺术",
+    "title": "Art of the First Cities in the Third Millennium B.C.",
+    "zh": "两河流域艺术 · 博物馆专题",
     "org": "The Met"
   },
   "photography-and-the-civil-war-1861-1865": {
-    "slug": "photography-and-the-civil-war-1861-1865",
     "url": "https://www.metmuseum.org/essays/photography-and-the-civil-war-1861-1865",
-    "title": "Photography and the Civil War, 1861–65 - The Metropolitan Museum of Art",
-    "zh": "摄影与美国内战",
+    "title": "Photography and the Civil War, 1861–65",
+    "zh": "纪实摄影 · 博物馆专题",
     "org": "The Met"
   },
   "the-art-of-the-mughals-after-1600": {
-    "slug": "the-art-of-the-mughals-after-1600",
     "url": "https://www.metmuseum.org/essays/the-art-of-the-mughals-after-1600",
-    "title": "The Art of the Mughals after 1600 - The Metropolitan Museum of Art",
-    "zh": "1600年后的莫卧儿艺术",
+    "title": "The Art of the Mughals after 1600",
+    "zh": "莫卧儿与南亚细密画 · 博物馆专题",
     "org": "The Met"
   },
   "the-art-of-the-abbasid-period-750-1258": {
-    "slug": "the-art-of-the-abbasid-period-750-1258",
     "url": "https://www.metmuseum.org/essays/the-art-of-the-abbasid-period-750-1258",
-    "title": "The Art of the Abbasid Period (750–1258) - The Metropolitan Museum of Art",
-    "zh": "阿拔斯时期艺术",
+    "title": "The Art of the Abbasid Period (750–1258)",
+    "zh": "阿拔斯时期艺术 · 博物馆专题",
     "org": "The Met"
   },
   "va-crafts": {
@@ -196,5 +183,263 @@
     "title": "Conceptual art",
     "url": "https://www.moma.org/collection/terms/conceptual-art",
     "org": "MoMA"
+  },
+  "greek-art-in-the-archaic-period": {
+    "url": "https://www.metmuseum.org/essays/greek-art-in-the-archaic-period",
+    "title": "Greek Art in the Archaic Period",
+    "zh": "古希腊：古风时期 · 博物馆专题",
+    "org": "The Met"
+  },
+  "etruscan-art": {
+    "url": "https://www.metmuseum.org/essays/etruscan-art",
+    "title": "Etruscan Art",
+    "zh": "伊特鲁里亚艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "mycenaean-civilization": {
+    "url": "https://www.metmuseum.org/essays/mycenaean-civilization",
+    "title": "Mycenaean Civilization",
+    "zh": "迈锡尼文明 · 博物馆专题",
+    "org": "The Met"
+  },
+  "icons-and-iconoclasm-in-byzantium": {
+    "url": "https://www.metmuseum.org/essays/icons-and-iconoclasm-in-byzantium",
+    "title": "Icons and Iconoclasm in Byzantium",
+    "zh": "圣像与圣像破坏 · 博物馆专题",
+    "org": "The Met"
+  },
+  "carolingian-art": {
+    "url": "https://www.metmuseum.org/essays/carolingian-art",
+    "title": "Carolingian Art",
+    "zh": "加洛林艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "ottonian-art": {
+    "url": "https://www.metmuseum.org/essays/ottonian-art",
+    "title": "Ottonian Art",
+    "zh": "奥托艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "romanesque-art": {
+    "url": "https://www.metmuseum.org/essays/romanesque-art",
+    "title": "Romanesque Art",
+    "zh": "罗曼式艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "italian-painting-of-the-later-middle-ages": {
+    "url": "https://www.metmuseum.org/essays/italian-painting-of-the-later-middle-ages",
+    "title": "Italian Painting of the Later Middle Ages",
+    "zh": "文艺复兴先声 · 博物馆专题",
+    "org": "The Met"
+  },
+  "mannerism-bronzino-1503-1572-and-his-contemporaries": {
+    "url": "https://www.metmuseum.org/essays/mannerism-bronzino-1503-1572-and-his-contemporaries",
+    "title": "Mannerism: Bronzino (1503–1572) and his Contemporaries",
+    "zh": "样式主义 · 博物馆专题",
+    "org": "The Met"
+  },
+  "still-life-painting-in-northern-europe-1600-1800": {
+    "url": "https://www.metmuseum.org/essays/still-life-painting-in-northern-europe-1600-1800",
+    "title": "Still-Life Painting in Northern Europe, 1600–1800",
+    "zh": "静物画与虚空寓意 · 博物馆专题",
+    "org": "The Met"
+  },
+  "landscape-painting-in-the-netherlands": {
+    "url": "https://www.metmuseum.org/essays/landscape-painting-in-the-netherlands",
+    "title": "Landscape Painting in the Netherlands",
+    "zh": "荷兰风景画 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-barbizon-school-french-painters-of-nature": {
+    "url": "https://www.metmuseum.org/essays/the-barbizon-school-french-painters-of-nature",
+    "title": "The Barbizon School: French Painters of Nature",
+    "zh": "巴比松画派 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-hudson-river-school": {
+    "url": "https://www.metmuseum.org/essays/the-hudson-river-school",
+    "title": "The Hudson River School",
+    "zh": "哈德逊河画派 · 博物馆专题",
+    "org": "The Met"
+  },
+  "american-impressionism": {
+    "url": "https://www.metmuseum.org/essays/american-impressionism",
+    "title": "American Impressionism",
+    "zh": "美国印象主义 · 博物馆专题",
+    "org": "The Met"
+  },
+  "chinese-buddhist-sculpture": {
+    "url": "https://www.metmuseum.org/essays/chinese-buddhist-sculpture",
+    "title": "Chinese Buddhist Sculpture",
+    "zh": "魏晋南北朝人物与佛教艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "shang-and-zhou-dynasties-the-bronze-age-of-china": {
+    "url": "https://www.metmuseum.org/essays/shang-and-zhou-dynasties-the-bronze-age-of-china",
+    "title": "Shang and Zhou Dynasties: The Bronze Age of China",
+    "zh": "商周青铜与礼制 · 博物馆专题",
+    "org": "The Met"
+  },
+  "neolithic-period-in-china": {
+    "url": "https://www.metmuseum.org/essays/neolithic-period-in-china",
+    "title": "Neolithic Period in China",
+    "zh": "中国新石器艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "han-dynasty-206-b-c-220-a-d": {
+    "url": "https://www.metmuseum.org/essays/han-dynasty-206-b-c-220-a-d",
+    "title": "Han Dynasty (206 B.C.–220 A.D.)",
+    "zh": "秦汉视觉世界 · 博物馆专题",
+    "org": "The Met"
+  },
+  "yuan-dynasty-1271-1368": {
+    "url": "https://www.metmuseum.org/essays/yuan-dynasty-1271-1368",
+    "title": "Yuan Dynasty (1271–1368)",
+    "zh": "文人画与元代山水 · 博物馆专题",
+    "org": "The Met"
+  },
+  "ming-dynasty-1368-1644": {
+    "url": "https://www.metmuseum.org/essays/ming-dynasty-1368-1644",
+    "title": "Ming Dynasty (1368–1644)",
+    "zh": "明代：浙派与吴门 · 博物馆专题",
+    "org": "The Met"
+  },
+  "chinese-gardens-and-collectors-rocks": {
+    "url": "https://www.metmuseum.org/essays/chinese-gardens-and-collectors-rocks",
+    "title": "Chinese Gardens and Collectors’ Rocks",
+    "zh": "中国园林与赏石 · 博物馆专题",
+    "org": "The Met"
+  },
+  "chinese-painting": {
+    "url": "https://www.metmuseum.org/essays/chinese-painting",
+    "title": "Chinese Painting",
+    "zh": "工笔与设色 · 博物馆专题",
+    "org": "The Met"
+  },
+  "zen-buddhism": {
+    "url": "https://www.metmuseum.org/essays/zen-buddhism",
+    "title": "Zen Buddhism",
+    "zh": "日本水墨与禅宗艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "rinpa-painting-style": {
+    "url": "https://www.metmuseum.org/essays/rinpa-painting-style",
+    "title": "Rinpa Painting Style",
+    "zh": "琳派与装饰绘画 · 博物馆专题",
+    "org": "The Met"
+  },
+  "heian-period-794-1185": {
+    "url": "https://www.metmuseum.org/essays/heian-period-794-1185",
+    "title": "Heian Period (794–1185)",
+    "zh": "日本古典绘画与绘卷 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-japanese-tea-ceremony": {
+    "url": "https://www.metmuseum.org/essays/the-japanese-tea-ceremony",
+    "title": "The Japanese Tea Ceremony",
+    "zh": "茶道与茶器 · 博物馆专题",
+    "org": "The Met"
+  },
+  "joseon-buncheong-ware-between-celadon-and-porcelain": {
+    "url": "https://www.metmuseum.org/essays/joseon-buncheong-ware-between-celadon-and-porcelain",
+    "title": "Joseon Buncheong Ware: Between Celadon and Porcelain",
+    "zh": "朝鲜粉青沙器 · 博物馆专题",
+    "org": "The Met"
+  },
+  "buddhism-and-buddhist-art": {
+    "url": "https://www.metmuseum.org/essays/buddhism-and-buddhist-art",
+    "title": "Buddhism and Buddhist Art",
+    "zh": "南亚早期与佛教艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "hinduism-and-hindu-art": {
+    "url": "https://www.metmuseum.org/essays/hinduism-and-hindu-art",
+    "title": "Hinduism and Hindu Art",
+    "zh": "印度教寺庙与雕塑 · 博物馆专题",
+    "org": "The Met"
+  },
+  "gandhara": {
+    "url": "https://www.metmuseum.org/essays/gandhara",
+    "title": "Gandhara",
+    "zh": "犍陀罗艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-art-of-the-mughals-before-1600": {
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-mughals-before-1600",
+    "title": "The Art of the Mughals before 1600",
+    "zh": "早期莫卧儿绘画 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-art-of-the-fatimid-period-909-1171": {
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-fatimid-period-909-1171",
+    "title": "The Art of the Fatimid Period (909–1171)",
+    "zh": "法蒂玛时期艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-art-of-the-seljuqs-of-iran-ca-1040-1196": {
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-seljuqs-of-iran-ca-1040-1196",
+    "title": "The Art of the Seljuqs of Iran (ca. 1040–1157)",
+    "zh": "塞尔柱时期艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-art-of-the-ottomans-before-1600": {
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600",
+    "title": "The Art of the Ottomans before 1600",
+    "zh": "奥斯曼宫廷艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "the-art-of-the-safavids-before-1600": {
+    "url": "https://www.metmuseum.org/essays/the-art-of-the-safavids-before-1600",
+    "title": "The Art of the Safavids before 1600",
+    "zh": "萨法维艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "calligraphy-in-islamic-art": {
+    "url": "https://www.metmuseum.org/essays/calligraphy-in-islamic-art",
+    "title": "Calligraphy in Islamic Art",
+    "zh": "伊斯兰书法 · 博物馆专题",
+    "org": "The Met"
+  },
+  "moche-decorated-ceramics": {
+    "url": "https://www.metmuseum.org/essays/moche-decorated-ceramics",
+    "title": "Moche Decorated Ceramics",
+    "zh": "莫切艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "french-art-deco": {
+    "url": "https://www.metmuseum.org/essays/french-art-deco",
+    "title": "French Art Deco",
+    "zh": "装饰艺术 · 博物馆专题",
+    "org": "The Met"
+  },
+  "nineteenth-century-silhouette-and-support": {
+    "url": "https://www.metmuseum.org/essays/nineteenth-century-silhouette-and-support",
+    "title": "Nineteenth-Century Silhouette and Support",
+    "zh": "服装轮廓与身体 · 博物馆专题",
+    "org": "The Met"
+  },
+  "women-artists-in-nineteenth-century-france": {
+    "url": "https://www.metmuseum.org/essays/women-artists-in-nineteenth-century-france",
+    "title": "Women Artists in Nineteenth-Century France",
+    "zh": "19世纪女性艺术家 · 博物馆专题",
+    "org": "The Met"
+  },
+  "pictorialism-in-america": {
+    "url": "https://www.metmuseum.org/essays/pictorialism-in-america",
+    "title": "Pictorialism in America",
+    "zh": "画意摄影与直接摄影 · 博物馆专题",
+    "org": "The Met"
+  },
+  "alfred-stieglitz-1864-1946-and-american-photography": {
+    "url": "https://www.metmuseum.org/essays/alfred-stieglitz-1864-1946-and-american-photography",
+    "title": "Alfred Stieglitz (1864–1946) and American Photography",
+    "zh": "摄影分离派与现代摄影 · 博物馆专题",
+    "org": "The Met"
+  },
+  "lithography-in-the-nineteenth-century": {
+    "url": "https://www.metmuseum.org/essays/lithography-in-the-nineteenth-century",
+    "title": "Lithography in the Nineteenth Century",
+    "zh": "石版与现代海报 · 博物馆专题",
+    "org": "The Met"
   }
 }

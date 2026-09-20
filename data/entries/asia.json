@@ -14,7 +14,10 @@
     "distinguish": "南亚艺术不等于单一宗教，佛像形成也不是单线过程。",
     "tags": "佛教 雕塑 叙事",
     "source": "south-asian-art-and-culture",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "sources": [
+      "buddhism-and-buddhist-art"
+    ]
   },
   {
     "id": "hindutemple",
@@ -31,7 +34,10 @@
     "distinguish": "南北印度及各王朝传统差异明显，不能用一种塔形概括。",
     "tags": "宗教 建筑 身体",
     "source": "south-asian-art-and-culture",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "sources": [
+      "hinduism-and-hindu-art"
+    ]
   },
   {
     "id": "himalaya",
@@ -98,7 +104,7 @@
     "work": "《源氏物语绘卷》：看被“掀开”的屋顶与人物关系。",
     "distinguish": "大和绘是变化中的概念，不是所有日本画的总称。",
     "tags": "绘卷 叙事 宫廷",
-    "source": "",
+    "source": "heian-period-794-1185",
     "kind": "地区传统／历史专题"
   },
   {
@@ -115,7 +121,7 @@
     "work": "雪舟《破墨山水图》：观察墨的浓淡与不确定边界。",
     "distinguish": "简洁并不自动等于禅；需结合作品的用途与文化语境。",
     "tags": "水墨 留白 自然",
-    "source": "",
+    "source": "zen-buddhism",
     "kind": "地区传统／历史专题"
   },
   {
@@ -132,7 +138,7 @@
     "work": "《燕子花图屏风》：看重复与空白怎样控制节奏。",
     "distinguish": "琳派更多是跨代呼应的传统，不是单一固定师承学校。",
     "tags": "金色 植物 平面",
-    "source": "",
+    "source": "rinpa-painting-style",
     "kind": "地区传统／历史专题"
   },
   {
@@ -150,7 +156,9 @@
     "distinguish": "浮世绘包括绘画与版画，不只北斋的风景。",
     "tags": "版画 平面 日常",
     "source": "japonisme",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "context": "江户城市中的出版商、画师、雕版师与摺师共同制作和销售木版画。演员、美人、名所和风景回应不同消费需求，作品的版本和印刷状态也影响今天看到的颜色。",
+    "reading": "留意轮廓线与色版的套合、渐变和纸面。相同设计的两张版画可能因版本、保存或重印而不同。"
   },
   {
     "id": "mughal",
@@ -167,7 +175,10 @@
     "distinguish": "莫卧儿、拉杰普特与帕哈里细密画不能混作一个流派。",
     "tags": "细密画 宫廷 交流",
     "source": "the-art-of-the-mughals-after-1600",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "sources": [
+      "the-art-of-the-mughals-after-1600"
+    ]
   },
   {
     "id": "nihonga",
@@ -236,5 +247,272 @@
     "tags": "材料 重复 时间",
     "source": "",
     "kind": "地区传统／历史专题"
+  },
+  {
+    "id": "gandhara",
+    "lane": "asia",
+    "era": 0,
+    "zh": "犍陀罗艺术",
+    "en": "Gandharan art",
+    "date": "约1—5世纪",
+    "hook": "南亚与中亚交流中的佛教造像和叙事。",
+    "look": "波状发卷、厚重衣褶、灰色片岩与佛传浮雕。",
+    "idea": "跨区域形式如何被重新用于佛教礼拜？",
+    "people": "今巴基斯坦与阿富汗一带的犍陀罗工坊",
+    "work": "比较佛像衣褶与同时期秣菟罗造像的身体表现。",
+    "distinguish": "希腊罗马因素只是交流的一部分，不能把它简化成“西方发明佛像”。",
+    "kind": "艺术史专题",
+    "tags": "犍陀罗艺术 Gandharan art 今巴基斯坦与阿富汗一带的犍陀罗工坊 波状发卷、厚重衣褶、灰色片岩与佛传浮雕。",
+    "source": "gandhara"
+  },
+  {
+    "id": "mathura",
+    "lane": "asia",
+    "era": 0,
+    "zh": "秣菟罗与笈多造像",
+    "en": "Mathura and Gupta sculpture",
+    "date": "约1—6世纪",
+    "hook": "南亚本土身体观念与佛、耆那及印度教图像的发展。",
+    "look": "红砂岩、正面站姿、充实身体与后来更柔和的薄衣造型。",
+    "idea": "身体怎样表现超越日常的精神状态？",
+    "people": "秣菟罗、鹿野苑、笈多时代工坊",
+    "work": "对比犍陀罗厚衣褶与鹿野苑近乎透明的衣纹。",
+    "distinguish": "秣菟罗是生产中心，笈多是王朝与时期，二者不是同类标签。",
+    "kind": "艺术史专题",
+    "tags": "秣菟罗与笈多造像 Mathura and Gupta sculpture 秣菟罗、鹿野苑、笈多时代工坊 红砂岩、正面站姿、充实身体与后来更柔和的薄衣造型。",
+    "source": "",
+    "sources": [
+      "buddhism-and-buddhist-art"
+    ]
+  },
+  {
+    "id": "chola",
+    "lane": "asia",
+    "era": 1,
+    "zh": "朱罗铜像",
+    "en": "Chola bronzes",
+    "date": "约9—13世纪",
+    "hook": "供奉与巡游中可移动的印度教神像。",
+    "look": "优雅体态、失蜡铸造、丰富手势和装饰。",
+    "idea": "神像怎样在礼仪行进中成为具有临在感的身体？",
+    "people": "印度南部朱罗王朝、舞王湿婆像",
+    "work": "从鼓、火、足下侏儒和手势追踪舞王湿婆的图像结构。",
+    "distinguish": "它们不仅是独立陈列的雕塑；衣饰、仪式与移动同样重要。",
+    "kind": "艺术史专题",
+    "tags": "朱罗铜像 Chola bronzes 印度南部朱罗王朝、舞王湿婆像 优雅体态、失蜡铸造、丰富手势和装饰。",
+    "source": "",
+    "sources": [
+      "hinduism-and-hindu-art"
+    ]
+  },
+  {
+    "id": "khmer",
+    "lane": "asia",
+    "era": 1,
+    "zh": "吴哥与高棉艺术",
+    "en": "Angkor and Khmer art",
+    "date": "约9—15世纪",
+    "hook": "寺庙建筑、王权与宗教叙事组成的宏大空间。",
+    "look": "层层塔寺、砂岩浮雕、神像与连续叙事长廊。",
+    "idea": "建筑的行走路径如何对应宇宙秩序与王权？",
+    "people": "吴哥窟、巴戎寺、高棉工坊",
+    "work": "观察搅乳海浮雕里重复人物如何形成长距离叙事节奏。",
+    "distinguish": "高棉艺术包含印度教和佛教等不同历史阶段。",
+    "kind": "艺术史专题",
+    "tags": "吴哥与高棉艺术 Angkor and Khmer art 吴哥窟、巴戎寺、高棉工坊 层层塔寺、砂岩浮雕、神像与连续叙事长廊。",
+    "source": ""
+  },
+  {
+    "id": "borobudur",
+    "lane": "asia",
+    "era": 1,
+    "zh": "婆罗浮屠与爪哇艺术",
+    "en": "Borobudur and Javanese art",
+    "date": "约8—10世纪",
+    "hook": "用建筑攀登和浮雕阅读组织佛教修行空间。",
+    "look": "层叠平台、佛塔、佛像与连续叙事石雕。",
+    "idea": "绕行和上升怎样改变观看次序？",
+    "people": "印度尼西亚中爪哇、婆罗浮屠、普兰巴南",
+    "work": "比较佛教的婆罗浮屠与印度教的普兰巴南的空间组织。",
+    "distinguish": "两者处于相关区域历史中，但宗教功能和建筑类型并不相同。",
+    "kind": "艺术史专题",
+    "tags": "婆罗浮屠与爪哇艺术 Borobudur and Javanese art 印度尼西亚中爪哇、婆罗浮屠、普兰巴南 层叠平台、佛塔、佛像与连续叙事石雕。",
+    "source": ""
+  },
+  {
+    "id": "mandala",
+    "lane": "asia",
+    "era": 1,
+    "zh": "曼荼罗与唐卡",
+    "en": "Mandala and thangka",
+    "date": "约8世纪以来",
+    "hook": "可以观看、观想与用于仪式的神圣图像体系。",
+    "look": "中心与四方、层层围界、严格图像规则与鲜明色彩。",
+    "idea": "图像如何作为仪式和精神训练的操作空间？",
+    "people": "西藏、尼泊尔、不丹及其他喜马拉雅传统",
+    "work": "先辨认主尊与眷属的层级，再观察外围叙事。",
+    "distinguish": "唐卡是图像载体与形式，曼荼罗是一类图像体系，二者不能互换。",
+    "kind": "艺术史专题",
+    "tags": "曼荼罗与唐卡 Mandala and thangka 西藏、尼泊尔、不丹及其他喜马拉雅传统 中心与四方、层层围界、严格图像规则与鲜明色彩。",
+    "source": "",
+    "sources": [
+      "buddhism-and-buddhist-art"
+    ]
+  },
+  {
+    "id": "mughalearly",
+    "lane": "asia",
+    "era": 2,
+    "zh": "早期莫卧儿绘画",
+    "en": "Early Mughal painting",
+    "date": "约16世纪",
+    "hook": "宫廷画坊将波斯书籍艺术与南亚经验重新组合。",
+    "look": "密集叙事、精细人物、建筑空间与合作制作。",
+    "idea": "大型帝国的历史如何被整理成可观看的书？",
+    "people": "阿克巴宫廷、《哈姆扎故事》《阿克巴纪》",
+    "work": "看一页画中同时出现的多个事件与建筑如何分隔时空。",
+    "distinguish": "莫卧儿绘画并不是南亚细密画的全部。",
+    "kind": "艺术史专题",
+    "tags": "早期莫卧儿绘画 Early Mughal painting 阿克巴宫廷、《哈姆扎故事》《阿克巴纪》 密集叙事、精细人物、建筑空间与合作制作。",
+    "source": "the-art-of-the-mughals-before-1600"
+  },
+  {
+    "id": "rajput",
+    "lane": "asia",
+    "era": 2,
+    "zh": "拉杰普特与帕哈里绘画",
+    "en": "Rajput and Pahari painting",
+    "date": "约16—19世纪",
+    "hook": "地方宫廷、诗歌、音乐与虔信主题中的细密绘画。",
+    "look": "强烈色面、情感化自然、连环叙事和程式化人物。",
+    "idea": "季节、音乐与爱情如何通过色彩和姿态表达？",
+    "people": "梅瓦尔、基尚格尔、巴索利、坎格拉",
+    "work": "比较《拉格马拉》画册中不同音乐调式的人物和天气。",
+    "distinguish": "涵盖许多地区与作坊，不是与莫卧儿相反的单一风格。",
+    "kind": "艺术史专题",
+    "tags": "拉杰普特与帕哈里绘画 Rajput and Pahari painting 梅瓦尔、基尚格尔、巴索利、坎格拉 强烈色面、情感化自然、连环叙事和程式化人物。",
+    "source": ""
+  },
+  {
+    "id": "celadon",
+    "lane": "asia",
+    "era": 1,
+    "zh": "高丽青瓷",
+    "en": "Goryeo celadon",
+    "date": "约10—14世纪",
+    "hook": "釉色、器形与镶嵌纹饰结合的陶瓷传统。",
+    "look": "青绿釉、优雅曲面、黑白象嵌和云鹤纹。",
+    "idea": "釉层如何让浅刻和镶嵌图案获得深度？",
+    "people": "朝鲜半岛高丽窑场",
+    "work": "看梅瓶上的白鹤与黑白线条如何嵌入胎体。",
+    "distinguish": "“青瓷”不等于一种完全相同的绿色，高丽青瓷也有多种装饰法。",
+    "kind": "艺术史专题",
+    "tags": "高丽青瓷 Goryeo celadon 朝鲜半岛高丽窑场 青绿釉、优雅曲面、黑白象嵌和云鹤纹。",
+    "source": ""
+  },
+  {
+    "id": "buncheong",
+    "lane": "asia",
+    "era": 2,
+    "zh": "朝鲜粉青沙器",
+    "en": "Joseon buncheong ware",
+    "date": "约15—16世纪",
+    "hook": "灰色胎土与白化妆土之间的自由装饰。",
+    "look": "印花、剔花、刷涂、浸白与铁绘痕迹。",
+    "idea": "器物的制作过程怎样直接成为表面美感？",
+    "people": "朝鲜王朝早期陶工",
+    "work": "比较刷白留下的运动感与印花纹样的重复秩序。",
+    "distinguish": "粉青沙器不是白瓷，也不只是“做得粗糙的青瓷”。",
+    "kind": "艺术史专题",
+    "tags": "朝鲜粉青沙器 Joseon buncheong ware 朝鲜王朝早期陶工 印花、剔花、刷涂、浸白与铁绘痕迹。",
+    "source": "joseon-buncheong-ware-between-celadon-and-porcelain"
+  },
+  {
+    "id": "koreabuddha",
+    "lane": "asia",
+    "era": 1,
+    "zh": "朝鲜半岛佛教造像",
+    "en": "Korean Buddhist sculpture",
+    "date": "约4世纪以来",
+    "hook": "在区域交流中发展的佛、菩萨和半跏思惟像。",
+    "look": "含蓄面容、流动衣褶、思惟姿态与金铜材质。",
+    "idea": "宗教图像怎样在朝鲜半岛、日本和中国之间被改造？",
+    "people": "三国时期、统一新罗与高丽工坊",
+    "work": "比较半跏思惟像手指触面的位置与躯干曲线。",
+    "distinguish": "区域影响是多向互动，不能只按一条传播线路理解。",
+    "kind": "艺术史专题",
+    "tags": "朝鲜半岛佛教造像 Korean Buddhist sculpture 三国时期、统一新罗与高丽工坊 含蓄面容、流动衣褶、思惟姿态与金铜材质。",
+    "source": ""
+  },
+  {
+    "id": "nihongaearly",
+    "lane": "asia",
+    "era": 1,
+    "zh": "大和绘与叙事绘卷",
+    "en": "Yamato-e and narrative handscrolls",
+    "date": "平安至镰仓时期尤盛",
+    "hook": "以建筑、云霞和人物次序组织日本叙事图像。",
+    "look": "吹拔屋台、俯视室内、斜向结构与反复出现的人物。",
+    "idea": "手卷逐段展开如何控制故事时间？",
+    "people": "《源氏物语绘卷》《伴大纳言绘词》",
+    "work": "看无屋顶建筑如何暴露室内人物，同时保留空间分隔。",
+    "distinguish": "大和绘是历史上变化的范畴，并非所有日本题材绘画的固定样式。",
+    "kind": "艺术史专题",
+    "tags": "大和绘与叙事绘卷 Yamato-e and narrative handscrolls 《源氏物语绘卷》《伴大纳言绘词》 吹拔屋台、俯视室内、斜向结构与反复出现的人物。",
+    "source": "",
+    "sources": [
+      "heian-period-794-1185"
+    ]
+  },
+  {
+    "id": "momoyama",
+    "lane": "asia",
+    "era": 2,
+    "zh": "桃山时代屏风与障壁画",
+    "en": "Momoyama screens and wall paintings",
+    "date": "约1573—1615年",
+    "hook": "绘画成为城堡、寺院和权力空间的一部分。",
+    "look": "金地、大尺度松树、强烈造型与跨屏构图。",
+    "idea": "作品如何在移动视点和室内光线下展示权力？",
+    "people": "狩野永德、长谷川等伯、海北友松",
+    "work": "对比金地屏风与《松林图》的墨色空间。",
+    "distinguish": "桃山绘画不只金碧辉煌，也有克制的水墨表现。",
+    "kind": "艺术史专题",
+    "tags": "桃山时代屏风与障壁画 Momoyama screens and wall paintings 狩野永德、长谷川等伯、海北友松 金地、大尺度松树、强烈造型与跨屏构图。",
+    "source": ""
+  },
+  {
+    "id": "tea",
+    "lane": "asia",
+    "era": 2,
+    "zh": "茶道与茶器",
+    "en": "Japanese tea ceremony and utensils",
+    "date": "约15—16世纪形成重要规范",
+    "hook": "由空间、动作和器物构成的审美实践。",
+    "look": "小尺度茶室、不对称茶碗、朴素材质与季节性陈设。",
+    "idea": "器物的使用过程如何改变它的观看价值？",
+    "people": "村田珠光、武野绍鸥、千利休、乐烧传统",
+    "work": "比较茶碗内外的釉层、口沿和握持感。",
+    "distinguish": "侘寂不是任意破旧物品的标签；茶道内部也有多样的趣味。",
+    "kind": "艺术史专题",
+    "tags": "茶道与茶器 Japanese tea ceremony and utensils 村田珠光、武野绍鸥、千利休、乐烧传统 小尺度茶室、不对称茶碗、朴素材质与季节性陈设。",
+    "source": "the-japanese-tea-ceremony"
+  },
+  {
+    "id": "shin-hanga",
+    "lane": "asia",
+    "era": 4,
+    "zh": "新版画与创作版画",
+    "en": "Shin-hanga and Sōsaku-hanga",
+    "date": "约20世纪前半叶",
+    "hook": "现代日本木版画中两种不同的生产观念。",
+    "look": "新版画常重视光影风景；创作版画强调作者自行绘、刻、印。",
+    "idea": "作者性究竟来自设计图，还是整个制作过程？",
+    "people": "川濑巴水、吉田博、恩地孝四郎、栋方志功",
+    "work": "比较商业出版的风景版画与创作版画的刀痕和版面。",
+    "distinguish": "二者并非严格互斥，艺术家与生产方式之间存在交叉。",
+    "kind": "艺术史专题",
+    "tags": "新版画与创作版画 Shin-hanga and Sōsaku-hanga 川濑巴水、吉田博、恩地孝四郎、栋方志功 新版画常重视光影风景；创作版画强调作者自行绘、刻、印。",
+    "source": ""
   }
 ]

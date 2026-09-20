@@ -54,6 +54,9 @@ for (const entry of entries) {
     `${entry.id}: unknown source ${entry.source}`,
   );
 }
+for (const entry of entries)
+  for (const source of entry.sources || [])
+    check(sources[source], `${entry.id}: unknown source ${source}`);
 const safeURL = (value) => {
   try {
     return ["https:", "http:"].includes(new URL(value).protocol);
@@ -71,7 +74,20 @@ for (const [id, source] of Object.entries(sources)) {
 const artworks = await json("data/artworks.json");
 const usedImages = new Set();
 for (const [id, art] of Object.entries(artworks)) {
-  check(byId.has(id), `${id}: artwork has no entry`);
+  check(
+    Array.isArray(art.entries) && art.entries.length > 0,
+    `${id}: artwork needs entry IDs`,
+  );
+  for (const entryId of art.entries || [])
+    check(byId.has(entryId), `${id}: unknown entry ${entryId}`);
+  check(/[\u3400-\u9fff]/.test(art.zh), `${id}: needs Chinese title`);
+  check(
+    Number.isInteger(art.width) &&
+      Number.isInteger(art.height) &&
+      art.width > 0 &&
+      art.height > 0,
+    `${id}: invalid image dimensions`,
+  );
   check(
     art.zh && (art.artist || art.artistZh) && art.date && art.credit,
     `${id}: incomplete artwork metadata`,

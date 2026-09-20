@@ -94,6 +94,211 @@
   {
     "title": "技术到底改变了什么？",
     "desc": "复制、光学、材料、网络与算法改变了艺术的制作、传播以及作者的角色。",
-    "ids": ["print", "photo", "collage", "screen", "netart", "generative", "ai"]
+    "ids": [
+      "print",
+      "photo",
+      "collage",
+      "screen",
+      "netart",
+      "generative",
+      "ai"
+    ]
+  },
+  {
+    "title": "古代世界：身体与权力",
+    "desc": "希腊、罗马与意大利地方传统的交叉比较。",
+    "ids": [
+      "mycenaean",
+      "archaic",
+      "classical",
+      "hellenistic",
+      "etruscan",
+      "romanportrait"
+    ]
+  },
+  {
+    "title": "从圣像到哥特式",
+    "desc": "图像、手抄本和建筑如何进入中世纪信仰生活。",
+    "ids": [
+      "byzantine",
+      "icons",
+      "carolingian",
+      "ottonian",
+      "romanesque",
+      "gothic",
+      "manuscript"
+    ]
+  },
+  {
+    "title": "中国画的画科与笔墨",
+    "desc": "把人物、花鸟、山水、制度和技法分开辨认。",
+    "ids": [
+      "gongbi",
+      "flowersbirds",
+      "songacademy",
+      "bluegreen",
+      "songland",
+      "literati",
+      "xieyi"
+    ]
+  },
+  {
+    "title": "器物里的中国史",
+    "desc": "从玉、青铜到瓷、漆和家具，比较材料与使用。",
+    "ids": [
+      "cnneolithic",
+      "jade",
+      "bronze",
+      "qinhan",
+      "ceramics",
+      "bluewhite",
+      "lacquer",
+      "mingfurniture"
+    ]
+  },
+  {
+    "title": "东亚的书、屏风与版画",
+    "desc": "载体的改变怎样影响观看方式和图像流通。",
+    "ids": [
+      "nihongaearly",
+      "zen",
+      "momoyama",
+      "rimpa",
+      "ukiyoe",
+      "shin-hanga"
+    ]
+  },
+  {
+    "title": "佛像与宗教空间",
+    "desc": "在各地传统之间比较身体、仪式与建筑。",
+    "ids": [
+      "indiaearly",
+      "gandhara",
+      "mathura",
+      "sixdyn",
+      "koreabuddha",
+      "khmer",
+      "borobudur",
+      "mandala"
+    ]
+  },
+  {
+    "title": "宫廷、城市与图案",
+    "desc": "沿伊斯兰世界的地区与王朝认识工艺差异。",
+    "ids": [
+      "abbasid",
+      "fatimid",
+      "seljuq",
+      "ottoman",
+      "safavid",
+      "islamcalligraphy",
+      "carpets"
+    ]
+  },
+  {
+    "title": "美洲的多种古代传统",
+    "desc": "把玛雅、莫切、墨西加和印加放回各自地区。",
+    "ids": [
+      "mesoamerica",
+      "maya",
+      "aztec",
+      "moche",
+      "andes",
+      "inca"
+    ]
+  },
+  {
+    "title": "物件如何参与社会",
+    "desc": "从金工、权力像、会堂到纪念仪式，认识物件的用途。",
+    "ids": [
+      "benin",
+      "asante",
+      "kongo",
+      "maori",
+      "malagan"
+    ]
+  },
+  {
+    "title": "为什么风景也有历史",
+    "desc": "从土地与城市，到户外观察和现代光色。",
+    "ids": [
+      "dutchland",
+      "veduta",
+      "romanticism",
+      "hudson",
+      "barbizon",
+      "impressionism",
+      "americanimp"
+    ]
+  },
+  {
+    "title": "现代设计如何分岔",
+    "desc": "量产、人体、秩序、反叛和循环设计的不同答案。",
+    "ids": [
+      "werkbund",
+      "bauhaus",
+      "streamline",
+      "organic",
+      "braun",
+      "radical",
+      "memphis",
+      "sustainable"
+    ]
+  },
+  {
+    "title": "建筑与未来城市",
+    "desc": "结构、巨构、设备和碎裂形式的连续比较。",
+    "ids": [
+      "classicalorders",
+      "gothicrevival",
+      "crystalpalace",
+      "international",
+      "brutalism",
+      "metabolism",
+      "hightech",
+      "deconstructivism"
+    ]
+  },
+  {
+    "title": "绘画是怎样做出来的",
+    "desc": "通过材料与空间方法重新看作品。",
+    "ids": [
+      "tempera",
+      "fresco",
+      "oilpainting",
+      "perspective",
+      "chiaroscuro",
+      "sfumato",
+      "watercolor"
+    ]
+  },
+  {
+    "title": "复制、摄影与作者",
+    "desc": "复制技术如何扩展作品的身份和流通。",
+    "ids": [
+      "etching",
+      "litho",
+      "monotype",
+      "photo",
+      "cyanotype",
+      "documentary",
+      "stieglitz",
+      "appropriation",
+      "artistbook"
+    ]
+  },
+  {
+    "title": "从画布走进空间",
+    "desc": "从色场到光、材料、装置与声音。",
+    "ids": [
+      "abstractexp",
+      "colorfield",
+      "hardedge",
+      "minimal",
+      "lightspace",
+      "artepovera",
+      "installation",
+      "soundart"
+    ]
   }
 ]

@@ -1,55 +1,69 @@
-export function createViews({
-  DATA,
-  ART,
-  LANES,
-  ERAS,
-  ROUTES,
-  BYID,
-  L,
-  seen,
-  getState,
-  hits,
-  esc,
-  imageHTML,
-}) {
-  function nodeButton(d) {
-    const state = getState();
-    return `<button class="node" data-node="${d.id}" title="${esc(d.en + " · " + d.date)}"><span>${esc(d.zh)}</span>${seen.has(d.id) ? '<span class="visited" aria-label="已看过">✓</span>' : ""}</button>`;
-  }
-  function cards(items, artOnly = false) {
-    const state = getState();
+import { esc, imageHTML, empty } from "./helpers.js";
+export function createViews(c, state, saved, seen) {
+  const { ART, LANES, ERAS, ROUTES, BYID, L } = c;
+  const node = (d) =>
+    `<button class="map-node" data-node="${d.id}" title="${esc(d.en)}"><span>${esc(d.zh)}</span>${ART[d.id].length ? '<i aria-label="有作品图">▧</i>' : ""}${seen.has(d.id) ? '<i aria-label="已读">·</i>' : ""}</button>`;
+  function cards(items) {
     if (!items.length)
-      return `<div class="empty">这里暂时没有匹配项。<br>${state.view === "saved" ? "打开感兴趣的条目，点击「收藏」即可留在这里。" : "可以换个关键词，或点击「重置筛选」。"}</div>`;
-    return `<div class="grid">${items.map((d) => `<button class="card" data-node="${d.id}" style="--c:${L[d.lane][3]}">${ART[d.id] ? `<div class="art-frame">${imageHTML(d.id)}</div>` : `<div class="noart">${String(DATA.indexOf(d) + 1).padStart(3, "0")}<span>${esc(d.kind)}</span></div>`}<div class="card-content"><div class="card-meta">${L[d.lane][1]} · ${esc(d.date)}</div><h3>${esc(d.zh)}</h3><div class="en">${esc(d.en)}</div><p>${artOnly && ART[d.id] ? esc(ART[d.id].zh) : esc(d.hook)}</p></div></button>`).join("")}</div>`;
+      return empty(
+        state.view === "saved" ? "还没有符合条件的收藏" : "没有符合条件的条目",
+        state.view !== "saved" ||
+          !!(state.q || state.lane !== "all" || state.era !== "all"),
+      );
+    return `<div class="entry-list">${items.map((d) => `<article class="entry-card" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 件作品` : ""}${seen.has(d.id) ? " · 已读" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button><button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
   }
-  function renderMap(items) {
-    const state = getState();
-    let lanes =
-      state.lane === "all" ? LANES : LANES.filter((x) => x[0] === state.lane);
-    let eras = ERAS.map((x, i) => [x, i]).filter(
-      (x) => state.era === "all" || x[1] === +state.era,
+  function map(items) {
+    if (!items.length) return empty();
+    const lanes = LANES.filter(
+      (l) => state.lane === "all" || l[0] === state.lane,
     );
-    return `<div class="map-intro"><span><b>横看时代，纵看不同传统。</b>点击名称进入详情；图片是这一区域的一扇窗。</span><span class="extra">分段导航，非等比例时间轴 · 空白不代表没有艺术</span></div><div class="map-wrap"><table class="map-table" style="min-width:${eras.length === 1 ? "0" : "1170px"}" aria-label="按时代与文化线索组织的美术史导航地图"><thead><tr><th><b>并行的美术史</b><span>每格均可继续深入</span></th>${eras.map(([e]) => `<th><b>${e[0]}</b><span>${e[1]}</span></th>`).join("")}</tr></thead><tbody>${lanes
+    const eras = ERAS.map((e, i) => [e, i]).filter(
+      ([, i]) => state.era === "all" || i === +state.era,
+    );
+    function cell(ds) {
+      const arts = ds.filter((d) => ART[d.id].length).slice(0, 2);
+      return `${arts.length ? `<div class="map-pictures">${arts.map((d) => `<button data-node="${d.id}" aria-label="查看${esc(d.zh)}">${imageHTML(ART[d.id][0])}</button>`).join("")}</div>` : ""}${ds.slice(0, 5).map(node).join("")}${ds.length > 5 ? `<details class="more-nodes"><summary>另外 ${ds.length - 5} 条 <span>＋</span></summary>${ds.slice(5).map(node).join("")}</details>` : ""}${!ds.length ? '<span class="cell-empty">—</span>' : ""}`;
+    }
+    const table = `<div class="map-scroll" tabindex="0" role="region" aria-label="全景地图，可横向滚动"><table class="map-table ${eras.length === 1 ? "single-era" : ""}"><thead><tr><th scope="col">分类 / 时代</th>${eras.map(([e, i]) => `<th scope="col"><button data-era="${i}">${e[0]}<small>${e[1]}</small></button></th>`).join("")}</tr></thead><tbody>${lanes.map((l) => `<tr style="--c:${l[3]}"><th scope="row"><button data-lane="${l[0]}"><b>${l[1]}</b><small>${items.filter((d) => d.lane === l[0]).length} 条</small></button></th>${eras.map(([, i]) => `<td>${cell(items.filter((d) => d.lane === l[0] && d.era === i))}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    const mobile = `<div class="mobile-map">${eras
+      .map(([e, i]) => {
+        const ds = items.filter((d) => d.era === i);
+        return ds.length
+          ? `<section class="era-section"><h3>${e[0]}<small>${e[1]} · ${ds.length} 条</small></h3>${lanes
+              .map((l) => {
+                const group = ds.filter((d) => d.lane === l[0]);
+                return group.length
+                  ? `<details class="mobile-group" style="--c:${l[3]}" ${state.lane !== "all" ? "open" : ""}><summary>${l[1]}<span>${group.length} 条 ＋</span></summary>${cell(group)}</details>`
+                  : "";
+              })
+              .join("")}</section>`
+          : "";
+      })
+      .join("")}</div>`;
+    return table + mobile;
+  }
+  function gallery(works, limit) {
+    if (!works.length) return empty("没有符合条件的作品");
+    return `<div class="art-grid">${works
+      .slice(0, limit)
       .map(
-        (l) =>
-          `<tr style="--c:${l[3]}"><th scope="row"><div class="lane-line"></div><b>${l[1]}</b><span>${l[2]}</span><br><span>${DATA.filter((x) => x.lane === l[0]).length} 个入口</span></th>${eras
-            .map(([e, i]) => {
-              const cell = items.filter((x) => x.lane === l[0] && x.era === i);
-              const img = cell.find((x) => ART[x.id]);
-              return `<td>${img ? `<button class="cell-art" data-node="${img.id}" aria-label="从作品进入${esc(img.zh)}">${imageHTML(img.id)}</button>` : ""}${cell.length ? cell.map(nodeButton).join("") : '<span class="emptycell">此分区未列入口<br>可从相邻时期继续</span>'}</td>`;
-            })
-            .join("")}</tr>`,
+        (a) =>
+          `<button class="art-card" data-art="${a.id}"><div class="art-stage">${imageHTML(a)}<span class="art-zoom" aria-hidden="true">↗</span></div><div class="art-info"><h3>${esc(a.zh)}</h3><p>${esc(a.artistZh || a.artist)}<span>${esc(a.date)}</span></p><small>${a.entries.map((id) => esc(BYID[id].zh)).join(" · ")}</small></div></button>`,
       )
       .join(
         "",
-      )}</tbody></table></div><div class="bottom-note">地图位置表示便于导航的主要讨论时期，不是精确起止；书法、陶瓷、宗教传统等常跨越多个时段。地理线索与设计、媒介线索有交叉，各条目只在主入口放置一次。<span class="only-mobile"> 表格可向右滑动，左侧分类固定。</span></div>`;
+      )}</div>${works.length > limit ? `<div class="load-more"><button data-more>再显示 ${Math.min(48, works.length - limit)} 件作品</button><span>已显示 ${limit} / ${works.length}</span></div>` : ""}`;
   }
-  function renderRoutes() {
-    const state = getState();
-    const allowed = new Set(hits().map((d) => d.id));
-    const routes = ROUTES.filter((r) => r.ids.some((id) => allowed.has(id)));
-    return `<h2 class="section-title">从一个问题出发。</h2><p class="section-sub">这些是学习顺序，不是单一继承链。一次逛一条，也可以随时跳走。</p><div class="routegrid">${routes.map((r) => `<article class="route"><span class="route-kicker">ROUTE ${String(ROUTES.indexOf(r) + 1).padStart(2, "0")}</span><h3>${r.title}</h3><p>${r.desc}</p><div class="route-steps">${r.ids.map((id, i) => `${i ? "<span>→</span>" : ""}<button data-node="${id}">${BYID[id].zh.split("／")[0]}</button>`).join("")}</div><button class="start" data-route="${ROUTES.indexOf(r)}">沿这条路线开始 →</button><span class="route-count">${r.ids.length} 站 · ${r.ids.filter((id) => seen.has(id)).length} 站看过</span></article>`).join("")}</div>${!routes.length ? '<div class="empty">暂无匹配路线，可重置筛选后查看。</div>' : ""}`;
+  function routes(items) {
+    const ids = new Set(items.map((d) => d.id));
+    const rs = ROUTES.filter((r) => r.ids.some((id) => ids.has(id)));
+    if (!rs.length) return empty("没有符合条件的路线");
+    return `<div class="route-grid">${rs
+      .map((r) => {
+        const cover = r.ids.map((id) => ART[id][0]).find(Boolean);
+        return `<article class="route-card"><div class="route-cover">${imageHTML(cover)}<span>${r.ids.length} 站</span></div><div class="route-copy"><div class="meta">路线 ${String(ROUTES.indexOf(r) + 1).padStart(2, "0")} · 已读 ${r.ids.filter((id) => seen.has(id)).length}/${r.ids.length}</div><h3>${esc(r.title)}</h3><p>${esc(r.desc)}</p><div class="route-stops">${r.ids.map((id) => `<button data-node="${id}">${esc(BYID[id].zh)}</button>`).join("")}</div><button class="primary" data-route="${ROUTES.indexOf(r)}">开始阅读 →</button></div></article>`;
+      })
+      .join("")}</div>`;
   }
-
-  return { nodeButton, cards, renderMap, renderRoutes };
+  return { cards, map, gallery, routes };
 }
