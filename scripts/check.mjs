@@ -80,6 +80,15 @@ for (const [id, art] of Object.entries(artworks)) {
   );
   for (const entryId of art.entries || [])
     check(byId.has(entryId), `${id}: unknown entry ${entryId}`);
+  check(new Set(art.entries).size === art.entries.length, `${id}: duplicate entry associations`);
+  for (const [entryId, note] of Object.entries(art.notes || {})) {
+    check(art.entries.includes(entryId), `${id}: note for unlinked entry ${entryId}`);
+    check(typeof note === "string" && note.trim(), `${id}: empty viewing note`);
+  }
+  if (art.license === "CC0") {
+    check(art.publicDomain === true, `${id}: contradictory CC0 metadata`);
+    check(safeURL(art.licenseUrl) && safeURL(art.metadataSource), `${id}: missing license or metadata provenance`);
+  }
   check(/[\u3400-\u9fff]/.test(art.zh), `${id}: needs Chinese title`);
   check(
     Number.isInteger(art.width) &&

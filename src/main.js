@@ -22,7 +22,7 @@ async function start() {
   const $ = (id) => document.getElementById(id);
   const saved = new Set(readLocal("art-atlas-saved").filter((id) => BYID[id]));
   const seen = new Set(readLocal("art-atlas-seen").filter((id) => BYID[id]));
-  const state = { view: "map", lane: "all", era: "all", q: "", sort: "time" };
+  const state = { view: "map", lane: "all", era: "all", q: "", sort: "time", illustrated: "" };
   let selected = null,
     artIndex = 0,
     detailHistory = [],
@@ -35,7 +35,8 @@ async function start() {
   const views = createViews(c, state, saved, seen);
   const titles = {
     map: "全景地图",
-    index: "条目目录",
+    index: "图解词典",
+    recent: "最近读过",
     gallery: "作品图库",
     routes: "学习路线",
     saved: "我的收藏",
@@ -46,6 +47,8 @@ async function start() {
     state.lane = L[p.get("lane")] ? p.get("lane") : "all";
     state.era = /^[0-6]$/.test(p.get("era")) ? p.get("era") : "all";
     state.q = p.get("q") || "";
+    state.illustrated = p.get("illustrated") === "yes" ? "yes" : "";
+    $("illustratedOnly").checked = !!state.illustrated;
     state.sort = ["time", "name", "images"].includes(p.get("sort"))
       ? p.get("sort")
       : "time";
@@ -82,6 +85,7 @@ async function start() {
       (d) =>
         (state.lane === "all" || d.lane === state.lane) &&
         (state.era === "all" || d.era === +state.era) &&
+        (!state.illustrated || ART[d.id].length > 0) &&
         (ignoreQuery || words.every((w) => SEARCH[d.id].includes(w))),
     ).sort((a, b) =>
       state.sort === "name"
@@ -93,6 +97,10 @@ async function start() {
   }
   function currentItems() {
     const items = hits(state.view === "routes");
+    if (state.view === "recent") {
+      const order = [...seen].reverse();
+      return items.filter((d) => seen.has(d.id)).sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
+    }
     if (state.view === "routes") {
       const ids = new Set(views.matchingRoutes(items).flatMap((r) => r.ids));
       return items.filter((d) => ids.has(d.id));
@@ -123,10 +131,10 @@ async function start() {
     $("viewTitle").textContent = state.q
       ? `${titles[state.view]} · 搜索结果`
       : titles[state.view];
-    const filtered = state.lane !== "all" || state.era !== "all" || state.q;
+    const filtered = state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
     $("reset").hidden = !filtered;
     $("clearSearch").hidden = !state.q;
-    $("sort").hidden = ["map", "routes"].includes(state.view);
+    $("sort").hidden = ["map", "routes", "recent"].includes(state.view);
     $("activeFilters").innerHTML = [
       state.lane !== "all"
         ? `<button data-remove="lane">${L[state.lane][1]} ×</button>`
@@ -135,6 +143,7 @@ async function start() {
         ? `<button data-remove="era">${ERAS[+state.era][0]} ×</button>`
         : "",
       state.q ? `<button data-remove="q">“${esc(state.q)}” ×</button>` : "",
+      state.illustrated ? '<button data-remove="illustrated">只看有图 ×</button>' : "",
     ].join("");
     let count = items.length + " 个条目";
     if (state.view === "gallery") {
@@ -172,7 +181,8 @@ async function start() {
     if (url) syncURL();
   }
   function reset() {
-    Object.assign(state, { lane: "all", era: "all", q: "" });
+    Object.assign(state, { lane: "all", era: "all", q: "", illustrated: "" });
+    $("illustratedOnly").checked = false;
     $("search").value = "";
     limit = 48;
     render();
@@ -234,6 +244,7 @@ async function start() {
       0,
       ART[id].findIndex((a) => a.id === art),
     );
+    seen.delete(id);
     seen.add(id);
     persist();
     drawDetail();
@@ -251,8 +262,7 @@ async function start() {
     document.body.classList.remove("dialog-open");
     selected = null;
     routeActive = null;
-    if (state.view === "saved" || state.view === "routes")
-      render({ url: false });
+    render({ url: false });
     if (!fromURL) syncURL();
     if (opener?.isConnected) opener.focus({ preventScroll: true });
     else $("content").focus({ preventScroll: true });
@@ -280,7 +290,7 @@ async function start() {
   function drawLight() {
     const a = BYWORK[lightWorks[lightIndex]];
     $("lightbox").innerHTML =
-      `<div class="light-head"><div><b>${esc(a.zh)}</b><small>${esc(a.artistZh || a.artist)} · ${esc(a.date)}</small></div><button data-close="lightbox" aria-label="关闭大图">关闭 ×</button></div><div class="light-stage">${imageHTML(a, "", true)}</div><div class="light-controls"><button data-light-step="-1" ${lightIndex === 0 ? "disabled" : ""}>← 上一幅</button><span>${lightIndex + 1} / ${lightWorks.length}</span><button data-light-step="1" ${lightIndex === lightWorks.length - 1 ? "disabled" : ""}>下一幅 →</button></div><div class="light-credit">${esc(a.title)}<br>${esc(a.credit)} · ${link(a.url, "原始馆藏记录")}</div>`;
+      `<div class="light-head"><div><b>${esc(a.zh)}</b><small>${esc(a.artistZh || a.artist)} · ${esc(a.date)}</small></div><button data-close="lightbox" aria-label="关闭大图">关闭 ×</button></div><div class="light-stage">${imageHTML(a, "", true)}</div><div class="light-controls"><button data-zoom aria-pressed="false">放大细节 ＋</button><button data-light-step="-1" ${lightIndex === 0 ? "disabled" : ""}>← 上一幅</button><span>${lightIndex + 1} / ${lightWorks.length}</span><button data-light-step="1" ${lightIndex === lightWorks.length - 1 ? "disabled" : ""}>下一幅 →</button></div><div class="light-credit">${esc(a.title)}<br>${esc(a.museum || "")} · ${esc(a.credit)}${a.license ? ` · ${esc(a.license)}` : ""} · ${link(a.url, "原始馆藏记录")}</div>`;
   }
   function showLight(id) {
     lightWorks = (selected ? ART[selected] : [BYWORK[id]]).map((a) => a.id);
@@ -310,12 +320,20 @@ async function start() {
     const b = e.target.closest("button");
     if (!b) return;
     const d = b.dataset;
+    if (d.query) {
+      state.q = d.query;
+      state.view = "index";
+      $("search").value = state.q;
+      limit = 48;
+      render();
+      return;
+    }
     if (d.save) {
       updateSave(d.save);
       return;
     }
     if (d.node) {
-      openNode(d.node);
+      openNode(d.node, { art: d.work });
       return;
     }
     if (d.art) {
@@ -346,7 +364,8 @@ async function start() {
       return;
     }
     if (d.remove) {
-      state[d.remove] = d.remove === "q" ? "" : "all";
+      state[d.remove] = ["q", "illustrated"].includes(d.remove) ? "" : "all";
+      $("illustratedOnly").checked = !!state.illustrated;
       $("search").value = state.q;
       render();
       return;
@@ -379,6 +398,17 @@ async function start() {
     }
     if (d.light) {
       showLight(d.light);
+      return;
+    }
+    if (d.zoom !== undefined) {
+      const stage = $("lightbox").querySelector(".light-stage");
+      const zoomed = stage.classList.toggle("zoomed");
+      if (zoomed) {
+        stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+        stage.scrollTop = (stage.scrollHeight - stage.clientHeight) / 2;
+      }
+      b.setAttribute("aria-pressed", zoomed);
+      b.textContent = zoomed ? "适合窗口 −" : "放大细节 ＋";
       return;
     }
     if (d.lightStep) {
@@ -465,6 +495,11 @@ async function start() {
     $("search").focus();
   };
   $("reset").onclick = reset;
+  $("illustratedOnly").onchange = (e) => {
+    state.illustrated = e.target.checked ? "yes" : "";
+    limit = 48;
+    render();
+  };
   $("sort").onchange = (e) => {
     state.sort = e.target.value;
     render();
