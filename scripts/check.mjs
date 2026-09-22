@@ -26,11 +26,10 @@ const sources = await json("data/sources.json");
 for (const entry of entries) {
   check(["core", "focus", "extended"].includes(entry.level), `${entry.id}: missing learning level`);
   if (entry.level === "core") {
-    const study = entry.study;
-    check(typeof entry.context === "string" && entry.context.trim(), `${entry.id}: core needs historical context`);
-    check(study && [study.why, study.question, study.answer].every((t) => typeof t === "string" && t.trim()), `${entry.id}: incomplete core study`);
-    check(study?.takeaways?.length >= 2 && study.takeaways.every((t) => typeof t === "string" && t.trim()), `${entry.id}: missing takeaways`);
-    check(study?.next?.length >= 2 && new Set(study.next).size === study.next.length && study.next.every((id) => byId.has(id) && id !== entry.id), `${entry.id}: invalid next readings`);
+    for (const field of ["context", "region", "influence"])
+      check(typeof entry[field] === "string" && entry[field].trim(), `${entry.id}: missing core ${field}`);
+    check(entry.work?.split("\n").length >= 3, `${entry.id}: needs three representative works`);
+    check(entry.next?.length >= 2 && new Set(entry.next).size === entry.next.length && entry.next.every((id) => byId.has(id) && id !== entry.id), `${entry.id}: invalid next readings`);
   }
   check(/^[a-z][a-z0-9-]*$/.test(entry.id), `${entry.id}: invalid stable ID`);
   for (const key of [
@@ -80,6 +79,14 @@ for (const [id, source] of Object.entries(sources)) {
   );
 }
 const artworks = await json("data/artworks.json");
+for (const entry of entries) {
+  if (entry.level === "core") check(entry.featuredWorks?.length >= 3 && entry.featuredWorks.length <= 5, `${entry.id}: needs 3–5 curated images`);
+  check(new Set(entry.featuredWorks || []).size === (entry.featuredWorks || []).length, `${entry.id}: duplicate featured images`);
+  for (const id of entry.featuredWorks || []) check(artworks[id]?.entries.includes(entry.id), `${entry.id}: invalid featured work ${id}`);
+}
+const authors = await json("data/authors.json");
+check(new Set(authors.map((a) => a.name)).size === authors.length, "Duplicate author names");
+for (const author of authors) check(author.name && author.aliases?.length && author.aliases.every((s) => typeof s === "string" && s.trim()), "Invalid author aliases");
 const usedImages = new Set();
 for (const [id, art] of Object.entries(artworks)) {
   check(

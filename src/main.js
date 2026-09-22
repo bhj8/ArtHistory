@@ -1,3 +1,5 @@
+import { searchResultsHTML } from "./ui/search-results.js";
+import { setupArtComparison } from "./ui/art-comparison.js";
 import { SCOPES, inScope, levelRank, readScope } from "./learning.js";
 import { loadContent } from "./content.js";
 import { readLocal, saveProgress } from "./storage.js";
@@ -20,6 +22,7 @@ async function start() {
       ROUTES,
       SOURCES,
     } = c;
+  const refreshArtComparison = setupArtComparison(c);
   const $ = (id) => document.getElementById(id);
   const saved = new Set(readLocal("art-atlas-saved").filter((id) => BYID[id]));
   const seen = new Set(readLocal("art-atlas-seen").filter((id) => BYID[id]));
@@ -79,18 +82,14 @@ async function start() {
     $("savedCount").textContent = saved.size;
   }
   function hits(ignoreQuery = false, scope = state.level) {
-    const words = state.q
-      .toLocaleLowerCase()
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean);
+    const matched = ignoreQuery || !state.q.trim() ? null : new Set(c.search.query(state.q).entries.map((d) => d.id));
     return DATA.filter(
       (d) =>
         inScope(d, scope) &&
         (state.lane === "all" || d.lane === state.lane) &&
         (state.era === "all" || d.era === +state.era) &&
         (!state.illustrated || ART[d.id].length > 0) &&
-        (ignoreQuery || words.every((w) => SEARCH[d.id].includes(w))),
+        (!matched || matched.has(d.id)),
     ).sort((a, b) =>
       state.sort === "priority"
         ? levelRank(a) - levelRank(b) || a.era - b.era
@@ -157,24 +156,16 @@ async function start() {
       state.illustrated ? '<button data-remove="illustrated">只看有图 ×</button>' : "",
     ].join("");
     let count = items.length + " 个条目";
-    if (state.view === "gallery") {
-      const words = state.q
-        .toLocaleLowerCase()
-        .trim()
-        .split(/\s+/)
-        .filter(Boolean);
+    if (state.q.trim() && !["routes", "saved", "recent", "gallery"].includes(state.view)) {
+      const allowedIds = new Set(hits(true).map((d) => d.id));
+      const results = c.search.query(state.q, allowedIds);
+      results.allowedIds = allowedIds;
+      $("content").innerHTML = searchResultsHTML(results, views, c, limit);
+      count = `${results.entries.length} 条目 · ${results.authors.length} 人物 · ${results.works.length} 作品`;
+    } else if (state.view === "gallery") {
       let works = WORKS.filter((a) => a.entries.some((id) => ids.has(id)));
       // If a query directly names a work or its maker, show only those matches.
-      const exactWorks = works.filter(
-        (a) =>
-          words.length &&
-          words.every((w) =>
-            [a.zh, a.title, a.artist, a.artistZh]
-              .join(" ")
-              .toLocaleLowerCase()
-              .includes(w),
-          ),
-      );
+      const exactWorks = state.q.trim() ? c.search.query(state.q, new Set(hits(true).map((d) => d.id))).works : [];
       if (exactWorks.length) works = exactWorks;
       if (state.sort === "priority")
         works.sort((a, b) => Math.min(...a.entries.map(id => levelRank(BYID[id]))) - Math.min(...b.entries.map(id => levelRank(BYID[id]))));
@@ -190,6 +181,7 @@ async function start() {
       $("content").innerHTML = views.routes(items);
       count = views.matchingRoutes(items).length + " 条路线";
     } else $("content").innerHTML = views.cards(items);
+    refreshArtComparison();
     $("resultCount").textContent = count;
     if (url) syncURL();
   }
@@ -227,6 +219,7 @@ async function start() {
     $("crumb").textContent = L[d.lane][1] + " / " + ERAS[d.era][0];
     $("backDetail").hidden = !detailHistory.length;
     $("detailBody").innerHTML = detailHTML(d, c, { saved, compare, artIndex });
+    refreshArtComparison();
     const i = sequence.indexOf(selected);
     $("detailNav").innerHTML =
       `<button data-step="-1" ${i <= 0 ? "disabled" : ""}>← 上一条</button><span>${routeActive !== null ? esc(ROUTES[routeActive].title) : "连续阅读"}<small>${i >= 0 ? `${i + 1} / ${sequence.length}` : ""}</small></span><button data-step="1" ${i < 0 || i >= sequence.length - 1 ? "disabled" : ""}>下一条 →</button>`;
@@ -350,9 +343,20 @@ async function start() {
     $("info").showModal();
   }
   document.addEventListener("click", async (e) => {
-    const b = e.target.closest("button");
+    const b = e.target.closest("button, a[data-node], a[data-author], a[data-result-section]");
     if (!b) return;
+    if (b.tagName === "A") {
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+    }
     const d = b.dataset;
+    if (d.resultSection) { $(d.resultSection)?.scrollIntoView({ block: "start" }); return; }
+    if (d.author) {
+      closeDetail();
+      state.q = d.author; state.view = "index"; state.level = "all"; state.lane = "all"; state.era = "all";
+      $("search").value = state.q;
+      render(); window.scrollTo(0, 0); return;
+    }
     if (d.query) {
       state.q = d.query;
       state.view = "index";
@@ -373,7 +377,7 @@ async function start() {
       const a = BYWORK[d.art];
       const id =
         a.entries.find(
-          (id) => state.lane === "all" || BYID[id].lane === state.lane,
+          (id) => inScope(BYID[id], state.level) && (state.lane === "all" || BYID[id].lane === state.lane),
         ) || a.entries[0];
       openNode(id, { art: a.id });
       return;

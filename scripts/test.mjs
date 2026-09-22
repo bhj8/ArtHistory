@@ -5,6 +5,8 @@ import { indexContent } from "../src/content.js";
 import { createViews } from "../src/ui/views.js";
 import { detailHTML } from "../src/ui/detail.js";
 import { creditHTML } from "../src/ui/helpers.js";
+import { linkedText } from "../src/ui/inline-links.js";
+import { searchResultsHTML } from "../src/ui/search-results.js";
 
 const json = async (name) => JSON.parse(await readFile(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 const taxonomy = await json("taxonomy");
@@ -15,9 +17,32 @@ const c = indexContent({
   SOURCES: await json("sources"),
   EDGES: await json("relationships"),
   ROUTES: await json("routes"),
+  authors: await json("authors"),
 });
 const state = { view: "index", q: "", lane: "all", era: "all" };
 const views = createViews(c, state, new Set(), new Set());
+for (const alias of ["梵高", "凡高", "Van Gogh", "Vincent van Gogh"]) {
+  const result = c.search.query(alias);
+  assert.ok(result.authors.some((a) => a.name === "梵高"), alias);
+  assert.ok(result.works.some((a) => a.id === "met-436535"), alias);
+}
+assert.equal(c.search.query("印象派").entries[0].id, "impressionism");
+assert.ok(c.search.query("印像派").suggestions.includes("印象主义"));
+assert.ok(c.search.query("Monnet").suggestions.includes("莫奈"));
+assert.ok(c.search.query("神奈川冲浪里").works.some((a) => a.id === "ukiyoe"));
+assert.equal(c.search.query("梵高", new Set(["egypt"])).works.length, 0);
+assert.equal(c.search.query("梵高", new Set(["egypt"])).authors.length, 0);
+const linkSample = linkedText('文艺复兴与油画，<img src=x>；Surrealism.', "baroque", c.TERMS);
+assert.ok(linkSample.includes('data-node="renaissance"') && linkSample.includes('data-node="oilpainting"'));
+assert.ok(linkSample.includes("&lt;img") && !linkSample.includes('<img src=x>'));
+assert.ok(!linkedText("油画", "oilpainting", c.TERMS).includes("<a"));
+assert.ok(!linkedText("NotSurrealismSuffix", "baroque", c.TERMS).includes("<a"));
+const resultHTML = searchResultsHTML(c.search.query("梵高"), views, c);
+assert.ok(resultHTML.includes('id="searchAuthors"') && resultHTML.includes('id="searchWorks"') && resultHTML.includes('id="searchEntries"'));
+for (const d of c.DATA.filter((d) => d.level === "core")) {
+  assert.ok(d.featuredWorks.length >= 3 && d.featuredWorks.length <= 5, d.id);
+  assert.deepEqual(c.ART[d.id].slice(0, d.featuredWorks.length).map((w) => w.id), d.featuredWorks);
+}
 assert.equal(readScope(new URLSearchParams()), "core");
 assert.equal(readScope(new URLSearchParams("view=index")), "all");
 assert.equal(readScope(new URLSearchParams("q=敦煌")), "all");
@@ -30,7 +55,7 @@ assert.equal(c.DATA.filter((d) => inScope(d, "all")).length, 233);
 for (const d of c.DATA.filter((d) => d.level === "core")) {
   const html = detailHTML(d, c, { saved: new Set(), compare: [] });
   assert.ok(html.includes("核心必读") && !html.includes("为什么先读") && !html.includes("试着说清楚"));
-  for (const id of d.study.next) assert.ok(html.includes(`data-node="${id}"`));
+  for (const id of d.next) assert.ok(html.includes(`data-node="${id}"`));
 }
 const core = c.DATA.find((d) => d.level === "core" && c.DATA.some((x) => x.lane === d.lane && x.era === d.era && x.level === "extended"));
 const extension = c.DATA.find((d) => d.lane === core.lane && d.era === core.era && d.level === "extended");

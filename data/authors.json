@@ -1,0 +1,639 @@
+[
+  {
+    "name": "梵高",
+    "aliases": [
+      "梵高",
+      "文森特·梵高",
+      "Vincent van Gogh",
+      "Van Gogh",
+      "凡高",
+      "梵谷"
+    ]
+  },
+  {
+    "name": "莫奈",
+    "aliases": [
+      "莫奈",
+      "克洛德·莫奈",
+      "Claude Monet",
+      "Monet"
+    ]
+  },
+  {
+    "name": "马奈",
+    "aliases": [
+      "马奈",
+      "爱德华·马奈",
+      "Édouard Manet",
+      "Edouard Manet",
+      "Manet"
+    ]
+  },
+  {
+    "name": "德加",
+    "aliases": [
+      "德加",
+      "埃德加·德加",
+      "Edgar Degas",
+      "Degas"
+    ]
+  },
+  {
+    "name": "雷诺阿",
+    "aliases": [
+      "雷诺阿",
+      "皮埃尔-奥古斯特·雷诺阿",
+      "Pierre-Auguste Renoir",
+      "Renoir",
+      "雷諾瓦"
+    ]
+  },
+  {
+    "name": "莫里索",
+    "aliases": [
+      "莫里索",
+      "贝尔特·莫里索",
+      "Berthe Morisot",
+      "Morisot"
+    ]
+  },
+  {
+    "name": "毕沙罗",
+    "aliases": [
+      "毕沙罗",
+      "卡米耶·毕沙罗",
+      "Camille Pissarro",
+      "Pissarro"
+    ]
+  },
+  {
+    "name": "塞尚",
+    "aliases": [
+      "塞尚",
+      "保罗·塞尚",
+      "Paul Cézanne",
+      "Paul Cezanne",
+      "Cezanne"
+    ]
+  },
+  {
+    "name": "高更",
+    "aliases": [
+      "高更",
+      "保罗·高更",
+      "Paul Gauguin",
+      "Gauguin"
+    ]
+  },
+  {
+    "name": "修拉",
+    "aliases": [
+      "修拉",
+      "乔治·修拉",
+      "Georges Seurat",
+      "Seurat",
+      "秀拉"
+    ]
+  },
+  {
+    "name": "毕加索",
+    "aliases": [
+      "毕加索",
+      "巴勃罗·毕加索",
+      "Pablo Picasso",
+      "Picasso",
+      "畢卡索"
+    ]
+  },
+  {
+    "name": "布拉克",
+    "aliases": [
+      "布拉克",
+      "乔治·布拉克",
+      "Georges Braque",
+      "Braque"
+    ]
+  },
+  {
+    "name": "胡安·格里斯",
+    "aliases": [
+      "胡安·格里斯",
+      "格里斯",
+      "Juan Gris",
+      "Gris"
+    ]
+  },
+  {
+    "name": "达利",
+    "aliases": [
+      "达利",
+      "萨尔瓦多·达利",
+      "Salvador Dalí",
+      "Salvador Dali",
+      "Dali",
+      "達利"
+    ]
+  },
+  {
+    "name": "马格利特",
+    "aliases": [
+      "马格利特",
+      "勒内·马格利特",
+      "René Magritte",
+      "Rene Magritte",
+      "Magritte"
+    ]
+  },
+  {
+    "name": "米罗",
+    "aliases": [
+      "米罗",
+      "胡安·米罗",
+      "Joan Miró",
+      "Joan Miro",
+      "Miro"
+    ]
+  },
+  {
+    "name": "马克斯·恩斯特",
+    "aliases": [
+      "马克斯·恩斯特",
+      "恩斯特",
+      "Max Ernst",
+      "Ernst"
+    ]
+  },
+  {
+    "name": "杜尚",
+    "aliases": [
+      "杜尚",
+      "马塞尔·杜尚",
+      "Marcel Duchamp",
+      "Duchamp"
+    ]
+  },
+  {
+    "name": "汉娜·赫希",
+    "aliases": [
+      "汉娜·赫希",
+      "赫希",
+      "Hannah Höch",
+      "Hannah Hoch"
+    ]
+  },
+  {
+    "name": "施维特斯",
+    "aliases": [
+      "施维特斯",
+      "库尔特·施维特斯",
+      "Kurt Schwitters",
+      "Schwitters"
+    ]
+  },
+  {
+    "name": "波洛克",
+    "aliases": [
+      "波洛克",
+      "杰克逊·波洛克",
+      "Jackson Pollock",
+      "Pollock"
+    ]
+  },
+  {
+    "name": "罗斯科",
+    "aliases": [
+      "罗斯科",
+      "马克·罗斯科",
+      "Mark Rothko",
+      "Rothko"
+    ]
+  },
+  {
+    "name": "德·库宁",
+    "aliases": [
+      "德·库宁",
+      "威廉·德·库宁",
+      "Willem de Kooning",
+      "de Kooning"
+    ]
+  },
+  {
+    "name": "李·克拉斯纳",
+    "aliases": [
+      "李·克拉斯纳",
+      "Lee Krasner",
+      "Krasner"
+    ]
+  },
+  {
+    "name": "纽曼",
+    "aliases": [
+      "纽曼",
+      "巴尼特·纽曼",
+      "Barnett Newman",
+      "Newman"
+    ]
+  },
+  {
+    "name": "沃霍尔",
+    "aliases": [
+      "沃霍尔",
+      "安迪·沃霍尔",
+      "Andy Warhol",
+      "Warhol",
+      "安迪沃荷"
+    ]
+  },
+  {
+    "name": "利希滕斯坦",
+    "aliases": [
+      "利希滕斯坦",
+      "罗伊·利希滕斯坦",
+      "Roy Lichtenstein",
+      "Lichtenstein"
+    ]
+  },
+  {
+    "name": "奥尔登堡",
+    "aliases": [
+      "奥尔登堡",
+      "克拉斯·奥尔登堡",
+      "Claes Oldenburg",
+      "Oldenburg"
+    ]
+  },
+  {
+    "name": "科苏斯",
+    "aliases": [
+      "科苏斯",
+      "约瑟夫·科苏斯",
+      "Joseph Kosuth",
+      "Kosuth"
+    ]
+  },
+  {
+    "name": "索尔·勒维特",
+    "aliases": [
+      "索尔·勒维特",
+      "勒维特",
+      "Sol LeWitt",
+      "LeWitt"
+    ]
+  },
+  {
+    "name": "朱迪·芝加哥",
+    "aliases": [
+      "朱迪·芝加哥",
+      "朱迪芝加哥",
+      "Judy Chicago"
+    ]
+  },
+  {
+    "name": "芭芭拉·克鲁格",
+    "aliases": [
+      "芭芭拉·克鲁格",
+      "克鲁格",
+      "Barbara Kruger",
+      "Kruger"
+    ]
+  },
+  {
+    "name": "雪莉·莱文",
+    "aliases": [
+      "雪莉·莱文",
+      "Sherrie Levine",
+      "Levine"
+    ]
+  },
+  {
+    "name": "安娜·门迭塔",
+    "aliases": [
+      "安娜·门迭塔",
+      "门迭塔",
+      "Ana Mendieta",
+      "Mendieta"
+    ]
+  },
+  {
+    "name": "艾尔·安纳祖",
+    "aliases": [
+      "艾尔·安纳祖",
+      "安纳祖",
+      "El Anatsui",
+      "Anatsui"
+    ]
+  },
+  {
+    "name": "尹卡·肖尼巴雷",
+    "aliases": [
+      "尹卡·肖尼巴雷",
+      "肖尼巴雷",
+      "Yinka Shonibare",
+      "Shonibare"
+    ]
+  },
+  {
+    "name": "达·芬奇",
+    "aliases": [
+      "达·芬奇",
+      "达芬奇",
+      "列奥纳多·达·芬奇",
+      "Leonardo da Vinci",
+      "da Vinci"
+    ]
+  },
+  {
+    "name": "米开朗琪罗",
+    "aliases": [
+      "米开朗琪罗",
+      "Michelangelo",
+      "Michelangelo Buonarroti",
+      "米開朗基羅"
+    ]
+  },
+  {
+    "name": "拉斐尔",
+    "aliases": [
+      "拉斐尔",
+      "Raphael",
+      "Raffaello Sanzio",
+      "拉斐爾"
+    ]
+  },
+  {
+    "name": "波提切利",
+    "aliases": [
+      "波提切利",
+      "桑德罗·波提切利",
+      "Sandro Botticelli",
+      "Botticelli"
+    ]
+  },
+  {
+    "name": "提香",
+    "aliases": [
+      "提香",
+      "Titian",
+      "Tiziano Vecellio"
+    ]
+  },
+  {
+    "name": "卡拉瓦乔",
+    "aliases": [
+      "卡拉瓦乔",
+      "Caravaggio",
+      "Michelangelo Merisi"
+    ]
+  },
+  {
+    "name": "贝尔尼尼",
+    "aliases": [
+      "贝尔尼尼",
+      "Bernini",
+      "Gian Lorenzo Bernini"
+    ]
+  },
+  {
+    "name": "鲁本斯",
+    "aliases": [
+      "鲁本斯",
+      "彼得·保罗·鲁本斯",
+      "Peter Paul Rubens",
+      "Rubens"
+    ]
+  },
+  {
+    "name": "伦勃朗",
+    "aliases": [
+      "伦勃朗",
+      "Rembrandt",
+      "Rembrandt van Rijn",
+      "林布蘭"
+    ]
+  },
+  {
+    "name": "委拉斯开兹",
+    "aliases": [
+      "委拉斯开兹",
+      "Diego Velázquez",
+      "Diego Velazquez",
+      "Velazquez"
+    ]
+  },
+  {
+    "name": "葛饰北斋",
+    "aliases": [
+      "葛饰北斋",
+      "北斋",
+      "Hokusai",
+      "Katsushika Hokusai",
+      "葛飾北齋"
+    ]
+  },
+  {
+    "name": "歌川广重",
+    "aliases": [
+      "歌川广重",
+      "广重",
+      "Hiroshige",
+      "Utagawa Hiroshige"
+    ]
+  },
+  {
+    "name": "喜多川歌麿",
+    "aliases": [
+      "喜多川歌麿",
+      "歌麿",
+      "Utamaro",
+      "Kitagawa Utamaro"
+    ]
+  },
+  {
+    "name": "郭熙",
+    "aliases": [
+      "郭熙",
+      "Guo Xi"
+    ]
+  },
+  {
+    "name": "范宽",
+    "aliases": [
+      "范宽",
+      "Fan Kuan"
+    ]
+  },
+  {
+    "name": "赵孟頫",
+    "aliases": [
+      "赵孟頫",
+      "赵孟俯",
+      "Zhao Mengfu"
+    ]
+  },
+  {
+    "name": "倪瓒",
+    "aliases": [
+      "倪瓒",
+      "Ni Zan"
+    ]
+  },
+  {
+    "name": "黄公望",
+    "aliases": [
+      "黄公望",
+      "Huang Gongwang"
+    ]
+  },
+  {
+    "name": "王羲之",
+    "aliases": [
+      "王羲之",
+      "Wang Xizhi"
+    ]
+  },
+  {
+    "name": "颜真卿",
+    "aliases": [
+      "颜真卿",
+      "Yan Zhenqing"
+    ]
+  },
+  {
+    "name": "苏轼",
+    "aliases": [
+      "苏轼",
+      "苏东坡",
+      "Su Shi"
+    ]
+  },
+  {
+    "name": "徐悲鸿",
+    "aliases": [
+      "徐悲鸿",
+      "Xu Beihong"
+    ]
+  },
+  {
+    "name": "齐白石",
+    "aliases": [
+      "齐白石",
+      "Qi Baishi"
+    ]
+  },
+  {
+    "name": "林风眠",
+    "aliases": [
+      "林风眠",
+      "Lin Fengmian"
+    ]
+  },
+  {
+    "name": "李桦",
+    "aliases": [
+      "李桦",
+      "Li Hua"
+    ]
+  },
+  {
+    "name": "徐冰",
+    "aliases": [
+      "徐冰",
+      "Xu Bing"
+    ]
+  },
+  {
+    "name": "威廉·莫里斯",
+    "aliases": [
+      "威廉·莫里斯",
+      "莫里斯",
+      "William Morris"
+    ]
+  },
+  {
+    "name": "阿尔丰斯·慕夏",
+    "aliases": [
+      "阿尔丰斯·慕夏",
+      "慕夏",
+      "Alphonse Mucha",
+      "Mucha"
+    ]
+  },
+  {
+    "name": "格罗皮乌斯",
+    "aliases": [
+      "格罗皮乌斯",
+      "瓦尔特·格罗皮乌斯",
+      "Walter Gropius",
+      "Gropius"
+    ]
+  },
+  {
+    "name": "勒·柯布西耶",
+    "aliases": [
+      "勒·柯布西耶",
+      "勒柯布西耶",
+      "Le Corbusier",
+      "Corbusier"
+    ]
+  },
+  {
+    "name": "密斯·凡·德·罗",
+    "aliases": [
+      "密斯·凡·德·罗",
+      "密斯",
+      "Ludwig Mies van der Rohe",
+      "Mies van der Rohe"
+    ]
+  },
+  {
+    "name": "马塞尔·布鲁尔",
+    "aliases": [
+      "马塞尔·布鲁尔",
+      "布鲁尔",
+      "Marcel Breuer",
+      "Breuer"
+    ]
+  },
+  {
+    "name": "玛丽安娜·布兰特",
+    "aliases": [
+      "玛丽安娜·布兰特",
+      "布兰特",
+      "Marianne Brandt"
+    ]
+  },
+  {
+    "name": "埃托雷·索特萨斯",
+    "aliases": [
+      "埃托雷·索特萨斯",
+      "索特萨斯",
+      "Ettore Sottsass",
+      "Sottsass"
+    ]
+  },
+  {
+    "name": "迈克尔·格雷夫斯",
+    "aliases": [
+      "迈克尔·格雷夫斯",
+      "格雷夫斯",
+      "Michael Graves"
+    ]
+  },
+  {
+    "name": "阿明·霍夫曼",
+    "aliases": [
+      "阿明·霍夫曼",
+      "Armin Hofmann",
+      "Hofmann"
+    ]
+  },
+  {
+    "name": "约瑟夫·米勒-布罗克曼",
+    "aliases": [
+      "约瑟夫·米勒-布罗克曼",
+      "米勒-布罗克曼",
+      "Josef Müller-Brockmann",
+      "Josef Muller-Brockmann"
+    ]
+  }
+]

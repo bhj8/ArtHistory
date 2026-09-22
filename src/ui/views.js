@@ -1,3 +1,4 @@
+import { artworkPickButton } from "./art-comparison.js";
 import { levelBadge, levelRank } from "../learning.js";
 import { esc, imageHTML, empty } from "./helpers.js";
 export function createViews(c, state, saved, seen) {
@@ -50,7 +51,7 @@ export function createViews(c, state, saved, seen) {
       .slice(0, limit)
       .map(
         (a) =>
-          `<button class="art-card" data-art="${a.id}"><div class="art-stage">${imageHTML(a)}<span class="art-zoom" aria-hidden="true">↗</span></div><div class="art-info"><h3>${esc(a.zh)}</h3><p>${esc(a.artistZh || a.artist)}<span>${esc(a.date)}</span></p><small>${a.entries.map((id) => esc(BYID[id].zh)).join(" · ")}</small></div></button>`,
+          `<article class="gallery-item"><button class="art-card" data-art="${a.id}"><div class="art-stage">${imageHTML(a)}<span class="art-zoom" aria-hidden="true">↗</span></div><div class="art-info"><h3>${esc(a.zh)}</h3><p>${esc(a.artistZh || a.artist)}<span>${esc(a.date)}</span></p><small>${a.entries.map((id) => esc(BYID[id].zh)).join(" · ")}</small></div></button>${artworkPickButton(a.id)}</article>`,
       )
       .join(
         "",

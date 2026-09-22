@@ -563,11 +563,15 @@
     "artistZh": "弗拉·菲利波·利皮",
     "image": "assets/artworks/renaissance.webp",
     "entries": [
-      "renaissance"
+      "renaissance",
+      "perspective"
     ],
     "museum": "The Met",
     "width": 563,
-    "height": 850
+    "height": 850,
+    "notes": {
+      "perspective": "建筑开口和人物位置组织画面纵深；早期文艺复兴的空间实践并不总是严格遵守单一消失点。"
+    }
   },
   "dutch": {
     "key": "dutch",
@@ -3167,7 +3171,8 @@
   "met-436535": {
     "oid": 436535,
     "entries": [
-      "postimp"
+      "postimp",
+      "oilpainting"
     ],
     "title": "Wheat Field with Cypresses",
     "zh": "有柏树的麦田",
@@ -3181,7 +3186,10 @@
     "image": "assets/artworks/met-436535.webp",
     "width": 599,
     "height": 477,
-    "artistZh": "文森特·梵高"
+    "artistZh": "文森特·梵高",
+    "notes": {
+      "oilpainting": "梵高的厚涂笔触是油画的另一种表面处理，与透明罩染形成区别。"
+    }
   },
   "met-436524": {
     "oid": 436524,
@@ -3321,7 +3329,8 @@
   "met-437397": {
     "oid": 437397,
     "entries": [
-      "dutch"
+      "dutch",
+      "oilpainting"
     ],
     "title": "Self-Portrait",
     "zh": "自画像",
@@ -3335,7 +3344,10 @@
     "image": "assets/artworks/met-437397.webp",
     "width": 515,
     "height": 625,
-    "artistZh": "伦勃朗"
+    "artistZh": "伦勃朗",
+    "notes": {
+      "oilpainting": "伦勃朗自画像以厚薄不同的油彩层表现皮肤、衣料和光照，展示油画技法的多样性。"
+    }
   },
   "met-310542": {
     "oid": 310542,
@@ -3471,7 +3483,8 @@
   "met-318622": {
     "oid": 318622,
     "entries": [
-      "benin"
+      "benin",
+      "mask"
     ],
     "title": "Pendant mask of Ìyọ́bà Idià",
     "zh": "王太后伊迪娅面具佩饰",
@@ -3953,7 +3966,8 @@
   "cma-121109": {
     "oid": 121109,
     "entries": [
-      "mathura"
+      "mathura",
+      "indiaearly"
     ],
     "zh": "佛坐像",
     "title": "Seated Buddha",
@@ -10291,7 +10305,8 @@
   "cma-160767": {
     "oid": 160767,
     "entries": [
-      "benin"
+      "benin",
+      "mask"
     ],
     "zh": "贝宁宫廷饰板",
     "title": "Plaque",
@@ -11798,7 +11813,8 @@
     "artistZh": "徐冰",
     "date": "照片摄于2020",
     "entries": [
-      "cncontemporary"
+      "cncontemporary",
+      "global"
     ],
     "image": "assets/artworks/commons-95592853.webp",
     "width": 960,
@@ -14045,7 +14061,8 @@
     "artistZh": "芭芭拉·克鲁格",
     "date": "展览现场2016",
     "entries": [
-      "postmodernart"
+      "postmodernart",
+      "feminist"
     ],
     "image": "assets/artworks/commons-76412409.webp",
     "width": 960,
@@ -14100,7 +14117,8 @@
     "date": "照片记录2020",
     "entries": [
       "appropriation",
-      "postmodernart"
+      "postmodernart",
+      "feminist"
     ],
     "image": "assets/artworks/commons-93141718.webp",
     "width": 960,
@@ -14117,7 +14135,8 @@
     "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sherrie_Levine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "notes": {
       "appropriation": "把它与杜尚的现成品放在一起想：材质与署名的改变如何重写作者和原作关系。",
-      "postmodernart": "把它与杜尚的现成品放在一起想：材质与署名的改变如何重写作者和原作关系。"
+      "postmodernart": "把它与杜尚的现成品放在一起想：材质与署名的改变如何重写作者和原作关系。",
+      "feminist": "雪莉·莱文对杜尚《泉》的再制作将作者身份、原创性与性别置于同一讨论中。"
     },
     "rightsNote": "所列许可为来源图片的许可；其中所摄作品的权利请参阅原始来源。"
   },
@@ -14509,7 +14528,8 @@
     "width": 368,
     "height": 512,
     "entries": [
-      "cnwoodcut"
+      "cnwoodcut",
+      "cnmodern"
     ],
     "notes": {
       "cnwoodcut": "看紧绷的身体、绳索和黑白刀痕如何集中表达挣扎。创作年代依中央美院展览说明为1935；馆方平台另有1938标注。"
@@ -14597,5 +14617,692 @@
     "notes": {
       "ai": "这是以扩散方法为例的概念流程；小图为手绘示意，非模型输出。重点是识别输入、生成、选择和修改中的决策。"
     }
+  },
+  "commons-101784013": {
+    "title": "Carafe, Cups and Glasses P11666.jpg",
+    "zh": "水瓶、杯子与玻璃杯",
+    "artist": "胡安·格里斯",
+    "artistZh": "胡安·格里斯",
+    "date": "1913年",
+    "entries": [
+      "cubism"
+    ],
+    "medium": "绘画",
+    "museum": "爱尔兰国家美术馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Carafe,_Cups_and_Glasses_P11666.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-101784013.webp",
+    "width": 1018,
+    "height": 1400,
+    "credit": "Juan Gris",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Carafe,_Cups_and_Glasses_P11666.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Carafe%2C_Cups_and_Glasses_P11666.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "cubism": "器皿与桌面被分解为交错形面。"
+    },
+    "referenceUrls": [
+      "https://onlinecollection.nationalgallery.ie/objects/13412/carafe-cups-and-glasses"
+    ]
+  },
+  "commons-154885769": {
+    "title": "02 10 2024 Photo Paolo Villa-Napoli-mann-Museo Archeologico-FO232526tris-Arte Greca copia romana-Policleto Doriforo Polykleitos Doryphoros from Pompeii-marmo marble carrara.jpg",
+    "zh": "持矛者：罗马大理石复制品",
+    "artist": "波利克里托斯原作；罗马复制者",
+    "artistZh": "波利克里托斯原作；罗马复制者",
+    "date": "原作约前5世纪中叶；罗马时期复制",
+    "entries": [
+      "classical"
+    ],
+    "medium": "大理石雕塑照片",
+    "museum": "那不勒斯国家考古博物馆",
+    "url": "https://commons.wikimedia.org/wiki/File:02_10_2024_Photo_Paolo_Villa-Napoli-mann-Museo_Archeologico-FO232526tris-Arte_Greca_copia_romana-Policleto_Doriforo_Polykleitos_Doryphoros_from_Pompeii-marmo_marble_carrara.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-154885769.webp",
+    "width": 845,
+    "height": 1400,
+    "credit": "Paolo Villa",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:02_10_2024_Photo_Paolo_Villa-Napoli-mann-Museo_Archeologico-FO232526tris-Arte_Greca_copia_romana-Policleto_Doriforo_Polykleitos_Doryphoros_from_Pompeii-marmo_marble_carrara.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/0/01/02_10_2024_Photo_Paolo_Villa-Napoli-mann-Museo_Archeologico-FO232526tris-Arte_Greca_copia_romana-Policleto_Doriforo_Polykleitos_Doryphoros_from_Pompeii-marmo_marble_carrara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "classical": "传世罗马复制品呈现重心转移与对应肢体结构。"
+    }
+  },
+  "commons-23825420": {
+    "title": "Portrait Vessel of a Ruler, 100 BC - 500 AD, Moche, north coast of Peru, ceramic and pigment - Art Institute of Chicago - DSC00316.JPG",
+    "zh": "统治者肖像陶器",
+    "artist": "莫切文化工匠",
+    "artistZh": "莫切文化工匠",
+    "date": "约前100—公元500年",
+    "entries": [
+      "andes"
+    ],
+    "medium": "彩绘陶器",
+    "museum": "芝加哥艺术博物馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Portrait_Vessel_of_a_Ruler,_100_BC_-_500_AD,_Moche,_north_coast_of_Peru,_ceramic_and_pigment_-_Art_Institute_of_Chicago_-_DSC00316.JPG",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-23825420.webp",
+    "width": 910,
+    "height": 1400,
+    "credit": "Daderot",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Portrait_Vessel_of_a_Ruler,_100_BC_-_500_AD,_Moche,_north_coast_of_Peru,_ceramic_and_pigment_-_Art_Institute_of_Chicago_-_DSC00316.JPG",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Portrait_Vessel_of_a_Ruler%2C_100_BC_-_500_AD%2C_Moche%2C_north_coast_of_Peru%2C_ceramic_and_pigment_-_Art_Institute_of_Chicago_-_DSC00316.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "andes": "面部形象与马镫形壶口构成陶器。"
+    }
+  },
+  "commons-45992938": {
+    "title": "Wall drawing Sol LeWitt. Spoleto.jpg",
+    "zh": "墙画：斯波莱托展览现场",
+    "artist": "索尔·勒维特",
+    "artistZh": "索尔·勒维特",
+    "date": "作品年代见来源；摄影2014年",
+    "entries": [
+      "conceptual"
+    ],
+    "medium": "墙画现场照片",
+    "museum": "意大利斯波莱托",
+    "url": "https://commons.wikimedia.org/wiki/File:Wall_drawing_Sol_LeWitt._Spoleto.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-45992938.webp",
+    "width": 1050,
+    "height": 1400,
+    "credit": "Manuelarosi",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Wall_drawing_Sol_LeWitt._Spoleto.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/67/Wall_drawing_Sol_LeWitt._Spoleto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "conceptual": "墙面上的几何结构由规则与执行过程实现。"
+    }
+  },
+  "commons-26720636": {
+    "title": "Yorkshire Sculpture Park with Yinka Shonibare MBE sculpture.jpg",
+    "zh": "风之雕塑：约克郡雕塑公园现场",
+    "artist": "尹卡·肖尼巴雷",
+    "artistZh": "尹卡·肖尼巴雷",
+    "date": "摄影2013年",
+    "entries": [
+      "global"
+    ],
+    "medium": "雕塑照片",
+    "museum": "约克郡雕塑公园",
+    "url": "https://commons.wikimedia.org/wiki/File:Yorkshire_Sculpture_Park_with_Yinka_Shonibare_MBE_sculpture.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-26720636.webp",
+    "width": 1280,
+    "height": 851,
+    "credit": "Sergiusz Pawlowicz",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Yorkshire_Sculpture_Park_with_Yinka_Shonibare_MBE_sculpture.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Yorkshire_Sculpture_Park_with_Yinka_Shonibare_MBE_sculpture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "global": "彩色纹样与布料般的形体连接纺织、贸易和文化身份。"
+    },
+    "referenceUrls": [
+      "https://ysp.org.uk/whats-on/exhibitions/past-exhibitions/yinka-shonibare-mbe-fabric-ation"
+    ]
+  },
+  "commons-6092055": {
+    "title": "LascauxStier.jpg",
+    "zh": "拉斯科洞穴公牛壁画",
+    "artist": "史前画工",
+    "artistZh": "史前画工",
+    "date": "旧石器时代晚期",
+    "entries": [
+      "prehistoric"
+    ],
+    "medium": "岩壁绘画",
+    "museum": "拉斯科洞穴",
+    "url": "https://commons.wikimedia.org/wiki/File:LascauxStier.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-6092055.webp",
+    "width": 295,
+    "height": 199,
+    "credit": "Original uploader was  Coen.vromans  at  nl.wikipedia",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:LascauxStier.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/bb/LascauxStier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "prehistoric": "岩壁上的动物轮廓与色块。"
+    }
+  },
+  "commons-9444845": {
+    "title": "Venus of Willendorf frontview retouched 2.jpg",
+    "zh": "维伦多夫女性像",
+    "artist": "史前雕刻者",
+    "artistZh": "史前雕刻者",
+    "date": "约距今29500年",
+    "entries": [
+      "prehistoric"
+    ],
+    "medium": "石灰岩雕刻",
+    "museum": "维也纳自然史博物馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Venus_of_Willendorf_frontview_retouched_2.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-9444845.webp",
+    "width": 851,
+    "height": 1400,
+    "credit": "User:MatthiasKabel",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Venus_of_Willendorf_frontview_retouched_2.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/19/Venus_of_Willendorf_frontview_retouched_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "prehistoric": "便携石雕，与洞穴壁画属于不同的材料和制作传统。"
+    }
+  },
+  "commons-8624693": {
+    "title": "Xu beihong Painting Tianheng's five hundreds heroes.jpg",
+    "zh": "田横五百士",
+    "artist": "徐悲鸿",
+    "artistZh": "徐悲鸿",
+    "date": "1928—1930年",
+    "entries": [
+      "cnmodern"
+    ],
+    "medium": "布面油画",
+    "museum": "徐悲鸿纪念馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Xu_beihong_Painting_Tianheng%27s_five_hundreds_heroes.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-8624693.webp",
+    "width": 1280,
+    "height": 754,
+    "credit": "Xu Beihong",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Xu_beihong_Painting_Tianheng%27s_five_hundreds_heroes.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Xu_beihong_Painting_Tianheng%27s_five_hundreds_heroes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "cnmodern": "历史题材人物群像采用油画造型与空间组织。"
+    }
+  },
+  "commons-21909786": {
+    "title": "1914 Gris Le Petit Déjeuner.jpg",
+    "zh": "早餐",
+    "artist": "胡安·格里斯",
+    "artistZh": "胡安·格里斯",
+    "date": "1914年",
+    "entries": [
+      "cubism",
+      "collage"
+    ],
+    "medium": "拼贴、绘画",
+    "museum": "纽约现代艺术博物馆（MoMA）",
+    "url": "https://commons.wikimedia.org/wiki/File:1914_Gris_Le_Petit_D%C3%A9jeuner.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-21909786.webp",
+    "width": 440,
+    "height": 600,
+    "credit": "Juan Gris",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:1914_Gris_Le_Petit_D%C3%A9jeuner.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/e/e0/1914_Gris_Le_Petit_D%C3%A9jeuner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "cubism": "印刷纸片、图形与桌面物件组成平面结构。",
+      "collage": "印刷纸片、图形与桌面物件组成平面结构。"
+    },
+    "referenceUrls": [
+      "https://www.moma.org/collection/works/35572"
+    ]
+  },
+  "commons-192611643": {
+    "title": "Joan Miró — Composition (1927).jpg",
+    "zh": "构图",
+    "artist": "胡安·米罗",
+    "artistZh": "胡安·米罗",
+    "date": "1927年",
+    "entries": [
+      "surrealism"
+    ],
+    "medium": "绘画",
+    "museum": "普希金造型艺术博物馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Joan_Mir%C3%B3_%E2%80%94_Composition_(1927).jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-192611643.webp",
+    "width": 1280,
+    "height": 1038,
+    "credit": "Joan Miró",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Joan_Mir%C3%B3_%E2%80%94_Composition_(1927).jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Joan_Mir%C3%B3_%E2%80%94_Composition_%281927%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "surrealism": "抽象符号与开放空间体现米罗的超现实主义实践。"
+    }
+  },
+  "commons-95137130": {
+    "title": "Et les seins mouraient... (1927) - Joan Miró (1893-1983) (45065322815).jpg",
+    "zh": "米罗：《Et les seins mouraient…》",
+    "artist": "胡安·米罗",
+    "artistZh": "胡安·米罗",
+    "date": "1927年；摄影2015年",
+    "entries": [
+      "surrealism"
+    ],
+    "medium": "纸板墨绘",
+    "museum": "贝拉多收藏",
+    "url": "https://commons.wikimedia.org/wiki/File:Et_les_seins_mouraient..._(1927)_-_Joan_Mir%C3%B3_(1893-1983)_(45065322815).jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-95137130.webp",
+    "width": 1280,
+    "height": 964,
+    "credit": "Pedro Ribeiro Simões  from Lisboa, Portugal",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Et_les_seins_mouraient..._(1927)_-_Joan_Mir%C3%B3_(1893-1983)_(45065322815).jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Et_les_seins_mouraient..._%281927%29_-_Joan_Mir%C3%B3_%281893-1983%29_%2845065322815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "surrealism": "原作题名保留法文；墨线与符号形成诗性结构。"
+    }
+  },
+  "commons-147326081": {
+    "title": "Mark Rothko, Seagram Murals, shown at the Fondation Louis Vuitton, Paris in 2024.jpg",
+    "zh": "西格拉姆壁画：展览现场",
+    "artist": "马克·罗斯科",
+    "artistZh": "马克·罗斯科",
+    "date": "1958—1959年；摄影2024年",
+    "entries": [
+      "abstractexp"
+    ],
+    "medium": "绘画的展览照片",
+    "museum": "路易威登基金会展览现场",
+    "url": "https://commons.wikimedia.org/wiki/File:Mark_Rothko,_Seagram_Murals,_shown_at_the_Fondation_Louis_Vuitton,_Paris_in_2024.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-147326081.webp",
+    "width": 1280,
+    "height": 585,
+    "credit": "Jean-Pierre Dalbéra",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Mark_Rothko,_Seagram_Murals,_shown_at_the_Fondation_Louis_Vuitton,_Paris_in_2024.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/7/75/Mark_Rothko%2C_Seagram_Murals%2C_shown_at_the_Fondation_Louis_Vuitton%2C_Paris_in_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "abstractexp": "罗斯科的色域绘画以大面积色层和模糊边界构成空间感。"
+    }
+  },
+  "commons-189721638": {
+    "title": "Willem de Kooning, Amsterdam 1968 tentoonstelling (A).jpg",
+    "zh": "歌唱的女人：1968年展览记录",
+    "artist": "威廉·德·库宁",
+    "artistZh": "威廉·德·库宁",
+    "date": "作品1965年；摄影1968年",
+    "entries": [
+      "abstractexp"
+    ],
+    "medium": "绘画的黑白档案照片",
+    "museum": "荷兰国家档案馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Willem_de_Kooning,_Amsterdam_1968_tentoonstelling_(A).jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-189721638.webp",
+    "width": 394,
+    "height": 1400,
+    "credit": "Anefo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Willem_de_Kooning,_Amsterdam_1968_tentoonstelling_(A).jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Willem_de_Kooning%2C_Amsterdam_1968_tentoonstelling_%28A%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "abstractexp": "黑白展览记录呈现作品尺度与陈列，不能用于判断原作色彩。"
+    }
+  },
+  "commons-12138750": {
+    "title": "The Barcelona Pavilion, Barcelona, 2010.jpg",
+    "zh": "巴塞罗那德国馆：重建建筑",
+    "artist": "密斯·凡·德·罗与莉莉·赖希",
+    "artistZh": "密斯·凡·德·罗与莉莉·赖希",
+    "date": "原建筑1929年；重建1986年；摄影2010年",
+    "entries": [
+      "international"
+    ],
+    "medium": "建筑照片",
+    "museum": "西班牙巴塞罗那",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Barcelona_Pavilion,_Barcelona,_2010.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-12138750.webp",
+    "width": 1280,
+    "height": 857,
+    "credit": "Ashley Pomeroy  at  English Wikipedia",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:The_Barcelona_Pavilion,_Barcelona,_2010.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/42/The_Barcelona_Pavilion%2C_Barcelona%2C_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "international": "现存建筑为重建版本；自由墙面与屋顶水平线组成流动空间。"
+    }
+  },
+  "commons-182930416": {
+    "title": "Alessi Tea Kettle.jpg",
+    "zh": "9093水壶",
+    "artist": "迈克尔·格雷夫斯",
+    "artistZh": "迈克尔·格雷夫斯",
+    "date": "设计1985年",
+    "entries": [
+      "postmoderndesign"
+    ],
+    "medium": "产品照片",
+    "museum": "产品来源见原记录",
+    "url": "https://commons.wikimedia.org/wiki/File:Alessi_Tea_Kettle.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-182930416.webp",
+    "width": 1280,
+    "height": 853,
+    "credit": "Didriks",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Alessi_Tea_Kettle.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Alessi_Tea_Kettle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "postmoderndesign": "金属壶体、彩色把手与鸟形壶嘴哨结合功能和拟物符号。"
+    }
+  },
+  "commons-143232707": {
+    "title": "Mogao Cave 217 - South Wall of the Main Chamber - Lotus Sutra tableau (preaching Buddha with Summit of Being atop; parable of the Phantom city to the right).png",
+    "zh": "莫高窟第217窟南壁法华经变",
+    "artist": "唐代敦煌画工",
+    "artistZh": "唐代敦煌画工",
+    "date": "唐代",
+    "entries": [
+      "dunhuang"
+    ],
+    "medium": "壁画",
+    "museum": "敦煌莫高窟",
+    "url": "https://commons.wikimedia.org/wiki/File:Mogao_Cave_217_-_South_Wall_of_the_Main_Chamber_-_Lotus_Sutra_tableau_(preaching_Buddha_with_Summit_of_Being_atop;_parable_of_the_Phantom_city_to_the_right).png",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-143232707.webp",
+    "width": 1280,
+    "height": 794,
+    "credit": "Unknown 8th century mural painter",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Mogao_Cave_217_-_South_Wall_of_the_Main_Chamber_-_Lotus_Sutra_tableau_(preaching_Buddha_with_Summit_of_Being_atop;_parable_of_the_Phantom_city_to_the_right).png",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Mogao_Cave_217_-_South_Wall_of_the_Main_Chamber_-_Lotus_Sutra_tableau_%28preaching_Buddha_with_Summit_of_Being_atop%3B_parable_of_the_Phantom_city_to_the_right%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "dunhuang": "经变画将佛教经典中的场景组织为大型壁面图像。"
+    }
+  },
+  "commons-153537620": {
+    "title": "Casablanca bookcase, by Ettore Sottsass for Memphis, 1981, plastic laminate, Inv. MOBILI 1932. Dono Fondazine UCIMU, Cinisello Balsamo (2003), Antique Furniture & Wooden Sculpture Museum, Milan (01).jpg",
+    "zh": "Casablanca书柜",
+    "artist": "埃托雷·索特萨斯",
+    "artistZh": "埃托雷·索特萨斯",
+    "date": "1981年",
+    "entries": [
+      "postmoderndesign"
+    ],
+    "medium": "塑料层压板家具",
+    "museum": "米兰古家具与木雕博物馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Casablanca_bookcase,_by_Ettore_Sottsass_for_Memphis,_1981,_plastic_laminate,_Inv._MOBILI_1932._Dono_Fondazine_UCIMU,_Cinisello_Balsamo_(2003),_Antique_Furniture_%26_Wooden_Sculpture_Museum,_Milan_(01).jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-153537620.webp",
+    "width": 991,
+    "height": 1400,
+    "credit": "Neoclassicism Enthusiast",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Casablanca_bookcase,_by_Ettore_Sottsass_for_Memphis,_1981,_plastic_laminate,_Inv._MOBILI_1932._Dono_Fondazine_UCIMU,_Cinisello_Balsamo_(2003),_Antique_Furniture_%26_Wooden_Sculpture_Museum,_Milan_(01).jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Casablanca_bookcase%2C_by_Ettore_Sottsass_for_Memphis%2C_1981%2C_plastic_laminate%2C_Inv._MOBILI_1932._Dono_Fondazine_UCIMU%2C_Cinisello_Balsamo_%282003%29%2C_Antique_Furniture_%26_Wooden_Sculpture_Museum%2C_Milan_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "postmoderndesign": "几何体、表面图案与不对称支撑组合为孟菲斯家具。"
+    }
+  },
+  "commons-26247205": {
+    "title": "'Fountain' by Marcel Duchamp (replica).JPG",
+    "zh": "泉：再制作版本",
+    "artist": "马塞尔·杜尚",
+    "artistZh": "马塞尔·杜尚",
+    "date": "原作1917年；此为后来的再制作版本",
+    "entries": [
+      "dada",
+      "conceptual"
+    ],
+    "medium": "现成品的展览照片",
+    "museum": "苏格兰国立现代艺术馆",
+    "url": "https://commons.wikimedia.org/wiki/File:%27Fountain%27_by_Marcel_Duchamp_(replica).JPG",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-26247205.webp",
+    "width": 1039,
+    "height": 1400,
+    "credit": "Kim Traynor",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:%27Fountain%27_by_Marcel_Duchamp_(replica).JPG",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/29/%27Fountain%27_by_Marcel_Duchamp_%28replica%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "dada": "现成工业品经选择、署名与展示进入艺术制度，图示不是1917年原件。",
+      "conceptual": "现成工业品经选择、署名与展示进入艺术制度，图示不是1917年原件。"
+    }
+  },
+  "commons-98629802": {
+    "title": "Scaffold sculpture, and Spoon and Cherry bridge during protests.jpg",
+    "zh": "匙桥与樱桃：雕塑公园现场",
+    "artist": "克拉斯·奥尔登堡与科莎·范·布鲁根",
+    "artistZh": "克拉斯·奥尔登堡与科莎·范·布鲁根",
+    "date": "1988年；摄影2017年",
+    "entries": [
+      "pop"
+    ],
+    "medium": "公共雕塑照片",
+    "museum": "明尼阿波利斯雕塑花园",
+    "url": "https://commons.wikimedia.org/wiki/File:Scaffold_sculpture,_and_Spoon_and_Cherry_bridge_during_protests.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-98629802.webp",
+    "width": 1280,
+    "height": 853,
+    "credit": "Lorie Shaull",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Scaffold_sculpture,_and_Spoon_and_Cherry_bridge_during_protests.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Scaffold_sculpture%2C_and_Spoon_and_Cherry_bridge_during_protests.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "pop": "日常器物和食物被放大为公共雕塑；照片同时记录公园中的其他作品。"
+    }
+  },
+  "commons-72816408": {
+    "title": "Whaam! - Roy Lichenstein.jpg",
+    "zh": "Whaam!：展览图像记录",
+    "artist": "罗伊·利希滕斯坦",
+    "artistZh": "罗伊·利希滕斯坦",
+    "date": "原作1963年；展示摄影2018年",
+    "entries": [
+      "pop"
+    ],
+    "medium": "展览展示照片",
+    "museum": "展示地点与版本见来源记录",
+    "url": "https://commons.wikimedia.org/wiki/File:Whaam!_-_Roy_Lichenstein.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-72816408.webp",
+    "width": 1280,
+    "height": 512,
+    "credit": "GualdimG",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "licenseScope": "image",
+    "imagePublicDomain": false,
+    "publicDomain": false,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Whaam!_-_Roy_Lichenstein.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/da/Whaam%21_-_Roy_Lichenstein.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "图片许可依据来源记录；展览照片或建筑照片不等同于作品本身的版权授权。",
+    "notes": {
+      "pop": "漫画图像、网点和拟声文字构成双联结构；此照片是2018年的展示记录。"
+    }
+  },
+  "commons-77843255": {
+    "title": "Josef Müller-Brockmann 1957.jpg",
+    "zh": "苏黎世六月音乐节海报",
+    "artist": "约瑟夫·米勒-布罗克曼",
+    "artistZh": "约瑟夫·米勒-布罗克曼",
+    "date": "1957年",
+    "entries": [
+      "swiss"
+    ],
+    "medium": "平面海报",
+    "museum": "来源见作品记录",
+    "url": "https://commons.wikimedia.org/wiki/File:Josef_M%C3%BCller-Brockmann_1957.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-77843255.webp",
+    "width": 988,
+    "height": 1400,
+    "credit": "Josef Müller-Brockmann",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Josef_M%C3%BCller-Brockmann_1957.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/41/Josef_M%C3%BCller-Brockmann_1957.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "swiss": "直角矩形、文字层级与非对称布局构成音乐节海报。"
+    }
+  },
+  "commons-288304": {
+    "title": "Bauhaus-Dessau main building.jpg",
+    "zh": "德绍包豪斯校舍",
+    "artist": "瓦尔特·格罗皮乌斯及事务所",
+    "artistZh": "瓦尔特·格罗皮乌斯及事务所",
+    "date": "1925—1926年",
+    "entries": [
+      "international",
+      "bauhaus"
+    ],
+    "medium": "建筑照片",
+    "museum": "德国德绍",
+    "url": "https://commons.wikimedia.org/wiki/File:Bauhaus-Dessau_main_building.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-288304.webp",
+    "width": 1280,
+    "height": 960,
+    "credit": "摄影者署名见 Wikimedia Commons 原始文件记录",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Bauhaus-Dessau_main_building.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Bauhaus-Dessau_main_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "international": "玻璃幕墙、连桥与不同高度体量对应学校的功能组织。",
+      "bauhaus": "玻璃幕墙、连桥与不同高度体量对应学校的功能组织。"
+    }
+  },
+  "commons-13278718": {
+    "title": "Juan Gris - La bouteille d'anis - Google Art Project.jpg",
+    "zh": "茴香酒瓶",
+    "artist": "胡安·格里斯",
+    "artistZh": "胡安·格里斯",
+    "date": "1914年",
+    "entries": [
+      "collage",
+      "cubism"
+    ],
+    "medium": "拼贴、油彩与铅笔",
+    "museum": "索菲亚王后国家艺术中心博物馆",
+    "url": "https://commons.wikimedia.org/wiki/File:Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg",
+    "sourceLabel": "作品及图片记录",
+    "image": "assets/artworks/commons-13278718.webp",
+    "width": 798,
+    "height": 1400,
+    "credit": "Juan Gris",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "licenseScope": "image",
+    "imagePublicDomain": true,
+    "publicDomain": true,
+    "metadataSource": "https://commons.wikimedia.org/wiki/File:Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg",
+    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/5/56/Juan_Gris_-_La_bouteille_d%27anis_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "rightsNote": "来源记录标注公共领域。",
+    "notes": {
+      "collage": "酒瓶标签、印刷片段与绘画形面共同构成静物。",
+      "cubism": "酒瓶标签、印刷片段与绘画形面共同构成静物。"
+    },
+    "referenceUrls": [
+      "https://www.museoreinasofia.es/colecciones/obra/la-bouteille-danis-la-botella-de-anis/"
+    ]
   }
 }

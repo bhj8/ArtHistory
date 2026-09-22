@@ -477,5 +477,47 @@
     "title": "Traditional Chinese Painting in the Twentieth Century",
     "org": "The Met",
     "url": "https://www.metmuseum.org/ko/essays/traditional-chinese-painting-in-the-twentieth-century"
+  },
+  "nhm-willendorf": {
+    "zh": "维伦多夫女性像",
+    "title": "Venus of Willendorf",
+    "org": "维也纳自然史博物馆",
+    "url": "https://www.nhm.at/presse/top10/venus_of_willendorf"
+  },
+  "lascaux-panels": {
+    "zh": "拉斯科壁画的构成",
+    "title": "Construction of the panels",
+    "org": "法国文化部",
+    "url": "https://archeologie.culture.gouv.fr/lascaux/en/construction-panels"
+  },
+  "moma-kosuth-chairs": {
+    "zh": "一把和三把椅子",
+    "title": "One and Three Chairs, 1965",
+    "org": "MoMA",
+    "url": "https://www.moma.org/collection/works/81435"
+  },
+  "moma-gris-breakfast": {
+    "zh": "格里斯：早餐",
+    "title": "Breakfast, 1914",
+    "org": "MoMA",
+    "url": "https://www.moma.org/collection/works/35572"
+  },
+  "met-african-arts": {
+    "zh": "非洲艺术馆藏",
+    "title": "African Art",
+    "org": "The Met",
+    "url": "https://www.metmuseum.org/departments/african-art"
+  },
+  "walters-moche": {
+    "zh": "莫切肖像陶器",
+    "title": "Portrait Vessel",
+    "org": "Walters Art Museum",
+    "url": "https://art.thewalters.org/object/48.2827/"
+  },
+  "va-postmodern-overview": {
+    "zh": "后现代主义",
+    "title": "What is Postmodernism?",
+    "org": "V&A",
+    "url": "https://www.vam.ac.uk/articles/what-is-postmodernism"
   }
 }

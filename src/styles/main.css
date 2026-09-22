@@ -1978,3 +1978,68 @@ dialog::backdrop {
   .detail-gallery { position: sticky; top: 76px; }
 }
 
+.term-link { color: var(--green); text-decoration: underline; text-decoration-color: #a8b7a2; text-underline-offset: 4px; }
+.term-link:hover { background: var(--pale); text-decoration-color: var(--green); }
+.featured-label { color: var(--green); font-size: 11px; }
+.art-compare-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.art-compare-actions button, .art-pick { font-size: 12px; }
+.art-pick[aria-pressed="true"] { background: var(--pale); border-color: var(--green); }
+.gallery-item { min-width: 0; }
+.gallery-item .art-card { width: 100%; }
+.gallery-item > .art-pick { margin-top: 8px; }
+#artComparebar { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); z-index: 35; max-width: calc(100vw - 24px); width: max-content; background: var(--white); border: 1px solid var(--green); box-shadow: 0 4px 24px #26352f26; border-radius: 10px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
+#artComparebar[hidden] { display: none; }
+#artComparebar > span { max-width: 350px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+#artComparebar button { font-size: 12px; white-space: nowrap; }
+body:has(#artComparebar:not([hidden])) #comparebar { bottom: 85px; }
+#artComparison { width: min(1500px, calc(100vw - 32px)); max-width: none; height: min(1000px, calc(100dvh - 32px)); max-height: none; padding: 0 24px 24px; margin: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--white); color: var(--ink); overflow: auto; }
+#artComparison::backdrop { background: #14251caa; }
+#artComparison .modal-head { position: sticky; top: 0; background: var(--white); z-index: 2; }
+.art-compare-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; }
+.art-compare-panel { min-width: 0; }
+.art-compare-panel label { display: block; font-size: 12px; color: var(--muted); }
+.art-compare-panel select { display: block; width: 100%; margin-top: 6px; padding: 10px; }
+.art-compare-tools { display: flex; gap: 8px; align-items: center; margin: 10px 0; }
+.art-compare-tools button { padding: 7px 12px; font-size: 12px; }
+.art-compare-tools output { min-width: 44px; text-align: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.art-compare-stage { height: clamp(240px, 52dvh, 580px); overflow: auto; background: #e9e6df; border-radius: 8px; overscroll-behavior: contain; cursor: grab; }
+.art-compare-stage:active { cursor: grabbing; }
+.art-compare-canvas { width: 100%; height: 100%; }
+.art-compare-canvas img { width: 100%; height: 100%; max-width: none; object-fit: contain; display: block; user-select: none; -webkit-user-drag: none; }
+.art-compare-caption { display: flex; flex-direction: column; gap: 6px; padding: 14px 0; font-size: 12px; line-height: 1.6; }
+.art-compare-caption strong { font-size: 16px; }
+.art-compare-caption small { color: var(--muted); }
+.search-groups { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 24px; }
+.search-groups a { padding: 8px 16px; background: var(--pale); border-radius: 6px; color: var(--green); font-size: 13px; text-decoration: none; }
+.search-section { scroll-margin-top: 140px; margin: 26px 0 36px; }
+.search-section > h3 { font-size: 20px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.search-section > h3 small { font-size: 12px; color: var(--muted); margin-left: 8px; }
+.author-results { display: grid; grid-template-columns: repeat(auto-fill,minmax(min(100%,310px),1fr)); gap: 16px; }
+.author-results article { padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.author-results h4 { font-size: 22px; margin: 0; }
+.author-results p { color: var(--muted); font-size: 12px; }
+.author-entries { display: flex; flex-wrap: wrap; gap: 6px; }
+.author-entries button { font-size: 12px; padding: 6px 9px; }
+.author-previews { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; margin-top: 14px; }
+.author-previews button { padding: 3px; }
+.author-previews img { width: 100%; height: 90px; object-fit: contain; }
+.search-work-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(min(100%,220px),1fr)); gap: 20px; }
+.search-work-grid article { min-width: 0; }
+.search-work-open { display: flex; flex-direction: column; text-align: left; gap: 8px; width: 100%; padding: 12px; }
+.search-work-open img { width: 100%; height: 220px; object-fit: contain; background: #ece9e2; }
+.search-work-open span { font-size: 12px; color: var(--muted); }
+.search-work-grid .art-pick { margin-top: 8px; }
+.search-suggestions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px; }
+@media (max-width: 600px) {
+  #artComparison { width: 100vw; height: 100dvh; border-radius: 0; padding: 0 10px 12px; }
+  .art-compare-grid { gap: 8px; }
+  .art-compare-stage { height: 35dvh; min-height: 210px; }
+  .art-compare-tools { flex-wrap: wrap; gap: 5px; }
+  .art-compare-tools button { padding: 6px 9px; }
+  .art-compare-panel select { font-size: 12px; padding: 8px 3px; }
+  .art-compare-caption strong { font-size: 13px; }
+  #artComparebar { padding: 8px; gap: 6px; }
+  #artComparebar > span { max-width: 90px; }
+  .search-work-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .search-work-open img { height: 150px; }
+}
