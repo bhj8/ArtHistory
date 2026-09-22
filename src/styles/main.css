@@ -2046,3 +2046,8 @@ body:has(#artComparebar:not([hidden])) #comparebar { bottom: 85px; }
   .search-work-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .search-work-open img { height: 150px; }
 }
+
+/* A compact core filter; ordinary entries need no level label. */
+.learning-filter { margin: 14px 0; padding: 0; border: 0; background: transparent; }
+.learning-scopes { margin-left: 0; width: auto; }
+.learning-scopes button { padding: 7px 13px; }

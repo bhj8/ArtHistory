@@ -1,21 +1,15 @@
-// Editorial learning order, not a ranking of the value of cultures or artworks.
-export const LEVELS = {
-  core: { label: "核心必读", rank: 0 },
-  focus: { label: "重点了解", rank: 1 },
-  extended: { label: "专题拓展", rank: 2 },
-};
-export const SCOPES = { core: "核心必读", focus: "核心＋重点", all: "全部条目" };
+// Keep editorial levels in the data; the interface only distinguishes core entries.
+export const SCOPES = { core: "核心", all: "全部" };
 export function inScope(entry, scope = "all") {
-  return scope === "all" || entry.level === "core" || (scope === "focus" && entry.level === "focus");
+  return scope !== "core" || entry.level === "core";
 }
-export function levelRank(entry) { return LEVELS[entry.level]?.rank ?? 2; }
+export function levelRank(entry) { return entry.level === "core" ? 0 : 1; }
 export function readScope(params) {
   const scope = params.get("level");
   if (Object.hasOwn(SCOPES, scope)) return scope;
-  // Existing search/view links continue to search their full original collection.
+  if (scope === "focus") return "all";
   return params.has("view") || params.has("q") || params.has("lane") || params.has("era") ? "all" : "core";
 }
 export function levelBadge(entry) {
-  const level = LEVELS[entry.level] || LEVELS.extended;
-  return `<span class="level-badge level-${Object.hasOwn(LEVELS, entry.level) ? entry.level : "extended"}">${level.label}</span>`;
+  return entry.level === "core" ? '<span class="level-badge level-core">核心</span>' : "";
 }

@@ -126,7 +126,7 @@ async function start() {
     $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${DATA.filter((d) => inScope(d, scope)).length}</small></button>`).join("");
     const outside = state.q && state.view !== "routes" && state.level !== "all" ? hits(false, "all").filter((d) => !inScope(d, state.level) && (state.view !== "saved" || saved.has(d.id)) && (state.view !== "recent" || seen.has(d.id))).length : 0;
     $("scopeSearchHint").hidden = !outside;
-    $("scopeSearchHint").innerHTML = outside ? `其他学习层级还有 ${outside} 个搜索结果。<button data-level="all">查看全部层级 →</button>` : "";
+    $("scopeSearchHint").innerHTML = outside ? `另有 ${outside} 个搜索结果。<button data-level="all">查看全部 →</button>` : "";
     $("eras").innerHTML =
       `<button data-era="all" aria-pressed="${state.era === "all"}" class="${state.era === "all" ? "on" : ""}">全部时代</button>` +
       ERAS.map(

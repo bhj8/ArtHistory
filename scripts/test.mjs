@@ -47,14 +47,14 @@ assert.equal(readScope(new URLSearchParams()), "core");
 assert.equal(readScope(new URLSearchParams("view=index")), "all");
 assert.equal(readScope(new URLSearchParams("q=敦煌")), "all");
 assert.equal(readScope(new URLSearchParams("level=all")), "all");
-assert.equal(readScope(new URLSearchParams("level=focus&view=index")), "focus");
+assert.equal(readScope(new URLSearchParams("level=focus&view=index")), "all");
 assert.equal(readScope(new URLSearchParams("level=invalid")), "core");
 assert.equal(c.DATA.filter((d) => inScope(d, "core")).length, 42);
-assert.equal(c.DATA.filter((d) => inScope(d, "focus")).length, 121);
+assert.equal(c.DATA.filter((d) => inScope(d, "focus")).length, 233);
 assert.equal(c.DATA.filter((d) => inScope(d, "all")).length, 233);
 for (const d of c.DATA.filter((d) => d.level === "core")) {
   const html = detailHTML(d, c, { saved: new Set(), compare: [] });
-  assert.ok(html.includes("核心必读") && !html.includes("为什么先读") && !html.includes("试着说清楚"));
+  assert.ok(html.includes(">核心</span>") && !html.includes("为什么先读") && !html.includes("试着说清楚"));
   for (const id of d.next) assert.ok(html.includes(`data-node="${id}"`));
 }
 const core = c.DATA.find((d) => d.level === "core" && c.DATA.some((x) => x.lane === d.lane && x.era === d.era && x.level === "extended"));
