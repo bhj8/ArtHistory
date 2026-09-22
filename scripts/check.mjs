@@ -112,10 +112,11 @@ for (const [id, art] of Object.entries(artworks)) {
   for (const entryId of art.entries || [])
     check(byId.has(entryId), `${id}: unknown entry ${entryId}`);
   check(new Set(art.entries).size === art.entries.length, `${id}: duplicate entry associations`);
-  for (const [entryId, note] of Object.entries(art.notes || {})) {
-    check(art.entries.includes(entryId), `${id}: note for unlinked entry ${entryId}`);
-    check(typeof note === "string" && note.trim(), `${id}: empty viewing note`);
-  }
+  for (const field of ["notes", "associationNotes"])
+    for (const [entryId, note] of Object.entries(art[field] || {})) {
+      check(art.entries.includes(entryId), `${id}: ${field} for unlinked entry ${entryId}`);
+      check(typeof note === "string" && note.trim(), `${id}: empty ${field}`);
+    }
   if (art.license === "CC0") {
     check((art.licenseScope === "image" ? art.imagePublicDomain : art.publicDomain) === true, `${id}: contradictory CC0 metadata`);
     check(safeURL(art.licenseUrl) && safeURL(art.metadataSource), `${id}: missing license or metadata provenance`);

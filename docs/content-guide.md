@@ -63,6 +63,7 @@
 6. 新增开放图片保存 `metadataSource`、`sourceImage`、`license` 与 `licenseUrl`，方便复核。本轮克利夫兰艺术博物馆图片由官方 API 的 `share_license_status: CC0` 筛选；不把搜索结果直接按关键词归类。
 7. `artist` 保留原始作者信息和 `attributed to`、`follower of`、`studio of` 等限定；`artistZh` 是界面上的中文导读署名。共同创作者、题字者和设计者应分别标明。
 8. `notes` 可按关联条目 ID 保存具体视觉特征，例如 `"notes": { "cyanotype": "植物形成白色轮廓，背景为蓝色感光层。" }`。背景材料、习作和跨地域对照须明确说明，不能当作流派的典型原作。
+9. `associationNotes` 按条目 ID 保存需要直接显示的归属限定、背景材料身份或前后期关系。移除关联时同步移除对应说明；检查程序会拒绝指向未关联条目的图注。全量文字审查记录见 [配图审查](ARTWORK-AUDIT.md)。
 
 新增或修改位图后，用已安装 Pillow 的 Python 运行 `scripts/thumbnails.py`，提交缩略图及 `data/thumbnails.json`；校验会拒绝过期缩略图。原图保留用于详情与放大，预览采用独立小图。
 

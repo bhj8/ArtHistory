@@ -1,0 +1,2359 @@
+[
+  {
+    "id": "abstractexp",
+    "status": "consistent",
+    "reason": "abstractexp：波洛克1950年的编号绘画，作者和年代均对应战后纽约抽象表现主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "abstractexp"
+    ]
+  },
+  {
+    "id": "agsa-23902",
+    "status": "consistent",
+    "reason": "aboriginal：波瑟姆1982年梦境题材绘画对应帕普尼亚时代原住民当代实践；现注保留Anmatyerre背景。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "aboriginal"
+    ]
+  },
+  {
+    "id": "baroque",
+    "status": "consistent",
+    "reason": "baroque：卡拉瓦乔1610年宗教叙事画，位于意大利巴洛克起始阶段。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "baroque"
+    ]
+  },
+  {
+    "id": "bauhaus",
+    "status": "consistent",
+    "reason": "bauhaus：布兰特约1924年的茶滤器设计，作者与包豪斯金工作坊及学校存续时期相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bauhaus"
+    ]
+  },
+  {
+    "id": "cafa-roar",
+    "status": "consistent",
+    "reason": "cnwoodcut / cnmodern：李桦1935年创作的木刻同时属于新兴木刻和民国美术；1938馆方异记已有说明。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cnwoodcut",
+      "cnmodern"
+    ]
+  },
+  {
+    "id": "calligraphy",
+    "status": "consistent",
+    "reason": "calligraphy：南宋皇后13世纪初题诗的墨迹属于中国书法传统，未被归作绘画流派。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "calligraphy"
+    ]
+  },
+  {
+    "id": "classical",
+    "status": "consistent",
+    "reason": "classical：前1世纪中叶希腊青铜小像处于希腊化晚期，条目同时涵盖古典与希腊化。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "classical"
+    ]
+  },
+  {
+    "id": "cma-103057",
+    "status": "consistent",
+    "reason": "aztec：墨西哥阿兹特克陶塑，1325—1521年与条目的政体年代相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "aztec"
+    ]
+  },
+  {
+    "id": "cma-103244",
+    "status": "consistent",
+    "reason": "ukiyoe / japonisme：1857年广重彩色木版属于浮世绘；日本主义关联现已明示它是欧洲接受的图像来源。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1921.318"
+    ],
+    "reviewedEntries": [
+      "ukiyoe",
+      "japonisme"
+    ]
+  },
+  {
+    "id": "cma-103608",
+    "status": "consistent",
+    "reason": "nativeamerica / textile：19世纪纳瓦霍羊毛披毯同时对应北美原住民传统和织物媒介，织物条目不限当代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nativeamerica",
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-103706",
+    "status": "consistent",
+    "reason": "buncheong：16世纪朝鲜王朝剔花粉青炻器，器种、装饰和年代均匹配粉青沙器。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "buncheong"
+    ]
+  },
+  {
+    "id": "cma-106697",
+    "status": "consistent",
+    "reason": "islamic：14世纪伊朗伊儿汗釉陶属于伊斯兰艺术；动物纹不与条目的多元图像范围冲突。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "islamic"
+    ]
+  },
+  {
+    "id": "cma-106698",
+    "status": "consistent",
+    "reason": "safavid / textile：16世纪萨法维伊朗丝织袍料，同时符合王朝艺术与纺织媒介两种维度。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "safavid",
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-106705",
+    "status": "consistent",
+    "reason": "islamcalligraphy：16世纪赫拉特古兰经彩饰书页属于伊斯兰书籍与书法语境，非欧洲泥金手抄本。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "islamcalligraphy"
+    ]
+  },
+  {
+    "id": "cma-106709",
+    "status": "consistent",
+    "reason": "byzantine：君士坦丁堡11—12世纪象牙盒，年代和产地对应拜占庭艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "byzantine"
+    ]
+  },
+  {
+    "id": "cma-106962",
+    "status": "consistent",
+    "reason": "ukiyoe：广重1857年三联套色木版，符合江户浮世绘的媒介与时代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ukiyoe"
+    ]
+  },
+  {
+    "id": "cma-106999",
+    "status": "consistent",
+    "reason": "preraphaelite：伯恩-琼斯1885年人物素描属于拉斐尔前派延续；条目1848年起并未以兄弟会解散为终点。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "preraphaelite"
+    ]
+  },
+  {
+    "id": "cma-107008",
+    "status": "consistent",
+    "reason": "rococo：布歇约1770年宗教题材素描仍属洛可可作者实践，不因题材宗教化而改归巴洛克。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rococo"
+    ]
+  },
+  {
+    "id": "cma-107161",
+    "status": "consistent",
+    "reason": "northern：克拉纳赫1509年木刻，位于德语地区北方文艺复兴。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-107251",
+    "status": "consistent",
+    "reason": "veduta / perspective / etching：卡纳莱托18世纪建筑蚀刻同时对应城市景观传统、透视空间方法与凹版媒介。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1925.1239.10"
+    ],
+    "reviewedEntries": [
+      "veduta",
+      "perspective",
+      "etching"
+    ]
+  },
+  {
+    "id": "cma-107261",
+    "status": "consistent",
+    "reason": "veduta / etching：卡纳莱托1735—1746年景观蚀刻，城市景观和蚀刻关联分别是题材传统与制版技术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "veduta",
+      "etching"
+    ]
+  },
+  {
+    "id": "cma-107277",
+    "status": "consistent",
+    "reason": "veduta / etching / perspective：卡纳莱托1735—1746年运河蚀刻，对应城市景观、建筑透视和蚀刻三维；现注说明建筑进深。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1925.1239.6"
+    ],
+    "reviewedEntries": [
+      "veduta",
+      "etching",
+      "perspective"
+    ]
+  },
+  {
+    "id": "cma-107310",
+    "status": "consistent",
+    "reason": "byzantine / icons：拜占庭约950—1025年圣母象牙浮雕同时是宗教圣像；icons条目明确包含浮雕。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "byzantine",
+      "icons"
+    ]
+  },
+  {
+    "id": "cma-107361",
+    "status": "consistent",
+    "reason": "qinhan：西汉墓葬陶灶浮雕，前1世纪在秦汉视觉文化范围内。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "qinhan"
+    ]
+  },
+  {
+    "id": "cma-107374",
+    "status": "consistent",
+    "reason": "qinhan：前1世纪西汉陶灶持矛者与虎图像，符合秦汉墓葬明器语境。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "qinhan"
+    ]
+  },
+  {
+    "id": "cma-107385",
+    "status": "consistent",
+    "reason": "qinhan：前1世纪西汉陶灶朱雀浮雕属于秦汉器物和神兽图像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "qinhan"
+    ]
+  },
+  {
+    "id": "cma-108312",
+    "status": "consistent",
+    "reason": "romanportrait / rome：公元50—70年罗马帝后大理石胸像，同时符合古罗马整体艺术与罗马肖像专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanportrait",
+      "rome"
+    ]
+  },
+  {
+    "id": "cma-108380",
+    "status": "consistent",
+    "reason": "print / northern：丢勒1510年木刻，既是北方文艺复兴作品，也属木版印刷技术。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1926.112"
+    ],
+    "reviewedEntries": [
+      "print",
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-108501",
+    "status": "consistent",
+    "reason": "engraving / northern：丢勒1514年雕版，作者时代对应北方文艺复兴，engraving媒介吻合铜版专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "engraving",
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-108512",
+    "status": "consistent",
+    "reason": "safavid / textile：萨法维归属的丝及金属线织物同时属于纺织；1600—1750宽年代含王朝末期，不据上限机械删朝代关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "safavid",
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-108544",
+    "status": "consistent",
+    "reason": "symbolism：雷东约1903—1910年神话粉彩，作者、题材和年代支持象征主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "symbolism"
+    ]
+  },
+  {
+    "id": "cma-108857",
+    "status": "consistent",
+    "reason": "safavid / carpets：伊斯法罕1600—1625年丝与金属线绒毯，同时属于萨法维工艺与地毯专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "safavid",
+      "carpets"
+    ]
+  },
+  {
+    "id": "cma-109038",
+    "status": "consistent",
+    "reason": "northern / print：克拉纳赫1509年比武木刻，北方文艺复兴和木版印刷关联均有明确依据。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "northern",
+      "print"
+    ]
+  },
+  {
+    "id": "cma-109138",
+    "status": "fix",
+    "reason": "symbolism：雷东约1868年的幻想素描早于条目标注1880年代起；可保留为早期实践，但须明示时间关系。",
+    "changes": {
+      "associationNotes": {
+        "symbolism": "雷东约1868年的早期幻想素描，早于象征主义运动的主要活动阶段。"
+      }
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1927.299"
+    ],
+    "reviewedEntries": [
+      "symbolism"
+    ]
+  },
+  {
+    "id": "cma-109541",
+    "status": "consistent",
+    "reason": "celadon：12世纪高丽竹笋形青瓷，文化、器形和釉陶类型均对应高丽青瓷。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "celadon"
+    ]
+  },
+  {
+    "id": "cma-110239",
+    "status": "consistent",
+    "reason": "romanportrait / rome：奥古斯都时期青铜男子胸像，同时属于罗马艺术与罗马肖像；媒介不是误写为绘画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanportrait",
+      "rome"
+    ]
+  },
+  {
+    "id": "cma-110953",
+    "status": "fix",
+    "reason": "realism：官方署名是库尔贝的模仿者，中文“模仿者：库尔贝”容易反转身份；现实主义关联只能作为仿作说明。",
+    "changes": {
+      "artistZh": "古斯塔夫·库尔贝的模仿者（姓名不详）",
+      "associationNotes": {
+        "realism": "19世纪模仿库尔贝的作品，馆方未认定为库尔贝亲笔。"
+      }
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1929.465"
+    ],
+    "reviewedEntries": [
+      "realism"
+    ]
+  },
+  {
+    "id": "cma-111518",
+    "status": "consistent",
+    "reason": "romanportrait：64—79年罗马皇帝改刻肖像，符合罗马肖像政治使用主题，现注已说明尼禄改刻为韦斯帕西安。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanportrait"
+    ]
+  },
+  {
+    "id": "cma-111702",
+    "status": "consistent",
+    "reason": "veduta / perspective：18世纪卡纳莱托奇想建筑素描可说明透视；城市景观关联已明确虚构建筑，不冒充现场实景。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1930.23"
+    ],
+    "reviewedEntries": [
+      "veduta",
+      "perspective"
+    ]
+  },
+  {
+    "id": "cma-111811",
+    "status": "consistent",
+    "reason": "chola / hindutemple：11世纪南印度朱罗舞王湿婆青铜，既是朱罗铜像，也是印度教仪式造像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "chola",
+      "hindutemple"
+    ]
+  },
+  {
+    "id": "cma-113947",
+    "status": "consistent",
+    "reason": "japonisme：惠斯勒约1872年日本题材粉彩符合欧洲日本主义，作者并非被误当作日本画家。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "japonisme"
+    ]
+  },
+  {
+    "id": "cma-114515",
+    "status": "consistent",
+    "reason": "artistbook / print：布莱克1821年木口木刻对应木版印刷；艺术家书关联作为历史前例且注释已有现代概念区别。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "artistbook",
+      "print"
+    ]
+  },
+  {
+    "id": "cma-114516",
+    "status": "consistent",
+    "reason": "artistbook / print：布莱克1821年书籍木刻属于印刷；现注明确其书籍插图前例身份，不等同20世纪艺术家书。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "artistbook",
+      "print"
+    ]
+  },
+  {
+    "id": "cma-114751",
+    "status": "consistent",
+    "reason": "etching / engraving：伦勃朗1648年蚀刻、干刻及雕版混合，两个凹版专题皆有媒介依据。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "etching",
+      "engraving"
+    ]
+  },
+  {
+    "id": "cma-115161",
+    "status": "consistent",
+    "reason": "asante：19世纪加纳阿散蒂王室金工刀鞘饰，产地、材料和宫廷功能匹配阿散蒂专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "asante"
+    ]
+  },
+  {
+    "id": "cma-115164",
+    "status": "consistent",
+    "reason": "asante：19世纪阿散蒂金匠制作的金刀柄罩，与王权金工专题一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "asante"
+    ]
+  },
+  {
+    "id": "cma-115383",
+    "status": "consistent",
+    "reason": "carpets：17世纪初克什米尔不对称结绒地毯，对应南亚地毯与织物图案。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "carpets"
+    ]
+  },
+  {
+    "id": "cma-117034",
+    "status": "consistent",
+    "reason": "crafts：莫里斯1875年郁金香织物设计，工艺美术关联成立；机器滚筒印花不等于不属于该运动。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "crafts"
+    ]
+  },
+  {
+    "id": "cma-117129",
+    "status": "consistent",
+    "reason": "crafts：莫里斯设计的后制织物约1936年，现注明设计与制作年代有别，工艺美术关联可保留。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "crafts"
+    ]
+  },
+  {
+    "id": "cma-117130",
+    "status": "consistent",
+    "reason": "crafts：莫里斯设计、20世纪初制作的印花亚麻，中文已标“设计”，与工艺美术设计传承相符。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1937.697"
+    ],
+    "reviewedEntries": [
+      "crafts"
+    ]
+  },
+  {
+    "id": "cma-117905",
+    "status": "consistent",
+    "reason": "benin：16世纪中叶或17世纪初埃多贝宁王国纪念头像，王室铜铸行会信息支持贝宁宫廷归类。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "benin"
+    ]
+  },
+  {
+    "id": "cma-117918",
+    "status": "consistent",
+    "reason": "islamic：12世纪叙利亚釉陶盘属于伊斯兰工艺；赞吉或阿尤布不确定归属保留在英文元数据中。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "islamic"
+    ]
+  },
+  {
+    "id": "cma-118675",
+    "status": "consistent",
+    "reason": "streamline：Boysen的20世纪流线型木制玩具车，题名与设计类型吻合；1900s不宜强解为1900—1909。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "streamline"
+    ]
+  },
+  {
+    "id": "cma-118676",
+    "status": "consistent",
+    "reason": "streamline：20世纪流线型玩具车符合消费品造型专题，现注已明确它不是实际汽车工程模型。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "streamline"
+    ]
+  },
+  {
+    "id": "cma-119617",
+    "status": "consistent",
+    "reason": "inca：15—16世纪印加结绳记录装置，对应印加信息文化，现注未误称装饰织物。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "inca"
+    ]
+  },
+  {
+    "id": "cma-120225",
+    "status": "consistent",
+    "reason": "ukiyoe：广重1858年江户名所套色木版，符合江户浮世绘。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ukiyoe"
+    ]
+  },
+  {
+    "id": "cma-120411",
+    "status": "consistent",
+    "reason": "khmer：12世纪初吴哥巴普昂湿婆砂岩像，属于高棉印度教阶段，条目兼含印度教与佛教。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "khmer"
+    ]
+  },
+  {
+    "id": "cma-120873",
+    "status": "consistent",
+    "reason": "jade：清乾隆玉山子符合中国玉器的长期传统，jade并非仅限史前礼玉。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "jade"
+    ]
+  },
+  {
+    "id": "cma-121109",
+    "status": "consistent",
+    "reason": "mathura / indiaearly：3世纪贵霜秣菟罗砂岩佛像，同时在秣菟罗专题和早期南亚至600年范围内。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mathura",
+      "indiaearly"
+    ]
+  },
+  {
+    "id": "cma-121799",
+    "status": "consistent",
+    "reason": "manuscript：约1420年巴黎时祷书用墨、蛋彩和金绘于犊皮，符合欧洲彩饰手抄本。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "cma-122348",
+    "status": "consistent",
+    "reason": "oilpainting / dutch：约1629或1632年伦勃朗及工作室木板油画，同时属于17世纪荷兰绘画和油画媒介。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "oilpainting",
+      "dutch"
+    ]
+  },
+  {
+    "id": "cma-122388",
+    "status": "consistent",
+    "reason": "seal：康熙印泥盒是印章使用的配套文具，seal专题关联属于使用背景，不是印面或篆刻作品本体。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "seal"
+    ]
+  },
+  {
+    "id": "cma-123434",
+    "status": "consistent",
+    "reason": "persian：1330—1335年伊儿汗大不里士列王纪画页，地域、书籍形态及细密设色均符合波斯书籍艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "persian"
+    ]
+  },
+  {
+    "id": "cma-123458",
+    "status": "consistent",
+    "reason": "hellenistic：前200—100年希腊青铜家具配件位于希腊化时期，不要求必须是独立人体雕塑。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hellenistic"
+    ]
+  },
+  {
+    "id": "cma-123467",
+    "status": "consistent",
+    "reason": "mathura：约150—250年贵霜秣菟罗红砂岩栏杆，产地和时期支持秣菟罗造像专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mathura"
+    ]
+  },
+  {
+    "id": "cma-123585",
+    "status": "consistent",
+    "reason": "celadon：12世纪高丽瓜形青瓷瓶，时代与媒介匹配高丽青瓷。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "celadon"
+    ]
+  },
+  {
+    "id": "cma-123964",
+    "status": "consistent",
+    "reason": "engraving / northern：丢勒1504年雕版作品同时属于北方文艺复兴和铜版雕刻媒介。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "engraving",
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-123967",
+    "status": "fix",
+    "reason": "fatimid：11世纪法蒂玛埃及光泽彩碗归类正确；中文署名“古埃及”与官方中世纪法蒂玛归属不符。",
+    "changes": {
+      "artistZh": "佚名（埃及法蒂玛时期）"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1944.476"
+    ],
+    "reviewedEntries": [
+      "fatimid"
+    ]
+  },
+  {
+    "id": "cma-123968",
+    "status": "fix",
+    "reason": "fatimid：11世纪福斯塔特法蒂玛光泽彩碗归类正确；需把中文作者地域从古埃及改为法蒂玛埃及。",
+    "changes": {
+      "artistZh": "佚名（埃及法蒂玛时期）"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1944.477"
+    ],
+    "reviewedEntries": [
+      "fatimid"
+    ]
+  },
+  {
+    "id": "cma-123985",
+    "status": "uncertain",
+    "reason": "seljuq / islamcalligraphy：书法拟人纹饰明确支持伊斯兰书法；官方同时给1200—1221年与塞尔柱标签，超出本站11—12世纪范围，保留疑点不能径直重定朝代。",
+    "changes": {
+      "retainEntries": [
+        "seljuq",
+        "islamcalligraphy"
+      ],
+      "associationNotes": {
+        "seljuq": "馆方归入塞尔柱艺术传统，作品断代为1200—1221年，晚于伊朗大塞尔柱政权结束。"
+      }
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1944.485"
+    ],
+    "reviewedEntries": [
+      "seljuq",
+      "islamcalligraphy"
+    ]
+  },
+  {
+    "id": "cma-124071",
+    "status": "consistent",
+    "reason": "seljuq：1170—1200年伊朗金彩盘，官方塞尔柱归属与世纪交界宽年代相容。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "seljuq"
+    ]
+  },
+  {
+    "id": "cma-124089",
+    "status": "consistent",
+    "reason": "oilpainting / dutch：1635年以前伦勃朗及工作室木板油画，对应荷兰黄金时代和油画两个维度。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "oilpainting",
+      "dutch"
+    ]
+  },
+  {
+    "id": "cma-124235",
+    "status": "consistent",
+    "reason": "watercolor：霍默1873年水彩、水粉和石墨作品，符合含不透明水性色的水彩专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "watercolor"
+    ]
+  },
+  {
+    "id": "cma-125234",
+    "status": "consistent",
+    "reason": "impressionism：莫奈1882年普尔维尔风景油画，处于印象派独立展览活动时期。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "impressionism"
+    ]
+  },
+  {
+    "id": "cma-125247",
+    "status": "consistent",
+    "reason": "baroque：鲁本斯约1620—1625年肖像，作者与年代均对应佛兰德巴洛克。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "baroque"
+    ]
+  },
+  {
+    "id": "cma-125249",
+    "status": "consistent",
+    "reason": "postimp：梵高1889年圣雷米油画，属于其后印象主义成熟阶段。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postimp"
+    ]
+  },
+  {
+    "id": "cma-125948",
+    "status": "consistent",
+    "reason": "rococo：布歇1740年代神话装饰油画，符合洛可可时期与作者。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rococo"
+    ]
+  },
+  {
+    "id": "cma-126085",
+    "status": "consistent",
+    "reason": "postimp / etching：梵高1890年蚀刻、干刻肖像既对应后印象主义作者成熟期，也符合凹版媒介。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postimp",
+      "etching"
+    ]
+  },
+  {
+    "id": "cma-126086",
+    "status": "consistent",
+    "reason": "ukiyoe / print：广重1833年彩色木版，浮世绘文化和木版印刷技术关联同时成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ukiyoe",
+      "print"
+    ]
+  },
+  {
+    "id": "cma-126239",
+    "status": "consistent",
+    "reason": "seljuq：12世纪伊朗塞尔柱鸟形青铜器，地域、时代和金属工艺匹配。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "seljuq"
+    ]
+  },
+  {
+    "id": "cma-127239",
+    "status": "consistent",
+    "reason": "aztec：1325—1521年中墨西哥阿兹特克式石像，文化和年代支持墨西加／阿兹特克专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "aztec"
+    ]
+  },
+  {
+    "id": "cma-127573",
+    "status": "consistent",
+    "reason": "dutch：约1655—1660年伦勃朗工作室油画，工作室身份已有标注，属于荷兰黄金时代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dutch"
+    ]
+  },
+  {
+    "id": "cma-127673",
+    "status": "fix",
+    "reason": "fatimid：983—990年法蒂玛Tinnis织物归类正确；古埃及中文署名错误，官方铭文关联法蒂玛哈里发。",
+    "changes": {
+      "artistZh": "佚名（埃及法蒂玛时期）"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1950.354"
+    ],
+    "reviewedEntries": [
+      "fatimid"
+    ]
+  },
+  {
+    "id": "cma-128074",
+    "status": "fix",
+    "reason": "nabis：维亚尔1908—1912年咖啡馆油画晚于纳比派主要活动阶段；可保留后续实践但须明示。",
+    "changes": {
+      "associationNotes": {
+        "nabis": "维亚尔1908—1912年的作品，晚于纳比派的主要活动阶段。"
+      }
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1950.90"
+    ],
+    "reviewedEntries": [
+      "nabis"
+    ]
+  },
+  {
+    "id": "cma-128187",
+    "status": "consistent",
+    "reason": "mesoamerica：前1200—600年格雷罗奥尔梅克石雕，在古代中美洲范围内。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mesoamerica"
+    ]
+  },
+  {
+    "id": "cma-128191",
+    "status": "uncertain",
+    "reason": "inca：官方写秘鲁“奇穆或印加”，不能把印加归属写成定论；Llama宜译美洲驼，区别Alpaca羊驼。",
+    "changes": {
+      "artistZh": "佚名（秘鲁，奇穆或印加文化）",
+      "zh": "驮货的美洲驼陶器",
+      "associationNotes": {
+        "inca": "馆方归属为奇穆或印加文化，具体文化归属未定。"
+      },
+      "retainEntries": [
+        "inca"
+      ]
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1951.182"
+    ],
+    "reviewedEntries": [
+      "inca"
+    ]
+  },
+  {
+    "id": "cma-128299",
+    "status": "consistent",
+    "reason": "romanportrait：约250—275年罗马大理石女孩胸像，符合罗马肖像年代与形式。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanportrait"
+    ]
+  },
+  {
+    "id": "cma-128300",
+    "status": "consistent",
+    "reason": "islamic：1170—1220年卡尚金彩陶盘属于伊斯兰工艺大类，宽年代不影响这一关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "islamic"
+    ]
+  },
+  {
+    "id": "cma-128842",
+    "status": "consistent",
+    "reason": "caravaggism / chiaroscuro：拉图尔1645年油画处于卡拉瓦乔主义传播阶段，集中照明也符合明暗法专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "caravaggism",
+      "chiaroscuro"
+    ]
+  },
+  {
+    "id": "cma-129188",
+    "status": "fix",
+    "reason": "textile：7—8世纪埃及羊毛亚麻织物属纺织；署名古埃及不当，且官方说明是衣服装饰带残片，并非独立挂毯。",
+    "changes": {
+      "artistZh": "佚名（埃及，7—8世纪）",
+      "zh": "格网团窠动物纹织物残片",
+      "associationNotes": {
+        "textile": "用于衣服装饰带的织物残片，采用羊毛与亚麻织成。"
+      }
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1951.89"
+    ],
+    "reviewedEntries": [
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-130111",
+    "status": "consistent",
+    "reason": "seal：乾隆田黄麒麟钮印与篆刻印章专题相符，动物钮饰不改变其印章功能。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "seal"
+    ]
+  },
+  {
+    "id": "cma-130130",
+    "status": "consistent",
+    "reason": "jade：乾隆浅青白玉杯对应中国玉器媒介传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "jade"
+    ]
+  },
+  {
+    "id": "cma-130133",
+    "status": "consistent",
+    "reason": "egypt：前14世纪阿蒙霍特普三世花岗闪长岩头像，王朝、王名及材料均符合古埃及。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "egypt"
+    ]
+  },
+  {
+    "id": "cma-130150",
+    "status": "consistent",
+    "reason": "rococo：布歇约1736年喷泉设计素描属于洛可可装饰实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rococo"
+    ]
+  },
+  {
+    "id": "cma-130163",
+    "status": "consistent",
+    "reason": "neoclassicism：大卫约1780年青年女子油画位于新古典主义艺术家实践范围，不要求全是古代历史题材。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "neoclassicism"
+    ]
+  },
+  {
+    "id": "cma-130220",
+    "status": "consistent",
+    "reason": "qing / xieyi：石涛1662年水墨兰竹石，既属于清代个性笔墨，也符合写意水墨专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "qing",
+      "xieyi"
+    ]
+  },
+  {
+    "id": "cma-130377",
+    "status": "consistent",
+    "reason": "northern：克拉纳赫1530年代宗教木板油画，对应北方文艺复兴。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-130457",
+    "status": "consistent",
+    "reason": "nabis：维亚尔1894年胶彩装饰画属于纳比派核心活动阶段。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nabis"
+    ]
+  },
+  {
+    "id": "cma-130497",
+    "status": "consistent",
+    "reason": "xieyi / flowersbirds / qing：八大山人17世纪水墨鱼石同时属于清代、写意水墨与花鸟画科，三维关联并不冲突。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "xieyi",
+      "flowersbirds",
+      "qing"
+    ]
+  },
+  {
+    "id": "cma-130674",
+    "status": "consistent",
+    "reason": "nativeamerica：19世纪末至20世纪初特林吉特宴会勺，地域与社群支持北美原住民艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nativeamerica"
+    ]
+  },
+  {
+    "id": "cma-130939",
+    "status": "consistent",
+    "reason": "cnneolithic / jade：可能红山文化玉佩，前4700—2920年属于中国新石器时期；玉材支持jade，可能归属未被写成定论。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cnneolithic",
+      "jade"
+    ]
+  },
+  {
+    "id": "cma-131337",
+    "status": "consistent",
+    "reason": "watercolor：霍默1873年水彩及石墨，媒介吻合水彩；混合技法不改变归类。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "watercolor"
+    ]
+  },
+  {
+    "id": "cma-131369",
+    "status": "consistent",
+    "reason": "maori：19世纪毛利软玉Hei-tiki佩饰属于毛利雕刻传统，条目不只限建筑木雕。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maori"
+    ]
+  },
+  {
+    "id": "cma-131583",
+    "status": "consistent",
+    "reason": "baroque：鲁本斯约1637—1638年历史叙事素描，符合巴洛克作者与时期。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "baroque"
+    ]
+  },
+  {
+    "id": "cma-131761",
+    "status": "consistent",
+    "reason": "monotype：普伦德加斯特1892年彩色单版画，媒介明确支持monotype。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "monotype"
+    ]
+  },
+  {
+    "id": "cma-132016",
+    "status": "consistent",
+    "reason": "qing：王原祁1707年仿倪瓒山水属于清代正统复古脉络，不因仿古改归元代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "qing"
+    ]
+  },
+  {
+    "id": "cma-132819",
+    "status": "consistent",
+    "reason": "suitang：7世纪末至800年唐三彩陶马，属于隋唐造像而非后世摹本。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "suitang"
+    ]
+  },
+  {
+    "id": "cma-132908",
+    "status": "consistent",
+    "reason": "xieyi / qing：八大山人约1680—1705年仿郭忠恕水墨，属于清代个性笔墨和写意传统，不等于宋代原作。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "xieyi",
+      "qing"
+    ]
+  },
+  {
+    "id": "cma-132964",
+    "status": "consistent",
+    "reason": "mingfurniture：17—18世纪黄花梨圈椅符合明式风格的后续传承，mingfurniture不等同明朝断代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mingfurniture"
+    ]
+  },
+  {
+    "id": "cma-132965",
+    "status": "consistent",
+    "reason": "mingfurniture：17—18世纪黄花梨罗汉式圈椅，明式家具风格范围允许跨明清年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mingfurniture"
+    ]
+  },
+  {
+    "id": "cma-132990",
+    "status": "consistent",
+    "reason": "mingfurniture：晚16—17世纪翘头案，明代归属和木构器形支持明式家具。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mingfurniture"
+    ]
+  },
+  {
+    "id": "cma-133447",
+    "status": "consistent",
+    "reason": "persian：1444年帖木儿设拉子列王纪双扉页，属于波斯书籍绘画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "persian"
+    ]
+  },
+  {
+    "id": "cma-134604",
+    "status": "consistent",
+    "reason": "inca：约1400—1540年印加棉与驼科纤维衣，宽年代含征服前后但文化标签仍为印加。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "inca"
+    ]
+  },
+  {
+    "id": "cma-135007",
+    "status": "consistent",
+    "reason": "ceramics：成化1465—1487年景德镇斗彩瓷杯，中国陶瓷归类有产地、款识和媒介支持。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ceramics"
+    ]
+  },
+  {
+    "id": "cma-135286",
+    "status": "fix",
+    "reason": "postimp：梵高1883年德伦特早期水彩早于本站后印象主义范围，馆方强调早期荷兰阶段；更适合水彩媒介条目。",
+    "changes": {
+      "entries": [
+        "watercolor"
+      ],
+      "associationNotes": {
+        "watercolor": "梵高1883年在荷兰德伦特创作的早期水彩，混用不透明水彩和黑色粉笔。"
+      }
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1958.30"
+    ],
+    "reviewedEntries": [
+      "postimp"
+    ]
+  },
+  {
+    "id": "cma-135295",
+    "status": "consistent",
+    "reason": "etching / engraving / chiaroscuro：伦勃朗约1652年蚀刻、干刻与刻刀结合，两个凹版专题准确，明暗处理亦属作品技术范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "etching",
+      "engraving",
+      "chiaroscuro"
+    ]
+  },
+  {
+    "id": "cma-135299",
+    "status": "consistent",
+    "reason": "postimp：梵高1890年肖像油画，年代和作者对应成熟后印象主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postimp"
+    ]
+  },
+  {
+    "id": "cma-135310",
+    "status": "consistent",
+    "reason": "postimp：梵高1889年圣雷米风景，属于成熟后印象主义作品。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postimp"
+    ]
+  },
+  {
+    "id": "cma-135341",
+    "status": "consistent",
+    "reason": "neoimp：修拉1887—1888年炭笔素描属于新印象主义艺术家的同期研究；条目不限点彩油画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "neoimp"
+    ]
+  },
+  {
+    "id": "cma-135382",
+    "status": "consistent",
+    "reason": "impressionism：莫奈约1868—1873年雪景人物油画，落在条目1860年代起的印象主义形成期。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "impressionism"
+    ]
+  },
+  {
+    "id": "cma-135428",
+    "status": "consistent",
+    "reason": "northern：克拉纳赫1540年狩猎画属于北方文艺复兴；转移到现代纤维板是支撑物历史，不是创作年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-135469",
+    "status": "consistent",
+    "reason": "symbolism：雷东1916年晚期花卉粉彩可作为象征主义艺术家的延续实践，略晚于概括年份不等于归类错误。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1958.46"
+    ],
+    "reviewedEntries": [
+      "symbolism"
+    ]
+  },
+  {
+    "id": "cma-135512",
+    "status": "consistent",
+    "reason": "neoimp：修拉1883—1884年习作早于1886命名，但官方明确联系改革印象主义的构图探索，现注已说明习作身份。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1958.51"
+    ],
+    "reviewedEntries": [
+      "neoimp"
+    ]
+  },
+  {
+    "id": "cma-135518",
+    "status": "consistent",
+    "reason": "nabis：维亚尔约1897—1899年咖啡馆绘画位于纳比派主要活动阶段。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nabis"
+    ]
+  },
+  {
+    "id": "cma-135655",
+    "status": "consistent",
+    "reason": "yangzhou / qing：罗聘18世纪钟馗水墨设色同时对应扬州八怪与清代个性绘画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "yangzhou",
+      "qing"
+    ]
+  },
+  {
+    "id": "cma-135661",
+    "status": "consistent",
+    "reason": "baroque：鲁本斯及工作室约1615年神话油画，合作归属已标，巴洛克关联准确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "baroque"
+    ]
+  },
+  {
+    "id": "cma-135705",
+    "status": "consistent",
+    "reason": "shin-hanga：恩地孝四郎木刻属于创作版画；shin-hanga条目同时涵盖新版画与创作版画，并未混为生产方式相同。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "shin-hanga"
+    ]
+  },
+  {
+    "id": "cma-135773",
+    "status": "consistent",
+    "reason": "expressionism：席勒1911年人体素描，符合奥地利表现主义语境。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "expressionism"
+    ]
+  },
+  {
+    "id": "cma-135836",
+    "status": "consistent",
+    "reason": "songland：巨然960—985年山水绢本水墨，年代覆盖五代至北宋，符合songland。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "songland"
+    ]
+  },
+  {
+    "id": "cma-135909",
+    "status": "consistent",
+    "reason": "byzantine：11世纪君士坦丁堡圣乔治血石浮雕，拜占庭归属正确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "byzantine"
+    ]
+  },
+  {
+    "id": "cma-136153",
+    "status": "consistent",
+    "reason": "etching / engraving：伦勃朗1636年蚀刻同时属于etching和含蚀刻的engraving综合专题，不是误称雕版技法。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "etching",
+      "engraving"
+    ]
+  },
+  {
+    "id": "cma-136178",
+    "status": "consistent",
+    "reason": "print / northern：丢勒约1503—1505年木刻，北方文艺复兴与木版印刷两关联均匹配。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "print",
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-136191",
+    "status": "consistent",
+    "reason": "print / northern：丢勒约1503—1505年天使报喜木刻，作者时代及木版媒介支持两个关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "print",
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-136311",
+    "status": "consistent",
+    "reason": "momoyama：约1600年桃山成对六曲屏风之一，时代和障壁画形式对应momoyama。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "momoyama"
+    ]
+  },
+  {
+    "id": "cma-136312",
+    "status": "consistent",
+    "reason": "momoyama：约1600年桃山南蛮来航六曲屏风，年代和载体均对应桃山屏风专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "momoyama"
+    ]
+  },
+  {
+    "id": "cma-136335",
+    "status": "consistent",
+    "reason": "mandala / himalaya：15世纪末尼泊尔布本胜乐金刚曼荼罗，图像体系支持mandala，地域宗教支持himalaya。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mandala",
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-136423",
+    "status": "consistent",
+    "reason": "bronze：前1200—1100年商代青铜鼎，属于商周礼器与青铜工艺。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bronze"
+    ]
+  },
+  {
+    "id": "cma-136510",
+    "status": "consistent",
+    "reason": "impressionism：莫奈约1915—1926年睡莲是印象派艺术家的晚期延续，现注与早期作品比较，不能机械删去晚年创作。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "impressionism"
+    ]
+  },
+  {
+    "id": "cma-136667",
+    "status": "consistent",
+    "reason": "egypt：前14世纪埃及第十八王朝供品浮雕，年代及仪式题材对应古埃及。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "egypt"
+    ]
+  },
+  {
+    "id": "cma-136757",
+    "status": "consistent",
+    "reason": "rimpa：酒井抱一金彩花卉扇面属于江户琳派；1761—1828是宽年代，不擅自缩为某创作年。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rimpa"
+    ]
+  },
+  {
+    "id": "cma-136918",
+    "status": "consistent",
+    "reason": "asante：19世纪阿散蒂铜合金金秤砣，器物用于称金而非必以黄金制成，归类不矛盾。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "asante"
+    ]
+  },
+  {
+    "id": "cma-136950",
+    "status": "consistent",
+    "reason": "southernsong / songacademy：马麟约1256年绢本画，南宋时代与宫廷画家身份共同支持southernsong和songacademy。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "southernsong",
+      "songacademy"
+    ]
+  },
+  {
+    "id": "cma-136951",
+    "status": "consistent",
+    "reason": "calligraphy：宋理宗1256年王维诗草书属于中国书法；诗作者与书写者已正确区分。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "calligraphy"
+    ]
+  },
+  {
+    "id": "cma-137197",
+    "status": "consistent",
+    "reason": "buncheong：15—16世纪朝鲜粉青刻划剔花鱼纹炻器，与buncheong媒介相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "buncheong"
+    ]
+  },
+  {
+    "id": "cma-137259",
+    "status": "consistent",
+    "reason": "realism：库尔贝1863年肖像油画属于现实主义作者同期实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "realism"
+    ]
+  },
+  {
+    "id": "cma-137276",
+    "status": "consistent",
+    "reason": "sixdyn：6世纪初北魏鎏金铜僧像，处于南北朝佛教造像范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "sixdyn"
+    ]
+  },
+  {
+    "id": "cma-137331",
+    "status": "consistent",
+    "reason": "dutchland：雷斯达尔约1670年急流教堂风景油画，属于17世纪荷兰风景传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dutchland"
+    ]
+  },
+  {
+    "id": "cma-137890",
+    "status": "consistent",
+    "reason": "mughalearly：约1560年阿克巴宫廷鹦鹉故事画页，时代与叙事书籍媒介支持早期莫卧儿。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mughalearly"
+    ]
+  },
+  {
+    "id": "cma-138369",
+    "status": "consistent",
+    "reason": "romanticism：德拉克洛瓦约1832—1834年肖像，位于法国浪漫主义实践年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanticism"
+    ]
+  },
+  {
+    "id": "cma-138393",
+    "status": "consistent",
+    "reason": "maya：约795年具雕刻者署名的玛雅贵族人物浮雕，属于古典期玛雅。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maya"
+    ]
+  },
+  {
+    "id": "cma-138431",
+    "status": "consistent",
+    "reason": "maori：19世纪新西兰毛利门楣木雕，社群、材料和建筑功能符合毛利专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maori"
+    ]
+  },
+  {
+    "id": "cma-138464",
+    "status": "consistent",
+    "reason": "neoclassicism：大卫1817年古典神话油画，作者时期和题材均支持新古典主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "neoclassicism"
+    ]
+  },
+  {
+    "id": "cma-138684",
+    "status": "consistent",
+    "reason": "dada / collage：施维特斯1920年纸片拼贴，达达语境与拼贴技术分别支持两关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dada",
+      "collage"
+    ]
+  },
+  {
+    "id": "cma-138689",
+    "status": "consistent",
+    "reason": "bronze：约前1250—1046年安阳商代方卣，礼器形制与青铜媒介匹配商周专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bronze"
+    ]
+  },
+  {
+    "id": "cma-138881",
+    "status": "consistent",
+    "reason": "fresco / mesoamerica：500—550年特奥蒂瓦坎壁画残片，地域支持中美洲，元数据明确fresco支持湿壁画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "fresco",
+      "mesoamerica"
+    ]
+  },
+  {
+    "id": "cma-138885",
+    "status": "consistent",
+    "reason": "manuscript：约1500年佛兰德时祷书使用墨、蛋彩与金，处于中晚期彩饰手抄本延续，不因1500边界改类。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "cma-139455",
+    "status": "consistent",
+    "reason": "khmer / sea：12世纪吴哥那伽佛青铜同时属于高棉传统和东南亚宗教艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "khmer",
+      "sea"
+    ]
+  },
+  {
+    "id": "cma-139746",
+    "status": "consistent",
+    "reason": "literati：元代归属的赵孟頫竹石兰水墨属于文人画，条目不只限定纯山水题材。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "literati"
+    ]
+  },
+  {
+    "id": "cma-139816",
+    "status": "consistent",
+    "reason": "dutchland：雷斯达尔1660年代林地风景油画，符合荷兰风景专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dutchland"
+    ]
+  },
+  {
+    "id": "cma-140070",
+    "status": "consistent",
+    "reason": "expressionism：基尔希纳1918—1919年山景墨笔素描属于表现主义时期实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "expressionism"
+    ]
+  },
+  {
+    "id": "cma-140246",
+    "status": "consistent",
+    "reason": "mingfurniture：17—18世纪黄花梨炕桌属于明式家具风格范畴，明或清的不确定断代已保留。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mingfurniture"
+    ]
+  },
+  {
+    "id": "cma-140259",
+    "status": "consistent",
+    "reason": "jade：18世纪清代仿古壶形玉瓶属于中国玉器，仿古造型不被误定为商周年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "jade"
+    ]
+  },
+  {
+    "id": "cma-140334",
+    "status": "consistent",
+    "reason": "expressionism：席勒1916年儿童水彩水粉肖像对应奥地利表现主义，媒介并不限定油画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "expressionism"
+    ]
+  },
+  {
+    "id": "cma-140441",
+    "status": "consistent",
+    "reason": "ming / garden：沈周1490年后苏州虎丘册页属于明代吴门；园林名胜题材支持garden，不把册页当园林实物。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ming",
+      "garden"
+    ]
+  },
+  {
+    "id": "cma-140451",
+    "status": "consistent",
+    "reason": "ming / garden：沈周1490年后五贤台册页属于吴门绘画，描绘虎丘人工景观也对应园林专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ming",
+      "garden"
+    ]
+  },
+  {
+    "id": "cma-140452",
+    "status": "consistent",
+    "reason": "ming / garden：沈周1490年后虎丘名胜册页同时属于明代吴门及园居名胜图像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ming",
+      "garden"
+    ]
+  },
+  {
+    "id": "cma-140476",
+    "status": "consistent",
+    "reason": "rimpa：酒井抱一19世纪初金地植物屏风，作者与装饰绘画载体支持琳派。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rimpa"
+    ]
+  },
+  {
+    "id": "cma-140492",
+    "status": "consistent",
+    "reason": "manuscript：约1404年法国国王时祷书，墨、蛋彩及金的犊皮书页符合彩饰手抄本。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "cma-141168",
+    "status": "consistent",
+    "reason": "realism：库尔贝1877年阿尔卑斯风景，属于现实主义画家晚期实践并在条目年代范围内。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "realism"
+    ]
+  },
+  {
+    "id": "cma-141236",
+    "status": "consistent",
+    "reason": "crystalpalace：约1850年水晶宫手工上色石版是工业建筑的历史图像记录，主题关联不等于原建筑材料。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "crystalpalace"
+    ]
+  },
+  {
+    "id": "cma-141637",
+    "status": "consistent",
+    "reason": "engraving / northern：丢勒1513年雕版，北方文艺复兴与铜版技法两维均成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "engraving",
+      "northern"
+    ]
+  },
+  {
+    "id": "cma-142024",
+    "status": "consistent",
+    "reason": "maya：600—900年玛雅贵族贝壳雕刻，地域文化和古典期年代吻合。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maya"
+    ]
+  },
+  {
+    "id": "cma-142356",
+    "status": "consistent",
+    "reason": "monotype：德加约1890年彩色单版风景，monotype媒介明确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "monotype"
+    ]
+  },
+  {
+    "id": "cma-142384",
+    "status": "consistent",
+    "reason": "tempera / renaissance：乔万尼·迪·保罗1460年代木板蛋彩祭坛画，意大利文艺复兴时代与tempera媒介相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "tempera",
+      "renaissance"
+    ]
+  },
+  {
+    "id": "cma-142579",
+    "status": "consistent",
+    "reason": "qing：石涛秦淮册页归属清代画家实践；1642—1707为宽年代，宋纸指纸材而非宋代创作。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "qing"
+    ]
+  },
+  {
+    "id": "cma-142692",
+    "status": "consistent",
+    "reason": "litho：格里斯1921年石版肖像归入litho，现注不因作者身份强归立体主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "litho"
+    ]
+  },
+  {
+    "id": "cma-142792",
+    "status": "consistent",
+    "reason": "expressionism：基尔希纳1909年马戏摔跤油画，作者、时间与表现主义一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "expressionism"
+    ]
+  },
+  {
+    "id": "cma-143203",
+    "status": "consistent",
+    "reason": "monotype：德加约1880—1883年谈话场景单版画，媒介支持monotype。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "monotype"
+    ]
+  },
+  {
+    "id": "cma-143234",
+    "status": "consistent",
+    "reason": "dutchland：雷斯达尔1646年风车油画，题材与时期匹配荷兰风景。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dutchland"
+    ]
+  },
+  {
+    "id": "cma-143237",
+    "status": "consistent",
+    "reason": "flowersbirds / gongbi：恽寿平1685年芍药设色花卉对应花鸟；gongbi兼含精细设色，现注已明确没骨而非必须勾线。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1967.192"
+    ],
+    "reviewedEntries": [
+      "flowersbirds",
+      "gongbi"
+    ]
+  },
+  {
+    "id": "cma-143278",
+    "status": "consistent",
+    "reason": "destijl：蒙德里安1927年原色构成，处于风格派核心阶段。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "destijl"
+    ]
+  },
+  {
+    "id": "cma-143296",
+    "status": "consistent",
+    "reason": "maori：19世纪毛利渔舟船首木雕贝壳镶嵌，属于毛利雕刻而不只会堂装饰。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maori"
+    ]
+  },
+  {
+    "id": "cma-143381",
+    "status": "consistent",
+    "reason": "maya：692年危地马拉Waka玛雅石碑，明确属于古典期玛雅。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maya"
+    ]
+  },
+  {
+    "id": "cma-143602",
+    "status": "consistent",
+    "reason": "dutchland：雷斯达尔约1660—1670年瀑布林地，属于荷兰17世纪风景画。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dutchland"
+    ]
+  },
+  {
+    "id": "cma-144268",
+    "status": "consistent",
+    "reason": "maori：19世纪毛利pounamu人形颈佩，社群与雕刻材料支持maori。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maori"
+    ]
+  },
+  {
+    "id": "cma-144280",
+    "status": "fix",
+    "reason": "egypt：官方归埃及托勒密语境阿匹斯神牛，egypt关联正确；中文“佚名（古罗马）”错误。",
+    "changes": {
+      "artistZh": "佚名（埃及）"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1969.118"
+    ],
+    "reviewedEntries": [
+      "egypt"
+    ]
+  },
+  {
+    "id": "cma-144595",
+    "status": "consistent",
+    "reason": "nouveau：慕夏1901—1902年植物装饰石版，属于新艺术设计实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nouveau"
+    ]
+  },
+  {
+    "id": "cma-144596",
+    "status": "consistent",
+    "reason": "nouveau：慕夏1901—1902年装饰资料石版，作者、日期及装饰用途符合新艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nouveau"
+    ]
+  },
+  {
+    "id": "cma-144597",
+    "status": "consistent",
+    "reason": "nouveau：慕夏1901—1902年香豌豆装饰石版，属于新艺术植物图案设计。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nouveau"
+    ]
+  },
+  {
+    "id": "cma-144690",
+    "status": "consistent",
+    "reason": "lacquer：乾隆雕红漆木盒，媒介、产地与时代符合中国漆器。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "lacquer"
+    ]
+  },
+  {
+    "id": "cma-144961",
+    "status": "consistent",
+    "reason": "himalaya：传为阿尼哥的约1260年代绿度母唐卡，尼泊尔艺术家西藏活动对应喜马拉雅；2020明确为装裱而非原画年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-144966",
+    "status": "consistent",
+    "reason": "renaissance：波提切利及工作室约1490年蛋彩油彩木板画，合作与混合媒介均不影响意大利文艺复兴归类。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "renaissance"
+    ]
+  },
+  {
+    "id": "cma-145192",
+    "status": "consistent",
+    "reason": "byzantine：约1050年君士坦丁堡鎏金银巡礼十字架，拜占庭产地和时代明确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "byzantine"
+    ]
+  },
+  {
+    "id": "cma-145941",
+    "status": "consistent",
+    "reason": "oceania / malagan：19世纪新爱尔兰马拉甘纪念柱，既属大洋洲区域艺术，也属具体马拉甘仪式传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "oceania",
+      "malagan"
+    ]
+  },
+  {
+    "id": "cma-145942",
+    "status": "consistent",
+    "reason": "mathura：150—200年贵霜秣菟罗砂岩门架，产地与造像时期符合mathura。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mathura"
+    ]
+  },
+  {
+    "id": "cma-145944",
+    "status": "consistent",
+    "reason": "oceania：1930年前新爱尔兰石灰岩祖先像属于大洋洲，oceania不只木雕或前殖民时期。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "oceania"
+    ]
+  },
+  {
+    "id": "cma-146135",
+    "status": "consistent",
+    "reason": "futurism / litho：波丘尼20世纪初石版，官方文字描述分解的骑车者与运动线；未来主义题材及石版媒介两关联成立。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1971.38"
+    ],
+    "reviewedEntries": [
+      "futurism",
+      "litho"
+    ]
+  },
+  {
+    "id": "cma-146909",
+    "status": "consistent",
+    "reason": "secession：克里姆特约1904年人物肖像习作，处于其维也纳分离派活动阶段。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "secession"
+    ]
+  },
+  {
+    "id": "cma-147071",
+    "status": "consistent",
+    "reason": "tea：16世纪末至17世纪初志野水指是茶会贮水器，现代替换漆盖已在媒介注明，不改变茶器归类。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "tea"
+    ]
+  },
+  {
+    "id": "cma-147115",
+    "status": "consistent",
+    "reason": "nouveau / litho：慕夏1896—1900年套色石版戏剧海报，同时对应新艺术设计和石版海报技术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nouveau",
+      "litho"
+    ]
+  },
+  {
+    "id": "cma-147393",
+    "status": "consistent",
+    "reason": "watercolor：霍默1889年石墨底稿水彩，明确属于水性媒介。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "watercolor"
+    ]
+  },
+  {
+    "id": "cma-147449",
+    "status": "consistent",
+    "reason": "chola：约1250年南印度晚朱罗人狮毗湿奴铜像，朱罗年代与材料支持chola。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "chola"
+    ]
+  },
+  {
+    "id": "cma-147464",
+    "status": "consistent",
+    "reason": "dutchland：萨洛蒙·范·雷斯达尔1644年河畔城堡油画，荷兰作者、年代及风景题材匹配。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dutchland"
+    ]
+  },
+  {
+    "id": "cma-147519",
+    "status": "consistent",
+    "reason": "mesoamerica：约900—1100年墨西哥湾韦拉克鲁斯球赛石饰，属于古代中美洲而非玛雅统一标签。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mesoamerica"
+    ]
+  },
+  {
+    "id": "cma-147526",
+    "status": "consistent",
+    "reason": "neoclassicism：大卫约1816—1822年囚徒素描属于新古典主义作者实践，题材不必限定古代神话。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "neoclassicism"
+    ]
+  },
+  {
+    "id": "cma-147579",
+    "status": "consistent",
+    "reason": "textile：约1500年佛兰德羊毛丝及银线挂毯，纤维织物关联由媒介直接支持。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-147653",
+    "status": "consistent",
+    "reason": "expressionism：基尔希纳1908年海景石版，表现主义归类由艺术家与同期实践支持，不因石版转作技术条目才成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "expressionism"
+    ]
+  },
+  {
+    "id": "cma-148384",
+    "status": "consistent",
+    "reason": "yangzhou / qing：罗聘1764年水墨设色高士山水，同时符合扬州八怪身份与清代时间。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "yangzhou",
+      "qing"
+    ]
+  },
+  {
+    "id": "cma-148739",
+    "status": "consistent",
+    "reason": "realism：库尔贝约1870年风景炭笔画，作者与时期符合现实主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "realism"
+    ]
+  },
+  {
+    "id": "cma-148753",
+    "status": "consistent",
+    "reason": "symbolism：雷东1910年人物粉彩，属于象征主义艺术家的成熟实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "symbolism"
+    ]
+  },
+  {
+    "id": "cma-148758",
+    "status": "consistent",
+    "reason": "caravaggism / baroque / chiaroscuro：卡拉瓦乔1606—1607年宗教油画同时对应巴洛克时期、卡拉瓦乔主义传统及明暗方法。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "caravaggism",
+      "baroque",
+      "chiaroscuro"
+    ]
+  },
+  {
+    "id": "cma-149101",
+    "status": "consistent",
+    "reason": "mathura：2世纪贵霜秣菟罗红砂岩栏柱，地域、材料与时间支持mathura。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mathura"
+    ]
+  },
+  {
+    "id": "cma-149112",
+    "status": "consistent",
+    "reason": "precisionism：希勒1920年城市建筑油画，作者与时期支持精确主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "precisionism"
+    ]
+  },
+  {
+    "id": "cma-149113",
+    "status": "consistent",
+    "reason": "monotype：德加约1880年代客厅单版画，媒介明确支持monotype。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "monotype"
+    ]
+  },
+  {
+    "id": "cma-149412",
+    "status": "consistent",
+    "reason": "literati：倪瓒14世纪竹石乔木水墨，元代士人作者和题跋笔墨语境符合literati。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "literati"
+    ]
+  },
+  {
+    "id": "cma-149413",
+    "status": "fix",
+    "reason": "bluegreen / literati：赵孟頫约1302—1303年画，官方明确青绿风格与文人背景，两关联正确；中文题名应从水村改为江村渔乐图。",
+    "changes": {
+      "zh": "江村渔乐图"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1978.66"
+    ],
+    "reviewedEntries": [
+      "bluegreen",
+      "literati"
+    ]
+  },
+  {
+    "id": "cma-150036",
+    "status": "consistent",
+    "reason": "sixdyn：约500年北魏鎏金铜苦行者像，时代处于魏晋南北朝佛教艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "sixdyn"
+    ]
+  },
+  {
+    "id": "cma-150048",
+    "status": "consistent",
+    "reason": "chola：约1000年南印度朱罗哈努曼青铜像，文化、宗教题材及材料均对应朱罗铜像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "chola"
+    ]
+  },
+  {
+    "id": "cma-150419",
+    "status": "consistent",
+    "reason": "nihonga：柴田是真19世纪末古典题材屏风作为明治转型背景，现注已明确不是所有日本画或洋画的代表。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nihonga"
+    ]
+  },
+  {
+    "id": "cma-150420",
+    "status": "consistent",
+    "reason": "romanpainting / fresco：1世纪庞贝湿壁画残片，romanpainting由地区时代支持，fresco由明确媒介支持。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanpainting",
+      "fresco"
+    ]
+  }
+]

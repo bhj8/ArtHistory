@@ -1,0 +1,2293 @@
+[
+  {
+    "id": "cma-150488",
+    "status": "consistent",
+    "reason": "拉利克约1900年的珐琅金质铃兰发梳，作者、年代与植物首饰题材符合新艺术运动。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nouveau"
+    ]
+  },
+  {
+    "id": "cma-150501",
+    "status": "consistent",
+    "reason": "布歇约1755年的宗教叙事素描，属于洛可可艺术家实践；洛可可不限爱情题材。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rococo"
+    ]
+  },
+  {
+    "id": "cma-150538",
+    "status": "consistent",
+    "reason": "莫里斯与伯恩-琼斯1865—1868年的木口木刻合作，同时关联工艺美术和拉斐尔前派合理。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1981.90"
+    ],
+    "reviewedEntries": [
+      "preraphaelite",
+      "crafts"
+    ]
+  },
+  {
+    "id": "cma-150688",
+    "status": "consistent",
+    "reason": "吴哥地区1175—1230年青铜轿钩，符合吴哥时期与高棉工艺范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "khmer"
+    ]
+  },
+  {
+    "id": "cma-151020",
+    "status": "consistent",
+    "reason": "克久拉霍11世纪砂岩恋人雕刻，地域、时代与印度教寺庙雕塑一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hindutemple"
+    ]
+  },
+  {
+    "id": "cma-151064",
+    "status": "consistent",
+    "reason": "柴田是真晚19世纪屏风符合江户到明治转型，现有说明已明确跨时代背景。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nihonga"
+    ]
+  },
+  {
+    "id": "cma-151346",
+    "status": "uncertain",
+    "reason": "馆方仅归属米斯特克或阿兹特克，不能把耳饰确定认作阿兹特克制作。",
+    "changes": {
+      "associationNotes.aztec": "馆方归属为米斯特克或阿兹特克；具体文化归属未定。"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1983.191"
+    ],
+    "reviewedEntries": [
+      "aztec"
+    ]
+  },
+  {
+    "id": "cma-151358",
+    "status": "fix",
+    "reason": "商代礼仪戈材质为软玉，不应在青铜专题无说明地充作青铜作品。",
+    "changes": {
+      "entries": [
+        "jade"
+      ],
+      "zh": "兽面纹仪仗玉戈"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1983.2"
+    ],
+    "reviewedEntries": [
+      "bronze"
+    ]
+  },
+  {
+    "id": "cma-151414",
+    "status": "consistent",
+    "reason": "唐代700—750年彩绘仕女俑，年代与隋唐造像条目相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "suitang"
+    ]
+  },
+  {
+    "id": "cma-151541",
+    "status": "consistent",
+    "reason": "唐代夹纻菩萨兼属干漆工艺及隋唐佛教造像，两条关联均成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "lacquer",
+      "suitang"
+    ]
+  },
+  {
+    "id": "cma-151714",
+    "status": "consistent",
+    "reason": "赖特1904年彩玻璃窗早于有机设计主要年代，但已有明确前史说明，保留背景关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "organic"
+    ]
+  },
+  {
+    "id": "cma-151839",
+    "status": "consistent",
+    "reason": "卡梅伦1874年蛋白照片属于摄影史，也是画意摄影先驱，早于运动制度化不构成错分。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "photo",
+      "pictorial"
+    ]
+  },
+  {
+    "id": "cma-151840",
+    "status": "consistent",
+    "reason": "卡梅伦1875年叙事摄影属于摄影史及画意摄影前史，两维度可共存。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "photo",
+      "pictorial"
+    ]
+  },
+  {
+    "id": "cma-151938",
+    "status": "consistent",
+    "reason": "贵霜时期秣菟罗红砂岩菩萨头像，产地、年代和材质符合秣菟罗专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mathura"
+    ]
+  },
+  {
+    "id": "cma-151964",
+    "status": "consistent",
+    "reason": "墨西哥阿兹特克武士铸像，1325年后年代与地域相符，保留热释光测年区间。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "aztec"
+    ]
+  },
+  {
+    "id": "cma-151968",
+    "status": "consistent",
+    "reason": "普金1849年圣餐杯符合哥特复兴宗教装饰艺术，专题不限建筑。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "gothicrevival"
+    ]
+  },
+  {
+    "id": "cma-152258",
+    "status": "consistent",
+    "reason": "秘鲁南岸查文风格棉织物，既属安第斯传统也属纤维艺术，不能因古代年代删纺织关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "andes",
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-152499",
+    "status": "consistent",
+    "reason": "广重1857年江户名所彩色木刻，浮世绘作者、年代和媒介一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ukiyoe"
+    ]
+  },
+  {
+    "id": "cma-153278",
+    "status": "consistent",
+    "reason": "希腊化晚期鎏金银碗，200—1 BCE落于条目时期，艺术不只限人体雕塑。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hellenistic"
+    ]
+  },
+  {
+    "id": "cma-153375",
+    "status": "consistent",
+    "reason": "1783年康格拉宫廷绘画属于拉杰普特与帕哈里传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rajput"
+    ]
+  },
+  {
+    "id": "cma-153401",
+    "status": "consistent",
+    "reason": "朝鲜王朝18世纪青花瓷龙纹罐，符合朝鲜半岛陶瓷传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "korea"
+    ]
+  },
+  {
+    "id": "cma-153596",
+    "status": "consistent",
+    "reason": "唐代8世纪仕女陶俑，白色化妆土和彩绘与隋唐造像一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "suitang"
+    ]
+  },
+  {
+    "id": "cma-153607",
+    "status": "consistent",
+    "reason": "吴哥12世纪青铜那伽端饰，符合高棉时期与宗教工艺。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "khmer"
+    ]
+  },
+  {
+    "id": "cma-153618",
+    "status": "consistent",
+    "reason": "西藏1236—1310年噶举派传承上师唐卡，地域、信仰与喜马拉雅佛教艺术相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-153760",
+    "status": "consistent",
+    "reason": "明代中国制掐丝珐琅供养曼荼罗基座，馆方明确为藏传佛教法器；曼荼罗和喜马拉雅关联均成立。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1987.58"
+    ],
+    "reviewedEntries": [
+      "mandala",
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-153761",
+    "status": "consistent",
+    "reason": "统一新罗676—935年药师三尊金铜像牌，符合朝鲜半岛佛教造像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "koreabuddha"
+    ]
+  },
+  {
+    "id": "cma-153768",
+    "status": "consistent",
+    "reason": "4世纪东罗马虎纹马赛克，处于罗马晚期，罗马艺术与罗马马赛克两条关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rome",
+      "romanpainting"
+    ]
+  },
+  {
+    "id": "cma-154073",
+    "status": "consistent",
+    "reason": "日本春日鹿曼荼罗属于曼荼罗多地域传统，现有说明已区分与藏传几何曼荼罗。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mandala"
+    ]
+  },
+  {
+    "id": "cma-154086",
+    "status": "consistent",
+    "reason": "南宋13世纪绢本水墨山水，时代和诗意山水题材符合南宋条目。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "southernsong"
+    ]
+  },
+  {
+    "id": "cma-154338",
+    "status": "consistent",
+    "reason": "西藏12世纪毗卢遮那佛唐卡，地域、媒介和密教题材符合喜马拉雅艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-154752",
+    "status": "consistent",
+    "reason": "1830年前后康格拉罗摩故事细密画，符合拉杰普特与帕哈里地域和时代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rajput"
+    ]
+  },
+  {
+    "id": "cma-155405",
+    "status": "consistent",
+    "reason": "墨西哥1350—1519年神祇石像，阿兹特克归属与条目一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "aztec"
+    ]
+  },
+  {
+    "id": "cma-155409",
+    "status": "consistent",
+    "reason": "朝鲜15世纪象嵌剔花牡丹纹瓶，馆藏明确为粉青沙器，工艺及时代一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "buncheong"
+    ]
+  },
+  {
+    "id": "cma-155454",
+    "status": "consistent",
+    "reason": "尤卡坦玛雅风格600—1000年球员陶器，属于古代中美洲范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mesoamerica"
+    ]
+  },
+  {
+    "id": "cma-155642",
+    "status": "consistent",
+    "reason": "日本14世纪初当麻曼荼罗明确标为净土叙事类型，可作曼荼罗跨地域实例。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mandala"
+    ]
+  },
+  {
+    "id": "cma-155863",
+    "status": "fix",
+    "reason": "史前基克拉泽斯罐的媒介是大理石，说明误称陶器；史前关联本身正确。",
+    "changes": {
+      "notes.prehistoric": "基克拉泽斯早期青铜时代的大理石容器，约前3000—前2950年。"
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1991.166"
+    ],
+    "reviewedEntries": [
+      "prehistoric"
+    ]
+  },
+  {
+    "id": "cma-155868",
+    "status": "consistent",
+    "reason": "约1700年梅瓦尔王公细密画，属于拉杰普特宫廷传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rajput"
+    ]
+  },
+  {
+    "id": "cma-155903",
+    "status": "consistent",
+    "reason": "明代刺绣唐卡虽在中国制作，馆方明确藏传佛教用途与对藏赠礼语境，喜马拉雅关联合理。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/print/art/1991.2"
+    ],
+    "reviewedEntries": [
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-155952",
+    "status": "consistent",
+    "reason": "基尔希纳1915—1916年人物石版画，作者及年代属于德国表现主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "expressionism"
+    ]
+  },
+  {
+    "id": "cma-156047",
+    "status": "consistent",
+    "reason": "中亚13世纪或更早金丝织锦挂毯，材质与纤维织物条目一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-157147",
+    "status": "consistent",
+    "reason": "西藏1375年前后无我佛母曼荼罗，图像类型及地域分别支持曼荼罗、喜马拉雅两关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mandala",
+      "himalaya"
+    ]
+  },
+  {
+    "id": "cma-157184",
+    "status": "consistent",
+    "reason": "玛雅250—900年玉质王冠饰件，文化与时代符合玛雅艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "maya"
+    ]
+  },
+  {
+    "id": "cma-157333",
+    "status": "consistent",
+    "reason": "伯恩-琼斯1870—1875年水彩素描，符合拉斐尔前派后续实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "preraphaelite"
+    ]
+  },
+  {
+    "id": "cma-157667",
+    "status": "consistent",
+    "reason": "1535—1540年伊兹尼克釉下彩大盘，奥斯曼宫廷及广义伊斯兰艺术均适用。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ottoman",
+      "islamic"
+    ]
+  },
+  {
+    "id": "cma-157929",
+    "status": "consistent",
+    "reason": "1903年《摄影作品》第三期是摄影分离派传播载体，也符合画意摄影专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "stieglitz",
+      "pictorial"
+    ]
+  },
+  {
+    "id": "cma-158056",
+    "status": "consistent",
+    "reason": "1913年《摄影作品》第四十一期含卡梅伦作品，期刊年代与被复制作品年代不同，不影响摄影分离派及画意关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "stieglitz",
+      "pictorial"
+    ]
+  },
+  {
+    "id": "cma-159000",
+    "status": "consistent",
+    "reason": "尼日利亚诺克风格陶头像，古代西非文化归属符合非洲古代入口，保留测年不确定区间。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "africaearly"
+    ]
+  },
+  {
+    "id": "cma-159058",
+    "status": "consistent",
+    "reason": "阿特金斯1852—1854年蓝晒植物图，蓝晒工艺与摄影史两关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cyanotype",
+      "photo"
+    ]
+  },
+  {
+    "id": "cma-159216",
+    "status": "consistent",
+    "reason": "施维特斯1923年梅尔兹石版画，属于达达相关实践，虽非拼贴原件也无错误关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dada"
+    ]
+  },
+  {
+    "id": "cma-159234",
+    "status": "consistent",
+    "reason": "1230—1240年比萨木板蛋彩十字架，材质明确支持蛋彩专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "tempera"
+    ]
+  },
+  {
+    "id": "cma-159305",
+    "status": "consistent",
+    "reason": "韦拉克鲁斯雷莫哈达斯风格500—900年陶塑，属于中美洲文化范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mesoamerica"
+    ]
+  },
+  {
+    "id": "cma-159724",
+    "status": "consistent",
+    "reason": "沈周1468年花卉水墨，花鸟题材及明代吴门两个关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "flowersbirds",
+      "ming"
+    ]
+  },
+  {
+    "id": "cma-159726",
+    "status": "consistent",
+    "reason": "沈周1500年海棠图，花鳥与明代吴门关联各有题材、作者依据。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "flowersbirds",
+      "ming"
+    ]
+  },
+  {
+    "id": "cma-159880",
+    "status": "fix",
+    "reason": "权贵帽是拉菲草纤维编织服饰，不是nkisi力量像；同属刚果文化不足以作为力量像实例。",
+    "changes": {
+      "entries": [
+        "textile"
+      ]
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/1997.180"
+    ],
+    "reviewedEntries": [
+      "kongo"
+    ]
+  },
+  {
+    "id": "cma-160127",
+    "status": "consistent",
+    "reason": "马远南宋观鹿册页，时代与宫廷画家身份同时支持南宋和宋代画院。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "southernsong",
+      "songacademy"
+    ]
+  },
+  {
+    "id": "cma-160128",
+    "status": "consistent",
+    "reason": "马远12世纪末至13世纪初月下饮酒册页，南宋院体与宋代画院关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "southernsong",
+      "songacademy"
+    ]
+  },
+  {
+    "id": "cma-160137",
+    "status": "consistent",
+    "reason": "陈汝言元代仙山设色手卷，青绿仙境题材、媒介与青绿山水传统一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bluegreen"
+    ]
+  },
+  {
+    "id": "cma-160208",
+    "status": "consistent",
+    "reason": "朝鲜王朝1878年佛教会图，属于朝鲜半岛宗教绘画范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "korea"
+    ]
+  },
+  {
+    "id": "cma-160742",
+    "status": "consistent",
+    "reason": "统一新罗9世纪阿弥陀佛金铜像，符合朝鲜半岛佛教造像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "koreabuddha"
+    ]
+  },
+  {
+    "id": "cma-160767",
+    "status": "consistent",
+    "reason": "贝宁王国16—17世纪宫廷铜饰板，可同时归贝宁及广义非洲雕刻；mask条目并非仅面具。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "benin",
+      "mask"
+    ]
+  },
+  {
+    "id": "cma-161234",
+    "status": "consistent",
+    "reason": "阿瑟·韦斯利·道约1908年雕刻版木，明确是印刷版材而非印成品，符合木版印刷专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "print"
+    ]
+  },
+  {
+    "id": "cma-161268",
+    "status": "consistent",
+    "reason": "朝鲜王朝19世纪初官员绢本肖像，符合朝鲜半岛艺术传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "korea"
+    ]
+  },
+  {
+    "id": "cma-161274",
+    "status": "consistent",
+    "reason": "馆方明确昂格朗的炭笔与纸纹技法反映点彩/分色主义，因此黑白素描仍适合新印象主义。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/print/art/1999.49"
+    ],
+    "reviewedEntries": [
+      "neoimp"
+    ]
+  },
+  {
+    "id": "cma-162150",
+    "status": "consistent",
+    "reason": "1530—1535年时祷书泥金彩饰叶，略晚于条目概括年代但工艺和书籍类型明确一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "cma-162396",
+    "status": "consistent",
+    "reason": "大卫1813年丘比特与普绪克纸本习作，作者年代及古典神话题材符合新古典主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "neoclassicism"
+    ]
+  },
+  {
+    "id": "cma-162868",
+    "status": "consistent",
+    "reason": "悦山道宗17世纪后半叶行草书，书体和纸本水墨媒介符合书法传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "calligraphy"
+    ]
+  },
+  {
+    "id": "cma-163505",
+    "status": "consistent",
+    "reason": "马家窑3300—2650 BCE彩陶罐，考古文化及年代符合中国新石器艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cnneolithic"
+    ]
+  },
+  {
+    "id": "cma-164427",
+    "status": "consistent",
+    "reason": "南安纳托利亚约50 BCE希腊化墓碑，处于希腊化条目时间范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hellenistic"
+    ]
+  },
+  {
+    "id": "cma-164431",
+    "status": "consistent",
+    "reason": "商代安阳时期青铜斝，材料、礼器类型和年代符合商周青铜。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bronze"
+    ]
+  },
+  {
+    "id": "cma-164437",
+    "status": "consistent",
+    "reason": "莫切200—850 CE蝙蝠形陶瓶，考古文化和器型符合莫切艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "moche"
+    ]
+  },
+  {
+    "id": "cma-164655",
+    "status": "consistent",
+    "reason": "15世纪末波斯《蔷薇园》泥金彩饰页，后添16世纪边饰已区分，符合波斯书籍艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "persian"
+    ]
+  },
+  {
+    "id": "cma-165186",
+    "status": "consistent",
+    "reason": "拉利克1909—1912年玻璃花瓶，新艺术作者与植物动物装饰成立，概括年代末端不应硬切。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nouveau"
+    ]
+  },
+  {
+    "id": "cma-165270",
+    "status": "consistent",
+    "reason": "莫切50—650 CE棉及驼科纤维织物，安第斯地域和织物媒介两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "andes",
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-165426",
+    "status": "consistent",
+    "reason": "马家窑半山期2650—2350 BCE鸟形彩陶，符合中国新石器时代文化。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cnneolithic"
+    ]
+  },
+  {
+    "id": "cma-166352",
+    "status": "consistent",
+    "reason": "墨西哥丘皮夸罗300 BCE—300 CE陶坐像，符合古代中美洲范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mesoamerica"
+    ]
+  },
+  {
+    "id": "cma-167708",
+    "status": "consistent",
+    "reason": "普金约1850年石器盘，哥特复兴设计师的日用工艺实践，非仅建筑分类。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "gothicrevival"
+    ]
+  },
+  {
+    "id": "cma-168196",
+    "status": "consistent",
+    "reason": "齐家文化2000—1700 BCE玉刀横跨新石器至青铜过渡，两个关联分别据考古文化与玉材成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cnneolithic",
+      "jade"
+    ]
+  },
+  {
+    "id": "cma-168689",
+    "status": "consistent",
+    "reason": "莫切200—850 CE猫科陶瓶，文化与工艺符合莫切艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "moche"
+    ]
+  },
+  {
+    "id": "cma-168731",
+    "status": "consistent",
+    "reason": "刚果19世纪末至20世纪初nkisi木像及附加材料，具体物件类型符合力量像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "kongo"
+    ]
+  },
+  {
+    "id": "cma-168738",
+    "status": "consistent",
+    "reason": "同为刚果nkisi复合材料木像，馆藏明确类型可支持力量像专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "kongo"
+    ]
+  },
+  {
+    "id": "cma-168739",
+    "status": "fix",
+    "reason": "刚果基督十字架反映当地天主教与本土信仰交汇，并非nkisi力量像；应避免仅凭地域归类。",
+    "changes": {
+      "entries": [
+        "mask"
+      ]
+    },
+    "sources": [
+      "https://www.clevelandart.org/art/2010.444"
+    ],
+    "reviewedEntries": [
+      "kongo"
+    ]
+  },
+  {
+    "id": "cma-169510",
+    "status": "consistent",
+    "reason": "宋元之际约1300年雕漆圆盒，材质工艺符合中国漆器。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "lacquer"
+    ]
+  },
+  {
+    "id": "cma-169736",
+    "status": "consistent",
+    "reason": "英格兰13世纪《圣经》彩饰字母书页，符合泥金装饰手抄本范围，单页无金不排除彩饰本。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "manuscript"
+    ]
+  },
+  {
+    "id": "cma-170075",
+    "status": "consistent",
+    "reason": "吴哥10世纪湿婆随从砂岩头像，年代、地域与高棉宗教雕刻一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "khmer"
+    ]
+  },
+  {
+    "id": "cma-170726",
+    "status": "consistent",
+    "reason": "伯恩-琼斯1893年圣杯挂毯习作，同时属于拉斐尔前派图像实践及工艺美术设计。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "preraphaelite",
+      "crafts"
+    ]
+  },
+  {
+    "id": "cma-170787",
+    "status": "consistent",
+    "reason": "阿克巴宫廷约1575年廷臣画页，后加18世纪边饰已明确；莫卧儿与早期莫卧儿两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mughal",
+      "mughalearly"
+    ]
+  },
+  {
+    "id": "cma-170835",
+    "status": "consistent",
+    "reason": "约1627年努尔·贾汉画页，莫卧儿宫廷题材及年代正确，作者传称已保留。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mughal"
+    ]
+  },
+  {
+    "id": "cma-170878",
+    "status": "consistent",
+    "reason": "1764年穆罕默德·沙身后肖像，晚期莫卧儿身份和纸上细密画媒介支持关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "mughal"
+    ]
+  },
+  {
+    "id": "cma-172504",
+    "status": "consistent",
+    "reason": "卡梅伦1867年人物摄影属摄影史及画意先驱，不应因早于1880年概括起点删除。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "photo",
+      "pictorial"
+    ]
+  },
+  {
+    "id": "cma-314404",
+    "status": "consistent",
+    "reason": "1782年后康格拉军事叙事画，帕哈里王国来源明确，符合拉杰普特与帕哈里。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rajput"
+    ]
+  },
+  {
+    "id": "cma-314476",
+    "status": "consistent",
+    "reason": "1750—1760年可能出自斋浦尔宫廷画家Sahib Ram，拉杰普特关联可保留但作者可能性不能抹去。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rajput"
+    ]
+  },
+  {
+    "id": "cma-314494",
+    "status": "consistent",
+    "reason": "比卡内尔1611—1613年王子肖像，拉杰普特王国地域与年代相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rajput"
+    ]
+  },
+  {
+    "id": "cma-318493",
+    "status": "consistent",
+    "reason": "景德镇明清过渡青花方瓶，釉下钴蓝及中国瓷器两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bluewhite",
+      "ceramics"
+    ]
+  },
+  {
+    "id": "cma-325449",
+    "status": "consistent",
+    "reason": "施蒂格利茨1907年《统舱》照相凹版，摄影分离派人物及摄影史两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "stieglitz",
+      "photo"
+    ]
+  },
+  {
+    "id": "cma-540412",
+    "status": "consistent",
+    "reason": "仿汉瓦当歙石砚含篆书铭文，金石趣味而非印章本体；seal涵盖金石学，可保留背景例证。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/2023.50"
+    ],
+    "reviewedEntries": [
+      "seal"
+    ]
+  },
+  {
+    "id": "cma-543423",
+    "status": "consistent",
+    "reason": "梁启超1911年后书法对联，书法媒介及中国近现代美术转型年代两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "calligraphy",
+      "cnmodern"
+    ]
+  },
+  {
+    "id": "cma-662030",
+    "status": "consistent",
+    "reason": "德拉克洛瓦1832年取水人物水彩，作者、时代与浪漫主义一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanticism"
+    ]
+  },
+  {
+    "id": "cma-74601",
+    "status": "consistent",
+    "reason": "德拉克洛瓦1854年港口水彩延续浪漫主义画家实践，不因概括终点1850年而删关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanticism"
+    ]
+  },
+  {
+    "id": "cma-80329",
+    "status": "consistent",
+    "reason": "维亚尔1899年家庭室内油画，作者与纳比派时期相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nabis"
+    ]
+  },
+  {
+    "id": "cma-83373",
+    "status": "consistent",
+    "reason": "维亚尔1892年熨衣人物油画，处于纳比派活跃期。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nabis"
+    ]
+  },
+  {
+    "id": "cma-84457",
+    "status": "consistent",
+    "reason": "唐代7—8世纪彩绘陶马，年代及造像工艺支持隋唐关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "suitang"
+    ]
+  },
+  {
+    "id": "cma-84460",
+    "status": "consistent",
+    "reason": "康熙景德镇釉下钴蓝瓷瓶，同时符合青花瓷及中国陶瓷。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bluewhite",
+      "ceramics"
+    ]
+  },
+  {
+    "id": "cma-93992",
+    "status": "consistent",
+    "reason": "东魏537年释迦及菩萨石碑，明确处于魏晋南北朝佛教造像范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "sixdyn"
+    ]
+  },
+  {
+    "id": "cma-95259",
+    "status": "consistent",
+    "reason": "德拉克洛瓦1858年希腊题材油画属其后期浪漫主义实践，非所有运动都在概括年份断绝。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "romanticism"
+    ]
+  },
+  {
+    "id": "cma-95272",
+    "status": "consistent",
+    "reason": "莫奈1888年户外风景延续印象主义实践，1886是群展终点而非画法终止。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "impressionism"
+    ]
+  },
+  {
+    "id": "cma-97165",
+    "status": "consistent",
+    "reason": "1418年佛罗伦萨嫁妆箱画板，蛋彩媒介与意大利文艺复兴年代地域两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "tempera",
+      "renaissance"
+    ]
+  },
+  {
+    "id": "cma-97166",
+    "status": "consistent",
+    "reason": "1460年前后利皮追随者木板蛋彩，作者限定已保留；蛋彩与意大利文艺复兴关联均正确。",
+    "changes": {},
+    "sources": [
+      "https://www.clevelandart.org/art/1916.802"
+    ],
+    "reviewedEntries": [
+      "tempera",
+      "renaissance"
+    ]
+  },
+  {
+    "id": "cma-97177",
+    "status": "consistent",
+    "reason": "传为卢伊尼的16世纪木板油画，伦巴第达芬奇传统可说明晕涂，保留作者传称。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "sfumato"
+    ]
+  },
+  {
+    "id": "cma-97197",
+    "status": "consistent",
+    "reason": "300—200 BCE希腊化女子头像，同时处于希腊化专题与覆盖古典及希腊化的总条目。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hellenistic",
+      "classical"
+    ]
+  },
+  {
+    "id": "cma-98300",
+    "status": "consistent",
+    "reason": "卡尚1180—1220年米奈彩杯，馆方明确塞尔柱时期传统，延及13世纪初并非明显错分。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "seljuq"
+    ]
+  },
+  {
+    "id": "cma-98708",
+    "status": "consistent",
+    "reason": "公元1世纪意大利马赛克铺地，同时属于罗马艺术及罗马壁画马赛克专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rome",
+      "romanpainting"
+    ]
+  },
+  {
+    "id": "cma-98773",
+    "status": "consistent",
+    "reason": "高丽13—14世纪镶嵌黑白泥青瓷瓶，材质、工艺、年代都符合高丽青瓷。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "celadon"
+    ]
+  },
+  {
+    "id": "cma-98823",
+    "status": "consistent",
+    "reason": "朝鲜王朝15世纪阿弥陀三尊铜像，同时属于朝鲜半岛传统与佛教造像。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "korea",
+      "koreabuddha"
+    ]
+  },
+  {
+    "id": "cma-98884",
+    "status": "consistent",
+    "reason": "朝鲜王朝19世纪婚礼绣袍，地域传统及丝织刺绣媒介两关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "korea",
+      "textile"
+    ]
+  },
+  {
+    "id": "cma-99419",
+    "status": "consistent",
+    "reason": "公元1世纪罗马千花玻璃碗，地域年代符合古罗马工艺艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "rome"
+    ]
+  },
+  {
+    "id": "commons-100244364",
+    "status": "consistent",
+    "reason": "岛本昭三2000年后续掷瓶绘画，已有清楚团体结束后创作说明，具体派关联可作延续实例。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "gutai"
+    ]
+  },
+  {
+    "id": "commons-100320435",
+    "status": "consistent",
+    "reason": "1900年前后中国门神木版年画，题材、工艺与年画条目一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "newyearprints"
+    ]
+  },
+  {
+    "id": "commons-100572411",
+    "status": "consistent",
+    "reason": "1900年前后中国彩色木版年画，民间题材与版画工艺符合年画专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "newyearprints"
+    ]
+  },
+  {
+    "id": "commons-101784013",
+    "status": "consistent",
+    "reason": "格里斯1913年静物绘画，作者、年代及形面分析与立体主义一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cubism"
+    ]
+  },
+  {
+    "id": "commons-102494908",
+    "status": "consistent",
+    "reason": "婆罗浮屠9世纪舞乐浮雕的19世纪历史照片，原作和摄影年代已区分。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "borobudur"
+    ]
+  },
+  {
+    "id": "commons-10271754",
+    "status": "consistent",
+    "reason": "任颐19世纪牡丹山石绘画，作者与海派花鸟传统一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "shanghai"
+    ]
+  },
+  {
+    "id": "commons-10533111",
+    "status": "consistent",
+    "reason": "贾德展厅装置摄影记录，极简主义作者及重复单元空间实践相符，照片年份不是作品年份。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "minimal"
+    ]
+  },
+  {
+    "id": "commons-110892859",
+    "status": "consistent",
+    "reason": "克拉克1960年《线性动物》，巴西新具体主义参与性作品符合拉美现代主义专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "latam"
+    ]
+  },
+  {
+    "id": "commons-113363220",
+    "status": "consistent",
+    "reason": "史密森《螺旋防波堤》2018年现场记录，拍摄时间不是创作时间，大地艺术关联成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "land"
+    ]
+  },
+  {
+    "id": "commons-115518028",
+    "status": "consistent",
+    "reason": "莫尔纳1969年规则与中断图像，作者、时代和算法生成实践符合生成艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "generative"
+    ]
+  },
+  {
+    "id": "commons-12138750",
+    "status": "consistent",
+    "reason": "巴塞罗那馆1929原作与1986重建均明确，作为现代主义建筑案例合理。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "international"
+    ]
+  },
+  {
+    "id": "commons-121483497",
+    "status": "consistent",
+    "reason": "1977年蓬皮杜中心设备构件的2022照片，外露设施正是高技派建筑专题范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hightech"
+    ]
+  },
+  {
+    "id": "commons-124440972",
+    "status": "consistent",
+    "reason": "孟菲斯作品群2022年馆藏陈列照，标明展览记录，可支持孟菲斯设计而非当年新作品。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "memphis"
+    ]
+  },
+  {
+    "id": "commons-124440977",
+    "status": "consistent",
+    "reason": "格雷夫斯1981年Plaza梳妆台，作者参与孟菲斯及首批作品年代一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "memphis"
+    ]
+  },
+  {
+    "id": "commons-12597693",
+    "status": "consistent",
+    "reason": "1967年旧金山Mantra-Rock海报，活动地域时代及迷幻平面设计语境一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "psychedelic"
+    ]
+  },
+  {
+    "id": "commons-129350163",
+    "status": "consistent",
+    "reason": "婆罗浮屠8—9世纪浮雕2022年照片，地点和原作时代一致，未混淆照片年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "borobudur"
+    ]
+  },
+  {
+    "id": "commons-13278718",
+    "status": "consistent",
+    "reason": "格里斯1914年《茴香酒瓶》含拼贴与油彩，同时属于拼贴媒介和立体主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "collage",
+      "cubism"
+    ]
+  },
+  {
+    "id": "commons-1348314",
+    "status": "consistent",
+    "reason": "1892年百科柱式图版明确为后世整理，可用于古典柱式比较而非古希腊原作。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "classicalorders"
+    ]
+  },
+  {
+    "id": "commons-139691502",
+    "status": "consistent",
+    "reason": "2023年丝网印刷工艺演示，属于媒介说明图片，未冒充历史作品。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "screen"
+    ]
+  },
+  {
+    "id": "commons-140329806",
+    "status": "consistent",
+    "reason": "李禹焕《关系项：舞台》公园照片，物派艺术家后续实践，照片日期本身不能限定原作年份。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "monoha"
+    ]
+  },
+  {
+    "id": "commons-14033547",
+    "status": "consistent",
+    "reason": "李禹焕1978年石与铁作品，时期、材料关系与物派一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "monoha"
+    ]
+  },
+  {
+    "id": "commons-1430363",
+    "status": "consistent",
+    "reason": "普拉托1832年诡盘明确标为动画前史，符合分帧原理背景关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "animation"
+    ]
+  },
+  {
+    "id": "commons-143232707",
+    "status": "consistent",
+    "reason": "唐代莫高217窟《法华经变》壁画，洞窟和时代符合敦煌条目。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "dunhuang"
+    ]
+  },
+  {
+    "id": "commons-146107377",
+    "status": "consistent",
+    "reason": "莫尔纳2024年工作笔记展览记录，属于生成艺术过程资料而非误标2024年早期作品。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "generative"
+    ]
+  },
+  {
+    "id": "commons-147243901",
+    "status": "consistent",
+    "reason": "麦金托什1897年设计、约1900制作高背椅，符合格拉斯哥风格时期和作者。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "glasgow"
+    ]
+  },
+  {
+    "id": "commons-147326081",
+    "status": "consistent",
+    "reason": "罗斯科1958—1959年西格拉姆壁画的2024展照，原作属抽象表现主义色域方向。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "abstractexp"
+    ]
+  },
+  {
+    "id": "commons-147636539",
+    "status": "consistent",
+    "reason": "麦金托什1907年茶室桌椅，室内整体设计属于格拉斯哥风格。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "glasgow"
+    ]
+  },
+  {
+    "id": "commons-149254712",
+    "status": "consistent",
+    "reason": "黑川纪章1972年胶囊塔单元照片，建筑年代和模块化设计符合新陈代谢派。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "metabolism"
+    ]
+  },
+  {
+    "id": "commons-15035429",
+    "status": "consistent",
+    "reason": "卡茨与祖尔活体培养装置，材料过程明确属于生物艺术，照片年份单独标记。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "bioart"
+    ]
+  },
+  {
+    "id": "commons-15108148",
+    "status": "consistent",
+    "reason": "基弗1984—1986年材料作品，作者年代与德国新表现主义相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "neox"
+    ]
+  },
+  {
+    "id": "commons-153516290",
+    "status": "consistent",
+    "reason": "高剑父等1925年合作花卉，岭南代表画家与近代时期相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "lingnan"
+    ]
+  },
+  {
+    "id": "commons-153537620",
+    "status": "consistent",
+    "reason": "索特萨斯1981年孟菲斯书柜，属于后现代设计条目中的孟菲斯分支。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postmoderndesign"
+    ]
+  },
+  {
+    "id": "commons-154885769",
+    "status": "consistent",
+    "reason": "《持矛者》罗马复制品已明确与希腊原作区分，适合古希腊传统传承实例。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "classical"
+    ]
+  },
+  {
+    "id": "commons-15638599",
+    "status": "consistent",
+    "reason": "伊姆斯塑料椅2010年照片，设计类型属于世纪中期现代，拍摄年份不构成错分。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "midcentury"
+    ]
+  },
+  {
+    "id": "commons-157019027",
+    "status": "consistent",
+    "reason": "高剑父1923年绘画，作者和时代属于岭南画派。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "lingnan"
+    ]
+  },
+  {
+    "id": "commons-157454674",
+    "status": "consistent",
+    "reason": "莫特利1929年爵士夜生活绘画符合广义哈莱姆/新黑人文化运动，不能仅因场景不在哈莱姆删除。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "harlem"
+    ]
+  },
+  {
+    "id": "commons-160039431",
+    "status": "consistent",
+    "reason": "凯利1963年纯色形面作品，作者年代与硬边绘画一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "hardedge"
+    ]
+  },
+  {
+    "id": "commons-162857033",
+    "status": "consistent",
+    "reason": "罗斯科泰特展厅2025年照片，色域作品的展示记录，未把拍照时间当绘画创作时间。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "colorfield"
+    ]
+  },
+  {
+    "id": "commons-163548642",
+    "status": "consistent",
+    "reason": "加利亚收藏与霍夫曼、维也纳工坊有馆方明确关联；此为组合陈列，不应给所有器物统一具体作者。",
+    "changes": {},
+    "sources": [
+      "https://www.ngv.vic.gov.au/vienna/decorative-arts/hoffmann-gala-apartment.html",
+      "https://www.ngv.vic.gov.au/explore/collection/work/14208/"
+    ],
+    "reviewedEntries": [
+      "wiener"
+    ]
+  },
+  {
+    "id": "commons-165508770",
+    "status": "consistent",
+    "reason": "伊姆斯1946年LCW胶合板椅的后世展照，设计时代与世纪中期现代一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "midcentury"
+    ]
+  },
+  {
+    "id": "commons-16629657",
+    "status": "consistent",
+    "reason": "本·沙恩1930年代公共壁画劳动题材，与社会现实主义作者和社会语境一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "socialreal"
+    ]
+  },
+  {
+    "id": "commons-16629735",
+    "status": "consistent",
+    "reason": "1930年代美国公共建筑劳动壁画记录可关联社会现实主义，具体作者未详已明示，不补猜作者。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "socialreal"
+    ]
+  },
+  {
+    "id": "commons-17178049",
+    "status": "consistent",
+    "reason": "韦格纳Y椅细节照片，丹麦设计师及木家具类型与丹麦现代家具一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "scandinavian"
+    ]
+  },
+  {
+    "id": "commons-180164517",
+    "status": "consistent",
+    "reason": "莫霍利-纳吉1923年无相机光影图，属于新视觉现代摄影实验。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "photoavant"
+    ]
+  },
+  {
+    "id": "commons-18065141",
+    "status": "consistent",
+    "reason": "1929年罗德琴科相关戏剧海报，首演年代与1971翻拍已区分，符合构成主义平面传播。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "constructivism"
+    ]
+  },
+  {
+    "id": "commons-182793541",
+    "status": "consistent",
+    "reason": "巴比肯建筑细节的2026摄影，粗野主义建筑身份不随摄影年份改变。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "brutalism"
+    ]
+  },
+  {
+    "id": "commons-182930416",
+    "status": "consistent",
+    "reason": "格雷夫斯1985年9093水壶，产品年代和后现代拟物设计关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postmoderndesign"
+    ]
+  },
+  {
+    "id": "commons-183008573",
+    "status": "consistent",
+    "reason": "迪克斯1926年人物肖像，作者时期与新客观主义相符。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "newobjectivity"
+    ]
+  },
+  {
+    "id": "commons-18730928",
+    "status": "consistent",
+    "reason": "英国朋克自出版刊物组合摄影，明确为刊物记录，符合朋克DIY平面设计。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "punk"
+    ]
+  },
+  {
+    "id": "commons-189721638",
+    "status": "consistent",
+    "reason": "德·库宁1965年绘画1968年黑白档案照，属于抽象表现主义艺术家后续实践且色彩局限已说明。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "abstractexp"
+    ]
+  },
+  {
+    "id": "commons-19063891",
+    "status": "consistent",
+    "reason": "德劳内1913年《彩虹》色彩绘画，作者及年代对应奥尔菲主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "orphism"
+    ]
+  },
+  {
+    "id": "commons-192611643",
+    "status": "consistent",
+    "reason": "米罗1927年符号性绘画，作者与时期属于超现实主义实践。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "surrealism"
+    ]
+  },
+  {
+    "id": "commons-194214446",
+    "status": "consistent",
+    "reason": "乌尔姆凳2026年实物照片，设计类型属于学院传统，不把照片年份视作原设计。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ulm"
+    ]
+  },
+  {
+    "id": "commons-196722453",
+    "status": "consistent",
+    "reason": "1936年Isotype图像语言图版，团队与图形信息传达类型符合信息图形专题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "pictograms"
+    ]
+  },
+  {
+    "id": "commons-19828186",
+    "status": "consistent",
+    "reason": "贾德1985年重复单元作品，属于极简主义后续实践，条目写1960年代起无终止限制。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "minimal"
+    ]
+  },
+  {
+    "id": "commons-1982929",
+    "status": "consistent",
+    "reason": "道格拉斯1939年哈莱姆城市绘画，作者与黑人文化运动延续语境一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "harlem"
+    ]
+  },
+  {
+    "id": "commons-21022363",
+    "status": "consistent",
+    "reason": "1972慕尼黑奥运图标既属统一视觉识别系统，也属信息图形，双关联正确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "corporate",
+      "pictograms"
+    ]
+  },
+  {
+    "id": "commons-2155549",
+    "status": "consistent",
+    "reason": "史密森1970年地景作品2005年照片，原作与记录年代分明，符合大地艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "land"
+    ]
+  },
+  {
+    "id": "commons-21909786",
+    "status": "consistent",
+    "reason": "格里斯1914年《早餐》纸片与绘画结合，立体主义运动与拼贴媒介两关联正确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "cubism",
+      "collage"
+    ]
+  },
+  {
+    "id": "commons-23825420",
+    "status": "consistent",
+    "reason": "秘鲁北海岸莫切肖像陶器，符合安第斯地域文化，不误作印加器物。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "andes"
+    ]
+  },
+  {
+    "id": "commons-25350845",
+    "status": "consistent",
+    "reason": "博朗SK4后世结构示意图，图种已明确，可说明功能主义产品结构。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "braun"
+    ]
+  },
+  {
+    "id": "commons-26247205",
+    "status": "fix",
+    "reason": "杜尚《泉》再制作本作为达达作品及观念艺术前史可跨条目，但观念条目需明确前驱身份。",
+    "changes": {
+      "associationNotes.conceptual": "杜尚1917年的现成品是1960年代观念艺术的前驱；图示为后来的再制作版本。"
+    },
+    "sources": [],
+    "reviewedEntries": [
+      "dada",
+      "conceptual"
+    ]
+  },
+  {
+    "id": "commons-26720636",
+    "status": "consistent",
+    "reason": "肖尼巴雷雕塑公园作品与纺织贸易及文化身份有关，符合全球当代去殖民议题。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "global"
+    ]
+  },
+  {
+    "id": "commons-28238289",
+    "status": "consistent",
+    "reason": "草间树木波点环境作品，现场改造与可穿行空间符合装置艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "installation"
+    ]
+  },
+  {
+    "id": "commons-28422726",
+    "status": "consistent",
+    "reason": "草间2010年不锈钢南瓜展览现场，物体与展场呈现属于装置艺术宽泛范围。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "installation"
+    ]
+  },
+  {
+    "id": "commons-288304",
+    "status": "consistent",
+    "reason": "1925—1926年德绍校舍同时是包豪斯机构建筑与现代主义建筑案例，两关联正确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "international",
+      "bauhaus"
+    ]
+  },
+  {
+    "id": "commons-29777788",
+    "status": "consistent",
+    "reason": "提拉瓦尼共享餐食活动记录符合参与式社会实践；具体作品版本未知已有说明，不冒认首展。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "relational"
+    ]
+  },
+  {
+    "id": "commons-31011870",
+    "status": "consistent",
+    "reason": "马列维奇1915年《黑方块》，作者年代和至上主义核心作品身份一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "suprematism"
+    ]
+  },
+  {
+    "id": "commons-31198865",
+    "status": "consistent",
+    "reason": "科苏斯文字与建筑装置记录，语言定义和阅读实践符合观念艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "conceptual"
+    ]
+  },
+  {
+    "id": "commons-31395049",
+    "status": "consistent",
+    "reason": "黑川1972年中银胶囊塔2013年照片，符合新陈代谢派模块城市构想。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "metabolism"
+    ]
+  },
+  {
+    "id": "commons-32407550",
+    "status": "consistent",
+    "reason": "1954年乌尔姆凳再版实物已标注，学院设计与再生产记录均没有时代混淆。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "ulm"
+    ]
+  },
+  {
+    "id": "commons-33137063",
+    "status": "consistent",
+    "reason": "JODI互动项目2014年现场，专题涵盖网络与互动艺术，非早期网页原图也可使用。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "netart"
+    ]
+  },
+  {
+    "id": "commons-3706407",
+    "status": "consistent",
+    "reason": "科苏斯放大转写文字广场，文字、翻译和场所关系符合观念艺术，未冒称《三把椅子》。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "conceptual"
+    ]
+  },
+  {
+    "id": "commons-37271424",
+    "status": "consistent",
+    "reason": "哈迪德1993年维特拉消防站，建筑作者和年代符合解构主义。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "deconstructivism"
+    ]
+  },
+  {
+    "id": "commons-37867226",
+    "status": "consistent",
+    "reason": "霍夫曼海报展览照片，设计师与瑞士国际主义排版关联明确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "swiss"
+    ]
+  },
+  {
+    "id": "commons-38424154",
+    "status": "consistent",
+    "reason": "阿布拉莫维奇2010年持续对坐表演，时间身体观众共同构成行为艺术。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "performance"
+    ]
+  },
+  {
+    "id": "commons-4053364",
+    "status": "consistent",
+    "reason": "梅尔茨冰屋公园现场照，作者和贫穷艺术材料实践一致，摄影年份非原作年代。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "artepovera"
+    ]
+  },
+  {
+    "id": "commons-4145439",
+    "status": "consistent",
+    "reason": "梅尔茨1982年石头冰屋，贫穷艺术1967年起的延续作品，材料身份明确。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "artepovera"
+    ]
+  },
+  {
+    "id": "commons-42975981",
+    "status": "consistent",
+    "reason": "1970年代朋克刊物后世组合摄影，出版年代和照片年代已区分。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "punk"
+    ]
+  },
+  {
+    "id": "commons-43701454",
+    "status": "consistent",
+    "reason": "贝伦斯1909年AEG厂房钢构细节，制造联盟工业设计与企业形象语境一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "werkbund"
+    ]
+  },
+  {
+    "id": "commons-44873493",
+    "status": "consistent",
+    "reason": "同一1909年AEG厂房立面不同视角，作为制造联盟建筑案例不是跨运动误归。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "werkbund"
+    ]
+  },
+  {
+    "id": "commons-45992938",
+    "status": "consistent",
+    "reason": "勒维特规则式墙画的展览现场，作品年代未知明示，观念艺术关联据作者实践成立。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "conceptual"
+    ]
+  },
+  {
+    "id": "commons-49961256",
+    "status": "consistent",
+    "reason": "萨伏伊别墅LC4家具作为室内环境背景可留现代主义建筑，现有说明明确家具而非建筑外观。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "international"
+    ]
+  },
+  {
+    "id": "commons-53231053",
+    "status": "consistent",
+    "reason": "阿尔托1932年帕米奥曲木椅，芬兰作者与北欧现代设计时代一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "nordic"
+    ]
+  },
+  {
+    "id": "commons-56920944",
+    "status": "consistent",
+    "reason": "芝加哥1974—1979年《晚宴》整体，女性主义艺术核心作品关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "feminist"
+    ]
+  },
+  {
+    "id": "commons-57035370",
+    "status": "consistent",
+    "reason": "《晚宴》局部为同作细节，与整体复用属于视角补充，女性主义关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "feminist"
+    ]
+  },
+  {
+    "id": "commons-57378608",
+    "status": "consistent",
+    "reason": "任颐晚19世纪花鸟册页，作者及年代属于海派传统。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "shanghai"
+    ]
+  },
+  {
+    "id": "commons-58514332",
+    "status": "consistent",
+    "reason": "利西茨基1919—1920年政治海报将几何抽象用于传播，构成主义关联合理亦有至上主义背景。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "constructivism"
+    ]
+  },
+  {
+    "id": "commons-59307033",
+    "status": "consistent",
+    "reason": "戈因斯1970年机场绘画是照相写实主义代表画家作品，已明确不是纪实照片。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "photorealism"
+    ]
+  },
+  {
+    "id": "commons-60426544",
+    "status": "consistent",
+    "reason": "莫霍利-纳吉1925—1928年无相机摄影实验，符合新视觉现代摄影。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "photoavant"
+    ]
+  },
+  {
+    "id": "commons-6092055",
+    "status": "consistent",
+    "reason": "拉斯科旧石器时代动物岩画，原作年代与史前条目一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "prehistoric"
+    ]
+  },
+  {
+    "id": "commons-63469142",
+    "status": "consistent",
+    "reason": "索特萨斯1981年Carlton书架既是孟菲斯具体作品，也属于后现代设计总条目。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postmoderndesign",
+      "memphis"
+    ]
+  },
+  {
+    "id": "commons-63601642",
+    "status": "consistent",
+    "reason": "Archizoom1967年Superonda沙发，作者团体和设计年份符合意大利激进设计。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "radical"
+    ]
+  },
+  {
+    "id": "commons-6809263",
+    "status": "consistent",
+    "reason": "博朗约1962年SK5收音唱机，品牌、产品与战后功能主义设计一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "braun"
+    ]
+  },
+  {
+    "id": "commons-68334358",
+    "status": "consistent",
+    "reason": "里维拉1932—1933年底特律壁画局部，美国创作地点不取消其墨西哥壁画运动作者语境。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "muralism"
+    ]
+  },
+  {
+    "id": "commons-6940392",
+    "status": "consistent",
+    "reason": "沃霍尔1962年汤罐头画作的2007展照，消费图像和波普艺术身份一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "pop"
+    ]
+  },
+  {
+    "id": "commons-69932702",
+    "status": "consistent",
+    "reason": "哈迪德1993年消防站整体与细部为同建筑不同摄影，解构主义关联一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "deconstructivism"
+    ]
+  },
+  {
+    "id": "commons-7013014",
+    "status": "consistent",
+    "reason": "安纳祖金属瓶盖织物整体与全球当代材料贸易语境一致，摄影2009已明示。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "global"
+    ]
+  },
+  {
+    "id": "commons-7013082",
+    "status": "consistent",
+    "reason": "同作金属片细部补充材料信息，全球当代关联与整体一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "global"
+    ]
+  },
+  {
+    "id": "commons-72816408",
+    "status": "consistent",
+    "reason": "利希滕斯坦1963年Whaam展示记录支持波普图像，具体展出版本未明，不应升级为原作实拍。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "pop"
+    ]
+  },
+  {
+    "id": "commons-76412409",
+    "status": "uncertain",
+    "reason": "克鲁格2016年公共文字作品适合后现代，女性主义关联仅凭艺术家身份仍需此作主题证据。",
+    "changes": {
+      "entries": [
+        "postmodernart"
+      ],
+      "recommendation": "该作女性主义主题缺少具体原始依据，移除feminist关联；这并非否定作者的女性主义实践。"
+    },
+    "sources": [
+      "https://www.moma.org/collection/artists/3266"
+    ],
+    "reviewedEntries": [
+      "postmodernart",
+      "feminist"
+    ]
+  },
+  {
+    "id": "commons-76412437",
+    "status": "consistent",
+    "reason": "克鲁格地铁文字介入公共场所，广告式语言重置支持后现代艺术关联。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "postmodernart"
+    ]
+  },
+  {
+    "id": "commons-77829436",
+    "status": "consistent",
+    "reason": "1963年《新平面设计》封面既属编辑网格设计，也属瑞士国际主义排版。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "editorial",
+      "swiss"
+    ]
+  },
+  {
+    "id": "commons-77843255",
+    "status": "consistent",
+    "reason": "米勒-布罗克曼1957年音乐节海报，设计师、年代与瑞士风格一致。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "swiss"
+    ]
+  },
+  {
+    "id": "commons-79699321",
+    "status": "consistent",
+    "reason": "里维拉1932—1933年底特律工业南墙，墨西哥壁画运动跨国委托案例，非因在美国便错归。",
+    "changes": {},
+    "sources": [],
+    "reviewedEntries": [
+      "muralism"
+    ]
+  }
+]

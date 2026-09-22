@@ -497,20 +497,23 @@
     "key": "mughal",
     "oid": 451314,
     "title": "\"Arjuna Battles Raja Tamradhvaja\", Folio from a Razmnama",
-    "artist": "'Abd al-Rahim ibn Muhammad Bairam Khan Khan-i Khanan",
+    "artist": "Unidentified artists from the workshop of Abd al-Rahim Khan-i Khanan",
     "date": "ca. 1616–17",
     "url": "https://www.metmuseum.org/art/collection/search/451314",
     "credit": "Rogers Fund, 1955",
     "publicDomain": true,
     "zh": "阿周那与塔姆拉德瓦贾王交战",
-    "artistZh": "莫卧儿画坊",
+    "artistZh": "阿卜杜勒·拉希姆汗画坊（画师姓名未详）",
     "image": "assets/artworks/mughal.webp",
     "entries": [
       "mughal"
     ],
     "museum": "The Met",
     "width": 525,
-    "height": 850
+    "height": 850,
+    "notes": {
+      "mughal": "为赞助人阿卜杜勒·拉希姆汗制作的《Razmnama》（《摩诃婆罗多》波斯文译本）画页；馆藏记录中的人名指赞助人，并非确定的执笔画师。"
+    }
   },
   "egypt": {
     "key": "egypt",
@@ -929,7 +932,10 @@
     "image": "assets/artworks/met-466254.webp",
     "width": 490,
     "height": 624,
-    "artistZh": ""
+    "artistZh": "",
+    "associationNotes": {
+      "ottonian": "馆藏记录定为10世纪初的北意大利作品；大都会博物馆同时将其收录于奥托艺术专题。"
+    }
   },
   "met-467730": {
     "oid": 467730,
@@ -1010,7 +1016,7 @@
   "met-471061": {
     "oid": 471061,
     "entries": [
-      "gothic"
+      "romanesque"
     ],
     "title": "Lion",
     "zh": "狮子",
@@ -1024,7 +1030,10 @@
     "image": "assets/artworks/met-471061.webp",
     "width": 600,
     "height": 611,
-    "artistZh": "西班牙（作者不详）"
+    "artistZh": "西班牙（作者不详）",
+    "associationNotes": {
+      "romanesque": "西班牙13世纪初罗曼式壁画；罗曼式传统在部分地区延续至1200年以后。"
+    }
   },
   "met-477779": {
     "oid": 477779,
@@ -1184,7 +1193,7 @@
       "stilllife"
     ],
     "title": "A Vase with Flowers",
-    "zh": "花瓶",
+    "zh": "花瓶与花卉静物",
     "artist": "Jacob Vosmaer",
     "date": "probably 1613",
     "url": "https://www.metmuseum.org/art/collection/search/437920",
@@ -1523,10 +1532,10 @@
   "met-49138": {
     "oid": 49138,
     "entries": [
-      "bronze"
+      "ceramics"
     ],
     "title": "Jar (Zun)",
-    "zh": "青铜尊",
+    "zh": "刻划纹黑陶尊",
     "artist": "China",
     "date": "13th–11th century BCE",
     "url": "https://www.metmuseum.org/art/collection/search/49138",
@@ -1542,10 +1551,10 @@
   "met-44778": {
     "oid": 44778,
     "entries": [
-      "bronze"
+      "jade"
     ],
     "title": "Water buffalo",
-    "zh": "水牛形青铜器",
+    "zh": "玉牛",
     "artist": "China",
     "date": "13th–11th century BCE",
     "url": "https://www.metmuseum.org/art/collection/search/44778",
@@ -1566,7 +1575,7 @@
     "title": "Plaque",
     "zh": "玉牌",
     "artist": "China",
-    "date": "年代未注明",
+    "date": "新石器时代，红山文化（约前3500—前2000年）",
     "url": "https://www.metmuseum.org/art/collection/search/75244",
     "credit": "Purchase, The Vincent Astor Foundation Gift, 2009",
     "publicDomain": true,
@@ -1771,10 +1780,11 @@
   "met-44590": {
     "oid": 44590,
     "entries": [
-      "garden"
+      "literati",
+      "ming"
     ],
     "title": "Windblown bamboo",
-    "zh": "风竹图",
+    "zh": "清风高节图",
     "artist": "Xia Chang",
     "date": "ca. 1460",
     "url": "https://www.metmuseum.org/art/collection/search/44590",
@@ -2208,7 +2218,10 @@
     "image": "assets/artworks/met-44637.webp",
     "width": 468,
     "height": 624,
-    "artistZh": "日本（作者不详）"
+    "artistZh": "日本（作者不详）",
+    "associationNotes": {
+      "tea": "15世纪末的信乐储藏罐，作为陶器传统的背景材料；本件实际用于茶事尚无确定记录。"
+    }
   },
   "met-42308": {
     "oid": 42308,
@@ -2461,8 +2474,7 @@
   "met-446999": {
     "oid": 446999,
     "entries": [
-      "carpets",
-      "mughal"
+      "carpets"
     ],
     "title": "Carpet with Palm Trees, Ibexes, and Birds",
     "zh": "棕榈树、羱羊与鸟纹地毯",
@@ -2514,7 +2526,10 @@
     "image": "assets/artworks/met-448257.webp",
     "width": 600,
     "height": 450,
-    "artistZh": ""
+    "artistZh": "",
+    "associationNotes": {
+      "mughal": "莫卧儿宫廷玉制书写器具，非绘画作品。"
+    }
   },
   "met-451283": {
     "oid": 451283,
@@ -2533,7 +2548,10 @@
     "image": "assets/artworks/met-451283.webp",
     "width": 429,
     "height": 624,
-    "artistZh": ""
+    "artistZh": "",
+    "associationNotes": {
+      "mughal": "画面作于约1620年，由Nanha绘制；同一册页另一面的书法约作于1530—1550年，书法家为Mir Ali Haravi。"
+    }
   },
   "met-449101": {
     "oid": 449101,
@@ -4521,7 +4539,7 @@
       "bluegreen",
       "literati"
     ],
-    "zh": "水村渔乐图",
+    "zh": "江村渔乐图",
     "title": "River Village:  Fisherman's Joy",
     "artist": "Zhao Mengfu (Chinese, 1254–1322)",
     "date": "c. 1302–3",
@@ -6085,7 +6103,7 @@
     "height": 900,
     "medium": "marble",
     "notes": {
-      "prehistoric": "这件基克拉泽斯早期青铜时代陶器展示史前器物的一个侧面。它不能替代旧石器时代洞穴图像的例证。"
+      "prehistoric": "基克拉泽斯早期青铜时代的大理石容器，约前3000—前2950年。"
     },
     "artistZh": "Master A"
   },
@@ -7102,7 +7120,10 @@
     "width": 1263,
     "height": 762,
     "medium": "oil on fabric",
-    "artistZh": "爱德华·维亚尔"
+    "artistZh": "爱德华·维亚尔",
+    "associationNotes": {
+      "nabis": "维亚尔1908—1912年的作品，晚于纳比派的主要活动阶段。"
+    }
   },
   "cma-80329": {
     "oid": 80329,
@@ -7538,7 +7559,10 @@
     "metadataSource": "https://openaccess-api.clevelandart.org/api/artworks/151346",
     "width": 900,
     "height": 574,
-    "medium": "obsidian, crystal"
+    "medium": "obsidian, crystal",
+    "associationNotes": {
+      "aztec": "馆方归属为米斯特克或阿兹特克；具体文化归属未定。"
+    }
   },
   "cma-103057": {
     "oid": 103057,
@@ -7587,7 +7611,7 @@
   "cma-168739": {
     "oid": 168739,
     "entries": [
-      "kongo"
+      "mask"
     ],
     "zh": "刚果十字架",
     "title": "Crucifix",
@@ -7609,7 +7633,7 @@
   "cma-159880": {
     "oid": 159880,
     "entries": [
-      "kongo"
+      "textile"
     ],
     "zh": "权贵帽",
     "title": "Prestige Cap (mpu ngola)",
@@ -7696,7 +7720,7 @@
     "width": 900,
     "height": 675,
     "medium": "serpentinite",
-    "artistZh": "佚名（古罗马）"
+    "artistZh": "佚名（埃及）"
   },
   "cma-136667": {
     "oid": 136667,
@@ -8105,7 +8129,7 @@
   "cma-135286": {
     "oid": 135286,
     "entries": [
-      "postimp"
+      "watercolor"
     ],
     "zh": "有独轮车的风景",
     "title": "Landscape with Wheelbarrow",
@@ -8123,7 +8147,10 @@
     "width": 1263,
     "height": 892,
     "medium": "watercolor and opaque watercolor with black chalk on cream paper",
-    "artistZh": "文森特·梵高"
+    "artistZh": "文森特·梵高",
+    "associationNotes": {
+      "watercolor": "梵高1883年在荷兰德伦特创作的早期水彩，混用不透明水彩和黑色粉笔。"
+    }
   },
   "cma-126085": {
     "oid": 126085,
@@ -8239,7 +8266,10 @@
     "width": 691,
     "height": 893,
     "medium": "graphite on beige wove paper",
-    "artistZh": "奥迪隆·雷东"
+    "artistZh": "奥迪隆·雷东",
+    "associationNotes": {
+      "symbolism": "雷东约1868年的早期幻想素描，早于象征主义运动的主要活动阶段。"
+    }
   },
   "cma-142692": {
     "oid": 142692,
@@ -8600,7 +8630,7 @@
     "entries": [
       "textile"
     ],
-    "zh": "格网团窠动物纹挂毯",
+    "zh": "格网团窠动物纹织物残片",
     "title": "Tapestry with lattice of animals in medallions",
     "artist": "Egypt",
     "date": "600s–700s",
@@ -8616,7 +8646,10 @@
     "width": 863,
     "height": 893,
     "medium": "wool and linen: tapestry weave",
-    "artistZh": "佚名（古埃及）"
+    "artistZh": "佚名（埃及，7—8世纪）",
+    "associationNotes": {
+      "textile": "用于衣服装饰带的织物残片，采用羊毛与亚麻织成。"
+    }
   },
   "cma-137259": {
     "oid": 137259,
@@ -8708,7 +8741,10 @@
     "width": 1073,
     "height": 893,
     "medium": "oil on fabric",
-    "artistZh": "模仿者：古斯塔夫·库尔贝"
+    "artistZh": "古斯塔夫·库尔贝的模仿者（姓名不详）",
+    "associationNotes": {
+      "realism": "1872年之后模仿库尔贝的作品，馆方未认定为库尔贝亲笔。"
+    }
   },
   "cma-95259": {
     "oid": 95259,
@@ -8877,9 +8913,9 @@
   "cma-151358": {
     "oid": 151358,
     "entries": [
-      "bronze"
+      "jade"
     ],
-    "zh": "兽面纹仪仗戈",
+    "zh": "兽面纹仪仗玉戈",
     "title": "Ceremonial Dagger-Axe with Animal Masks (Ge)",
     "artist": "China, Shang dynasty (c. 1600–c. 1046 BCE)",
     "date": "c. 1600–1050 BCE",
@@ -10649,7 +10685,7 @@
     "entries": [
       "inca"
     ],
-    "zh": "驮货的羊驼像",
+    "zh": "驮货的美洲驼陶器",
     "title": "Llama with Packs",
     "artist": "Peru, Chimú or Inca",
     "date": "before 1532",
@@ -10664,7 +10700,11 @@
     "metadataSource": "https://openaccess-api.clevelandart.org/api/artworks/128191",
     "width": 962,
     "height": 893,
-    "medium": "pottery"
+    "medium": "pottery",
+    "artistZh": "佚名（秘鲁，奇穆或印加文化）",
+    "associationNotes": {
+      "inca": "馆方归属为奇穆或印加文化，具体文化归属未定。"
+    }
   },
   "cma-119617": {
     "oid": 119617,
@@ -10712,7 +10752,7 @@
     "width": 992,
     "height": 893,
     "medium": "earthenware with luster-painted design",
-    "artistZh": "佚名（古埃及）"
+    "artistZh": "佚名（埃及法蒂玛时期）"
   },
   "cma-123968": {
     "oid": 123968,
@@ -10735,7 +10775,7 @@
     "width": 969,
     "height": 893,
     "medium": "earthenware with luster-painted design",
-    "artistZh": "佚名（古埃及）"
+    "artistZh": "佚名（埃及法蒂玛时期）"
   },
   "cma-127673": {
     "oid": 127673,
@@ -10758,7 +10798,7 @@
     "width": 1263,
     "height": 454,
     "medium": "plain weave with inwoven tapestry weave: linen and silk",
-    "artistZh": "佚名（古埃及）"
+    "artistZh": "佚名（埃及法蒂玛时期）"
   },
   "cma-123985": {
     "oid": 123985,
@@ -10782,7 +10822,10 @@
     "width": 900,
     "height": 794,
     "medium": "brass inlaid with silver",
-    "artistZh": "佚名（伊朗）"
+    "artistZh": "佚名（伊朗）",
+    "associationNotes": {
+      "seljuq": "馆方归入塞尔柱艺术传统，作品断代为1200—1221年，晚于伊朗大塞尔柱政权结束。"
+    }
   },
   "cma-126239": {
     "oid": 126239,
@@ -14071,8 +14114,7 @@
     "artistZh": "芭芭拉·克鲁格",
     "date": "展览现场2016",
     "entries": [
-      "postmodernart",
-      "feminist"
+      "postmodernart"
     ],
     "image": "assets/artworks/commons-76412409.webp",
     "width": 960,
@@ -15161,6 +15203,9 @@
     "notes": {
       "dada": "现成工业品经选择、署名与展示进入艺术制度，图示不是1917年原件。",
       "conceptual": "现成工业品经选择、署名与展示进入艺术制度，图示不是1917年原件。"
+    },
+    "associationNotes": {
+      "conceptual": "杜尚1917年的现成品是1960年代观念艺术的前驱；图示为后来的再制作版本。"
     }
   },
   "commons-98629802": {

@@ -1,0 +1,475 @@
+{
+  "reviewedRevision": "f3f2778de0ca38f9b357d4b263a57f37a51d1945",
+  "date": "2026-09-22",
+  "method": "仅核对文字元数据和条目语义，疑点针对性查官方文字来源；未检查图片像素，也未逐件重新验证馆藏全文。",
+  "reviewedWorks": 660,
+  "reviewedAssociations": 777,
+  "resolutions": [
+    {
+      "id": "cma-109138",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "symbolism": "雷东约1868年的早期幻想素描，早于象征主义运动的主要活动阶段。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-110953",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "artistZh": {
+          "before": "模仿者：古斯塔夫·库尔贝",
+          "after": "古斯塔夫·库尔贝的模仿者（姓名不详）"
+        },
+        "associationNotes": {
+          "after": {
+            "realism": "1872年之后模仿库尔贝的作品，馆方未认定为库尔贝亲笔。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-123967",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "artistZh": {
+          "before": "佚名（古埃及）",
+          "after": "佚名（埃及法蒂玛时期）"
+        }
+      }
+    },
+    {
+      "id": "cma-123968",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "artistZh": {
+          "before": "佚名（古埃及）",
+          "after": "佚名（埃及法蒂玛时期）"
+        }
+      }
+    },
+    {
+      "id": "cma-123985",
+      "reviewStatus": "uncertain",
+      "outcome": "保留馆方塞尔柱归属，直接图注说明1200—1221年断代与政权终期的关系。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "seljuq": "馆方归入塞尔柱艺术传统，作品断代为1200—1221年，晚于伊朗大塞尔柱政权结束。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-127673",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "artistZh": {
+          "before": "佚名（古埃及）",
+          "after": "佚名（埃及法蒂玛时期）"
+        }
+      }
+    },
+    {
+      "id": "cma-128074",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "nabis": "维亚尔1908—1912年的作品，晚于纳比派的主要活动阶段。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-128191",
+      "reviewStatus": "uncertain",
+      "outcome": "保留奇穆或印加的不确定性，补中文署名及图注，区分美洲驼与羊驼。",
+      "appliedFields": {
+        "zh": {
+          "before": "驮货的羊驼像",
+          "after": "驮货的美洲驼陶器"
+        },
+        "artistZh": {
+          "after": "佚名（秘鲁，奇穆或印加文化）"
+        },
+        "associationNotes": {
+          "after": {
+            "inca": "馆方归属为奇穆或印加文化，具体文化归属未定。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-129188",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "zh": {
+          "before": "格网团窠动物纹挂毯",
+          "after": "格网团窠动物纹织物残片"
+        },
+        "artistZh": {
+          "before": "佚名（古埃及）",
+          "after": "佚名（埃及，7—8世纪）"
+        },
+        "associationNotes": {
+          "after": {
+            "textile": "用于衣服装饰带的织物残片，采用羊毛与亚麻织成。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-135286",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "postimp"
+          ],
+          "after": [
+            "watercolor"
+          ]
+        },
+        "associationNotes": {
+          "after": {
+            "watercolor": "梵高1883年在荷兰德伦特创作的早期水彩，混用不透明水彩和黑色粉笔。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-144280",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "artistZh": {
+          "before": "佚名（古罗马）",
+          "after": "佚名（埃及）"
+        }
+      }
+    },
+    {
+      "id": "cma-149413",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "zh": {
+          "before": "水村渔乐图",
+          "after": "江村渔乐图"
+        }
+      }
+    },
+    {
+      "id": "cma-151346",
+      "reviewStatus": "uncertain",
+      "outcome": "保留米斯特克或阿兹特克的不确定归属，直接图注明示。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "aztec": "馆方归属为米斯特克或阿兹特克；具体文化归属未定。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-151358",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "bronze"
+          ],
+          "after": [
+            "jade"
+          ]
+        },
+        "zh": {
+          "before": "兽面纹仪仗戈",
+          "after": "兽面纹仪仗玉戈"
+        }
+      }
+    },
+    {
+      "id": "cma-155863",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "notes": {
+          "before": {
+            "prehistoric": "这件基克拉泽斯早期青铜时代陶器展示史前器物的一个侧面。它不能替代旧石器时代洞穴图像的例证。"
+          },
+          "after": {
+            "prehistoric": "基克拉泽斯早期青铜时代的大理石容器，约前3000—前2950年。"
+          }
+        }
+      }
+    },
+    {
+      "id": "cma-159880",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "kongo"
+          ],
+          "after": [
+            "textile"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cma-168739",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "kongo"
+          ],
+          "after": [
+            "mask"
+          ]
+        }
+      }
+    },
+    {
+      "id": "commons-26247205",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "conceptual": "杜尚1917年的现成品是1960年代观念艺术的前驱；图示为后来的再制作版本。"
+          }
+        }
+      }
+    },
+    {
+      "id": "commons-76412409",
+      "reviewStatus": "uncertain",
+      "outcome": "缺少作品层面的女性主义主题依据，移除该关联并替换精选；保留后现代关联，不否定作者的女性主义实践。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "postmodernart",
+            "feminist"
+          ],
+          "after": [
+            "postmodernart"
+          ]
+        }
+      }
+    },
+    {
+      "id": "met-39707",
+      "reviewStatus": "fix",
+      "outcome": "已将关联条目校正为平安时代佛教造像，稳定ID及配图保留。",
+      "appliedFields": {}
+    },
+    {
+      "id": "met-437920",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "zh": {
+          "before": "花瓶",
+          "after": "花瓶与花卉静物"
+        }
+      }
+    },
+    {
+      "id": "met-44590",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "garden"
+          ],
+          "after": [
+            "literati",
+            "ming"
+          ]
+        },
+        "zh": {
+          "before": "风竹图",
+          "after": "清风高节图"
+        }
+      }
+    },
+    {
+      "id": "met-44637",
+      "reviewStatus": "uncertain",
+      "outcome": "保留为陶器传统背景材料，图注明示储藏罐及茶事用途未定，不称确定茶器。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "tea": "15世纪末的信乐储藏罐，作为陶器传统的背景材料；本件实际用于茶事尚无确定记录。"
+          }
+        }
+      }
+    },
+    {
+      "id": "met-446999",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "carpets",
+            "mughal"
+          ],
+          "after": [
+            "carpets"
+          ]
+        }
+      }
+    },
+    {
+      "id": "met-44778",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "bronze"
+          ],
+          "after": [
+            "jade"
+          ]
+        },
+        "zh": {
+          "before": "水牛形青铜器",
+          "after": "玉牛"
+        }
+      }
+    },
+    {
+      "id": "met-448257",
+      "reviewStatus": "uncertain",
+      "outcome": "保留宫廷书写背景关系，图注明示玉制书写器具，非绘画作品。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "mughal": "莫卧儿宫廷玉制书写器具，非绘画作品。"
+          }
+        }
+      }
+    },
+    {
+      "id": "met-44842",
+      "reviewStatus": "fix",
+      "outcome": "已将关联条目校正为平安时代佛教造像，稳定ID及配图保留。",
+      "appliedFields": {}
+    },
+    {
+      "id": "met-451283",
+      "reviewStatus": "consistent",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "mughal": "画面作于约1620年，由Nanha绘制；同一册页另一面的书法约作于1530—1550年，书法家为Mir Ali Haravi。"
+          }
+        }
+      }
+    },
+    {
+      "id": "met-466254",
+      "reviewStatus": "uncertain",
+      "outcome": "保留馆方奥托专题关联，图注并列馆藏的10世纪初北意大利断代。",
+      "appliedFields": {
+        "associationNotes": {
+          "after": {
+            "ottonian": "馆藏记录定为10世纪初的北意大利作品；大都会博物馆同时将其收录于奥托艺术专题。"
+          }
+        }
+      }
+    },
+    {
+      "id": "met-471061",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "gothic"
+          ],
+          "after": [
+            "romanesque"
+          ]
+        },
+        "associationNotes": {
+          "after": {
+            "romanesque": "西班牙13世纪初罗曼式壁画；罗曼式传统在部分地区延续至1200年以后。"
+          }
+        }
+      }
+    },
+    {
+      "id": "met-49138",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "entries": {
+          "before": [
+            "bronze"
+          ],
+          "after": [
+            "ceramics"
+          ]
+        },
+        "zh": {
+          "before": "青铜尊",
+          "after": "刻划纹黑陶尊"
+        }
+      }
+    },
+    {
+      "id": "met-75244",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "date": {
+          "before": "年代未注明",
+          "after": "新石器时代，红山文化（约前3500—前2000年）"
+        }
+      }
+    },
+    {
+      "id": "mughal",
+      "reviewStatus": "fix",
+      "outcome": "已落实审查建议。",
+      "appliedFields": {
+        "artist": {
+          "before": "'Abd al-Rahim ibn Muhammad Bairam Khan Khan-i Khanan",
+          "after": "Unidentified artists from the workshop of Abd al-Rahim Khan-i Khanan"
+        },
+        "artistZh": {
+          "before": "莫卧儿画坊",
+          "after": "阿卜杜勒·拉希姆汗画坊（画师姓名未详）"
+        },
+        "notes": {
+          "after": {
+            "mughal": "为赞助人阿卜杜勒·拉希姆汗制作的《Razmnama》（《摩诃婆罗多》波斯文译本）画页；馆藏记录中的人名指赞助人，并非确定的执笔画师。"
+          }
+        }
+      }
+    }
+  ]
+}
