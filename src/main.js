@@ -1,3 +1,4 @@
+import { SCOPES, inScope, levelRank, readScope } from "./learning.js";
 import { loadContent } from "./content.js";
 import { readLocal, saveProgress } from "./storage.js";
 import { createViews } from "./ui/views.js";
@@ -22,7 +23,7 @@ async function start() {
   const $ = (id) => document.getElementById(id);
   const saved = new Set(readLocal("art-atlas-saved").filter((id) => BYID[id]));
   const seen = new Set(readLocal("art-atlas-seen").filter((id) => BYID[id]));
-  const state = { view: "map", lane: "all", era: "all", q: "", sort: "time", illustrated: "" };
+  const state = { view: "map", lane: "all", era: "all", q: "", sort: "time", illustrated: "", level: "core" };
   let selected = null,
     artIndex = 0,
     detailHistory = [],
@@ -47,9 +48,10 @@ async function start() {
     state.lane = L[p.get("lane")] ? p.get("lane") : "all";
     state.era = /^[0-6]$/.test(p.get("era")) ? p.get("era") : "all";
     state.q = p.get("q") || "";
+    state.level = readScope(p);
     state.illustrated = p.get("illustrated") === "yes" ? "yes" : "";
     $("illustratedOnly").checked = !!state.illustrated;
-    state.sort = ["time", "name", "images"].includes(p.get("sort"))
+    state.sort = ["time", "name", "images", "priority"].includes(p.get("sort"))
       ? p.get("sort")
       : "time";
     $("search").value = state.q;
@@ -59,7 +61,7 @@ async function start() {
     const u = new URL(location.href);
     u.search = "";
     for (const [k, v] of Object.entries(state)) {
-      if (v && !["all", "time"].includes(v) && !(k === "view" && v === "map"))
+      if (k === "level" || (v && !["all", "time"].includes(v) && !(k === "view" && v === "map")))
         u.searchParams.set(k, v);
     }
     u.hash = selected || "";
@@ -75,7 +77,7 @@ async function start() {
     saveProgress(saved, seen);
     $("savedCount").textContent = saved.size;
   }
-  function hits(ignoreQuery = false) {
+  function hits(ignoreQuery = false, scope = state.level) {
     const words = state.q
       .toLocaleLowerCase()
       .trim()
@@ -83,16 +85,19 @@ async function start() {
       .filter(Boolean);
     return DATA.filter(
       (d) =>
+        inScope(d, scope) &&
         (state.lane === "all" || d.lane === state.lane) &&
         (state.era === "all" || d.era === +state.era) &&
         (!state.illustrated || ART[d.id].length > 0) &&
         (ignoreQuery || words.every((w) => SEARCH[d.id].includes(w))),
     ).sort((a, b) =>
-      state.sort === "name"
+      state.sort === "priority"
+        ? levelRank(a) - levelRank(b) || a.era - b.era
+        : state.sort === "name"
         ? a.zh.localeCompare(b.zh, "zh-CN")
         : state.sort === "images"
           ? ART[b.id].length - ART[a.id].length || a.era - b.era
-          : a.era - b.era,
+          : a.era - b.era || levelRank(a) - levelRank(b),
     );
   }
   function currentItems() {
@@ -118,6 +123,11 @@ async function start() {
       )
       .join("");
     $("laneSelect").value = state.lane;
+    $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${DATA.filter((d) => inScope(d, scope)).length}</small></button>`).join("");
+    $("learningHint").textContent = state.view === "routes" ? "按层级发现路线；打开路线后按完整顺序阅读，保留必要的拓展内容。" : state.level === "core" ? "先读 42 个核心条目：每条附重点导读、自测和下一步阅读。" : state.level === "focus" ? "保留核心与重点，建立更完整的时代和主题联系。" : "完整词典：核心必读、重点了解、专题拓展均带文字标记。";
+    const outside = state.q && state.view !== "routes" && state.level !== "all" ? hits(false, "all").filter((d) => !inScope(d, state.level) && (state.view !== "saved" || saved.has(d.id)) && (state.view !== "recent" || seen.has(d.id))).length : 0;
+    $("scopeSearchHint").hidden = !outside;
+    $("scopeSearchHint").innerHTML = outside ? `其他学习层级还有 ${outside} 个搜索结果。<button data-level="all">查看全部层级 →</button>` : "";
     $("eras").innerHTML =
       `<button data-era="all" aria-pressed="${state.era === "all"}" class="${state.era === "all" ? "on" : ""}">全部时代</button>` +
       ERAS.map(
@@ -131,11 +141,12 @@ async function start() {
     $("viewTitle").textContent = state.q
       ? `${titles[state.view]} · 搜索结果`
       : titles[state.view];
-    const filtered = state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
+    const filtered = state.level !== "all" || state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
     $("reset").hidden = !filtered;
     $("clearSearch").hidden = !state.q;
     $("sort").hidden = ["map", "routes", "recent"].includes(state.view);
     $("activeFilters").innerHTML = [
+      state.level !== "all" ? `<button data-remove="level">${SCOPES[state.level]} ×</button>` : "",
       state.lane !== "all"
         ? `<button data-remove="lane">${L[state.lane][1]} ×</button>`
         : "",
@@ -165,7 +176,9 @@ async function start() {
           ),
       );
       if (exactWorks.length) works = exactWorks;
-      if (state.sort === "name")
+      if (state.sort === "priority")
+        works.sort((a, b) => Math.min(...a.entries.map(id => levelRank(BYID[id]))) - Math.min(...b.entries.map(id => levelRank(BYID[id]))));
+      else if (state.sort === "name")
         works.sort((a, b) => a.zh.localeCompare(b.zh, "zh-CN"));
       else
         works.sort((a, b) => BYID[a.entries[0]].era - BYID[b.entries[0]].era);
@@ -181,7 +194,7 @@ async function start() {
     if (url) syncURL();
   }
   function reset() {
-    Object.assign(state, { lane: "all", era: "all", q: "", illustrated: "" });
+    Object.assign(state, { lane: "all", era: "all", q: "", illustrated: "", level: "all" });
     $("illustratedOnly").checked = false;
     $("search").value = "";
     limit = 48;
@@ -349,6 +362,13 @@ async function start() {
       state.view = d.view;
       limit = 48;
       render();
+      return;
+    }
+    if (d.level) {
+      state.level = d.level;
+      limit = 48;
+      render();
+      document.querySelector(`[data-level="${state.level}"]`)?.focus({ preventScroll: true });
       return;
     }
     if (d.lane) {

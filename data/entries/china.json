@@ -14,7 +14,8 @@
     "distinguish": "各考古文化有各自的时间与地域，不能视为单线演进。",
     "tags": "陶器 玉 礼仪",
     "source": "neolithic-period-in-china",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "extended"
   },
   {
     "id": "bronze",
@@ -31,7 +32,22 @@
     "distinguish": "纹样意义并非都已确定，不能把所有兽面解释成同一象征。",
     "tags": "青铜 礼仪 纹样 文字",
     "source": "shang-and-zhou-dynasties-the-bronze-age-of-china",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "商周青铜器与祭祀、宴饮、政治身份和祖先记忆相连。器形、纹饰与铭文提供不同层次的信息，脱离用途只看纹样会失去重要线索。",
+    "study": {
+      "why": "将材料、礼仪和政治制度联系起来，是理解中国古代视觉文化的基础。",
+      "takeaways": [
+        "先看器形可能承担的功能，再看纹饰与铭文。",
+        "区分铸造工艺、视觉形象和礼制关系三个层面。"
+      ],
+      "question": "只辨认饕餮纹，就能理解一件青铜器吗？",
+      "answer": "不能。还要看器类、组合、铭文、年代及使用语境，纹饰只是证据的一部分。",
+      "next": [
+        "jade",
+        "qinhan"
+      ]
+    }
   },
   {
     "id": "qinhan",
@@ -48,7 +64,8 @@
     "distinguish": "这些对象跨材料、地域与用途，不是统一的“秦汉画风”。",
     "tags": "墓葬 雕塑 帛画",
     "source": "han-dynasty-206-b-c-220-a-d",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "calligraphy",
@@ -70,7 +87,21 @@
       "chinese-calligraphy"
     ],
     "context": "书法兼有文字交流、身体训练、人格评价和收藏展示的功能。篆、隶、楷、行、草并非简单的逐步替代序列，许多书体在同一时期并行使用。",
-    "reading": "先看一行字的行气，再看单字的疏密、转折和墨色。注意临摹、拓本与原迹的媒介差异。"
+    "reading": "先看一行字的行气，再看单字的疏密、转折和墨色。注意临摹、拓本与原迹的媒介差异。",
+    "level": "core",
+    "study": {
+      "why": "把文字内容、身体动作和视觉形式连在一起，能帮助理解水墨与题跋传统。",
+      "takeaways": [
+        "沿起笔、转折和收笔追踪书写动作。",
+        "分开观察单字结构、行气和整幅章法。"
+      ],
+      "question": "书体是不是从篆到草依次替代，越后越先进？",
+      "answer": "不是。不同书体长期并行，并因用途与表达需要被选择；不能用单一进步序列解释。",
+      "next": [
+        "literati",
+        "seal"
+      ]
+    }
   },
   {
     "id": "sixdyn",
@@ -87,7 +118,8 @@
     "distinguish": "传世绘画多有摹本与归属问题，应区分原作与后世传本。",
     "tags": "人物 佛教 线描",
     "source": "chinese-buddhist-sculpture",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "suitang",
@@ -104,7 +136,8 @@
     "distinguish": "“丰腴”不能概括全部唐代造型。",
     "tags": "宫廷 人物 壁画",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "dunhuang",
@@ -121,7 +154,25 @@
     "distinguish": "敦煌并不等于唐代；洞窟跨越很多世纪。",
     "tags": "佛教 壁画 交流",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "丝路交流、佛教信仰与地方供养共同塑造敦煌洞窟。洞窟中的建筑、塑像和壁画构成整体，现存图像也经历了重绘、损伤、修复与记录。",
+    "study": {
+      "why": "它让宗教、跨地域交流与原境观看相遇，提醒我们艺术不只是一张独立图片。",
+      "takeaways": [
+        "先理解图像在洞窟中的位置，再阅读具体故事。",
+        "区分原作、临摹、复原展示和现代摄影记录。"
+      ],
+      "question": "网上看到的壁画照片，能否完整代表洞窟中的观看？",
+      "answer": "不能。照片会裁切尺度、位置和光线，也可能记录复原展示；要查明拍摄对象和说明。",
+      "next": [
+        "indiaearly",
+        "suitang"
+      ]
+    },
+    "sources": [
+      "getty-dunhuang"
+    ]
   },
   {
     "id": "songland",
@@ -143,7 +194,21 @@
       "landscape-painting-in-chinese-art"
     ],
     "context": "五代至北宋的山水画与地区环境、宫廷赞助和文人观看有关。宏大山水通过道路、水流、建筑和人物安排可想象的行旅，而不只是描绘一个固定视点的实景。",
-    "reading": "沿山路与水流移动目光，比较前景、中景和远景如何连接；寻找小人物在巨大山体中的位置。"
+    "reading": "沿山路与水流移动目光，比较前景、中景和远景如何连接；寻找小人物在巨大山体中的位置。",
+    "level": "core",
+    "study": {
+      "why": "山水空间的组织是理解中国绘画观看方式的一条主线。",
+      "takeaways": [
+        "沿道路、水流和小人物寻找可想象的行旅。",
+        "将山体层次、墨色远近与留白一起观察。"
+      ],
+      "question": "山水画没有统一消失点，就意味着空间组织不严密吗？",
+      "answer": "不是。它可以通过层叠、移动观看和虚实关系组织空间，不能只用线性透视衡量。",
+      "next": [
+        "southernsong",
+        "literati"
+      ]
+    }
   },
   {
     "id": "southernsong",
@@ -162,7 +227,8 @@
     "source": "",
     "kind": "地区传统／历史专题",
     "context": "南宋宫廷和城市文化中的山水经常通过局部景物、斜向构图和大片留白产生诗意。现存作品包括团扇、册页与立轴，不同载体决定观看距离和叙事密度。",
-    "reading": "观察看似空白的水面、雾气和天空如何发挥作用，再看人物的视线是否指向未画出的部分。"
+    "reading": "观察看似空白的水面、雾气和天空如何发挥作用，再看人物的视线是否指向未画出的部分。",
+    "level": "focus"
   },
   {
     "id": "literati",
@@ -184,7 +250,21 @@
       "yuan-dynasty-1271-1368"
     ],
     "context": "文人画强调诗、书、画及个人修养之间的联系，但文人身份、职业出售和宫廷关系并非简单二分。元代画家借古代风格、书法笔意和题跋构造多样的自我表达。",
-    "reading": "将题跋、印章和后人收藏痕迹也纳入阅读；区分作品最初的画面与后来累积的观看历史。"
+    "reading": "将题跋、印章和后人收藏痕迹也纳入阅读；区分作品最初的画面与后来累积的观看历史。",
+    "level": "core",
+    "study": {
+      "why": "诗、书、画与个人表达在此交汇，连接书法、山水和题跋收藏。",
+      "takeaways": [
+        "将笔墨形式与题跋、署名、交游语境联系起来。",
+        "区分文化身份与实际职业，不把文人与市场绝对对立。"
+      ],
+      "question": "文人画强调自我表达，是否就不需要学习古人？",
+      "answer": "恰恰相反，借古人笔意、题跋和风格建立对话，常是表达自我的重要方式。",
+      "next": [
+        "calligraphy",
+        "ming"
+      ]
+    }
   },
   {
     "id": "ming",
@@ -201,7 +281,8 @@
     "distinguish": "“吴门四家”媒介和身份差异明显，不宜当作一种画法。",
     "tags": "山水 园林 文人",
     "source": "ming-dynasty-1368-1644",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "qing",
@@ -218,7 +299,8 @@
     "distinguish": "“四王”“四僧”都是概括，内部并不统一。",
     "tags": "笔墨 传统 个性",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "ceramics",
@@ -235,7 +317,25 @@
     "distinguish": "瓷器不是绘画史的附属；窑口、年代和用途都很重要。",
     "tags": "陶瓷 工艺 器物",
     "source": "",
-    "kind": "媒介传统"
+    "kind": "媒介传统",
+    "level": "core",
+    "context": "陶瓷制作依赖原料、成型、施釉与烧成，也进入日用、礼仪、宫廷和贸易网络。不同窑口与时代的选择各有条件，不能只按颜色排成风格表。",
+    "study": {
+      "why": "把技术、功能与跨文化流通放在一起，是认识艺术与日常生活关系的基础。",
+      "takeaways": [
+        "分别看胎、釉、器形和装饰，不用一种特征代替全部。",
+        "比较器物为盛放、饮用、陈设或礼仪服务的方式。"
+      ],
+      "question": "看到蓝白颜色，就可以断定器物的时代和产地吗？",
+      "answer": "不能。纹饰、胎釉、器形、工艺和可靠记录需要共同判断；相似颜色可出现在不同语境。",
+      "next": [
+        "bluewhite",
+        "celadon"
+      ]
+    },
+    "sources": [
+      "va-ceramics-az"
+    ]
   },
   {
     "id": "shanghai",
@@ -252,7 +352,8 @@
     "distinguish": "扬州画派与海派是两组不同地域和时期的网络，此处为对照入口。",
     "tags": "城市 市场 花鸟",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "cnmodern",
@@ -269,7 +370,25 @@
     "distinguish": "“中西融合”没有单一公式，也不是用西方取代中国。",
     "tags": "中西交流 教育 现代",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "近现代中国的学校、留学、出版和社会变革改变了艺术的学习与传播。传统书画、油画、版画和公共图像并行发展，不同实践对现代的理解并不一致。",
+    "study": {
+      "why": "把传统的延续与新制度、新媒介放在一起，连接古代书画和当代艺术。",
+      "takeaways": [
+        "分别追踪教育制度、媒介选择和社会用途的变化。",
+        "把具体艺术家的选择放在历史环境中比较。"
+      ],
+      "question": "近现代转型是否等于用西方绘画替代中国画？",
+      "answer": "不是。吸收、改造、延续和争论同时存在，传统本身也在新的制度和用途里发生变化。",
+      "next": [
+        "cnwoodcut",
+        "cn1949"
+      ]
+    },
+    "sources": [
+      "met-cn-twentieth"
+    ]
   },
   {
     "id": "cnwoodcut",
@@ -286,7 +405,8 @@
     "distinguish": "木刻技法历史很早，新兴木刻是特定现代运动。",
     "tags": "版画 社会 黑白",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "cn1949",
@@ -303,7 +423,8 @@
     "distinguish": "此时期并非只有一种样式，应区分年代、媒介与个体。",
     "tags": "社会 主题 国画",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "cncontemporary",
@@ -320,7 +441,8 @@
     "distinguish": "“当代”不等于某一种画风；中国当代也不只政治波普。",
     "tags": "观念 城市 身份",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "gongbi",
@@ -337,7 +459,8 @@
     "distinguish": "工笔是技法和风格范畴，不是一个单独朝代；也不必画得照片般写实。",
     "kind": "艺术史专题",
     "tags": "工笔与设色 Gongbi and meticulous painting 宫廷人物画、花鸟画、仇英 轮廓准确、色层细腻、衣纹花叶处理精密。",
-    "source": "chinese-painting"
+    "source": "chinese-painting",
+    "level": "focus"
   },
   {
     "id": "flowersbirds",
@@ -357,7 +480,8 @@
     "source": "",
     "sources": [
       "chinese-painting"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "bluegreen",
@@ -377,7 +501,8 @@
     "source": "",
     "sources": [
       "landscape-painting-in-chinese-art"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "songacademy",
@@ -397,7 +522,8 @@
     "source": "",
     "sources": [
       "chinese-painting"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "garden",
@@ -414,7 +540,8 @@
     "distinguish": "园林不是自然景观的简单缩小复制，而有明确的人工选择和安排。",
     "kind": "艺术史专题",
     "tags": "中国园林与赏石 Chinese gardens and scholars' rocks 苏州园林、文人园居、供石传统 曲折路径、借景、漏窗、池水与奇石。",
-    "source": "chinese-gardens-and-collectors-rocks"
+    "source": "chinese-gardens-and-collectors-rocks",
+    "level": "extended"
   },
   {
     "id": "jade",
@@ -434,7 +561,8 @@
     "source": "",
     "sources": [
       "neolithic-period-in-china"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "lacquer",
@@ -454,7 +582,8 @@
     "source": "",
     "sources": [
       "ming-dynasty-1368-1644"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "mingfurniture",
@@ -471,7 +600,8 @@
     "distinguish": "明式是风格称谓，不能只凭风格断定生产于明代。",
     "kind": "艺术史专题",
     "tags": "明式家具 Ming-style furniture 黄花梨家具、圈椅、官帽椅与画案 简洁线条、榫卯、适度曲面、硬木纹理。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "bluewhite",
@@ -491,7 +621,8 @@
     "source": "",
     "sources": [
       "ming-dynasty-1368-1644"
-    ]
+    ],
+    "level": "focus"
   },
   {
     "id": "xieyi",
@@ -511,7 +642,8 @@
     "source": "",
     "sources": [
       "chinese-painting"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "yangzhou",
@@ -531,7 +663,8 @@
     "source": "",
     "sources": [
       "chinese-painting"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "lingnan",
@@ -548,7 +681,8 @@
     "distinguish": "岭南画派不等于所有在广东工作的画家。",
     "kind": "艺术史专题",
     "tags": "岭南画派 Lingnan school 高剑父、高奇峰、陈树人、关山月 渲染光影、写生动物、时事题材与较强色彩。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "seal",
@@ -568,7 +702,8 @@
     "source": "",
     "sources": [
       "chinese-calligraphy"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "newyearprints",
@@ -585,6 +720,7 @@
     "distinguish": "年画是用途和生产传统，不等于所有民间绘画。",
     "kind": "艺术史专题",
     "tags": "年画与民间版画 Chinese New Year prints 杨柳青、桃花坞、杨家埠、武强 鲜明套色、门神、吉祥谐音、戏曲和生活场景。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   }
 ]

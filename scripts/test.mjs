@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { inScope, readScope, levelRank } from "../src/learning.js";
 import { readFile } from "node:fs/promises";
 import { indexContent } from "../src/content.js";
 import { createViews } from "../src/ui/views.js";
@@ -17,6 +18,26 @@ const c = indexContent({
 });
 const state = { view: "index", q: "", lane: "all", era: "all" };
 const views = createViews(c, state, new Set(), new Set());
+assert.equal(readScope(new URLSearchParams()), "core");
+assert.equal(readScope(new URLSearchParams("view=index")), "all");
+assert.equal(readScope(new URLSearchParams("q=敦煌")), "all");
+assert.equal(readScope(new URLSearchParams("level=all")), "all");
+assert.equal(readScope(new URLSearchParams("level=focus&view=index")), "focus");
+assert.equal(readScope(new URLSearchParams("level=invalid")), "core");
+assert.equal(c.DATA.filter((d) => inScope(d, "core")).length, 42);
+assert.equal(c.DATA.filter((d) => inScope(d, "focus")).length, 121);
+assert.equal(c.DATA.filter((d) => inScope(d, "all")).length, 233);
+for (const d of c.DATA.filter((d) => d.level === "core")) {
+  assert.ok(c.SEARCH[d.id].includes(d.study.question.toLocaleLowerCase()));
+  const html = detailHTML(d, c, { saved: new Set(), compare: [] });
+  assert.ok(html.includes("核心必读") && html.includes("展开参考思路"));
+  for (const id of d.study.next) assert.ok(html.includes(`data-node="${id}"`));
+}
+const core = c.DATA.find((d) => d.level === "core" && c.DATA.some((x) => x.lane === d.lane && x.era === d.era && x.level === "extended"));
+const extension = c.DATA.find((d) => d.lane === core.lane && d.era === core.era && d.level === "extended");
+assert.ok(levelRank(core) < levelRank(extension));
+const priorityMap = views.map([extension, core]);
+assert.ok(priorityMap.indexOf(`data-node="${core.id}"`) < priorityMap.indexOf(`data-node="${extension.id}"`));
 
 // A shared artwork preview must open in the entry being browsed, not its first association.
 const sharedEntry = c.DATA.find((d) => c.ART[d.id].slice(1, 4).some((a) => a.entries[0] !== d.id));

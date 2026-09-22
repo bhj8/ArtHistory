@@ -14,7 +14,22 @@
     "distinguish": "印刷并非只从欧洲开始；技术路径与材料条件不同。",
     "tags": "版画 文字 复制",
     "source": "",
-    "kind": "媒介／工艺"
+    "kind": "媒介／工艺",
+    "level": "core",
+    "context": "印刷使文字与图像能够在一定条件下被重复制作和传播。木版、活字等方法具有不同的制作组织，版材、纸张、油墨和工序都会影响最终效果。",
+    "study": {
+      "why": "它连接知识传播、复制技术与图像市场，是跨地域阅读的重要媒介基础。",
+      "takeaways": [
+        "分清刻版、排字、上墨与印制等环节。",
+        "同版图像也可能因印制和保存条件产生差异。"
+      ],
+      "question": "印刷品可复制，是否意味着每一张都完全相同？",
+      "answer": "不是。用墨、纸张、版面磨损与后续保存等因素，都可能改变具体印本的样貌。",
+      "next": [
+        "ukiyoe",
+        "engraving"
+      ]
+    }
   },
   {
     "id": "engraving",
@@ -31,7 +46,8 @@
     "distinguish": "铜版、蚀刻、干刻是不同制版方法，不是同一种线条效果。",
     "tags": "版画 线条 黑白",
     "source": "",
-    "kind": "媒介／工艺"
+    "kind": "媒介／工艺",
+    "level": "focus"
   },
   {
     "id": "litho",
@@ -48,7 +64,8 @@
     "distinguish": "石版是一种技术；新艺术是可使用该技术的运动。",
     "tags": "印刷 海报 城市",
     "source": "lithography-in-the-nineteenth-century",
-    "kind": "媒介／工艺"
+    "kind": "媒介／工艺",
+    "level": "focus"
   },
   {
     "id": "photo",
@@ -67,7 +84,21 @@
     "source": "",
     "kind": "媒介／方法",
     "context": "摄影并没有单一的发明时刻与唯一工艺路线。金属板、纸负片、玻璃负片与各种印相方法曾并存，技术选择影响曝光时间、细节、复制能力和用途。",
-    "reading": "把图像内容与物质载体分开观察：同一底片的不同印相可以呈现不同色调、表面和裁切。"
+    "reading": "把图像内容与物质载体分开观察：同一底片的不同印相可以呈现不同色调、表面和裁切。",
+    "level": "core",
+    "study": {
+      "why": "摄影改变了图像制作、记录与传播方式，也不断迫使艺术重新讨论真实性。",
+      "takeaways": [
+        "将拍摄、显影与印相等环节区分开来。",
+        "观察取景、时机和制作方法怎样参与图像的意义。"
+      ],
+      "question": "摄影由光形成图像，就意味着它不包含选择吗？",
+      "answer": "不是。取景、曝光、时机、工艺与展示都包含决定；机械成像并不等于没有立场。",
+      "next": [
+        "documentary",
+        "photoavant"
+      ]
+    }
   },
   {
     "id": "pictorial",
@@ -84,7 +115,8 @@
     "distinguish": "这是两个相关但不同的倾向，时间上也有重叠。",
     "tags": "摄影 清晰 柔焦",
     "source": "pictorialism-in-america",
-    "kind": "媒介／方法"
+    "kind": "媒介／方法",
+    "level": "focus"
   },
   {
     "id": "collage",
@@ -101,7 +133,22 @@
     "distinguish": "拼贴是方法，达达和构成主义都可使用；不是单一流派。",
     "tags": "拼贴 摄影 重组",
     "source": "",
-    "kind": "媒介／工艺"
+    "kind": "媒介／工艺",
+    "level": "core",
+    "context": "把已有的纸张、照片或其他材料重新组合，会使材料的原来用途与新语境同时可见。不同实践可以研究构成，也可以利用报刊图像参与社会与政治表达。",
+    "study": {
+      "why": "它连接立体主义、达达和现代传播，让“选取与重组”成为可分析的创作行为。",
+      "takeaways": [
+        "辨认材料原来的身份，再看重组后的关系。",
+        "区分真实粘贴材料与仅仅画出拼贴外观的图像。"
+      ],
+      "question": "拼贴只是把漂亮的图片放在一起吗？",
+      "answer": "不只是。材料的来历、切割、接缝和新语境都可能承担意义，重组可以改变原图的立场。",
+      "next": [
+        "cubism",
+        "photoavant"
+      ]
+    }
   },
   {
     "id": "photoavant",
@@ -118,7 +165,8 @@
     "distinguish": "新视觉不只追求清晰记录，也包含强烈实验。",
     "tags": "摄影 视角 实验",
     "source": "",
-    "kind": "媒介／方法"
+    "kind": "媒介／方法",
+    "level": "focus"
   },
   {
     "id": "screen",
@@ -135,7 +183,8 @@
     "distinguish": "丝网印刷是工艺，不等同波普艺术。",
     "tags": "复制 印刷 色块",
     "source": "",
-    "kind": "媒介／工艺"
+    "kind": "媒介／工艺",
+    "level": "focus"
   },
   {
     "id": "video",
@@ -152,7 +201,8 @@
     "distinguish": "装置不等于“放了很多东西”；空间关系是重点。",
     "tags": "影像 空间 时间",
     "source": "",
-    "kind": "媒介／方法"
+    "kind": "媒介／方法",
+    "level": "focus"
   },
   {
     "id": "textile",
@@ -171,7 +221,8 @@
     "source": "",
     "kind": "媒介／方法",
     "context": "纺织涉及穿着、建筑、贸易、仪式与社会身份。材料、织机和技术决定图案的可能性，但艺术价值也不能只按绘画式构图来衡量。",
-    "reading": "看纹样是否由经纬组织产生，还是在成布后印染或刺绣。留意织物边缘、接缝与原来用途。"
+    "reading": "看纹样是否由经纬组织产生，还是在成布后印染或刺绣。留意织物边缘、接缝与原来用途。",
+    "level": "focus"
   },
   {
     "id": "netart",
@@ -188,7 +239,8 @@
     "distinguish": "把作品照片放上网，不一定就是网络艺术。",
     "tags": "网络 参与 交互",
     "source": "",
-    "kind": "媒介／方法"
+    "kind": "媒介／方法",
+    "level": "focus"
   },
   {
     "id": "generative",
@@ -205,7 +257,8 @@
     "distinguish": "生成艺术不等于生成式AI；它有更长的规则与计算历史。",
     "tags": "算法 规则 随机",
     "source": "",
-    "kind": "媒介／方法"
+    "kind": "媒介／方法",
+    "level": "focus"
   },
   {
     "id": "ai",
@@ -222,7 +275,8 @@
     "distinguish": "它是技术与实践领域，尚不能作为一个统一的美术史流派。",
     "tags": "AI 算法 作者",
     "source": "",
-    "kind": "技术与创作实践"
+    "kind": "技术与创作实践",
+    "level": "focus"
   },
   {
     "id": "perspective",
@@ -239,7 +293,22 @@
     "distinguish": "线性透视是一种空间体系，不是人类观看与绘画的唯一正确方式。",
     "kind": "技法与观看方法",
     "tags": "线性透视 Linear perspective 布鲁内莱斯基、阿尔伯蒂、马萨乔、皮耶罗·德拉·弗朗切斯卡 视平线、消失点、缩短与有规则的尺度递减。",
-    "source": ""
+    "source": "",
+    "level": "core",
+    "context": "线性透视通过投影关系在平面上组织空间，视点与消失点决定特定的观看位置。它是一种重要方法，但不是所有文化与所有绘画共同追求的唯一目标。",
+    "study": {
+      "why": "掌握它，能更准确地比较写实空间与其他空间组织方法。",
+      "takeaways": [
+        "沿成组平行线的画面投影寻找消失方向。",
+        "把视平线和观者位置联系起来，而不只寻找一个点。"
+      ],
+      "question": "没有使用单点透视的绘画，就没有组织空间吗？",
+      "answer": "不是。层叠、尺度、留白、移动观看等同样能够组织空间；评价应结合图像目的。",
+      "next": [
+        "renaissance",
+        "songland"
+      ]
+    }
   },
   {
     "id": "chiaroscuro",
@@ -259,7 +328,8 @@
     "source": "",
     "sources": [
       "baroque-rome"
-    ]
+    ],
+    "level": "focus"
   },
   {
     "id": "sfumato",
@@ -276,7 +346,8 @@
     "distinguish": "晕涂不是简单把整幅图变模糊，也不同于厚涂的笔触质感。",
     "kind": "技法与观看方法",
     "tags": "晕涂法 Sfumato 达·芬奇及其工作室传统 细微色调过渡、柔化边缘和难以确定的表情。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "fresco",
@@ -293,7 +364,8 @@
     "distinguish": "湿壁画与干壁画的材料结合方式不同，不能把所有壁画都叫 fresco。",
     "kind": "技法与观看方法",
     "tags": "湿壁画 Fresco 乔托、马萨乔、米开朗基罗、里维拉 大面积墙面、每日工作接缝、建筑与叙事融合。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "tempera",
@@ -310,7 +382,8 @@
     "distinguish": "蛋彩与油画可以在一件作品中混合，不必按朝代绝对划分。",
     "kind": "技法与观看方法",
     "tags": "蛋彩画 Egg tempera 意大利木板画、波提切利及相关工坊 迅速干燥、细线排笔、清晰轮廓与较薄的色层。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "oilpainting",
@@ -327,7 +400,22 @@
     "distinguish": "凡·艾克并非简单“发明油画”的单一人物。",
     "kind": "技法与观看方法",
     "tags": "油画与罩染 Oil painting and glazing 扬·凡·艾克、提香、伦勃朗 透明罩染、厚涂、高光、细微色层和材质表现。",
-    "source": ""
+    "source": "",
+    "level": "core",
+    "context": "以油为结合剂的颜料具有特定的干燥、覆盖和层叠特性。画家可以利用透明与不透明色层、厚薄和笔触形成不同效果，材料方法与作品风格并不是一一对应。",
+    "study": {
+      "why": "理解材料与层次，能解释许多绘画表面为什么呈现不同的光泽和深度。",
+      "takeaways": [
+        "区分透明罩染、不透明覆盖与可见笔触的作用。",
+        "把基底、色层和最终表面的关系纳入观察。"
+      ],
+      "question": "所有油画都依靠多层透明罩染完成吗？",
+      "answer": "不是。油画可以采用多种厚薄、覆盖和直接作画方式，需观察具体作品并参考技术研究。",
+      "next": [
+        "tempera",
+        "chiaroscuro"
+      ]
+    }
   },
   {
     "id": "watercolor",
@@ -344,7 +432,8 @@
     "distinguish": "水彩不只有透明技法，也可能与水粉及其他媒介混用。",
     "kind": "技法与观看方法",
     "tags": "水彩与水性媒介 Watercolor 透纳、约翰·塞尔·科特曼、温斯洛·霍默 纸白、湿画扩散、透明叠色与干笔。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "etching",
@@ -361,7 +450,8 @@
     "distinguish": "蚀刻只是凹版的一种；雕版、干刻和飞尘也属于不同技术。",
     "kind": "技法与观看方法",
     "tags": "蚀刻与凹版 Etching and intaglio 丢勒、伦勃朗、戈雅、卡洛 细线、交叉排线、版痕与多次试印修改。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "monotype",
@@ -378,7 +468,8 @@
     "distinguish": "单版画与在固定版型上改变上色的 monoprint 有概念差别。",
     "kind": "技法与观看方法",
     "tags": "单版画 Monotype 卡斯蒂廖内、德加、威廉·布莱克的相关实验 擦拭痕迹、偶然纹理、柔化轮廓与印后再加工。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "cyanotype",
@@ -395,7 +486,8 @@
     "distinguish": "无相机摄影有多种工艺，蓝晒只是其中一种。",
     "kind": "技法与观看方法",
     "tags": "蓝晒与无相机摄影 Cyanotype and camera-less photography 约翰·赫歇尔、安娜·阿特金斯；后来的物影摄影 普鲁士蓝、白色轮廓、植物或物品的接触投影。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "documentary",
@@ -412,7 +504,8 @@
     "distinguish": "纪实不是无立场的透明记录；真实事件也可能被重新安排和解释。",
     "kind": "技法与观看方法",
     "tags": "纪实摄影 Documentary photography 马修·布雷迪、雅各布·里斯、多萝西娅·兰格、沃克·埃文斯 现场环境、系列叙事、说明文字与摄影者的选择。",
-    "source": "photography-and-the-civil-war-1861-1865"
+    "source": "photography-and-the-civil-war-1861-1865",
+    "level": "focus"
   },
   {
     "id": "stieglitz",
@@ -429,7 +522,8 @@
     "distinguish": "摄影分离派内部并不只有一种风格，成员的实践也随时间改变。",
     "kind": "技法与观看方法",
     "tags": "摄影分离派与现代摄影 Photo-Secession and modern photography 阿尔弗雷德·斯蒂格利茨、爱德华·斯泰肯、格特鲁德·凯塞比尔 精细印相、现代城市视角、个人表达和新的展示方式。",
-    "source": "alfred-stieglitz-1864-1946-and-american-photography"
+    "source": "alfred-stieglitz-1864-1946-and-american-photography",
+    "level": "extended"
   },
   {
     "id": "animation",
@@ -446,7 +540,8 @@
     "distinguish": "动画是制作运动影像的方法，不只是一种儿童叙事类型。",
     "kind": "技法与观看方法",
     "tags": "动画与实验影像 Animation and experimental film 瓦尔特·鲁特曼、奥斯卡·费钦格、诺曼·麦克拉伦 抽象运动、图形变形、定格、蒙太奇与视听节奏。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "artistbook",
@@ -463,7 +558,8 @@
     "distinguish": "艺术家书不等于介绍艺术家的画册，书的形式本身应参与作品。",
     "kind": "技法与观看方法",
     "tags": "艺术家书 Artists' books 埃德·鲁沙、迪特·罗特、索尔·勒维特 页序、折叠、图文关系、限量与廉价印刷并存。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "soundart",
@@ -480,7 +576,8 @@
     "distinguish": "声音艺术与音乐有交叉，不宜仅凭有没有旋律划分。",
     "kind": "技法与观看方法",
     "tags": "声音艺术 Sound art 马克斯·诺伊豪斯、克里斯蒂娜·库比施、相关声音装置实践 录音、环境声、声响装置、沉默与空间回声。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "bioart",
@@ -497,6 +594,7 @@
     "distinguish": "涉及生命的图像不一定是生物艺术；具体实践也存在伦理争议。",
     "kind": "技法与观看方法",
     "tags": "生物艺术 Bioart 爱德华多·卡茨、组织培养与艺术计划等 活体培养、生物材料、实验室过程和跨学科合作。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   }
 ]

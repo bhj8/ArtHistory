@@ -14,7 +14,22 @@
     "distinguish": "不能把不同地区、相隔万年的作品看成同一种风格。",
     "tags": "洞穴 壁画 雕塑 仪式",
     "source": "",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "core",
+    "context": "文字出现以前，不同地区的人已经通过岩壁图像、雕刻和便携物件组织经验。材料保存和考古发现决定了我们今天能看到什么，不能将所有遗存串成同一条进步线。",
+    "study": {
+      "why": "建立“图像早于文字、用途需要证据”的起点，避免把艺术史只当成风格名单。",
+      "takeaways": [
+        "先区分岩壁图像、便携物件与后来定居社会的器物。",
+        "解释用途时，将可以观察的痕迹与推测分开。"
+      ],
+      "question": "看见动物图像，就能断言它用于狩猎巫术吗？",
+      "answer": "不能。题材不是用途的直接证据，还要结合地点、年代和考古语境；多种解释可能并存。",
+      "next": [
+        "cnneolithic",
+        "africaearly"
+      ]
+    }
   },
   {
     "id": "egypt",
@@ -31,7 +46,25 @@
     "distinguish": "不是“不会透视”；它追求的是可识别、完整与秩序。",
     "tags": "雕塑 墓葬 壁画 王权",
     "source": "",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "core",
+    "context": "墓葬、神庙和王权活动塑造了古埃及图像的形式与功能。人物比例、姿态和文字不是独立装饰，而与身份、祭祀和延续生命的观念共同工作。",
+    "study": {
+      "why": "理解形式规则为什么服务于用途，是比较其他古代文明的重要基础。",
+      "takeaways": [
+        "先辨认人物身份与等级，再看姿态和比例。",
+        "将图像放回墓葬或神庙语境，不用写实程度给它评分。"
+      ],
+      "question": "人物头部侧面、肩膀正面，意味着画家不会观察吗？",
+      "answer": "这种组合强调各部位的可识别性和完整性。解释形式时，应先问它要表达什么、为谁服务。",
+      "next": [
+        "mesopotamia",
+        "classical"
+      ]
+    },
+    "sources": [
+      "met-egypt-guide"
+    ]
   },
   {
     "id": "mesopotamia",
@@ -51,7 +84,8 @@
     "kind": "历史时期／区域传统",
     "sources": [
       "art-of-the-first-cities-in-the-third-millennium-b-c"
-    ]
+    ],
+    "level": "focus"
   },
   {
     "id": "archaic",
@@ -68,7 +102,8 @@
     "distinguish": "“古风”是具体历史分期，不等于一切古代风格。",
     "tags": "人体 陶器 雕塑",
     "source": "greek-art-in-the-archaic-period",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "focus"
   },
   {
     "id": "classical",
@@ -85,7 +120,22 @@
     "distinguish": "古典与希腊化是相继而多样的阶段，不能只记“完美人体”。",
     "tags": "人体 理想 雕塑 动态",
     "source": "",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "core",
+    "context": "希腊世界的神庙、公共空间、祭祀与墓葬为造像提供不同场所。古典时期与希腊化时期跨越很长时间，人体的比例、运动和情绪也不断变化。",
+    "study": {
+      "why": "人体比例与姿态在此成为重要问题，并在后来的欧洲艺术中不断被重新解释。",
+      "takeaways": [
+        "比较身体重心与支撑腿，观察静态形体中的运动。",
+        "将理想化身体与强烈情绪的表现放在不同语境中理解。"
+      ],
+      "question": "身体越理想化，就越不像有实际用途的物件吗？",
+      "answer": "不是。理想化形式也可服务祭祀、纪念或公共身份；形式理想与社会功能可以同时存在。",
+      "next": [
+        "hellenistic",
+        "renaissance"
+      ]
+    }
   },
   {
     "id": "rome",
@@ -102,7 +152,8 @@
     "distinguish": "罗马借鉴希腊，但在肖像、工程与帝国叙事上有自己的重点。",
     "tags": "建筑 肖像 壁画 帝国",
     "source": "",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "focus"
   },
   {
     "id": "byzantine",
@@ -119,7 +170,8 @@
     "distinguish": "平面感不表示技艺退化；应放回宗教功能理解。",
     "tags": "金色 宗教 镶嵌画",
     "source": "",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "focus"
   },
   {
     "id": "romanesque",
@@ -136,7 +188,8 @@
     "distinguish": "罗曼式不是古罗马艺术；它是中世纪的一组区域传统。",
     "tags": "建筑 雕塑 宗教",
     "source": "romanesque-art",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "focus"
   },
   {
     "id": "gothic",
@@ -156,7 +209,8 @@
     "kind": "历史时期／区域传统",
     "sources": [
       "gothic-art"
-    ]
+    ],
+    "level": "focus"
   },
   {
     "id": "proto",
@@ -173,7 +227,8 @@
     "distinguish": "这是便于学习的概括，不是所有地区统一的转折线。",
     "tags": "叙事 体积 壁画",
     "source": "italian-painting-of-the-later-middle-ages",
-    "kind": "历史时期／区域传统"
+    "kind": "历史时期／区域传统",
+    "level": "extended"
   },
   {
     "id": "renaissance",
@@ -192,7 +247,21 @@
     "source": "",
     "kind": "历史时期／区域传统",
     "context": "意大利文艺复兴发生在城市国家、教会、宫廷和商业家族的多重赞助环境中。古典遗产、基督教信仰和人文主义并存。透视与解剖是重要资源，但不是每位画家都以同一种方式使用它们。",
-    "reading": "先找人物关系、视线和手势，再判断建筑线条与人体是否共同支持叙事。不要只用“画得更像”解释变化。"
+    "reading": "先找人物关系、视线和手势，再判断建筑线条与人体是否共同支持叙事。不要只用“画得更像”解释变化。",
+    "level": "core",
+    "study": {
+      "why": "连接古典传统、赞助制度与空间研究，能帮助理解后来许多绘画方法。",
+      "takeaways": [
+        "把透视、解剖与赞助人的需求一起看。",
+        "区分文艺复兴时期的共同问题与不同城市、画家的选择。"
+      ],
+      "question": "文艺复兴可以概括为摆脱宗教、转向科学吗？",
+      "answer": "不能。基督教题材、古典遗产和人文主义经常并存；新方法也会被用于宗教图像。",
+      "next": [
+        "northern",
+        "perspective"
+      ]
+    }
   },
   {
     "id": "northern",
@@ -211,7 +280,8 @@
     "source": "",
     "kind": "历史时期／区域传统",
     "context": "尼德兰和德语地区的绘画、版画与工艺由宫廷、城市、行会和私人信仰共同推动。细密材质、日常室内与宗教象征常结合；与意大利的交流持续发生，而非两套完全隔绝的传统。",
-    "reading": "观察镜子、织物、金属、皮肤和窗光的不同画法，再问这些细节是否具有叙事或宗教用途。"
+    "reading": "观察镜子、织物、金属、皮肤和窗光的不同画法，再问这些细节是否具有叙事或宗教用途。",
+    "level": "focus"
   },
   {
     "id": "mannerism",
@@ -228,7 +298,8 @@
     "distinguish": "不是技术不成熟；不少变化是有意的形式选择。",
     "tags": "变形 人体 张力",
     "source": "mannerism-bronzino-1503-1572-and-his-contemporaries",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "baroque",
@@ -247,7 +318,21 @@
     "source": "baroque-rome",
     "kind": "艺术运动／倾向",
     "context": "巴洛克涵盖不同地区、宗派和赞助关系，不能只等于华丽或夸张。罗马教会、欧洲宫廷与城市市场要求不同的图像；绘画、雕塑、建筑和戏剧空间经常被共同设计。",
-    "reading": "从观众的位置出发，寻找人物、光线和建筑如何将你纳入事件。比较同一画家的宗教画与肖像，避免只看装饰多少。"
+    "reading": "从观众的位置出发，寻找人物、光线和建筑如何将你纳入事件。比较同一画家的宗教画与肖像，避免只看装饰多少。",
+    "level": "core",
+    "study": {
+      "why": "从光、动作和空间理解图像如何说服观众，是连接绘画与建筑的关键入口。",
+      "takeaways": [
+        "追踪光线与手势怎样安排注意力。",
+        "比较教会、宫廷和市场环境下不同的观看需求。"
+      ],
+      "question": "一幅画装饰很少，还可能具有巴洛克特征吗？",
+      "answer": "可能。戏剧性的光、身体动作和与观众的关系，同样可以构成强烈的巴洛克观看经验。",
+      "next": [
+        "caravaggism",
+        "dutch"
+      ]
+    }
   },
   {
     "id": "dutch",
@@ -266,7 +351,8 @@
     "source": "",
     "kind": "历史时期／区域传统",
     "context": "17世纪荷兰共和国中，城市市民、行会、公共机构和收藏市场是重要的委托者。肖像、风景、静物和风俗画获得独立发展，但商业繁荣也与殖民贸易和全球物资流通相关。",
-    "reading": "先看器物和服饰可能来自哪里，再区分画面是在展示身份、讲述寓意，还是提供观看乐趣。"
+    "reading": "先看器物和服饰可能来自哪里，再区分画面是在展示身份、讲述寓意，还是提供观看乐趣。",
+    "level": "focus"
   },
   {
     "id": "rococo",
@@ -283,7 +369,8 @@
     "distinguish": "洛可可常与巴洛克相连，但观看尺度和情感气氛不同。",
     "tags": "粉彩 装饰 曲线 爱情",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "neoclassicism",
@@ -302,7 +389,8 @@
     "source": "neoclassicism",
     "kind": "艺术运动／倾向",
     "context": "考古发现、古代文献和艺术理论使古典形式获得新的权威。在启蒙运动、革命与帝国政治的不同背景里，同样的古典语言可以承担不同立场。",
-    "reading": "看人物是否像浮雕般排列，手势是否清楚，建筑是否提供稳定背景。再把这些形式与画中事件的道德主张联系起来。"
+    "reading": "看人物是否像浮雕般排列，手势是否清楚，建筑是否提供稳定背景。再把这些形式与画中事件的道德主张联系起来。",
+    "level": "focus"
   },
   {
     "id": "romanticism",
@@ -321,7 +409,8 @@
     "source": "romanticism",
     "kind": "艺术运动／倾向",
     "context": "浪漫主义不是一个统一画法，而是对历史、情感、自然力量和想象的多种探索。它与革命、民族认同、帝国旅行和工业化同时发生，也可能使用古典训练而非完全拒绝它。",
-    "reading": "比较自然、人物和观看者的尺度；寻找风暴、废墟或战斗如何使观看产生不安、同情或崇高感。"
+    "reading": "比较自然、人物和观看者的尺度；寻找风暴、废墟或战斗如何使观看产生不安、同情或崇高感。",
+    "level": "focus"
   },
   {
     "id": "realism",
@@ -338,7 +427,8 @@
     "distinguish": "现实主义是历史立场；“画得像”是更广泛的写实能力。",
     "tags": "劳动 社会 日常",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "preraphaelite",
@@ -355,7 +445,8 @@
     "distinguish": "不是生活在拉斐尔之前，而是19世纪主动回望早期艺术。",
     "tags": "文学 花卉 中世纪",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "extended"
   },
   {
     "id": "impressionism",
@@ -374,7 +465,21 @@
     "source": "impressionism-art-and-modernity",
     "kind": "艺术运动／倾向",
     "context": "19世纪巴黎的城市改造、郊区休闲、铁路交通与独立展览改变了绘画的题材和展示方式。印象派并非只关心风景，也画剧院、劳动、家庭和现代消费。1874年的独立展览是重要节点，但成员的目标和画法并不完全一致。",
-    "reading": "先看阴影是否使用蓝紫等颜色，再看笔触是否在近处与远处同样清楚。比较画面的取景是否像偶然截取，以及这种效果实际如何被安排。"
+    "reading": "先看阴影是否使用蓝紫等颜色，再看笔触是否在近处与远处同样清楚。比较画面的取景是否像偶然截取，以及这种效果实际如何被安排。",
+    "level": "core",
+    "study": {
+      "why": "理解现代生活、观看经验与独立展览的关系，是进入现代绘画的重要门槛。",
+      "takeaways": [
+        "分别观察题材、笔触和色彩，不把它们混成一个判断。",
+        "比较近看笔触与远看整体的差异。"
+      ],
+      "question": "笔触松散就足以判断一幅画属于印象主义吗？",
+      "answer": "不够。还要考虑年代、艺术家的活动、题材和展览语境；松散笔触本身并不是某一流派的专利。",
+      "next": [
+        "postimp",
+        "neoimp"
+      ]
+    }
   },
   {
     "id": "neoimp",
@@ -391,7 +496,8 @@
     "distinguish": "点彩是技法，新印象主义是更完整的艺术倾向。",
     "tags": "点彩 色彩 科学",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "postimp",
@@ -410,7 +516,21 @@
     "source": "post-impressionism",
     "kind": "艺术运动／倾向",
     "context": "“后印象主义”是后来提出的总括性名称，不是塞尚、梵高、高更和修拉共同组成的单一团体。他们都重新思考印象主义的成果，却分别强调结构、情感、象征或系统色彩。",
-    "reading": "把两位画家的风景并排：看树木被处理成色点、轮廓、色块还是方向鲜明的笔触。相似题材不等于相同目标。"
+    "reading": "把两位画家的风景并排：看树木被处理成色点、轮廓、色块还是方向鲜明的笔触。相似题材不等于相同目标。",
+    "level": "core",
+    "study": {
+      "why": "同一出发点可以通向结构、情绪和象征等不同方向，帮助理解现代主义的分岔。",
+      "takeaways": [
+        "不要把塞尚、梵高和高更视作使用同一套方法。",
+        "比较色彩是在组织空间、传达情感，还是构造象征。"
+      ],
+      "question": "为什么后印象主义不能被当成一个有统一纲领的团体？",
+      "answer": "它是后来的概括名称，画家的目的和方法不同；学习时应比较具体实践，而不是寻找唯一风格公式。",
+      "next": [
+        "cubism",
+        "expressionism"
+      ]
+    }
   },
   {
     "id": "symbolism",
@@ -427,7 +547,8 @@
     "distinguish": "不是“作品里有象征”就属于象征主义。",
     "tags": "梦境 神话 心理",
     "source": "symbolism",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "fauvism",
@@ -449,7 +570,8 @@
       "fauvism"
     ],
     "context": "1905年前后的野兽派画家以大胆色彩和显露的笔触回应自然。这个名称来自批评界，参与者并未长期遵守统一纲领，许多人随后转向其他问题。",
-    "reading": "将画中的天空、脸和树与常见自然颜色比较，判断偏离真实色的选择怎样维持画面的平衡。"
+    "reading": "将画中的天空、脸和树与常见自然颜色比较，判断偏离真实色的选择怎样维持画面的平衡。",
+    "level": "focus"
   },
   {
     "id": "expressionism",
@@ -466,7 +588,8 @@
     "distinguish": "表现主义是多种群体与倾向，不能只靠“怪”判断。",
     "tags": "情绪 变形 都市",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "cubism",
@@ -485,7 +608,21 @@
     "source": "cubism",
     "kind": "艺术运动／倾向",
     "context": "布拉克与毕加索在20世纪初的实验重新组织物体、空间与画面关系。随后拼贴把报纸、壁纸等真实材料引入作品，也使再现与现实物件之间的边界变得不稳定。",
-    "reading": "不要急着认物体：先追踪重复轮廓、字母、桌面边缘和透明叠面，再看局部是否对应同一稳定视点。"
+    "reading": "不要急着认物体：先追踪重复轮廓、字母、桌面边缘和透明叠面，再看局部是否对应同一稳定视点。",
+    "level": "core",
+    "study": {
+      "why": "它重新思考物体与画面的关系，又连接到拼贴、构成和抽象实验。",
+      "takeaways": [
+        "寻找相互交错的平面，比较它们是否服从同一视点。",
+        "留意报纸等实物材料怎样打断绘画的幻觉。"
+      ],
+      "question": "把物体画成三角形，就等于立体主义吗？",
+      "answer": "不等于。关键还在空间、视点和再现方式的重新组织；几何外形只是可见线索之一。",
+      "next": [
+        "collage",
+        "constructivism"
+      ]
+    }
   },
   {
     "id": "futurism",
@@ -502,7 +639,8 @@
     "distinguish": "与暴力、民族主义和法西斯的历史联系也需一起理解。",
     "tags": "速度 机器 动态",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "suprematism",
@@ -519,7 +657,8 @@
     "distinguish": "与构成主义相邻，但不以生产和社会实用功能为同一目标。",
     "tags": "抽象 几何 空白",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "dada",
@@ -536,7 +675,22 @@
     "distinguish": "达达没有统一外观；它更像一组反常规的行动。",
     "tags": "观念 拼贴 反权威",
     "source": "moma-dada",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "core",
+    "context": "第一次世界大战前后的社会危机促使一些艺术家质疑既有文化秩序。不同城市的达达实践借助现成品、拼贴、表演和刊物，挑战艺术的规则与权威。",
+    "study": {
+      "why": "它把“什么可以成为艺术”变成问题，为观念艺术和挪用等实践提供参照。",
+      "takeaways": [
+        "区分作品的制作技巧与对艺术制度的提问。",
+        "观察日常物件或印刷材料进入展览后怎样改变意义。"
+      ],
+      "question": "达达可以简单理解为不要技术、随便创作吗？",
+      "answer": "不能。选择、安排、命名和展示本身可能是精心设计的策略，目的在于质疑既有判断标准。",
+      "next": [
+        "conceptual",
+        "appropriation"
+      ]
+    }
   },
   {
     "id": "surrealism",
@@ -555,7 +709,21 @@
     "source": "surrealism",
     "kind": "艺术运动／倾向",
     "context": "超现实主义结合梦、心理自动性与对理性秩序的质疑，涉及绘画、文学、摄影、电影与物件。写实幻境只是其中一种方式，自动绘画、偶然技法和语言实验同样重要。",
-    "reading": "区分“画得像真实但事件不可能”和“制作过程主动减少控制”这两种不同策略。"
+    "reading": "区分“画得像真实但事件不可能”和“制作过程主动减少控制”这两种不同策略。",
+    "level": "core",
+    "study": {
+      "why": "它把梦、无意识与偶然变为创作资源，扩展了图像生成的方法。",
+      "takeaways": [
+        "将写实幻境与自动性、偶然技法区别开。",
+        "留意熟悉物件的尺度、位置和组合为何令人不安。"
+      ],
+      "question": "所有看起来像梦的画，都属于超现实主义运动吗？",
+      "answer": "不是。视觉相似不足以确定历史归属，还需看作者与运动、文本和展览的联系。",
+      "next": [
+        "dada",
+        "collage"
+      ]
+    }
   },
   {
     "id": "socialreal",
@@ -572,7 +740,8 @@
     "distinguish": "社会现实主义与苏联社会主义现实主义不是同义词。",
     "tags": "社会 劳动 版画",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "abstractexp",
@@ -591,7 +760,21 @@
     "source": "abstract-expressionism",
     "kind": "艺术运动／倾向",
     "context": "二战前后纽约的艺术网络、欧洲移民和新的展览机构共同塑造了抽象表现主义。标签之下既有强调动作的笔触，也有大色域和较少手势的画面。",
-    "reading": "看作品尺寸与身体动作的关系。照片会缩小观看尺度，不能完全替代面对原作时的距离和周边视野。"
+    "reading": "看作品尺寸与身体动作的关系。照片会缩小观看尺度，不能完全替代面对原作时的距离和周边视野。",
+    "level": "core",
+    "study": {
+      "why": "它让观看从辨认物体转向身体尺度、动作和色域，是理解战后抽象的重要入口。",
+      "takeaways": [
+        "比较密集动作痕迹和宽阔色域两类观看方式。",
+        "把画幅与观众身体的关系纳入观察。"
+      ],
+      "question": "抽象表现主义是否总意味着用力泼洒颜料？",
+      "answer": "不是。这个名称下包含不同方法，较少手势的大色域画面同样重要。",
+      "next": [
+        "colorfield",
+        "minimal"
+      ]
+    }
   },
   {
     "id": "pop",
@@ -608,7 +791,22 @@
     "distinguish": "不只色彩鲜艳；复制、媒介与消费文化才是关键。",
     "tags": "大众文化 消费 复制",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "core",
+    "context": "大众传播、广告与消费商品提供了波普艺术的图像资源。艺术家借重复、放大和复制等方法，把熟悉的商品或明星形象带入艺术空间，不同作品的态度并不相同。",
+    "study": {
+      "why": "它把艺术与日常视觉消费联系起来，帮助理解复制、传媒和挪用。",
+      "takeaways": [
+        "先辨认图像原来的传播环境，再观察进入展厅后的变化。",
+        "看重复是否保留微小差异，避免只把图案当装饰。"
+      ],
+      "question": "出现商品图像，就表示艺术家赞美消费吗？",
+      "answer": "未必。作品可能保持暧昧、制造距离或提出批评，需要结合具体的处理和语境判断。",
+      "next": [
+        "screen",
+        "appropriation"
+      ]
+    }
   },
   {
     "id": "op",
@@ -625,7 +823,8 @@
     "distinguish": "欧普是光学艺术，不是波普的另一种译名。",
     "tags": "错觉 几何 视觉",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "extended"
   },
   {
     "id": "minimal",
@@ -642,7 +841,8 @@
     "distinguish": "与“极简装修”“少放东西”的生活风格不能完全等同。",
     "tags": "空间 材料 几何",
     "source": "moma-minimal",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "focus"
   },
   {
     "id": "conceptual",
@@ -659,7 +859,22 @@
     "distinguish": "“看不懂”不是观念艺术的定义，应追问作品设置的问题。",
     "tags": "观念 文本 规则",
     "source": "moma-concept",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "core",
+    "context": "一些艺术实践将语言、规则、指令、记录和定义置于中心。作品的呈现可能是照片、文字或物件，制作出的单一物体不再是判断艺术的唯一依据。",
+    "study": {
+      "why": "从“它长什么样”推进到“它提出什么问题”，是理解当代实践的关键。",
+      "takeaways": [
+        "辨认观念如何通过物件、图像和语言被呈现。",
+        "区分作品本身、制作指令和事后记录。"
+      ],
+      "question": "作品重视观念，就意味着视觉呈现无关紧要吗？",
+      "answer": "不是。呈现方式影响观念怎样被理解；文字、空间和物件的选择仍然需要分析。",
+      "next": [
+        "installation",
+        "relational"
+      ]
+    }
   },
   {
     "id": "land",
@@ -676,7 +891,8 @@
     "distinguish": "大地艺术不必然环保；生态艺术更强调环境关系。",
     "tags": "自然 空间 时间",
     "source": "",
-    "kind": "艺术实践／倾向"
+    "kind": "艺术实践／倾向",
+    "level": "focus"
   },
   {
     "id": "performance",
@@ -693,7 +909,8 @@
     "distinguish": "它不等于戏剧表演，记录影像也不等于事件本身。",
     "tags": "身体 时间 参与",
     "source": "",
-    "kind": "艺术实践／倾向"
+    "kind": "艺术实践／倾向",
+    "level": "focus"
   },
   {
     "id": "feminist",
@@ -710,7 +927,25 @@
     "distinguish": "不是“女性艺术家创作的一切”，而是一组立场与议题。",
     "tags": "身体 身份 制度",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "core",
+    "context": "女性主义艺术与关于性别、劳动、身体和制度的讨论相互交织。不同艺术家通过绘画、表演、摄影、纤维及协作实践，追问谁可以被看见、谁能够发声。",
+    "study": {
+      "why": "它不仅扩展艺术家名单，也改变我们理解材料、观看和艺术制度的方法。",
+      "takeaways": [
+        "同时关注作品主题与创作、展示的权力关系。",
+        "不要把女性主义艺术等同于女性作者的所有作品。"
+      ],
+      "question": "增加女性艺术家的名字，是否就完成了女性主义视角的讨论？",
+      "answer": "还需要追问评价标准、媒介等级、劳动分工与制度排除；它涉及解释艺术史的方法。",
+      "next": [
+        "performance",
+        "textile"
+      ]
+    },
+    "sources": [
+      "moma-feminist-art"
+    ]
   },
   {
     "id": "postmodernart",
@@ -727,7 +962,8 @@
     "distinguish": "这是宽泛讨论框架，不是一个有共同画法的流派。",
     "tags": "挪用 身份 媒介",
     "source": "",
-    "kind": "历史概括／风格群"
+    "kind": "历史概括／风格群",
+    "level": "focus"
   },
   {
     "id": "neox",
@@ -744,7 +980,8 @@
     "distinguish": "各地艺术家差异很大，不能只凭“画得粗”归类。",
     "tags": "绘画 情绪 历史",
     "source": "",
-    "kind": "艺术运动／倾向"
+    "kind": "艺术运动／倾向",
+    "level": "extended"
   },
   {
     "id": "relational",
@@ -761,7 +998,8 @@
     "distinguish": "参与式艺术、社会实践与关系美学有交集，但不是同义词。",
     "tags": "参与 社区 关系",
     "source": "",
-    "kind": "艺术实践／倾向"
+    "kind": "艺术实践／倾向",
+    "level": "extended"
   },
   {
     "id": "mycenaean",
@@ -778,7 +1016,8 @@
     "distinguish": "迈锡尼位于希腊大陆；米诺斯文明的核心在克里特岛。",
     "kind": "艺术史专题",
     "tags": "迈锡尼文明 Mycenaean art 迈锡尼、梯林斯的宫殿与工坊 厚重城墙、金饰、印章与程式化海洋纹陶器。",
-    "source": "mycenaean-civilization"
+    "source": "mycenaean-civilization",
+    "level": "extended"
   },
   {
     "id": "etruscan",
@@ -795,7 +1034,8 @@
     "distinguish": "与希腊贸易密切，但不能被当作希腊或罗马艺术的附属。",
     "kind": "艺术史专题",
     "tags": "伊特鲁里亚艺术 Etruscan art 切尔韦泰里、塔尔奎尼亚、维爱 彩绘陶塑、宴饮场景、青铜镜与精细金工。",
-    "source": "etruscan-art"
+    "source": "etruscan-art",
+    "level": "extended"
   },
   {
     "id": "hellenistic",
@@ -812,7 +1052,8 @@
     "distinguish": "不是古典艺术之后的统一衰落期；理想化和戏剧化同时存在。",
     "kind": "艺术史专题",
     "tags": "希腊化艺术 Hellenistic art 佩加蒙、亚历山大里亚、罗得岛 扭转姿态、强烈表情、深凿衣褶，老人和孩童也成为题材。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "romanportrait",
@@ -829,7 +1070,8 @@
     "distinguish": "写实不等于没有宣传；理想化也不等于不重视相貌。",
     "kind": "艺术史专题",
     "tags": "罗马肖像 Roman portraiture 共和国贵族肖像、奥古斯都、帝国皇帝像 写实皱纹、理想化身体、发型与服饰的身份编码。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "romanpainting",
@@ -846,7 +1088,8 @@
     "distinguish": "庞贝四种风格是考古分类，不覆盖整个罗马帝国全部壁画。",
     "kind": "艺术史专题",
     "tags": "罗马壁画与马赛克 Roman wall painting and mosaics 庞贝、赫库兰尼姆、博斯科雷阿莱 假建筑透视、色块墙面、神话画框与石粒镶嵌。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "icons",
@@ -863,7 +1106,8 @@
     "distinguish": "圣像不限于木板画；圣像破坏也不是对所有图像的一概拒绝。",
     "kind": "艺术史专题",
     "tags": "圣像与圣像破坏 Icons and iconoclasm 拜占庭圣像、圣凯瑟琳修道院 正面圣者、金地、铭文和便于礼拜的板画或浮雕。",
-    "source": "icons-and-iconoclasm-in-byzantium"
+    "source": "icons-and-iconoclasm-in-byzantium",
+    "level": "extended"
   },
   {
     "id": "carolingian",
@@ -880,7 +1124,8 @@
     "distinguish": "加洛林文艺复兴并非15世纪意大利文艺复兴。",
     "kind": "艺术史专题",
     "tags": "加洛林艺术 Carolingian art 查理曼、亚琛宫廷、兰斯与图尔抄经工坊 古典人物形体、华丽福音书、象牙雕刻与集中式礼拜空间。",
-    "source": "carolingian-art"
+    "source": "carolingian-art",
+    "level": "extended"
   },
   {
     "id": "ottonian",
@@ -897,7 +1142,8 @@
     "distinguish": "与加洛林艺术有延续，但政治版图与表现语言并不相同。",
     "kind": "艺术史专题",
     "tags": "奥托艺术 Ottonian art 奥托王朝、希尔德斯海姆、赖歇瑙 强烈手势、秩序化构图、金色背景与仪式性人物等级。",
-    "source": "ottonian-art"
+    "source": "ottonian-art",
+    "level": "extended"
   },
   {
     "id": "manuscript",
@@ -914,7 +1160,8 @@
     "distinguish": "“泥金装饰”不表示每一页或每一本都实际用金。",
     "kind": "艺术史专题",
     "tags": "泥金装饰手抄本 Illuminated manuscripts 福音书、诗篇集、时祷书与修道院抄经室 金箔、首字母装饰、页边图像、分栏文字和细密绘画。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "venetian",
@@ -931,7 +1178,8 @@
     "distinguish": "“重色彩”与“重素描”是历史争论框架，不是两地画家绝对的分界。",
     "kind": "艺术史专题",
     "tags": "威尼斯画派 Venetian painting 乔瓦尼·贝利尼、乔尔乔内、提香、丁托列托 温润色层、宽阔风景、富质感衣料与柔和轮廓。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "caravaggism",
@@ -948,7 +1196,8 @@
     "distinguish": "明暗对比早已有之；卡拉瓦乔主义不等于所有深色画面。",
     "kind": "艺术史专题",
     "tags": "卡拉瓦乔主义 Caravaggism 卡拉瓦乔、阿尔泰米西娅·真蒂莱斯基、里贝拉 暗背景、侧面强光、贴近观众的身体与戏剧性瞬间。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "stilllife",
@@ -965,7 +1214,8 @@
     "distinguish": "静物不一定包含虚空寓意，物件也并非总有唯一固定含义。",
     "kind": "艺术史专题",
     "tags": "静物画与虚空寓意 Still life and vanitas 克拉拉·佩特斯、彼得·克拉斯、威廉·卡尔夫 桌面器物、反光材质、腐败迹象、钟表和骷髅。",
-    "source": "still-life-painting-in-northern-europe-1600-1800"
+    "source": "still-life-painting-in-northern-europe-1600-1800",
+    "level": "extended"
   },
   {
     "id": "dutchland",
@@ -982,7 +1232,8 @@
     "distinguish": "风景看似实景，仍可能组合多个地点并安排象征意义。",
     "kind": "艺术史专题",
     "tags": "荷兰风景画 Dutch landscape painting 雅各布·凡·雷斯达尔、扬·凡·戈延、梅因德特·霍贝玛 低地平线、大片天空、河道、风车与变化的天气。",
-    "source": "landscape-painting-in-the-netherlands"
+    "source": "landscape-painting-in-the-netherlands",
+    "level": "extended"
   },
   {
     "id": "veduta",
@@ -999,7 +1250,8 @@
     "distinguish": "城市实景画与幻想建筑景观 capriccio 并不相同。",
     "kind": "艺术史专题",
     "tags": "城市景观画 Veduta 卡纳莱托、贝洛托、瓜尔迪 清晰建筑、运河街道、细小人物与开阔视点。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "barbizon",
@@ -1016,7 +1268,8 @@
     "distinguish": "与印象主义存在联系，但不能统称为追逐瞬间光色的画派。",
     "kind": "艺术史专题",
     "tags": "巴比松画派 Barbizon school 泰奥多尔·卢梭、米勒、杜普雷、柯罗 厚重树木、泥土色、天气变化与朴素乡村景物。",
-    "source": "the-barbizon-school-french-painters-of-nature"
+    "source": "the-barbizon-school-french-painters-of-nature",
+    "level": "extended"
   },
   {
     "id": "hudson",
@@ -1033,7 +1286,8 @@
     "distinguish": "画名像学校，但并非一个具备统一教学的学院。",
     "kind": "艺术史专题",
     "tags": "哈德逊河画派 Hudson River school 托马斯·科尔、弗雷德里克·丘奇、阿尔伯特·比尔施塔特 全景山河、细密植物、戏剧性光线与崇高空间。",
-    "source": "the-hudson-river-school"
+    "source": "the-hudson-river-school",
+    "level": "extended"
   },
   {
     "id": "americanimp",
@@ -1050,7 +1304,8 @@
     "distinguish": "在美国活动与采用印象主义手法是两个不同的判断条件。",
     "kind": "艺术史专题",
     "tags": "美国印象主义 American Impressionism 柴尔德·哈萨姆、威廉·梅里特·蔡斯、约翰·亨利·特瓦克特曼 明亮调色、短促笔触、户外人物和中产生活。",
-    "source": "american-impressionism"
+    "source": "american-impressionism",
+    "level": "extended"
   },
   {
     "id": "women19",
@@ -1067,7 +1322,8 @@
     "distinguish": "女性艺术家不是一个统一流派，也不只画家庭生活。",
     "kind": "艺术史专题",
     "tags": "19世纪女性艺术家 Women artists in nineteenth-century France 贝尔特·莫里索、玛丽·卡萨特、罗莎·博纳尔 肖像、静物与家庭场景背后有训练和展示机会的差异。",
-    "source": "women-artists-in-nineteenth-century-france"
+    "source": "women-artists-in-nineteenth-century-france",
+    "level": "extended"
   },
   {
     "id": "nabis",
@@ -1084,7 +1340,8 @@
     "distinguish": "与象征主义和后印象主义有交叉，但纳比派是更具体的艺术家群体。",
     "kind": "艺术史专题",
     "tags": "纳比派 Les Nabis 皮埃尔·博纳尔、爱德华·维亚尔、莫里斯·德尼、保罗·塞律西耶 平面色块、装饰轮廓、室内场景与日本版画式裁切。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "orphism",
@@ -1101,7 +1358,8 @@
     "distinguish": "与立体主义有关，但重点并非单纯分解物体结构。",
     "kind": "艺术史专题",
     "tags": "奥尔菲主义 Orphism 罗贝尔·德洛内、索尼娅·德洛内、弗朗蒂谢克·库普卡 明亮色环、相邻互补色、旋转构图和韵律感。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "precisionism",
@@ -1118,7 +1376,8 @@
     "distinguish": "并非所有画得“精确”的写实作品都属于精确主义。",
     "kind": "艺术史专题",
     "tags": "精确主义 Precisionism 查尔斯·希勒、查尔斯·德穆斯 硬边轮廓、工厂筒仓、无人城市与简化体块。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "newobjectivity",
@@ -1135,7 +1394,8 @@
     "distinguish": "它包含不同立场，不能简单理解为没有情绪的照相式写实。",
     "kind": "艺术史专题",
     "tags": "新客观主义 Neue Sachlichkeit / New Objectivity 奥托·迪克斯、乔治·格罗斯、克里斯蒂安·沙德 清晰轮廓、夸张肖像、冷静空间与社会讽刺。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "colorfield",
@@ -1155,7 +1415,8 @@
     "source": "",
     "sources": [
       "abstract-expressionism"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "hardedge",
@@ -1172,7 +1433,8 @@
     "distinguish": "硬边是形式特征；不自动等于极简主义或欧普艺术。",
     "kind": "艺术史专题",
     "tags": "硬边绘画 Hard-edge painting 埃尔斯沃思·凯利、约翰·麦克劳克林、洛瑟·费特尔森 平整颜料、锋利边缘、几何或简化有机形。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "artepovera",
@@ -1189,7 +1451,8 @@
     "distinguish": "“贫穷”指向材料和制度的批判，不是艺术家贫困程度。",
     "kind": "艺术史专题",
     "tags": "贫穷艺术 Arte Povera 雅尼斯·库内利斯、马里奥·梅尔茨、米开朗基罗·皮斯托莱托 石头、土、布、木材、火与过程性的装置。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "photorealism",
@@ -1206,7 +1469,8 @@
     "distinguish": "照相写实不等于所有写实绘画，也不与超写实雕塑完全重合。",
     "kind": "艺术史专题",
     "tags": "照相写实主义 Photorealism 理查德·埃斯蒂斯、查克·克洛斯、奥黛丽·弗拉克 镜面反射、橱窗、街景、巨大肖像与均匀细节。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "lightspace",
@@ -1223,7 +1487,8 @@
     "distinguish": "与极简主义相关，但其重点经常在感知条件而非单个物体。",
     "kind": "艺术史专题",
     "tags": "光与空间艺术 Light and Space 詹姆斯·特瑞尔、罗伯特·欧文、玛丽·科斯 均匀光场、雾化边界、反射表面和慢变化空间。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "installation",
@@ -1240,7 +1505,8 @@
     "distinguish": "装置是一类实践方式，不是一种固定外观；不必使用电子技术。",
     "kind": "艺术史专题",
     "tags": "装置艺术 Installation art 伊利亚·卡巴科夫、草间弥生、多丽丝·萨尔塞多 多物件组合、现场声音、影像、建筑介入与特定场所。",
-    "source": ""
+    "source": "",
+    "level": "focus"
   },
   {
     "id": "appropriation",
@@ -1257,7 +1523,8 @@
     "distinguish": "挪用是一种艺术策略，不自动解决版权或伦理问题。",
     "kind": "艺术史专题",
     "tags": "挪用艺术 Appropriation art 雪莉·莱文、理查德·普林斯、芭芭拉·克鲁格 翻拍、引用、重复、改写广告与经典艺术图像。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "japonisme",
@@ -1274,6 +1541,7 @@
     "distinguish": "日本主义是欧洲接受史概念，不等于日本自身的艺术史。",
     "kind": "艺术史专题",
     "tags": "日本主义 Japonisme 莫奈、德加、梵高、卡萨特、惠斯勒 非对称构图、平涂、裁切、版画与工艺图案。",
-    "source": "japonisme"
+    "source": "japonisme",
+    "level": "extended"
   }
 ]

@@ -58,6 +58,11 @@
         <div class="explore-intro"><div><span class="eyebrow">从一幅作品开始，读懂一个概念</span><p>查一个词，看几幅画，再沿着相关条目继续逛。</p></div><div class="explore-links"><button data-view="index">翻开图解词典 →</button><button data-view="routes">按路线学习 →</button></div></div>
         <div class="search-topics" aria-label="试试这些主题"><span>随手翻翻</span><button data-query="山水">山水</button><button data-query="印象">印象派</button><button data-query="版画">版画</button><button data-query="建筑">建筑</button><button data-query="陶瓷">陶瓷</button><button data-query="摄影">摄影</button></div>
         <div class="era-bar" id="eras" aria-label="时代筛选"></div>
+        <section class="learning-filter" aria-label="学习层级筛选">
+          <div><strong>先抓主线，再向外探索</strong><p>按基础性、关键转折与知识联系安排学习顺序。</p></div>
+          <div id="learningScopes" class="learning-scopes"></div>
+          <p class="learning-hint" id="learningHint"></p>
+        </section>
         <div class="resultbar">
           <div>
             <h2 id="viewTitle">全景地图</h2>
@@ -70,10 +75,12 @@
               <option value="time">按时代</option>
               <option value="name">按名称</option>
               <option value="images">图片优先</option>
+              <option value="priority">学习优先</option>
             </select>
           </div>
         </div>
         <div id="activeFilters"></div>
+        <div id="scopeSearchHint" class="scope-search-hint" hidden></div>
         <div id="content" tabindex="-1">
           <div class="loading">正在载入图谱…</div>
         </div>

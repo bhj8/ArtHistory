@@ -17,7 +17,22 @@
     "kind": "地区传统／历史专题",
     "sources": [
       "buddhism-and-buddhist-art"
-    ]
+    ],
+    "level": "core",
+    "context": "南亚不同地区的信仰、赞助和交通网络推动了佛塔、叙事浮雕与造像的发展。佛教图像的形式和用途并非单一模式，应结合地点与仪式理解。",
+    "study": {
+      "why": "它是理解佛教图像跨地区传播的起点，也能帮助比较东亚造像。",
+      "takeaways": [
+        "辨认佛塔、叙事浮雕与独立造像的不同观看方式。",
+        "在比较相似造型时，保留地方材料和用途的差异。"
+      ],
+      "question": "两尊佛像姿态相近，就能说明它们来自同一传统吗？",
+      "answer": "不能。相似姿态可能跨地区传播，还需考察年代、材料、制作地点和宗教语境。",
+      "next": [
+        "gandhara",
+        "dunhuang"
+      ]
+    }
   },
   {
     "id": "hindutemple",
@@ -37,7 +52,22 @@
     "kind": "地区传统／历史专题",
     "sources": [
       "hinduism-and-hindu-art"
-    ]
+    ],
+    "level": "core",
+    "context": "印度教寺庙中的建筑、雕刻和仪式路线共同组织神圣空间。神祇形象的姿势、持物和伴随者常帮助辨认身份，不能把雕像只视为装饰。",
+    "study": {
+      "why": "它把空间、身体与图像识别连在一起，拓展以平面绘画为中心的观看习惯。",
+      "takeaways": [
+        "先辨认形象的持物和姿态，再看它在建筑中的位置。",
+        "想象观者如何行走、接近或绕行，而不只看正面照片。"
+      ],
+      "question": "脱离寺庙展示的雕像，会失去哪些线索？",
+      "answer": "位置、相邻形象、尺度和仪式路线可能难以恢复；看馆藏物件时应同时查找原来语境。",
+      "next": [
+        "chola",
+        "khmer"
+      ]
+    }
   },
   {
     "id": "himalaya",
@@ -54,7 +84,8 @@
     "distinguish": "这里的图像规则有具体宗教用途，不能仅当作装饰符号。",
     "tags": "佛教 曼荼罗 工艺",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "sea",
@@ -71,7 +102,8 @@
     "distinguish": "东南亚不是印度艺术的复制，各地持续改造传入形式。",
     "tags": "建筑 宗教 交流",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "korea",
@@ -88,7 +120,25 @@
     "distinguish": "不能把朝鲜半岛艺术简单视作中国与日本之间的过渡。",
     "tags": "陶瓷 山水 民画",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "朝鲜半岛的陶瓷、书画与宗教造像在不同政权、信仰和交流网络中发展。高丽与朝鲜王朝等时期拥有不同条件，不能以单一邻国的影响替代其自身历史。",
+    "study": {
+      "why": "通过一个有连续历史的地区入口，学习同时辨认交流与本地选择。",
+      "takeaways": [
+        "将陶瓷、绘画与佛教造像视为相互联系但各有节奏的传统。",
+        "明确具体时代，避免把高丽与朝鲜王朝混为一谈。"
+      ],
+      "question": "受到邻近地区影响，是否意味着作品只是模仿？",
+      "answer": "不是。技术和形式可以被选择、改造并用于新的社会环境，交流与创造并不矛盾。",
+      "next": [
+        "celadon",
+        "buncheong"
+      ]
+    },
+    "sources": [
+      "met-korean-history"
+    ]
   },
   {
     "id": "japanheian",
@@ -105,7 +155,8 @@
     "distinguish": "大和绘是变化中的概念，不是所有日本画的总称。",
     "tags": "绘卷 叙事 宫廷",
     "source": "heian-period-794-1185",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "zen",
@@ -122,7 +173,8 @@
     "distinguish": "简洁并不自动等于禅；需结合作品的用途与文化语境。",
     "tags": "水墨 留白 自然",
     "source": "zen-buddhism",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "rimpa",
@@ -139,7 +191,8 @@
     "distinguish": "琳派更多是跨代呼应的传统，不是单一固定师承学校。",
     "tags": "金色 植物 平面",
     "source": "rinpa-painting-style",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "ukiyoe",
@@ -158,7 +211,21 @@
     "source": "japonisme",
     "kind": "地区传统／历史专题",
     "context": "江户城市中的出版商、画师、雕版师与摺师共同制作和销售木版画。演员、美人、名所和风景回应不同消费需求，作品的版本和印刷状态也影响今天看到的颜色。",
-    "reading": "留意轮廓线与色版的套合、渐变和纸面。相同设计的两张版画可能因版本、保存或重印而不同。"
+    "reading": "留意轮廓线与色版的套合、渐变和纸面。相同设计的两张版画可能因版本、保存或重印而不同。",
+    "level": "core",
+    "study": {
+      "why": "它连接图像生产、城市消费和跨文化传播，适合学习艺术如何被复制与流通。",
+      "takeaways": [
+        "把画师、雕版师、摺师和出版商放回合作链条。",
+        "比较裁切、平面色块与不同印次的色彩状态。"
+      ],
+      "question": "同一图像的两张木版画颜色不同，是否必有一张是赝品？",
+      "answer": "不一定。印次、保存、颜料和印刷状态都可能造成差异，需要版本与来源信息。",
+      "next": [
+        "print",
+        "japonisme"
+      ]
+    }
   },
   {
     "id": "mughal",
@@ -178,7 +245,22 @@
     "kind": "地区传统／历史专题",
     "sources": [
       "the-art-of-the-mughals-after-1600"
-    ]
+    ],
+    "level": "core",
+    "context": "莫卧儿宫廷的书籍、画册与绘画制作汇集不同背景的艺术家。肖像、历史叙事和自然观察与宫廷知识、收藏和权力相互联系，画页应放回书籍或画册环境。",
+    "study": {
+      "why": "它提供书籍艺术与宫廷制作的另一条主线，帮助理解跨文化交流中的具体改造。",
+      "takeaways": [
+        "比较人物、边饰和文字如何共同组织一页。",
+        "不要把所有南亚细密画归入莫卧儿宫廷。"
+      ],
+      "question": "一张精细的小幅画，就足以判断它属于莫卧儿艺术吗？",
+      "answer": "不够。尺寸和细密程度不是完整归属依据，还要结合年代、地域、题材与书籍语境。",
+      "next": [
+        "persian",
+        "rajput"
+      ]
+    }
   },
   {
     "id": "nihonga",
@@ -195,7 +277,8 @@
     "distinguish": "日本画并非自古不变的名词，与现代制度紧密相关。",
     "tags": "中西交流 绘画 现代",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "gutai",
@@ -212,7 +295,8 @@
     "distinguish": "具体不是“写实”的意思，也不只是西方行为艺术的延伸。",
     "tags": "材料 身体 实验",
     "source": "",
-    "kind": "组织／团体"
+    "kind": "组织／团体",
+    "level": "focus"
   },
   {
     "id": "monoha",
@@ -229,7 +313,8 @@
     "distinguish": "与极简主义有可比之处，但历史背景和理论不同。",
     "tags": "材料 空间 关系",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "dansaekhwa",
@@ -246,7 +331,8 @@
     "distinguish": "单色画不是简单“涂一种颜色”，各人的材料过程不同。",
     "tags": "材料 重复 时间",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "extended"
   },
   {
     "id": "gandhara",
@@ -263,7 +349,8 @@
     "distinguish": "希腊罗马因素只是交流的一部分，不能把它简化成“西方发明佛像”。",
     "kind": "艺术史专题",
     "tags": "犍陀罗艺术 Gandharan art 今巴基斯坦与阿富汗一带的犍陀罗工坊 波状发卷、厚重衣褶、灰色片岩与佛传浮雕。",
-    "source": "gandhara"
+    "source": "gandhara",
+    "level": "focus"
   },
   {
     "id": "mathura",
@@ -283,7 +370,8 @@
     "source": "",
     "sources": [
       "buddhism-and-buddhist-art"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "chola",
@@ -303,7 +391,8 @@
     "source": "",
     "sources": [
       "hinduism-and-hindu-art"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "khmer",
@@ -320,7 +409,8 @@
     "distinguish": "高棉艺术包含印度教和佛教等不同历史阶段。",
     "kind": "艺术史专题",
     "tags": "吴哥与高棉艺术 Angkor and Khmer art 吴哥窟、巴戎寺、高棉工坊 层层塔寺、砂岩浮雕、神像与连续叙事长廊。",
-    "source": ""
+    "source": "",
+    "level": "focus"
   },
   {
     "id": "borobudur",
@@ -337,7 +427,8 @@
     "distinguish": "两者处于相关区域历史中，但宗教功能和建筑类型并不相同。",
     "kind": "艺术史专题",
     "tags": "婆罗浮屠与爪哇艺术 Borobudur and Javanese art 印度尼西亚中爪哇、婆罗浮屠、普兰巴南 层叠平台、佛塔、佛像与连续叙事石雕。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "mandala",
@@ -357,7 +448,8 @@
     "source": "",
     "sources": [
       "buddhism-and-buddhist-art"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "mughalearly",
@@ -374,7 +466,8 @@
     "distinguish": "莫卧儿绘画并不是南亚细密画的全部。",
     "kind": "艺术史专题",
     "tags": "早期莫卧儿绘画 Early Mughal painting 阿克巴宫廷、《哈姆扎故事》《阿克巴纪》 密集叙事、精细人物、建筑空间与合作制作。",
-    "source": "the-art-of-the-mughals-before-1600"
+    "source": "the-art-of-the-mughals-before-1600",
+    "level": "extended"
   },
   {
     "id": "rajput",
@@ -391,7 +484,8 @@
     "distinguish": "涵盖许多地区与作坊，不是与莫卧儿相反的单一风格。",
     "kind": "艺术史专题",
     "tags": "拉杰普特与帕哈里绘画 Rajput and Pahari painting 梅瓦尔、基尚格尔、巴索利、坎格拉 强烈色面、情感化自然、连环叙事和程式化人物。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "celadon",
@@ -408,7 +502,8 @@
     "distinguish": "“青瓷”不等于一种完全相同的绿色，高丽青瓷也有多种装饰法。",
     "kind": "艺术史专题",
     "tags": "高丽青瓷 Goryeo celadon 朝鲜半岛高丽窑场 青绿釉、优雅曲面、黑白象嵌和云鹤纹。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "buncheong",
@@ -425,7 +520,8 @@
     "distinguish": "粉青沙器不是白瓷，也不只是“做得粗糙的青瓷”。",
     "kind": "艺术史专题",
     "tags": "朝鲜粉青沙器 Joseon buncheong ware 朝鲜王朝早期陶工 印花、剔花、刷涂、浸白与铁绘痕迹。",
-    "source": "joseon-buncheong-ware-between-celadon-and-porcelain"
+    "source": "joseon-buncheong-ware-between-celadon-and-porcelain",
+    "level": "extended"
   },
   {
     "id": "koreabuddha",
@@ -442,7 +538,8 @@
     "distinguish": "区域影响是多向互动，不能只按一条传播线路理解。",
     "kind": "艺术史专题",
     "tags": "朝鲜半岛佛教造像 Korean Buddhist sculpture 三国时期、统一新罗与高丽工坊 含蓄面容、流动衣褶、思惟姿态与金铜材质。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "nihongaearly",
@@ -462,7 +559,8 @@
     "source": "",
     "sources": [
       "heian-period-794-1185"
-    ]
+    ],
+    "level": "extended"
   },
   {
     "id": "momoyama",
@@ -479,7 +577,8 @@
     "distinguish": "桃山绘画不只金碧辉煌，也有克制的水墨表现。",
     "kind": "艺术史专题",
     "tags": "桃山时代屏风与障壁画 Momoyama screens and wall paintings 狩野永德、长谷川等伯、海北友松 金地、大尺度松树、强烈造型与跨屏构图。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "tea",
@@ -496,7 +595,8 @@
     "distinguish": "侘寂不是任意破旧物品的标签；茶道内部也有多样的趣味。",
     "kind": "艺术史专题",
     "tags": "茶道与茶器 Japanese tea ceremony and utensils 村田珠光、武野绍鸥、千利休、乐烧传统 小尺度茶室、不对称茶碗、朴素材质与季节性陈设。",
-    "source": "the-japanese-tea-ceremony"
+    "source": "the-japanese-tea-ceremony",
+    "level": "extended"
   },
   {
     "id": "shin-hanga",
@@ -513,6 +613,7 @@
     "distinguish": "二者并非严格互斥，艺术家与生产方式之间存在交叉。",
     "kind": "艺术史专题",
     "tags": "新版画与创作版画 Shin-hanga and Sōsaku-hanga 川濑巴水、吉田博、恩地孝四郎、栋方志功 新版画常重视光影风景；创作版画强调作者自行绘、刻、印。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   }
 ]

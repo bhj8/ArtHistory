@@ -43,6 +43,7 @@ export function indexContent({
       d.id,
       [
         ...Object.values(d).flat(),
+        ...(d.study ? [d.study.why, ...d.study.takeaways, d.study.question, d.study.answer] : []),
         ...ART[d.id].flatMap((a) => [
           a.zh,
           a.title,

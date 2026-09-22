@@ -17,7 +17,22 @@
     "kind": "地区传统／历史专题",
     "sources": [
       "geometric-patterns-in-islamic-art"
-    ]
+    ],
+    "level": "core",
+    "context": "跨越广阔地区与漫长历史的伊斯兰艺术包括建筑、书籍和日常器物。书法、几何与植物纹样具有重要地位，但具体使用与图像选择随场所、时代和功能改变。",
+    "study": {
+      "why": "它帮助建立跨媒介、跨地区的观看方式，避免把一个文化范围误认成单一风格。",
+      "takeaways": [
+        "将书法、几何和植物纹样作为不同而可组合的视觉资源。",
+        "区分宗教空间、宫廷书籍和日用器物的条件。"
+      ],
+      "question": "伊斯兰艺术是否完全没有人物图像？",
+      "answer": "不能这样概括。不同地区、时代和用途有不同实践；应在具体对象与语境中讨论图像。",
+      "next": [
+        "islamcalligraphy",
+        "persian"
+      ]
+    }
   },
   {
     "id": "persian",
@@ -34,7 +49,8 @@
     "distinguish": "并非所有细密画都来自波斯，人物绘画也属于伊斯兰文化史。",
     "tags": "书籍 细密画 叙事",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "africaearly",
@@ -51,7 +67,8 @@
     "distinguish": "“非洲艺术”只是导航总类，不是一种原始风格。",
     "tags": "雕塑 岩画 地域",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "benin",
@@ -68,7 +85,8 @@
     "distinguish": "贝宁王国位于今尼日利亚；还需了解殖民掠夺与归还问题。",
     "tags": "青铜 宫廷 雕塑",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "mask",
@@ -85,7 +103,22 @@
     "distinguish": "非洲雕刻有自己的语境，不能只当作立体主义的素材来源。",
     "tags": "面具 身体 仪式",
     "source": "african-influences-in-modern-art",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "非洲不同社会的雕刻、面具与表演具有各自的制度和用途。博物馆里的物件常只是更大活动的一部分，服饰、音乐、身体动作与社区关系同样重要。",
+    "study": {
+      "why": "它提醒我们将物件与表演、社会关系一起研究，而不是只看孤立造型。",
+      "takeaways": [
+        "明确具体地域和群体，不以“非洲风格”统包所有形式。",
+        "查找物件如何被佩戴、启动、保存或展示的线索。"
+      ],
+      "question": "展柜中一个面具的正面，能否代表完整作品？",
+      "answer": "通常不能。表演、身体、服饰和参与者关系可能都是其意义的组成部分。",
+      "next": [
+        "kongo",
+        "benin"
+      ]
+    }
   },
   {
     "id": "mesoamerica",
@@ -102,7 +135,22 @@
     "distinguish": "“玛雅”“阿兹特克”不是同一个文明或时期。",
     "tags": "建筑 文字 雕塑",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "古代中美洲各社会通过城市、历法、书写、仪式和图像组织公共生活。不同政体之间既有交流，也有各自历史，不能将玛雅与墨西加等文化合并成一个时代。",
+    "study": {
+      "why": "为世界艺术史建立重要的独立入口，理解图像、城市和知识体系怎样相连。",
+      "takeaways": [
+        "先分清地域与时代，再比较人物、符号和建筑布局。",
+        "把图像与文字、历法或仪式活动之间的联系纳入阅读。"
+      ],
+      "question": "玛雅与阿兹特克可以作为同一文化的两个名字吗？",
+      "answer": "不可以。它们有不同的历史、地域和政治组织，比较时必须保留这些区别。",
+      "next": [
+        "maya",
+        "aztec"
+      ]
+    }
   },
   {
     "id": "andes",
@@ -119,7 +167,22 @@
     "distinguish": "安第斯不是中美洲，纺织也并非雕塑绘画的次要附属。",
     "tags": "纺织 陶器 建筑",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "安第斯地区的纺织、陶器、金属和建筑与多样的地理环境及社会组织有关。印加之前已有丰富传统，器物材料的地位也不能照搬欧洲绘画中心的分类。",
+    "study": {
+      "why": "它扩大我们对重要艺术媒介的认识，尤其是织物、材料和社会功能之间的关系。",
+      "takeaways": [
+        "把织物和陶器作为主要视觉材料，而不是绘画之外的附属品。",
+        "区分不同时期的文化，不用印加概括全部安第斯历史。"
+      ],
+      "question": "为什么理解安第斯艺术时需要认真看织物？",
+      "answer": "织物可能参与身份、礼仪与权力的表达；材料的社会价值并不由西方媒介等级决定。",
+      "next": [
+        "moche",
+        "inca"
+      ]
+    }
   },
   {
     "id": "nativeamerica",
@@ -136,7 +199,8 @@
     "distinguish": "不能用羽毛、图腾等符号概括所有原住民族。",
     "tags": "身份 工艺 土地",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "oceania",
@@ -153,7 +217,8 @@
     "distinguish": "大洋洲内部差异巨大，不能一概而论为“部落艺术”。",
     "tags": "祖先 木雕 纺织",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "aboriginal",
@@ -170,7 +235,8 @@
     "distinguish": "点画不是所有原住民艺术的统一形式；部分知识不公开。",
     "tags": "土地 身份 绘画",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "muralism",
@@ -187,7 +253,8 @@
     "distinguish": "弗里达·卡罗与其时代关系密切，但不能简单归为壁画家。",
     "tags": "壁画 社会 劳动",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "latam",
@@ -204,7 +271,8 @@
     "distinguish": "拉美不是统一风格；巴西新具体主义只是其中一条路径。",
     "tags": "参与 几何 身体",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "focus"
   },
   {
     "id": "global",
@@ -221,7 +289,22 @@
     "distinguish": "全球当代不是一个流派，也不是欧美当代艺术的附录。",
     "tags": "身份 殖民 迁徙",
     "source": "",
-    "kind": "地区传统／历史专题"
+    "kind": "地区传统／历史专题",
+    "level": "core",
+    "context": "当代艺术在迁移、市场、展览机构与不同地方实践之间流通。关于殖民历史、文化身份和材料来源的讨论，使展示方式、收藏过程与叙述权也成为问题。",
+    "study": {
+      "why": "它把前面学到的地域传统与当代制度联系起来，让艺术史保持多中心视角。",
+      "takeaways": [
+        "从具体艺术家、地点和材料出发，再讨论全球联系。",
+        "区分共享议题与统一风格，不把全球当代视为同一种外观。"
+      ],
+      "question": "作品参加国际展览，就意味着地方语境不重要了吗？",
+      "answer": "相反，理解地方历史、材料流通与展览制度之间的关系，通常能使解释更准确。",
+      "next": [
+        "aboriginal",
+        "latam"
+      ]
+    }
   },
   {
     "id": "abbasid",
@@ -238,7 +321,8 @@
     "distinguish": "政治统治的变化与艺术生产的年代边界并不完全同步。",
     "kind": "艺术史专题",
     "tags": "阿拔斯时期艺术 Abbasid art 巴格达、萨迈拉与相关陶瓷工坊 抽象植物纹、斜面灰泥、光泽彩陶与书法。",
-    "source": "the-art-of-the-abbasid-period-750-1258"
+    "source": "the-art-of-the-abbasid-period-750-1258",
+    "level": "extended"
   },
   {
     "id": "fatimid",
@@ -255,7 +339,8 @@
     "distinguish": "伊斯兰艺术并非普遍禁止人物和动物形象。",
     "kind": "艺术史专题",
     "tags": "法蒂玛时期艺术 Fatimid art 法蒂玛开罗、宫廷与城市工坊 水晶雕刻、光泽彩、象牙、织物与人物动物纹。",
-    "source": "the-art-of-the-fatimid-period-909-1171"
+    "source": "the-art-of-the-fatimid-period-909-1171",
+    "level": "extended"
   },
   {
     "id": "seljuq",
@@ -272,7 +357,8 @@
     "distinguish": "塞尔柱有不同政治支系，不宜把所有地区器物归为同一工坊风格。",
     "kind": "艺术史专题",
     "tags": "塞尔柱时期艺术 Seljuq art 伊朗、伊拉克与安纳托利亚的相关工坊 釉陶、金属镶嵌、书法带与复杂人物场景。",
-    "source": "the-art-of-the-seljuqs-of-iran-ca-1040-1196"
+    "source": "the-art-of-the-seljuqs-of-iran-ca-1040-1196",
+    "level": "extended"
   },
   {
     "id": "ottoman",
@@ -289,7 +375,8 @@
     "distinguish": "奥斯曼艺术不限于宫廷，也跨越很长时段和广大地区。",
     "kind": "艺术史专题",
     "tags": "奥斯曼宫廷艺术 Ottoman court arts 锡南、伊兹尼克窑场、伊斯坦布尔宫廷画坊 伊兹尼克陶瓷、郁金香康乃馨、长叶纹与穹顶空间。",
-    "source": "the-art-of-the-ottomans-before-1600"
+    "source": "the-art-of-the-ottomans-before-1600",
+    "level": "extended"
   },
   {
     "id": "safavid",
@@ -306,7 +393,8 @@
     "distinguish": "萨法维是波斯艺术的一个阶段，不等于全部波斯文化。",
     "kind": "艺术史专题",
     "tags": "萨法维艺术 Safavid art 大不里士、加兹温、伊斯法罕；苏丹·穆罕默德 精密细密画、繁复花毯、书法与蓝色瓷砖建筑。",
-    "source": "the-art-of-the-safavids-before-1600"
+    "source": "the-art-of-the-safavids-before-1600",
+    "level": "extended"
   },
   {
     "id": "islamcalligraphy",
@@ -323,7 +411,8 @@
     "distinguish": "并非所有伊斯兰书法都写宗教经文，语言也不限于阿拉伯语。",
     "kind": "艺术史专题",
     "tags": "伊斯兰书法 Calligraphy in Islamic art 古兰经抄本、陶瓷题铭、建筑书法 库法体、流动书体、书法带与建筑铭文。",
-    "source": "calligraphy-in-islamic-art"
+    "source": "calligraphy-in-islamic-art",
+    "level": "extended"
   },
   {
     "id": "carpets",
@@ -340,7 +429,8 @@
     "distinguish": "以现代国界和市场产地名推断古代地毯来源需要谨慎。",
     "kind": "艺术史专题",
     "tags": "地毯与织物图案 Carpets and textile patterns 伊朗、安纳托利亚、中亚及南亚织造传统 中央团花、连续几何、边框、植物纹与结绒结构。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "moche",
@@ -357,7 +447,8 @@
     "distinguish": "莫切不等于后来的印加；安第斯地区有多种不同历史传统。",
     "kind": "艺术史专题",
     "tags": "莫切艺术 Moche art 莫切地区陶工与金工 马镫形流口、红白陶绘、立体人物和仪式场面。",
-    "source": "moche-decorated-ceramics"
+    "source": "moche-decorated-ceramics",
+    "level": "extended"
   },
   {
     "id": "maya",
@@ -374,7 +465,8 @@
     "distinguish": "古典期城市的衰落不等于玛雅人的消失。",
     "kind": "艺术史专题",
     "tags": "玛雅艺术 Maya art 蒂卡尔、帕伦克、科潘及玛雅工坊 象形文字、雕刻石碑、彩绘陶器与复杂人物姿态。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "aztec",
@@ -391,7 +483,8 @@
     "distinguish": "阿兹特克是较广泛的称谓，墨西加指其中更具体的群体。",
     "kind": "艺术史专题",
     "tags": "墨西加／阿兹特克艺术 Mexica / Aztec art 特诺奇蒂特兰、大神庙、墨西加工匠 大型石雕、神祇属性、羽毛工艺与象征化身体。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "inca",
@@ -408,7 +501,8 @@
     "distinguish": "绳结记事 khipu 不能简单归为装饰图案，也不等同字母文字。",
     "kind": "艺术史专题",
     "tags": "印加艺术与建筑 Inka art and architecture 库斯科、马丘比丘、织工与金工 精密砌石、几何织纹、托卡普方格和简洁器形。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "kongo",
@@ -425,7 +519,8 @@
     "distinguish": "不能仅凭钉子把作品称为“巫毒娃娃”，需理解具体地方语境。",
     "kind": "艺术史专题",
     "tags": "刚果权力像 Kongo power figures 刚果地区雕刻者与仪式专家；nkisi、nkondi 腹部容器、镜面、金属钉片与具有力量感的姿态。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "asante",
@@ -442,7 +537,8 @@
     "distinguish": "非洲艺术不是一个统一风格，阿散蒂与贝宁的制度及传统不同。",
     "kind": "艺术史专题",
     "tags": "阿散蒂金工与王权 Asante arts 今加纳地区的阿散蒂宫廷与工匠 金饰、权杖、金权衡与肯特织物的色彩节奏。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "maori",
@@ -459,7 +555,8 @@
     "distinguish": "会堂不是任意“部落风”装饰，其形象与具体社群和谱系有关。",
     "kind": "艺术史专题",
     "tags": "毛利雕刻与会堂 Māori carving and meeting houses 新西兰毛利各 iwi 的雕刻、绘饰与织作传统 螺旋纹、祖先形象、贝壳镶眼与建筑装饰。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "malagan",
@@ -476,7 +573,8 @@
     "distinguish": "博物馆留下的是物体；仪式、权利与记忆不能从物体外观直接还原。",
     "kind": "艺术史专题",
     "tags": "马拉甘艺术 Malagan art 巴布亚新几内亚新爱尔兰的雕刻者与仪式社群 镂空人物、动物复合形、鲜明彩绘和多层结构。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   },
   {
     "id": "harlem",
@@ -493,6 +591,7 @@
     "distinguish": "它不是单一绘画风格，也不只发生在哈莱姆一处。",
     "kind": "艺术史专题",
     "tags": "哈莱姆文艺复兴 Harlem Renaissance 阿伦·道格拉斯、奥古斯塔·萨维奇、阿奇博尔德·莫特利 都市节奏、非洲形式资源、黑人生活与历史叙事。",
-    "source": ""
+    "source": "",
+    "level": "extended"
   }
 ]

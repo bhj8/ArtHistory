@@ -24,6 +24,14 @@ const byId = new Map(entries.map((entry) => [entry.id, entry]));
 check(byId.size === entries.length, "Duplicate entry IDs");
 const sources = await json("data/sources.json");
 for (const entry of entries) {
+  check(["core", "focus", "extended"].includes(entry.level), `${entry.id}: missing learning level`);
+  if (entry.level === "core") {
+    const study = entry.study;
+    check(typeof entry.context === "string" && entry.context.trim(), `${entry.id}: core needs historical context`);
+    check(study && [study.why, study.question, study.answer].every((t) => typeof t === "string" && t.trim()), `${entry.id}: incomplete core study`);
+    check(study?.takeaways?.length >= 2 && study.takeaways.every((t) => typeof t === "string" && t.trim()), `${entry.id}: missing takeaways`);
+    check(study?.next?.length >= 2 && new Set(study.next).size === study.next.length && study.next.every((id) => byId.has(id) && id !== entry.id), `${entry.id}: invalid next readings`);
+  }
   check(/^[a-z][a-z0-9-]*$/.test(entry.id), `${entry.id}: invalid stable ID`);
   for (const key of [
     "zh",

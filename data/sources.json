@@ -441,5 +441,41 @@
     "title": "Lithography in the Nineteenth Century",
     "zh": "石版与现代海报 · 博物馆专题",
     "org": "The Met"
+  },
+  "met-egypt-guide": {
+    "zh": "古埃及艺术：教育者资源",
+    "title": "The Art of Ancient Egypt: A Resource for Educators",
+    "org": "The Met",
+    "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Ancient_Egypt_A_Resource_for_Educators.pdf"
+  },
+  "getty-dunhuang": {
+    "zh": "敦煌石窟：丝路上的佛教艺术",
+    "title": "Cave Temples of Dunhuang: Buddhist Art on China’s Silk Road",
+    "org": "Getty Research Institute",
+    "url": "https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/gallery.html"
+  },
+  "va-ceramics-az": {
+    "zh": "陶瓷知识 A–Z",
+    "title": "An A–Z of Ceramics",
+    "org": "V&A",
+    "url": "https://www.vam.ac.uk/articles/a-z-of-ceramics"
+  },
+  "moma-feminist-art": {
+    "zh": "女性主义艺术",
+    "title": "Feminist art",
+    "org": "MoMA",
+    "url": "https://www.moma.org/collection/terms/feminist-art"
+  },
+  "met-korean-history": {
+    "zh": "韩国艺术：百年收藏中的历史",
+    "title": "Korea: 100 Years of Collecting at the Met",
+    "org": "The Met",
+    "url": "https://www.metmuseum.org/exhibitions/listings/2015/korea"
+  },
+  "met-cn-twentieth": {
+    "zh": "二十世纪中国传统绘画",
+    "title": "Traditional Chinese Painting in the Twentieth Century",
+    "org": "The Met",
+    "url": "https://www.metmuseum.org/ko/essays/traditional-chinese-painting-in-the-twentieth-century"
   }
 }
