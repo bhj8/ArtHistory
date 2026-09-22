@@ -2,7 +2,7 @@ import { artworkPickButton } from "./art-comparison.js";
 import { levelBadge, levelRank } from "../learning.js";
 import { esc, imageHTML, empty } from "./helpers.js";
 export function createViews(c, state, saved, seen) {
-  const { ART, LANES, ERAS, ROUTES, BYID, L, SEARCH } = c;
+  const { ART, LANES, ERAS, ROUTES, BYID, L } = c;
   const node = (d) =>
     `<button class="map-node node-${d.level}" data-node="${d.id}" title="${esc(d.en)}"><span>${esc(d.zh)}</span>${levelBadge(d)}${ART[d.id].length ? '<i aria-label="有配图">▧</i>' : ""}${seen.has(d.id) ? '<i aria-label="已读">·</i>' : ""}</button>`;
   function cards(items) {
@@ -12,7 +12,7 @@ export function createViews(c, state, saved, seen) {
         state.view !== "saved" ||
           !!(state.q || state.lane !== "all" || state.era !== "all"),
       );
-    return `<div class="entry-list visual-dictionary">${items.map((d) => `<article class="entry-card entry-${d.level}" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${levelBadge(d)} ${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 幅配图` : ""}${seen.has(d.id) ? " · 已读" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button>${ART[d.id].length > 1 ? `<div class="entry-preview" aria-label="${esc(d.zh)}的更多配图">${ART[d.id].slice(1, 4).map((a) => `<button data-node="${d.id}" data-work="${a.id}" aria-label="查看${esc(a.zh)}">${imageHTML(a)}<span>${esc(a.zh)}</span></button>`).join("")}</div>` : ""}<button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
+    return `<div class="entry-list visual-dictionary">${items.map((d) => `<article class="entry-card entry-${d.level}" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${levelBadge(d)} ${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 幅配图` : ""}${seen.has(d.id) ? " · 已读" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button>${ART[d.id].length > 1 ? `<div class="entry-preview" aria-label="${esc(d.zh)}的更多配图">${ART[d.id].slice(1, 4).map((a) => `<button data-node="${d.id}" data-work="${a.id}" aria-label="查看${esc(a.zh)}">${imageHTML(a, "", false, "90px")}<span>${esc(a.zh)}</span></button>`).join("")}</div>` : ""}<button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
   }
   function map(items) {
     if (!items.length) return empty();
@@ -25,7 +25,7 @@ export function createViews(c, state, saved, seen) {
     function cell(ds) {
       ds = [...ds].sort((a, b) => levelRank(a) - levelRank(b));
       const arts = ds.filter((d) => ART[d.id].length).slice(0, 2);
-      return `${arts.length ? `<div class="map-pictures">${arts.map((d) => `<button data-node="${d.id}" aria-label="查看${esc(d.zh)}">${imageHTML(ART[d.id][0])}</button>`).join("")}</div>` : ""}${ds.slice(0, 5).map(node).join("")}${ds.length > 5 ? `<details class="more-nodes"><summary>另外 ${ds.length - 5} 条 <span>＋</span></summary>${ds.slice(5).map(node).join("")}</details>` : ""}${!ds.length ? '<span class="cell-empty">—</span>' : ""}`;
+      return `${arts.length ? `<div class="map-pictures">${arts.map((d) => `<button data-node="${d.id}" aria-label="查看${esc(d.zh)}">${imageHTML(ART[d.id][0], "", false, "146px")}</button>`).join("")}</div>` : ""}${ds.slice(0, 5).map(node).join("")}${ds.length > 5 ? `<details class="more-nodes"><summary>另外 ${ds.length - 5} 条 <span>＋</span></summary>${ds.slice(5).map(node).join("")}</details>` : ""}${!ds.length ? '<span class="cell-empty">—</span>' : ""}`;
     }
     const table = `<div class="map-scroll" tabindex="0" role="region" aria-label="全景地图，可横向滚动"><table class="map-table ${eras.length === 1 ? "single-era" : ""}"><thead><tr><th scope="col">分类 / 时代</th>${eras.map(([e, i]) => `<th scope="col"><button data-era="${i}">${e[0]}<small>${e[1]}</small></button></th>`).join("")}</tr></thead><tbody>${lanes.map((l) => `<tr style="--c:${l[3]}"><th scope="row"><button data-lane="${l[0]}"><b>${l[1]}</b><small>${items.filter((d) => d.lane === l[0]).length} 条</small></button></th>${eras.map(([, i]) => `<td>${cell(items.filter((d) => d.lane === l[0] && d.era === i))}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
     const mobile = `<div class="mobile-map">${eras
@@ -65,7 +65,7 @@ export function createViews(c, state, saved, seen) {
       const text = `${r.title} ${r.desc}`.toLocaleLowerCase();
       return members.length && (
         words.every((w) => text.includes(w)) ||
-        members.some((id) => words.every((w) => SEARCH[id].includes(w)))
+        members.some(id => c.search.query(state.q).entries.some(d => d.id === id))
       );
     });
   }

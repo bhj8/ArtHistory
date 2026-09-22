@@ -15,7 +15,6 @@ async function start() {
       WORKS,
       BYWORK,
       ART,
-      SEARCH,
       LANES,
       ERAS,
       L,
@@ -36,7 +35,9 @@ async function start() {
     limit = 48,
     toastTimer,
     opener = null,
-    browsePosition = null;
+    browsePosition = null,
+    renderRequest = 0,
+    detailRequest = 0;
   const views = createViews(c, state, saved, seen);
   const titles = {
     map: "全景地图",
@@ -112,7 +113,19 @@ async function start() {
     }
     return items.filter((d) => state.view !== "saved" || saved.has(d.id));
   }
-  function render({ url = true } = {}) {
+  async function render({ url = true } = {}) {
+    const request = ++renderRequest;
+    if (state.q.trim() && !c.searchReady) {
+      $("content").innerHTML = '<div class="empty" role="status">正在加载搜索…</div>';
+      try { await c.ensureSearch(); }
+      catch (error) {
+        if (request !== renderRequest) return;
+        console.error(error);
+        $("content").innerHTML = '<div class="empty" role="alert">搜索暂时未能加载。<button data-retry-search>重试</button></div>';
+        return;
+      }
+      if (request !== renderRequest) return;
+    }
     persist();
     const items = currentItems(),
       ids = new Set(items.map((d) => d.id));
@@ -224,8 +237,14 @@ async function start() {
     $("detailNav").innerHTML =
       `<button data-step="-1" ${i <= 0 ? "disabled" : ""}>← 上一条</button><span>${routeActive !== null ? esc(ROUTES[routeActive].title) : "连续阅读"}<small>${i >= 0 ? `${i + 1} / ${sequence.length}` : ""}</small></span><button data-step="1" ${i < 0 || i >= sequence.length - 1 ? "disabled" : ""}>下一条 →</button>`;
   }
-  function openNode(id, { art, route, back = false, fromURL = false } = {}) {
+  async function openNode(id, { art, route, back = false, fromURL = false } = {}) {
     if (!BYID[id]) return;
+    const request = ++detailRequest;
+    if (!c.isEntryReady(id)) toast("正在加载条目…");
+    try { await c.ensureEntry(id); }
+    catch (error) { if (request === detailRequest) toast("条目未能加载，请再次打开重试。"); console.error(error); return; }
+    if (request !== detailRequest) return;
+    $("toast").classList.remove("visible");
     if (!$("detail").open) {
       opener = document.activeElement;
       // Capture once per reading session, not when following related entries.
@@ -270,6 +289,7 @@ async function start() {
     if (!fromURL) syncURL(true);
   }
   function closeDetail({ fromURL = false } = {}) {
+    detailRequest++;
     if (!$("detail").open) return;
     $("detail").close();
     selected = null;
@@ -304,8 +324,12 @@ async function start() {
       b.setAttribute("aria-pressed", yes);
     });
   }
-  function showComparison() {
+  async function showComparison() {
     if (compare.length !== 2) return;
+    const pair = [...compare];
+    try { await Promise.all(pair.map(id => c.ensureEntry(id))); }
+    catch (error) { console.error(error); toast("对照资料未能加载，请重试。"); return; }
+    if (pair.join() !== compare.join()) return;
     $("comparison").innerHTML = comparisonHTML(compare, c);
     $("comparison").showModal();
   }
@@ -322,7 +346,11 @@ async function start() {
     drawLight();
     $("lightbox").showModal();
   }
-  function showInfo(sources) {
+  async function showInfo(sources) {
+    if (sources) {
+      try { await c.ensureSources(); }
+      catch (error) { console.error(error); toast("资料来源未能加载，请重试。"); return; }
+    }
     $("info").innerHTML =
       `<div class="modal-head"><h2 id="infoTitle">${sources ? "资料来源" : "收录与使用说明"}</h2><button data-close="info" aria-label="关闭说明">关闭 ×</button></div>${
         sources
@@ -348,6 +376,7 @@ async function start() {
       e.preventDefault();
     }
     const d = b.dataset;
+    if (d.retrySearch !== undefined) { render(); return; }
     if (d.resultSection) { $(d.resultSection)?.scrollIntoView({ block: "start" }); return; }
     if (d.author) {
       closeDetail();
@@ -594,10 +623,10 @@ async function start() {
     .map((l) => `<option value="${l[0]}">${l[1]}</option>`)
     .join("");
   $("stats").innerHTML =
-    `<b>${DATA.length}</b> 条目 <span>·</span> <b>${WORKS.length}</b> 配图<br><b>${ROUTES.length}</b> 路线 <span>·</span> <b>${Object.keys(SOURCES).length}</b> 专题资料`;
+    `<b>${DATA.length}</b> 条目 <span>·</span> <b>${WORKS.length}</b> 配图<br><b>${ROUTES.length}</b> 路线 <span>·</span> <b>${c.sourceCount}</b> 专题资料`;
   readURL();
   const initial = location.hash.slice(1);
-  render({ url: false });
+  await render({ url: false });
   if (BYID[initial]) openNode(initial, { fromURL: true });
 }
 start().catch((error) => {

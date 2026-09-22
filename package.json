@@ -8,9 +8,9 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs dist",
     "check": "node scripts/check.mjs && node scripts/test.mjs",
-    "build": "npm run check && node scripts/build.mjs",
+    "build": "npm run check && node scripts/build.mjs && node scripts/test-build.mjs",
     "preview": "node scripts/serve.mjs dist"
   }
 }

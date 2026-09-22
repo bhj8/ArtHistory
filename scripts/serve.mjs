@@ -23,6 +23,7 @@ createServer(async (req, res) => {
     const pathname = decodeURIComponent(
       new URL(req.url, "http://localhost").pathname,
     );
+    if (process.env.LOG_REQUESTS) console.log(`${req.method} ${pathname}`);
     let target = resolve(root, "." + pathname);
     if (target !== root && !target.startsWith(root + sep)) {
       res.writeHead(403);

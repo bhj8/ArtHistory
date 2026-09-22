@@ -1,5 +1,6 @@
 import { readFile, readdir, stat } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 const root = new URL("../", import.meta.url);
 const errors = [];
@@ -79,6 +80,21 @@ for (const [id, source] of Object.entries(sources)) {
   );
 }
 const artworks = await json("data/artworks.json");
+const thumbnails = await json("data/thumbnails.json");
+for (const [id, art] of Object.entries(artworks)) {
+  if (art.image.endsWith(".svg")) continue;
+  const preview = thumbnails[id];
+  check(!!preview, `${id}: missing previews; run scripts/thumbnails.py`);
+  if (!preview) continue;
+  const hash = createHash("sha256").update(await readFile(new URL(art.image, root))).digest("hex");
+  check(preview.sourceHash === hash, `${id}: previews are stale`);
+  for (const p of preview.previews) {
+    check(p.width > 0 && p.width <= 640 && p.height > 0 && p.height <= 960, `${id}: invalid preview dimensions`);
+    check(/^assets\/thumbnails\/[a-z0-9-]+\.webp$/.test(p.image), `${id}: invalid preview path`);
+    try { check((await stat(new URL(p.image, root))).size > 0, `${id}: empty preview`); }
+    catch { check(false, `${id}: missing ${p.image}`); }
+  }
+}
 for (const entry of entries) {
   if (entry.level === "core") check(entry.featuredWorks?.length >= 3 && entry.featuredWorks.length <= 5, `${entry.id}: needs 3–5 curated images`);
   check(new Set(entry.featuredWorks || []).size === (entry.featuredWorks || []).length, `${entry.id}: duplicate featured images`);

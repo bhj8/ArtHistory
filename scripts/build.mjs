@@ -1,4 +1,5 @@
 import { cp, mkdir, rm, writeFile, readFile, readdir } from "node:fs/promises";
+import { prepareContent } from "./prepare-content.mjs";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 const root = new URL("../", import.meta.url);
@@ -20,7 +21,7 @@ const inputs = [
   ...(await files("data")),
   ...(await files("assets")),
 ];
-const hash = createHash("sha256").update(
+const hash = createHash("sha256").update(await readFile(new URL("scripts/prepare-content.mjs", root))).update(
   await readFile(new URL(import.meta.url)),
 );
 for (const path of inputs)
@@ -36,6 +37,9 @@ html = html.replace(
   /(\.\/src\/(?:main\.js|styles\/main\.css))(?=["'])/g,
   `$1?v=${revision}`,
 );
+const preloadModules = inputs.filter(p => p.startsWith("src/") && p.endsWith(".js") && p !== "src/main.js")
+  .map(p => `    <link rel="modulepreload" href="./${p}?v=${revision}" />`).join("\n");
+html = html.replace("  </head>", `${preloadModules}\n    <link rel="preload" as="fetch" href="./data/catalog.json?v=${revision}" crossorigin />\n  </head>`);
 await writeFile(new URL("index.html", dist), html);
 for (const path of inputs.filter(
   (p) => p.startsWith("src/") && p.endsWith(".js"),
@@ -51,13 +55,21 @@ for (const path of inputs.filter(
 const artworks = JSON.parse(
   await readFile(new URL("data/artworks.json", dist), "utf8"),
 );
-for (const art of Object.values(artworks)) {
+const thumbnails = JSON.parse(await readFile(new URL("data/thumbnails.json", root), "utf8"));
+for (const [id, art] of Object.entries(artworks)) {
   const digest = createHash("sha256")
     .update(await readFile(new URL(art.image, root)))
     .digest("hex")
     .slice(0, 12);
   art.image += `?v=${digest}`;
+  if (thumbnails[id]) {
+    art.previews = await Promise.all(thumbnails[id].previews.map(async p => {
+      const hash = createHash("sha256").update(await readFile(new URL(p.image, root))).digest("hex").slice(0, 12);
+      return {...p, image: `${p.image}?v=${hash}`};
+    }));
+  }
 }
 await writeFile(new URL("data/artworks.json", dist), JSON.stringify(artworks));
+await prepareContent(dist);
 await writeFile(new URL(".nojekyll", dist), "");
 console.log(`Static site built: ${fileURLToPath(dist)} (${revision})`);

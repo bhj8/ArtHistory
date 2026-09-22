@@ -16,6 +16,8 @@
 npm run dev
 ```
 
+开发命令会先生成 `dist/` 再启动本地预览，修改源文件后重新运行构建并刷新。
+
 打开终端显示的本地地址。由于数据使用 JSON 加载，请通过 HTTP 服务预览，不要双击 `index.html`。
 
 ```sh
@@ -49,6 +51,8 @@ npm run preview  # 预览 dist/
 | `assets/artworks/*.{webp,svg}`      | 独立图片文件，支持浏览器缓存与按需加载    |
 | `scripts/`                    | 零依赖校验、构建与本地预览工具            |
 | `.github/workflows/pages.yml` | PR 校验及 main 分支自动发布               |
+
+首页使用轻量目录和独立缩略图；搜索索引在构建时生成，搜索、条目正文与完整出处按需加载。性能对比及维护方法见 [首页加载优化](docs/PERFORMANCE.md)。
 
 新增内容、图片和关系的具体操作见 [内容维护说明](docs/content-guide.md)。
 

@@ -13,7 +13,7 @@ function distance(a, b, max = 2) {
   }
   return grid[a.length][b.length];
 }
-export function createSearch(entries, works, seeds = []) {
+export function compileSearch(entries, works, seeds = []) {
   const hasName = (value, name) => normalize(value).includes(normalize(name));
   const authors = seeds.map((s) => ({ ...s, names: [s.name, ...s.aliases].map(normalize),
     works: works.filter((w) => s.aliases.some((a) => hasName(`${w.artistZh} ${w.artist}`, a))).map((w) => w.id),
@@ -31,6 +31,16 @@ export function createSearch(entries, works, seeds = []) {
   const authorWords = (w) => authors.filter((a) => a.works.includes(w.id)).flatMap((a) => a.aliases).join(" ");
   const workIndex = works.map((w) => ({ value: w, names: [w.zh, w.title, ...(w.aliases || [])].map(normalize), text: normalize([w.zh, w.title, w.artist, w.artistZh, w.medium, authorWords(w)].join(" ")) }));
   const entryIndex = entries.map((d) => ({ value: d, names: [d.zh, d.en, ...(d.aliases || [])].map(normalize), text: normalize([d.zh, d.en, ...(d.aliases || []), d.tags, d.look, d.context, d.region, d.people, d.work, d.influence, ...authors.filter((a) => a.entries.includes(d.id)).flatMap((a) => a.aliases), ...workIndex.filter((w) => w.value.entries.includes(d.id)).map((w) => w.text)].join(" ")) }));
+  return { authors, entries: entryIndex.map(({value, ...r}) => ({...r, id: value.id})), works: workIndex.map(({value, ...r}) => ({...r, id: value.id})) };
+}
+export function createSearch(entries, works, seeds = []) {
+  return hydrateSearch(compileSearch(entries, works, seeds), entries, works);
+}
+export function hydrateSearch(compiled, entries, works) {
+  const byEntry = new Map(entries.map(d => [d.id, d])), byWork = new Map(works.map(w => [w.id, w]));
+  const authors = compiled.authors;
+  const entryIndex = compiled.entries.map(r => ({...r, value: byEntry.get(r.id)}));
+  const workIndex = compiled.works.map(r => ({...r, value: byWork.get(r.id)}));
   const vocabulary = [...entryIndex.map((r) => ({ label: r.value.zh, names: r.names })), ...authors.map((a) => ({ label: a.name, names: a.names })), ...workIndex.map((r) => ({ label: r.value.zh, names: [r.names[0]] }))];
   function query(value, allowedIds = new Set(entries.map((d) => d.id))) {
     const q = normalize(value), tokens = q.split(" ").filter(Boolean);

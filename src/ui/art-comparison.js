@@ -7,7 +7,13 @@ export function artworkPickButton(id) {
 export function setupArtComparison(c) {
   const dialog = document.getElementById("artComparison");
   const bar = document.getElementById("artComparebar");
-  let slots = [], scales = [1, 1];
+  let slots = [], scales = [1, 1], opening = false;
+  const changes = [0, 0];
+  const loadError = () => {
+    const toast = document.getElementById("toast");
+    toast.textContent = "作品资料未能加载，请重试。"; toast.classList.add("visible");
+    setTimeout(() => toast.classList.remove("visible"), 3000);
+  };
   function refreshSelection() {
     bar.hidden = !selectedWorks.length;
     bar.innerHTML = `<span>${selectedWorks.map((id) => esc(c.BYWORK[id].zh)).join(" ＋ ")}</span><button data-show-art-comparison ${selectedWorks.length !== 2 ? "disabled" : ""}>对照作品 (${selectedWorks.length}/2)</button><button data-clear-art-comparison aria-label="清空作品对照">清空 ×</button>`;
@@ -49,21 +55,33 @@ export function setupArtComparison(c) {
     if (d.scale !== undefined) zoom(+d.scale, scales[+d.scale] + +d.delta);
     if (d.fit !== undefined) zoom(+d.fit, 1);
   });
-  function show() {
-    slots = [...selectedWorks]; scales = [1, 1];
+  async function show() {
+    if (opening || dialog.open) return;
+    opening = true;
+    const pair = [...selectedWorks];
+    try { await c.ensureWorks(pair); }
+    catch (error) { console.error(error); loadError(); opening = false; return; }
+    opening = false;
+    if (pair.join() !== selectedWorks.join()) return;
+    slots = pair; scales = [1, 1];
     dialog.innerHTML = `<div class="modal-head"><h2 id="artComparisonTitle">作品对照</h2><button data-close="artComparison" aria-label="关闭作品对照">关闭 ×</button></div><div class="art-compare-grid">${panel(0)}${panel(1)}</div>`;
     dialog.showModal(); zoom(0, 1); zoom(1, 1);
   }
-  dialog.addEventListener("change", (e) => {
+  dialog.addEventListener("change", async (e) => {
     if (e.target.dataset.compareSlot === undefined) return;
     const side = +e.target.dataset.compareSlot;
-    slots[side] = e.target.value; scales[side] = 1;
+    const request = ++changes[side], id = e.target.value;
+    try { await c.ensureWorks([id]); }
+    catch (error) { console.error(error); if (request === changes[side]) {e.target.value = slots[side]; loadError();} return; }
+    if (!dialog.open || request !== changes[side]) return;
+    slots[side] = id; scales[side] = 1;
     selectedWorks.splice(0, selectedWorks.length, ...slots);
     refreshSelection();
     dialog.querySelector(`[data-panel="${side}"]`).outerHTML = panel(side);
     zoom(side, 1); dialog.querySelector(`[data-compare-slot="${side}"]`).focus({ preventScroll: true });
   });
   let drag = null;
+  dialog.addEventListener("close", () => { changes[0]++; changes[1]++; });
   dialog.addEventListener("pointerdown", (e) => {
     const stage = e.target.closest(".art-compare-stage");
     if (!stage || e.button !== 0 || e.pointerType === "touch") return;

@@ -11,10 +11,12 @@ export const link = (url, text, cls = "") =>
 export function creditHTML(art) {
   return `<p>${esc(art.credit)}</p>${art.license ? `<p>${art.licenseScope === "image" ? "图片许可：" : "权利信息："}${art.licenseUrl ? link(art.licenseUrl, esc(art.license)) : esc(art.license)}</p>` : ""}${art.rightsNote ? `<p>${esc(art.rightsNote)}</p>` : ""}${link(art.url, esc(art.sourceLabel || "原始馆藏记录"))}${(art.referenceUrls || []).map((url) => `<p>${link(url, "补充作品资料")}</p>`).join("")}`;
 }
-export function imageHTML(art, cls = "", eager = false) {
-  return art
-    ? `<img class="${cls}" src="${esc(art.image)}" alt="${esc(art.zh)}" loading="${eager ? "eager" : "lazy"}" decoding="async"${art.width ? ` width="${art.width}" height="${art.height}"` : ""}>`
-    : "";
+export function imageHTML(art, cls = "", eager = false, sizes = "(max-width: 600px) 45vw, 280px") {
+  if (!art) return "";
+  const previews = !eager && art.previews?.filter((p, i, all) => all.findIndex(other => other.width === p.width) === i);
+  const src = previews ? previews[0].image : art.image;
+  const responsive = previews ? ` srcset="${previews.map(p => `${esc(p.image)} ${p.width}w`).join(", ")}" sizes="${sizes}"` : "";
+  return `<img class="${cls}" src="${esc(src)}"${responsive} alt="${esc(art.zh)}" loading="${eager ? "eager" : "lazy"}" decoding="async"${art.width ? ` width="${art.width}" height="${art.height}"` : ""}>`;
 }
 export function empty(text = "没有符合条件的内容", action = true) {
   return `<div class="empty"><span aria-hidden="true">⌕</span><h3>${text}</h3>${action ? "<button data-reset>清除筛选</button>" : "<p>在条目中点击「收藏」，即可保存在这里。</p>"}</div>`;
