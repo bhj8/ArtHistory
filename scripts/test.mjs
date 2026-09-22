@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { indexContent } from "../src/content.js";
 import { createViews } from "../src/ui/views.js";
 import { detailHTML } from "../src/ui/detail.js";
+import { creditHTML } from "../src/ui/helpers.js";
 
 const json = async (name) => JSON.parse(await readFile(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 const taxonomy = await json("taxonomy");
@@ -25,9 +26,10 @@ for (const a of c.ART[sharedEntry.id].slice(1, 4)) {
   assert.ok(cards.includes(`data-node="${sharedEntry.id}" data-work="${a.id}"`));
 }
 
-// Every entry must render, including empty galleries and the last image of long galleries.
+// All entries stay illustrated; imported photos and original guides both count.
 for (const d of c.DATA) {
   const works = c.ART[d.id];
+  assert.ok(works.length > 0, `${d.id} must have an illustration`);
   const html = detailHTML(d, c, { saved: new Set(), compare: [], artIndex: Math.max(0, works.length - 1) });
   assert.ok(!html.includes("undefined"), d.id);
   if (works.length) {
@@ -36,6 +38,21 @@ for (const d of c.DATA) {
   }
   for (const a of works) assert.ok(c.BYWORK[a.id].entries.includes(d.id));
 }
+
+// A photographer's license must remain visibly attributed and linked.
+const photo = c.BYWORK['commons-57035370'];
+const credit = creditHTML(photo);
+assert.ok(credit.includes('Donald Woodman'));
+assert.ok(credit.includes(photo.licenseUrl));
+assert.ok(credit.includes('图片许可：'));
+for (const guide of c.WORKS.filter((a) => a.kind === 'guide')) {
+  assert.ok(guide.zh.includes('学习图解'));
+  assert.ok(creditHTML(guide).includes('非历史作品'));
+}
+const gallery = detailHTML(c.BYID.feminist, c, { saved: new Set(), compare: [], artIndex: 0 });
+assert.match(gallery, /data-thumb="-1" disabled aria-label="上一幅配图"/);
+const lastImage = detailHTML(c.BYID.feminist, c, { saved: new Set(), compare: [], artIndex: c.ART.feminist.length - 1 });
+assert.match(lastImage, /disabled aria-label="下一幅配图"/);
 
 // Teaching notes are scoped to an artwork/entry pair and escaped as text.
 const noteEntry = c.DATA.find((d) => c.ART[d.id].some((a) => a.notes?.[d.id]));

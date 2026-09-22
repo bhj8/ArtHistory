@@ -8,6 +8,9 @@ export const esc = (value) =>
   );
 export const link = (url, text, cls = "") =>
   `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${text} ↗</a>`;
+export function creditHTML(art) {
+  return `<p>${esc(art.credit)}</p>${art.license ? `<p>${art.licenseScope === "image" ? "图片许可：" : "权利信息："}${art.licenseUrl ? link(art.licenseUrl, esc(art.license)) : esc(art.license)}</p>` : ""}${art.rightsNote ? `<p>${esc(art.rightsNote)}</p>` : ""}${link(art.url, esc(art.sourceLabel || "原始馆藏记录"))}${(art.referenceUrls || []).map((url) => `<p>${link(url, "补充作品资料")}</p>`).join("")}`;
+}
 export function imageHTML(art, cls = "", eager = false) {
   return art
     ? `<img class="${cls}" src="${esc(art.image)}" alt="${esc(art.zh)}" loading="${eager ? "eager" : "lazy"}" decoding="async"${art.width ? ` width="${art.width}" height="${art.height}"` : ""}>`

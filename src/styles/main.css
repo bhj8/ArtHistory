@@ -851,14 +851,16 @@ dialog::backdrop {
 }
 #detail {
   position: fixed;
-  inset: 0 0 0 auto;
-  margin: 0;
-  width: min(750px, 100vw);
+  inset: 0;
+  margin: auto;
+  width: min(1600px, calc(100vw - 48px));
   max-width: 100vw;
-  height: 100dvh;
+  height: calc(100dvh - 32px);
   max-height: 100dvh;
   overflow: auto;
-  box-shadow: -15px 0 55px #11251925;
+  border-radius: 12px;
+  box-shadow: 0 18px 70px #11251940;
+  scrollbar-gutter: stable;
 }
 .drawer-top {
   position: sticky;
@@ -1852,6 +1854,41 @@ dialog::backdrop {
   .thumbnails img { height:85px; }
   .result-actions { flex-wrap:wrap; justify-content:flex-end; }
   .gallery-heading { align-items:flex-start; flex-direction:column; gap:4px; }
+}
+/* A centered reading spread uses the available screen for both art and context. */
+.detail-actions { flex-wrap: wrap; }
+.image-provenance { font-size: 11px; line-height: 1.8; color: var(--muted); margin: 2px 0 18px; overflow-wrap: anywhere; }
+.image-provenance summary { cursor: pointer; }
+.image-provenance p, .light-credit p { margin: 7px 0; }
+.gallery-controls { display: flex; align-items: center; justify-content: space-between; margin: 0 0 10px; gap: 12px; }
+.gallery-controls button { font-size: 12px; padding: 7px 12px; }
+.gallery-controls span { font-size: 11px; color: var(--muted); }
+@media (min-width: 1000px) {
+  #detailBody {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 0 44px;
+    padding: 0 40px 36px;
+  }
+  .detail-heading { grid-column: 1 / -1; padding: 27px 0 26px; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 24px; }
+  .detail-heading > :not(.detail-actions) { grid-column: 1; }
+  .detail-heading .detail-actions { grid-column: 2; grid-row: 2 / 5; align-self: center; max-width: 340px; justify-content: flex-end; }
+  .detail-hook { margin: 10px 0 0; }
+  .detail-heading h2 { font-size: 36px; }
+  .detail-gallery, .detail-reading { padding: 0; min-width: 0; }
+  .detail-art img { height: auto; max-height: min(58dvh, 700px); }
+  .detail-reading { border-left: 1px solid var(--line); padding-left: 36px; }
+  .detail-reading > .detail-section:first-child { margin-top: 0; }
+  .detail-reading .related { grid-template-columns: 1fr; }
+  .drawer-top, .detail-bottom { padding-left: 40px; padding-right: 40px; }
+}
+@media (max-width: 999px) {
+  #detail { width: min(880px, calc(100vw - 24px)); height: calc(100dvh - 24px); }
+  .detail-art img { height: auto; max-height: 60dvh; }
+}
+@media (max-width: 560px) {
+  #detail { width: 100vw; height: 100dvh; border-radius: 0; scrollbar-gutter: auto; }
 }
 @media print {
   .header,

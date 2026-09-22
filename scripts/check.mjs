@@ -86,7 +86,7 @@ for (const [id, art] of Object.entries(artworks)) {
     check(typeof note === "string" && note.trim(), `${id}: empty viewing note`);
   }
   if (art.license === "CC0") {
-    check(art.publicDomain === true, `${id}: contradictory CC0 metadata`);
+    check((art.licenseScope === "image" ? art.imagePublicDomain : art.publicDomain) === true, `${id}: contradictory CC0 metadata`);
     check(safeURL(art.licenseUrl) && safeURL(art.metadataSource), `${id}: missing license or metadata provenance`);
   }
   check(/[\u3400-\u9fff]/.test(art.zh), `${id}: needs Chinese title`);
@@ -103,12 +103,17 @@ for (const [id, art] of Object.entries(artworks)) {
   );
   check(safeURL(art.url), `${id}: missing original artwork link`);
   check(
-    /^assets\/artworks\/[a-z0-9-]+\.webp$/.test(art.image),
+    /^assets\/artworks\/[a-z0-9-]+\.(webp|svg)$/.test(art.image),
     `${id}: invalid image path`,
   );
   try {
     const image = await readFile(new URL(art.image, root));
-    check(
+    if (art.image.endsWith(".svg")) {
+      const svg = image.toString("utf8");
+      check(art.kind === "guide", `${id}: SVG must be an explicitly labelled learning guide`);
+      check(svg.includes("<svg") && svg.includes("<title>"), `${id}: incomplete SVG guide`);
+      check(!/<script|<foreignObject|\son\w+\s*=|(?:href|src)\s*=/i.test(svg), `${id}: SVG must be static and self-contained`);
+    } else check(
       image.toString("ascii", 0, 4) === "RIFF" &&
         image.toString("ascii", 8, 12) === "WEBP",
       `${id}: not a WebP image`,
@@ -122,6 +127,8 @@ for (const [id, art] of Object.entries(artworks)) {
     errors.push(`${id}: missing image ${art.image}`);
   }
 }
+for (const entry of entries)
+  check(Object.values(artworks).some((art) => art.entries.includes(entry.id)), `${entry.id}: missing illustration`);
 for (const name of await readdir(new URL("assets/artworks/", root)))
   check(usedImages.has(name), `Unused artwork: ${name}`);
 const relationships = await json("data/relationships.json");

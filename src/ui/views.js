@@ -2,7 +2,7 @@ import { esc, imageHTML, empty } from "./helpers.js";
 export function createViews(c, state, saved, seen) {
   const { ART, LANES, ERAS, ROUTES, BYID, L, SEARCH } = c;
   const node = (d) =>
-    `<button class="map-node" data-node="${d.id}" title="${esc(d.en)}"><span>${esc(d.zh)}</span>${ART[d.id].length ? '<i aria-label="有作品图">▧</i>' : ""}${seen.has(d.id) ? '<i aria-label="已读">·</i>' : ""}</button>`;
+    `<button class="map-node" data-node="${d.id}" title="${esc(d.en)}"><span>${esc(d.zh)}</span>${ART[d.id].length ? '<i aria-label="有配图">▧</i>' : ""}${seen.has(d.id) ? '<i aria-label="已读">·</i>' : ""}</button>`;
   function cards(items) {
     if (!items.length)
       return empty(
@@ -10,7 +10,7 @@ export function createViews(c, state, saved, seen) {
         state.view !== "saved" ||
           !!(state.q || state.lane !== "all" || state.era !== "all"),
       );
-    return `<div class="entry-list visual-dictionary">${items.map((d) => `<article class="entry-card" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 件作品` : ""}${seen.has(d.id) ? " · 已读" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button>${ART[d.id].length > 1 ? `<div class="entry-preview" aria-label="${esc(d.zh)}的更多作品">${ART[d.id].slice(1, 4).map((a) => `<button data-node="${d.id}" data-work="${a.id}" aria-label="查看${esc(a.zh)}">${imageHTML(a)}<span>${esc(a.zh)}</span></button>`).join("")}</div>` : ""}<button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
+    return `<div class="entry-list visual-dictionary">${items.map((d) => `<article class="entry-card" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 幅配图` : ""}${seen.has(d.id) ? " · 已读" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button>${ART[d.id].length > 1 ? `<div class="entry-preview" aria-label="${esc(d.zh)}的更多配图">${ART[d.id].slice(1, 4).map((a) => `<button data-node="${d.id}" data-work="${a.id}" aria-label="查看${esc(a.zh)}">${imageHTML(a)}<span>${esc(a.zh)}</span></button>`).join("")}</div>` : ""}<button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
   }
   function map(items) {
     if (!items.length) return empty();
@@ -52,7 +52,7 @@ export function createViews(c, state, saved, seen) {
       )
       .join(
         "",
-      )}</div>${works.length > limit ? `<div class="load-more"><button data-more>再显示 ${Math.min(48, works.length - limit)} 件作品</button><span>已显示 ${limit} / ${works.length}</span></div>` : ""}`;
+      )}</div>${works.length > limit ? `<div class="load-more"><button data-more>再显示 ${Math.min(48, works.length - limit)} 幅配图</button><span>已显示 ${limit} / ${works.length}</span></div>` : ""}`;
   }
   function matchingRoutes(items) {
     const ids = new Set(items.map((d) => d.id));

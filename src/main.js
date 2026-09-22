@@ -2,7 +2,7 @@ import { loadContent } from "./content.js";
 import { readLocal, saveProgress } from "./storage.js";
 import { createViews } from "./ui/views.js";
 import { detailHTML, comparisonHTML } from "./ui/detail.js";
-import { esc, link, imageHTML } from "./ui/helpers.js";
+import { esc, link, imageHTML, creditHTML } from "./ui/helpers.js";
 
 async function start() {
   const c = await loadContent(),
@@ -170,7 +170,7 @@ async function start() {
       else
         works.sort((a, b) => BYID[a.entries[0]].era - BYID[b.entries[0]].era);
       $("content").innerHTML = views.gallery(works, limit);
-      count = works.length + " 件作品";
+      count = works.length + " 幅配图";
     } else if (state.view === "map" && !state.q) {
       $("content").innerHTML = views.map(items);
     } else if (state.view === "routes") {
@@ -290,7 +290,7 @@ async function start() {
   function drawLight() {
     const a = BYWORK[lightWorks[lightIndex]];
     $("lightbox").innerHTML =
-      `<div class="light-head"><div><b>${esc(a.zh)}</b><small>${esc(a.artistZh || a.artist)} · ${esc(a.date)}</small></div><button data-close="lightbox" aria-label="关闭大图">关闭 ×</button></div><div class="light-stage">${imageHTML(a, "", true)}</div><div class="light-controls"><button data-zoom aria-pressed="false">放大细节 ＋</button><button data-light-step="-1" ${lightIndex === 0 ? "disabled" : ""}>← 上一幅</button><span>${lightIndex + 1} / ${lightWorks.length}</span><button data-light-step="1" ${lightIndex === lightWorks.length - 1 ? "disabled" : ""}>下一幅 →</button></div><div class="light-credit">${esc(a.title)}<br>${esc(a.museum || "")} · ${esc(a.credit)}${a.license ? ` · ${esc(a.license)}` : ""} · ${link(a.url, "原始馆藏记录")}</div>`;
+      `<div class="light-head"><div><b>${esc(a.zh)}</b><small>${esc(a.artistZh || a.artist)} · ${esc(a.date)}</small></div><button data-close="lightbox" aria-label="关闭大图">关闭 ×</button></div><div class="light-stage">${imageHTML(a, "", true)}</div><div class="light-controls"><button data-zoom aria-pressed="false">放大细节 ＋</button><button data-light-step="-1" ${lightIndex === 0 ? "disabled" : ""}>← 上一幅</button><span>${lightIndex + 1} / ${lightWorks.length}</span><button data-light-step="1" ${lightIndex === lightWorks.length - 1 ? "disabled" : ""}>下一幅 →</button></div><div class="light-credit">${esc(a.title)}<br>${esc(a.museum || "")} · ${creditHTML(a)}</div>`;
   }
   function showLight(id) {
     lightWorks = (selected ? ART[selected] : [BYWORK[id]]).map((a) => a.id);
@@ -312,7 +312,7 @@ async function start() {
                 ),
               )
               .join("")}</div>`
-          : `<p>年代是概略讨论范围，不是精确起止。分区允许跨文化交流；学习路线表示阅读顺序，不代表单向演变。</p><p>中文内容为导读性概括，作品标题含意译，原题见大图及馆藏记录。部分专题尚无作品图。图片权利信息保留于各馆藏记录。</p><p>收藏保存在当前浏览器。搜索快捷键：/；关闭详情或大图：Esc；大图切换：左右方向键。</p>`
+          : `<p>年代是概略讨论范围，不是精确起止。分区允许跨文化交流；学习路线表示阅读顺序，不代表单向演变。</p><p>中文内容为导读性概括，标题含意译。配图包括作品、建筑、展览与工艺记录；本站学习图解另有明确标注，不是历史作品。作者、摄影者、来源与许可可在图片下方查看；照片许可不等同于作品本身的权利。</p><p>收藏保存在当前浏览器。搜索快捷键：/；关闭详情或大图：Esc；大图切换：左右方向键。</p>`
       }`;
     $("info").showModal();
   }
@@ -551,7 +551,7 @@ async function start() {
     .map((l) => `<option value="${l[0]}">${l[1]}</option>`)
     .join("");
   $("stats").innerHTML =
-    `<b>${DATA.length}</b> 条目 <span>·</span> <b>${WORKS.length}</b> 作品<br><b>${ROUTES.length}</b> 路线 <span>·</span> <b>${Object.keys(SOURCES).length}</b> 专题资料`;
+    `<b>${DATA.length}</b> 条目 <span>·</span> <b>${WORKS.length}</b> 配图<br><b>${ROUTES.length}</b> 路线 <span>·</span> <b>${Object.keys(SOURCES).length}</b> 专题资料`;
   readURL();
   const initial = location.hash.slice(1);
   render({ url: false });
