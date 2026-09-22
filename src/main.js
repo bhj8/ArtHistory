@@ -264,7 +264,6 @@ async function start() {
     drawDetail();
     if (!$("detail").open) {
       $("detail").showModal();
-      document.body.classList.add("dialog-open");
     }
     $("detail").scrollTop = 0;
     $("closeDetail").focus({ preventScroll: true });
@@ -273,7 +272,6 @@ async function start() {
   function closeDetail({ fromURL = false } = {}) {
     if (!$("detail").open) return;
     $("detail").close();
-    document.body.classList.remove("dialog-open");
     selected = null;
     routeActive = null;
     render({ url: false });

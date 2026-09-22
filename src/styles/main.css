@@ -399,15 +399,15 @@ select {
   background: #e7ebdf;
 }
 .map-scroll {
-  overflow: auto;
-  max-height: calc(100dvh - 300px);
+  overflow-x: auto;
+  max-height: none;
   min-height: 300px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
   scrollbar-width: thin;
   scrollbar-color: #aab5a4 #e9ede5;
-  overscroll-behavior: contain;
+  overscroll-behavior-x: contain;
 }
 .map-table {
   width: 100%;
@@ -846,8 +846,11 @@ dialog::backdrop {
   background: #20352866;
   backdrop-filter: blur(3px);
 }
-.dialog-open {
+html:has(dialog[open]) {
   overflow: hidden;
+}
+dialog {
+  overscroll-behavior: contain;
 }
 #detail {
   position: fixed;
