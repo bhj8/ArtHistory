@@ -32,7 +32,8 @@ async function start() {
     compare = [],
     limit = 48,
     toastTimer,
-    opener = null;
+    opener = null,
+    browsePosition = null;
   const views = createViews(c, state, saved, seen);
   const titles = {
     map: "全景地图",
@@ -234,6 +235,14 @@ async function start() {
     if (!BYID[id]) return;
     if (!$("detail").open) {
       opener = document.activeElement;
+      // Capture once per reading session, not when following related entries.
+      browsePosition = {
+        x: window.scrollX,
+        y: window.scrollY,
+        openDetails: [...$("content").querySelectorAll("details")].map((d) => d.open),
+        scrollers: [...$("content").querySelectorAll(".map-scroll")].map((el) => ({ x: el.scrollLeft, y: el.scrollTop })),
+        openerData: opener?.dataset ? { ...opener.dataset } : {},
+      };
       detailHistory = [];
       routeActive = route ?? null;
       sequence =
@@ -275,9 +284,21 @@ async function start() {
     selected = null;
     routeActive = null;
     render({ url: false });
+    if (browsePosition) {
+      $("content").querySelectorAll("details").forEach((d, i) => { d.open = !!browsePosition.openDetails[i]; });
+      $("content").querySelectorAll(".map-scroll").forEach((el, i) => {
+        const position = browsePosition.scrollers[i];
+        if (position) el.scrollTo(position.x, position.y);
+      });
+    }
     if (!fromURL) syncURL();
-    if (opener?.isConnected) opener.focus({ preventScroll: true });
-    else $("content").focus({ preventScroll: true });
+    const openerData = Object.entries(browsePosition?.openerData || {});
+    const restoredOpener = opener?.isConnected ? opener : openerData.length
+      ? [...$("content").querySelectorAll("button")].find((button) => openerData.every(([key, value]) => button.dataset[key] === value))
+      : null;
+    (restoredOpener || $("content")).focus({ preventScroll: true });
+    if (browsePosition) window.scrollTo({ left: browsePosition.x, top: browsePosition.y, behavior: "instant" });
+    browsePosition = null;
   }
   function updateCompare() {
     if ($("detailCompare")) $("detailCompare").hidden = compare.length !== 2;
