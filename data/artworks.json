@@ -563,15 +563,12 @@
     "artistZh": "弗拉·菲利波·利皮",
     "image": "assets/artworks/renaissance.webp",
     "entries": [
-      "renaissance",
-      "perspective"
+      "renaissance"
     ],
     "museum": "The Met",
     "width": 563,
     "height": 850,
-    "notes": {
-      "perspective": "建筑开口和人物位置组织画面纵深；早期文艺复兴的空间实践并不总是严格遵守单一消失点。"
-    }
+    "notes": {}
   },
   "dutch": {
     "key": "dutch",
@@ -804,8 +801,7 @@
   "met-435658": {
     "oid": 435658,
     "entries": [
-      "icons",
-      "proto"
+      "icons"
     ],
     "title": "Madonna and Child",
     "zh": "圣母与圣婴",
@@ -1093,7 +1089,7 @@
       "renaissance"
     ],
     "title": "Head of the Madonna",
-    "zh": "圣母头部习作",
+    "zh": "圣母头像（残片）",
     "artist": "Franciabigio (Francesco di Cristofano)",
     "date": "ca. 1509",
     "url": "https://www.metmuseum.org/art/collection/search/437608",
@@ -2599,7 +2595,6 @@
   "met-454662": {
     "oid": 454662,
     "entries": [
-      "fatimid",
       "islamcalligraphy"
     ],
     "title": "Folio from the \"Blue Qur'an\"",
@@ -3286,7 +3281,13 @@
     "image": "assets/artworks/met-436947.webp",
     "width": 599,
     "height": 457,
-    "artistZh": "爱德华·马奈"
+    "artistZh": "爱德华·马奈",
+    "notes": {
+      "impressionism": "马奈在此作中采用明亮色彩与松动笔触，表现现代休闲生活；他与印象派画家交往密切，但未参加印象派独立展览。"
+    },
+    "associationNotes": {
+      "impressionism": "马奈与印象派画家交往密切，但未参加印象派独立展览；此作的明亮色彩与松动笔触体现了双方的联系。"
+    }
   },
   "met-437329": {
     "oid": 437329,
@@ -5293,13 +5294,17 @@
     "notes": {
       "veduta": "沿建筑檐口和地面边线寻找汇聚方向。这是组合出来的奇想建筑景观，不能把它当作某处真实城市的精确记录。",
       "perspective": "沿建筑檐口和地面边线寻找汇聚方向。这是组合出来的奇想建筑景观，不能把它当作某处真实城市的精确记录。"
+    },
+    "associationNotes": {
+      "veduta": "卡纳莱托的虚构建筑景观，并非真实城市的现场记录。"
     }
   },
   "cma-107277": {
     "oid": 107277,
     "entries": [
       "veduta",
-      "etching"
+      "etching",
+      "perspective"
     ],
     "zh": "多洛运河船闸",
     "title": "Views:  The Canal Lock at Dolo",
@@ -5317,7 +5322,10 @@
     "width": 1263,
     "height": 882,
     "medium": "etching",
-    "artistZh": "卡纳莱托"
+    "artistZh": "卡纳莱托",
+    "notes": {
+      "perspective": "岸墙上沿、屋檐和窗列随距离向远处收束，人物与建筑尺度逐渐缩小，形成连续的空间纵深。"
+    }
   },
   "cma-107261": {
     "oid": 107261,
@@ -5456,8 +5464,7 @@
   "cma-159234": {
     "oid": 159234,
     "entries": [
-      "tempera",
-      "proto"
+      "tempera"
     ],
     "zh": "带受难故事的十字架",
     "title": "Crucifix with Scenes of the Passion",
@@ -7742,7 +7749,7 @@
     "entries": [
       "renaissance"
     ],
-    "zh": "圣母子与幼年施洗约翰（波提切利工作室）",
+    "zh": "圣母子与幼年施洗约翰（波提切利及工作室）",
     "title": "Virgin and Child with the Young Saint John the Baptist",
     "artist": "Sandro Botticelli (Italian, 1444/45–1510); and Workshop",
     "date": "c. 1490",
@@ -7858,7 +7865,7 @@
     "entries": [
       "baroque"
     ],
-    "zh": "狄安娜与仙女出猎（鲁本斯工作室）",
+    "zh": "狄安娜与仙女出猎（鲁本斯及工作室）",
     "title": "Diana and Her Nymphs Departing for the Hunt",
     "artist": "Peter Paul Rubens (Flemish, 1577–1640); and Workshop",
     "date": "c. 1615",
@@ -8332,7 +8339,10 @@
     "artistZh": "歌川广重",
     "notes": {
       "ukiyoe": "斜线雨丝与桥梁构成不同方向的节奏。留白、水面和人物尺度一起创造骤雨中的空间。",
-      "japonisme": "斜线雨丝与桥梁构成不同方向的节奏。留白、水面和人物尺度一起创造骤雨中的空间。"
+      "japonisme": "广重的木版画是欧洲日本主义的重要图像来源。梵高于1887年临摹这幅1857年的骤雨图；原作属于日本浮世绘。"
+    },
+    "associationNotes": {
+      "japonisme": "日本浮世绘原作；在欧洲日本主义中属于被收藏、临摹和吸收的图像来源。"
     }
   },
   "cma-106962": {

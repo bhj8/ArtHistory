@@ -2051,3 +2051,27 @@ body:has(#artComparebar:not([hidden])) #comparebar { bottom: 85px; }
 .learning-filter { margin: 14px 0; padding: 0; border: 0; background: transparent; }
 .learning-scopes { margin-left: 0; width: auto; }
 .learning-scopes button { padding: 7px 13px; }
+
+/* Route controls remain visible while the reader scrolls or visits a related entry. */
+.drawer-top { flex-wrap: wrap; }
+#routeNav { flex-basis: 100%; display: flex; align-items: center; gap: 16px; padding-top: 8px; border-top: 1px solid var(--line); }
+.route-status { min-width: 0; flex: 1; display: grid; gap: 5px; }
+.route-status strong { font-size: 14px; }
+.route-status span { font-size: 12px; color: var(--muted); }
+.route-status select { width: 100%; min-width: 0; max-width: 430px; padding: 6px; border: 1px solid var(--line); border-radius: 5px; background: var(--white); }
+.route-controls { display: flex; align-items: stretch; gap: 8px; }
+.route-controls button, .detail-bottom button { white-space: normal; text-align: left; max-width: 280px; }
+.route-controls strong, .detail-bottom button strong { display: block; font-size: 14px; margin-top: 3px; }
+#detail:has(#routeNav:not([hidden])) .gallery-controls { position: static; }
+#detail:has(#routeNav:not([hidden])) .detail-gallery { position: static; }
+@media (max-width: 600px) {
+  #routeNav { display: block; }
+  .route-status { grid-template-columns: 1fr auto; }
+  .route-status strong { grid-column: 1 / -1; font-size: 12px; }
+  .route-status select { grid-column: 1 / -1; }
+  .route-controls { margin-top: 7px; }
+  .route-controls button { flex: 1; }
+  .route-controls strong, .detail-bottom button strong { font-size: 12px; }
+}
+
+.art-association { font-size: 13px; line-height: 1.8; color: var(--muted); margin: 8px 0 14px; }

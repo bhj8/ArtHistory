@@ -1,3 +1,4 @@
+import { readingNavigation } from "./ui/reading-nav.js";
 import { searchResultsHTML } from "./ui/search-results.js";
 import { setupArtComparison } from "./ui/art-comparison.js";
 import { SCOPES, inScope, levelRank, readScope } from "./learning.js";
@@ -31,6 +32,7 @@ async function start() {
     detailHistory = [],
     sequence = [],
     routeActive = null,
+    routePosition = 0,
     compare = [],
     limit = 48,
     toastTimer,
@@ -69,6 +71,7 @@ async function start() {
       if (k === "level" || (v && !["all", "time"].includes(v) && !(k === "view" && v === "map")))
         u.searchParams.set(k, v);
     }
+    if (selected && routeActive !== null) { u.searchParams.set("route", routeActive); u.searchParams.set("stop", routePosition); }
     u.hash = selected || "";
     history[push ? "pushState" : "replaceState"]({}, "", u);
   }
@@ -233,12 +236,20 @@ async function start() {
     $("backDetail").hidden = !detailHistory.length;
     $("detailBody").innerHTML = detailHTML(d, c, { saved, compare, artIndex });
     refreshArtComparison();
-    const i = sequence.indexOf(selected);
-    $("detailNav").innerHTML =
-      `<button data-step="-1" ${i <= 0 ? "disabled" : ""}>← 上一条</button><span>${routeActive !== null ? esc(ROUTES[routeActive].title) : "连续阅读"}<small>${i >= 0 ? `${i + 1} / ${sequence.length}` : ""}</small></span><button data-step="1" ${i < 0 || i >= sequence.length - 1 ? "disabled" : ""}>下一条 →</button>`;
+    const nav = readingNavigation({selected, sequence, route: ROUTES[routeActive], position: routePosition, BYID});
+    $("detailNav").innerHTML = nav.bottom;
+    $("routeNav").innerHTML = nav.top;
+    $("routeNav").hidden = routeActive === null;
+    if (routeActive !== null) $("routeStops").onchange = e => openNode(e.target.value);
+
   }
   async function openNode(id, { art, route, back = false, fromURL = false } = {}) {
     if (!BYID[id]) return;
+    if (fromURL) {
+      const params = new URLSearchParams(location.search), value = params.get("route");
+      route = value !== null && /^\d+$/.test(value) && ROUTES[+value] ? +value : null;
+      routePosition = Math.max(0, Math.min((ROUTES[route]?.ids.length || 1) - 1, Number(params.get("stop")) || 0));
+    }
     const request = ++detailRequest;
     if (!c.isEntryReady(id)) toast("正在加载条目…");
     try { await c.ensureEntry(id); }
@@ -261,17 +272,22 @@ async function start() {
         routeActive !== null
           ? ROUTES[routeActive].ids
           : [...currentItems().map((d) => d.id)];
-      if (!sequence.includes(id))
+      if (routeActive === null && !sequence.includes(id))
         sequence = DATA.filter((d) => d.lane === BYID[id].lane).map(
           (d) => d.id,
         );
     } else if (selected && selected !== id && !back) {
       detailHistory.push(selected);
     }
-    if (!sequence.includes(id)) {
+    if (route !== undefined) {
+      routeActive = route;
+      sequence = route !== null ? ROUTES[route].ids : currentItems().map(d => d.id);
+    }
+    if (routeActive === null && !sequence.includes(id)) {
       routeActive = null;
       sequence = DATA.filter((d) => d.lane === BYID[id].lane).map((d) => d.id);
     }
+    if (routeActive !== null && sequence.includes(id)) routePosition = sequence.indexOf(id);
     selected = id;
     artIndex = Math.max(
       0,
@@ -397,7 +413,7 @@ async function start() {
       return;
     }
     if (d.node) {
-      openNode(d.node, { art: d.work });
+      openNode(d.node, { art: d.work, route: d.routeIndex !== undefined ? +d.routeIndex : undefined });
       return;
     }
     if (d.art) {
@@ -496,8 +512,10 @@ async function start() {
       openNode(ROUTES[route].ids[0], { route });
       return;
     }
+    if (d.finishRoute !== undefined) { closeDetail(); return; }
+    if (d.resumeRoute !== undefined) { openNode(sequence[routePosition]); return; }
     if (d.step) {
-      const id = sequence[sequence.indexOf(selected) + Number(d.step)];
+      const id = sequence[(routeActive !== null ? routePosition : sequence.indexOf(selected)) + Number(d.step)];
       if (id) openNode(id);
       return;
     }

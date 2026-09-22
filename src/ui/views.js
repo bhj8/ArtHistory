@@ -75,7 +75,7 @@ export function createViews(c, state, saved, seen) {
     return `<div class="route-grid">${rs
       .map((r) => {
         const cover = r.ids.map((id) => ART[id][0]).find(Boolean);
-        return `<article class="route-card"><div class="route-cover">${imageHTML(cover)}<span>${r.ids.length} 站</span></div><div class="route-copy"><div class="meta">路线 ${String(ROUTES.indexOf(r) + 1).padStart(2, "0")} · 已读 ${r.ids.filter((id) => seen.has(id)).length}/${r.ids.length}</div><h3>${esc(r.title)}</h3><p>${esc(r.desc)}</p><div class="route-stops">${r.ids.map((id) => `<button data-node="${id}">${esc(BYID[id].zh)}</button>`).join("")}</div><button class="primary" data-route="${ROUTES.indexOf(r)}">开始阅读 →</button></div></article>`;
+        return `<article class="route-card"><div class="route-cover">${imageHTML(cover)}<span>${r.ids.length} 站</span></div><div class="route-copy"><div class="meta">路线 ${String(ROUTES.indexOf(r) + 1).padStart(2, "0")} · 已读 ${r.ids.filter((id) => seen.has(id)).length}/${r.ids.length}</div><h3>${esc(r.title)}</h3><p>${esc(r.desc)}</p><div class="route-stops">${r.ids.map((id) => `<button data-node="${id}" data-route-index="${ROUTES.indexOf(r)}">${esc(BYID[id].zh)}</button>`).join("")}</div><button class="primary" data-route="${ROUTES.indexOf(r)}">开始阅读 →</button></div></article>`;
       })
       .join("")}</div>`;
   }

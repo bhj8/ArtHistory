@@ -1,3 +1,4 @@
+import { readingNavigation } from "../src/ui/reading-nav.js";
 import assert from "node:assert/strict";
 import { inScope, readScope, levelRank } from "../src/learning.js";
 import { readFile } from "node:fs/promises";
@@ -118,3 +119,20 @@ assert.ok(c.ART.print.some((a) => a.id === "cma-161234"));
 assert.ok(!c.ART.songland.some((a) => a.id === "cma-154086"));
 assert.ok(c.ART.southernsong.some((a) => a.id === "cma-154086"));
 console.log(`Passed artwork context, all ${c.DATA.length} detail views, teaching notes and media classification checks.`);
+
+// Every route exposes its exact next stop and an explicit finish, including detours.
+for (const route of c.ROUTES) {
+  route.ids.forEach((selected, position) => {
+    const nav = readingNavigation({selected, sequence:route.ids, route, position, BYID:c.BYID});
+    assert.ok(nav.top.includes(`第 ${position + 1} / ${route.ids.length} 站`));
+    if (position < route.ids.length - 1) assert.ok(nav.top.includes(c.BYID[route.ids[position + 1]].zh));
+    else assert.ok(nav.top.includes("data-finish-route"));
+  });
+  const detour = c.DATA.find(d => !route.ids.includes(d.id));
+  assert.ok(readingNavigation({selected:detour.id, sequence:route.ids, route, position:0, BYID:c.BYID}).top.includes("data-resume-route"));
+}
+assert.ok(views.routes(c.DATA).includes('data-route-index="0"'));
+assert.deepEqual(c.BYWORK.renaissance.entries, ["renaissance"]);
+assert.ok(!c.BYWORK["met-435658"].entries.includes("proto"));
+assert.ok(!c.BYWORK["cma-159234"].entries.includes("proto"));
+assert.ok(!c.BYWORK["met-454662"].entries.includes("fatimid"));
