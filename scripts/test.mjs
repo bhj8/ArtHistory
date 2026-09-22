@@ -28,9 +28,8 @@ assert.equal(c.DATA.filter((d) => inScope(d, "core")).length, 42);
 assert.equal(c.DATA.filter((d) => inScope(d, "focus")).length, 121);
 assert.equal(c.DATA.filter((d) => inScope(d, "all")).length, 233);
 for (const d of c.DATA.filter((d) => d.level === "core")) {
-  assert.ok(c.SEARCH[d.id].includes(d.study.question.toLocaleLowerCase()));
   const html = detailHTML(d, c, { saved: new Set(), compare: [] });
-  assert.ok(html.includes("核心必读") && html.includes("展开参考思路"));
+  assert.ok(html.includes("核心必读") && !html.includes("为什么先读") && !html.includes("试着说清楚"));
   for (const id of d.study.next) assert.ok(html.includes(`data-node="${id}"`));
 }
 const core = c.DATA.find((d) => d.level === "core" && c.DATA.some((x) => x.lane === d.lane && x.era === d.era && x.level === "extended"));
@@ -71,6 +70,8 @@ for (const guide of c.WORKS.filter((a) => a.kind === 'guide')) {
   assert.ok(creditHTML(guide).includes('非历史作品'));
 }
 const gallery = detailHTML(c.BYID.feminist, c, { saved: new Set(), compare: [], artIndex: 0 });
+assert.ok(gallery.indexOf('class="thumbnails"') < gallery.indexOf('class="detail-art"'));
+assert.ok(!gallery.includes('这幅图怎么看') && !gallery.includes('study-check'));
 assert.match(gallery, /data-thumb="-1" disabled aria-label="上一幅配图"/);
 const lastImage = detailHTML(c.BYID.feminist, c, { saved: new Set(), compare: [], artIndex: c.ART.feminist.length - 1 });
 assert.match(lastImage, /disabled aria-label="下一幅配图"/);

@@ -1962,3 +1962,19 @@ dialog::backdrop {
   .learning-scopes small { display: block; margin-left: 0; }
   .study-next { grid-template-columns: 1fr; }
 }
+.detail-gallery .thumbnails { display: flex; gap: 8px; overflow-x: auto; margin: 0 0 12px; padding: 3px 2px 8px; scrollbar-width: thin; }
+.detail-gallery .thumbnails button { flex: 0 0 76px; width: 76px; height: 68px; padding: 4px; position: relative; }
+.detail-gallery .thumbnails img { width: 100%; height: 100%; object-fit: contain; }
+.detail-gallery .thumbnails span, .detail-gallery .thumbnails small { display: none; }
+.detail-gallery .detail-art { width: 100%; }
+.detail-gallery .detail-art img { width: 100%; height: clamp(180px, 38dvh, 440px); max-height: none; object-fit: contain; }
+@media (max-width: 560px) {
+  .detail-gallery .detail-art img { height: clamp(160px, 30dvh, 320px); }
+}
+.art-note { font-size: 13px; line-height: 1.8; margin-bottom: 18px; }
+.art-note summary { color: var(--muted); cursor: pointer; }
+.gallery-controls { position: sticky; top: 62px; z-index: 2; background: var(--white); padding: 6px 0; }
+@media (min-width: 1000px) {
+  .detail-gallery { position: sticky; top: 76px; }
+}
+

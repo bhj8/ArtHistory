@@ -124,7 +124,6 @@ async function start() {
       .join("");
     $("laneSelect").value = state.lane;
     $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${DATA.filter((d) => inScope(d, scope)).length}</small></button>`).join("");
-    $("learningHint").textContent = state.view === "routes" ? "按层级发现路线；打开路线后按完整顺序阅读，保留必要的拓展内容。" : state.level === "core" ? "先读 42 个核心条目：每条附重点导读、自测和下一步阅读。" : state.level === "focus" ? "保留核心与重点，建立更完整的时代和主题联系。" : "完整词典：核心必读、重点了解、专题拓展均带文字标记。";
     const outside = state.q && state.view !== "routes" && state.level !== "all" ? hits(false, "all").filter((d) => !inScope(d, state.level) && (state.view !== "saved" || saved.has(d.id)) && (state.view !== "recent" || seen.has(d.id))).length : 0;
     $("scopeSearchHint").hidden = !outside;
     $("scopeSearchHint").innerHTML = outside ? `其他学习层级还有 ${outside} 个搜索结果。<button data-level="all">查看全部层级 →</button>` : "";
@@ -411,8 +410,9 @@ async function start() {
       const y = $("detail").scrollTop;
       drawDetail();
       $("detail").scrollTop = y;
+      document.querySelector(`.thumbnails [data-thumb="${artIndex}"]`)?.scrollIntoView({ block: "nearest", inline: "nearest" });
       document
-        .querySelector(`[data-thumb="${artIndex}"]`)
+        .querySelector(`.thumbnails [data-thumb="${artIndex}"]`)
         ?.focus({ preventScroll: true });
       return;
     }
