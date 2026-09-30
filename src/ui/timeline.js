@@ -80,14 +80,17 @@ export function timelineHTML(items, c, { era = "all", lane = "all", seen = new S
     : `<button class="tl-era${pulse === s.era ? " from" : ""}" data-era="${s.era}" style="left:${s.x}px;width:${s.w}px" title="放大这个时代"><b>${esc(c.ERAS[s.era][0])}</b><small>${esc(c.ERAS[s.era][1])}</small></button>`;
   const markX = mark && mark.from <= to ? [x(Math.max(from, mark.from)), x(Math.min(to, Math.max(from, mark.to)))] : null;
   const markMid = markX && (markX[0] + markX[1]) / 2;
-  const ticks = segments.flatMap((s) => (zoom ? niceTicks(s.from, s.to, s.w) : TICKS[s.era]).filter((y) => !markX || Math.abs(x(y) - markMid) > 40).map((y) => `<span class="tl-tick" style="left:${x(y)}px">${yearLabel(y)}</span>`)).join("");
+  const markText = mark ? `${mark.to < from ? "← " : ""}${mark.label}` : "";
+  const markW = [...markText].reduce((n, ch) => n + (ch.charCodeAt(0) > 255 ? 10 : 6), 0) + 14; // estimated label width
+  const markSide = !markX ? "" : markMid < markW / 2 ? "start" : markMid > total - markW / 2 ? "end" : "";
+  const markBox = !markX ? null : markSide === "start" ? [markX[0], markX[0] + markW] : markSide === "end" ? [markX[1] - markW, markX[1]] : [markMid - markW / 2, markMid + markW / 2];
+  // A tick stays only if its label (about 32px wide) clears the marker's label and the band's edges.
+  const clear = (px) => !markBox || ((px + 16 < markBox[0] || px - 16 > markBox[1]) && Math.abs(px - markX[0]) > 14 && Math.abs(px - markX[1]) > 14);
+  const ticks = segments.flatMap((s) => (zoom ? niceTicks(s.from, s.to, s.w) : TICKS[s.era]).filter((y) => clear(x(y))).map((y) => `<span class="tl-tick" style="left:${x(y)}px">${yearLabel(y)}</span>`)).join("");
   // The year a reader searched for: a line or band, labelled in the tick row and kept inside the axis.
-  const markHTML = (label) => {
-    if (!markX) return "";
-    const side = markMid < 40 ? " start" : markMid > total - 40 ? " end" : "";
-    const text = `${mark.to < from ? "← " : ""}${esc(mark.label)}`;
-    return `<i class="tl-mark${side}" style="left:${markX[0].toFixed(1)}px;width:${Math.max(2, markX[1] - markX[0]).toFixed(1)}px">${label ? `<span>${text}</span>` : ""}</i>`;
-  };
+  const markHTML = (label) => markX
+    ? `<span class="tl-mark${markSide ? ` ${markSide}` : ""}" style="left:${markX[0].toFixed(1)}px;width:${Math.max(2, markX[1] - markX[0]).toFixed(1)}px">${label ? `<span>${esc(markText)}</span>` : ""}</span>`
+    : "";
   const corner = zoom
     ? `<button data-era="all" title="返回全部时代">← 全部</button>`
     : `<span>年代</span><span class="tl-pan"><button data-tl-scroll="-1" aria-label="时间轴向左">‹</button><button data-tl-scroll="1" aria-label="时间轴向右">›</button></span>`;

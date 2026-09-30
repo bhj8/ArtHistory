@@ -69,16 +69,19 @@ export function setupQuickSearch(c, { input, panel, recent, commit, scope = () =
       const numeric = /\d|世纪|年代/.test(value) ? '<p class="quick-hint">也可以按年代检索：1500、16世纪、前5世纪、1960年代。</p>' : "";
       return show(`<p class="quick-hint">没有找到“${esc(value)}”。</p>${r.suggestions.length ? group("是不是要找", r.suggestions.map((s) => option(`data-query="${esc(s)}"`, `<span class="quick-text"><b>${esc(s)}</b></span>`)).join("")) : ""}${numeric}`);
     }
-    // The page applies the chosen era and lane; say so, and offer everything when that is more.
-    const where = scope();
-    const inScope = where.label ? c.search.query(value, where.ids) : r;
-    const shown = inScope.entries.length + inScope.authors.length + inScope.works.length;
-    const allRow = (global, n, res, text) => option(`data-quick-all${global ? '="global"' : ""}`, `<span class="quick-text"><b>${text}</b><small>${res.entries.length} 条目 · ${res.authors.length} 人物 · ${res.works.length} 作品</small></span>${global === !shown ? "<kbd>Enter</kbd>" : ""}`, "quick-all");
+    // The page applies the chosen era and lane, and keeps the reader's view; say so, and offer more when there is more.
+    // `own` is set in the saved, recent, gallery and routes views, whose pages count in their own unit.
+    const where = scope(value), own = where.own;
+    const inScope = where.label && !own ? c.search.query(value, where.ids) : r;
+    const shown = own ? own.here : inScope.entries.length + inScope.authors.length + inScope.works.length;
+    const wider = own && !own.leaves ? own.all : total;
+    const detail = (res) => `${res.entries.length} 条目 · ${res.authors.length} 人物 · ${res.works.length} 作品`;
+    const allRow = (global, text, small) => option(`data-quick-all${global ? '="global"' : ""}`, `<span class="quick-text"><b>${text}</b>${small ? `<small>${small}</small>` : ""}</span>${global === !shown ? "<kbd>Enter</kbd>" : ""}`, "quick-all");
     const rows = !where.label
-      ? allRow(false, total, r, `查看全部 ${total} 个结果`)
-      : (shown ? allRow(false, shown, inScope, `在「${esc(where.label)}」中查看 ${shown} 个结果`) : "") +
-        (total > shown ? allRow(true, total, r, `在全部时代与分类中查看 ${total} 个结果`) : "");
-    globalDefault = !!where.label && !shown && total > 0;
+      ? (own ? allRow(false, `查看全部 ${shown} ${own.unit}`, "") : allRow(false, `查看全部 ${total} 个结果`, detail(r)))
+      : (shown ? allRow(false, `在「${esc(where.label)}」中查看 ${shown} ${own ? own.unit : "个结果"}`, own ? "" : detail(inScope)) : "") +
+        (wider > shown ? allRow(true, own && !own.leaves ? `在全部时代与分类中查看 ${wider} ${own.unit}` : `在全部${own ? "条目" : "时代与分类"}中查看 ${total} 个结果`, own && !own.leaves ? "" : detail(r)) : "");
+    globalDefault = !!where.label && !shown && wider > 0;
     show(
       (when ? group("年代", when) : "") +
       group(r.years ? "这一时期的条目" : "条目", r.entries.slice(0, 5).map(entryOption).join("")) +

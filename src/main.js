@@ -11,7 +11,8 @@ import { setupQuickSearch } from "./ui/quick-search.js";
 import { personHTML, personHash, personFromHash } from "./ui/person.js";
 import { timelineHTML, inTimeline, eraX } from "./ui/timeline.js";
 import { eraStepHTML } from "./ui/era.js";
-import { eraOfYear, workEra, workInEra, workMid, parseYearQuery } from "./eras.js";
+import { BOUNDS, eraOfYear, workEra, workInEra, workMid, parseYearQuery } from "./eras.js";
+import { lifeSpan } from "./search.js";
 
 async function start() {
   const c = await loadContent(),
@@ -47,6 +48,8 @@ async function start() {
     opener = null,
     browsePosition = null,
     personName = null,
+    personOpener = null,
+    personBack = false,
     timelineFocus = null,
     yearMark = null,
     searchTimer,
@@ -87,6 +90,7 @@ async function start() {
   const placeOf = () => [state.view, state.lane, state.era].join("|");
   // Entries and people opened from the page are history steps: `dlg` counts how many, so closing
   // them goes Back to the page instead of leaving a duplicate entry; `trail` feeds "← 返回".
+  if (!Number.isInteger(history.state?.idx)) history.replaceState({ ...history.state, idx: 0 }, "");
   let lastHref = location.href, lastState = history.state;
   const remember = () => { lastHref = location.href; lastState = history.state; };
   function syncURL(push = false, dialog = "") {
@@ -105,7 +109,8 @@ async function start() {
     if (push && dialog) {
       const depth = history.state?.dlg || (location.hash ? 0 : 0.5);
       st = depth ? { dlg: Math.floor(depth) + 1, person: dialog === "person", trail: detailHistory.slice() } : {};
-    } else if (!push && !moved) st = { ...(history.state || {}) };
+    } else if (!push && !moved && (selected || personName)) st = { ...(history.state || {}) };
+    st.idx = (history.state?.idx || 0) + (push || moved ? 1 : 0);
     if (u.href === location.href && !push) return;
     try { history[push || moved ? "pushState" : "replaceState"](st, "", u); }
     catch { history.replaceState(st, "", u); }
@@ -148,13 +153,18 @@ async function start() {
   }
   const inView = (d) => (state.view === "saved" ? kept(d.id) : state.view === "recent" ? seen.has(d.id) : true);
   // The gallery lists works placed by their own dates; one selector feeds both the list and its counts.
+  let exactKey = null, exactAll = null;
   function galleryWorks({ scope = browseScope(), lane = state.lane, era = state.era } = {}) {
     const base = new Set(DATA.filter((d) => passes(d, { scope, lane, era: "all" })).map((d) => d.id));
     let works = WORKS.filter((a) => a.entries.some((id) => base.has(id)));
-    // If a query directly names a work or its maker, show only those matches.
+    // If a query directly names a work, its maker or its date, show only those works.
     if (state.q.trim()) {
-      const exact = c.search.query(state.q, new Set(DATA.filter((d) => passes(d, { scope, lane, era: "all", ignoreQuery: true })).map((d) => d.id))).works;
-      if (exact.length) works = exact;
+      const key = `${state.q}|${c.searchReady}|${state.illustrated}`;
+      if (exactKey !== key) { exactKey = key; exactAll = c.search.query(state.q, new Set(DATA.filter((d) => passes(d, { scope: "all", lane: "all", era: "all", ignoreQuery: true })).map((d) => d.id))).works; }
+      if (exactAll.length) {
+        const here = new Set(DATA.filter((d) => passes(d, { scope, lane, era: "all", ignoreQuery: true })).map((d) => d.id));
+        works = exactAll.filter((w) => w.entries.some((id) => here.has(id)));
+      }
     }
     return era === "all" ? works : works.filter((w) => workInEra(w, +era, BYID));
   }
@@ -272,14 +282,15 @@ async function start() {
     $("learningScopes").hidden = !!state.q.trim() || personalView() || state.view === "routes";
     $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${count({ scope })}</small></button>`).join("");
     const perEra = ERAS.map((_, i) => count({ era: String(i) }));
+    const carried = ERAS.map((_, i) => (perEra[i] ? 0 : carryIn({ era: String(i) })));
     $("eras").innerHTML =
       `<button data-era="all" aria-pressed="${state.era === "all"}" class="${state.era === "all" ? "on" : ""}">全部时代</button>` +
       ERAS.map(
         (e, i) =>
-          `<button data-era="${i}" aria-pressed="${state.era == i}" class="${state.era == i ? "on" : ""}${perEra[i] || carryIn({ era: String(i) }) ? "" : " zero"}" title="${esc(`${e[0]} · ${e[1]} · ${perEra[i]} ${unit}`)}">${e[0]}<small>${e[1]}</small></button>`,
+          `<button data-era="${i}" aria-pressed="${state.era == i}" class="${state.era == i ? "on" : ""}${perEra[i] || carried[i] ? "" : " zero"}" title="${esc(`${e[0]} · ${e[1]} · ${perEra[i]} ${unit}${carried[i] ? ` · 并存 ${carried[i]}` : ""}`)}">${e[0]}<small>${e[1]}</small></button>`,
       ).join("");
     // Phones use the two selects, so they carry the same counts as the chips and the sidebar.
-    [...$("eraSelect").options].forEach((o, i) => { o.textContent = i ? `${ERAS[i - 1][0]}（${perEra[i - 1]}）· ${ERAS[i - 1][1]}` : `全部时代（${count({ era: "all" })}）`; });
+    [...$("eraSelect").options].forEach((o, i) => { o.textContent = i ? `${ERAS[i - 1][0]}（${perEra[i - 1] || !carried[i - 1] ? perEra[i - 1] : `并存 ${carried[i - 1]}`}）· ${ERAS[i - 1][1]}` : `全部时代（${count({ era: "all" })}）`; });
     [...$("laneSelect").options].forEach((o) => { o.textContent = `${o.value === "all" ? "全部分类" : L[o.value][1]}（${laneN[o.value]}）`; });
     $("laneSelect").value = state.lane;
     $("eraSelect").value = state.era;
@@ -307,6 +318,12 @@ async function start() {
     if (state.q.trim() && !["routes", "saved", "recent", "gallery", "timeline"].includes(state.view)) {
       const allowedIds = new Set(hits(true).map((d) => d.id));
       const results = c.search.query(state.q, allowedIds);
+      if (results.years && eraOn) {
+        // Works sit in the era of their own date, as in the gallery; people must have lived in the era.
+        const anyEra = c.search.query(state.q, new Set(DATA.filter((d) => passes(d, { era: "all", ignoreQuery: true })).map((d) => d.id)));
+        results.works = anyEra.works.filter((w) => workInEra(w, era, BYID));
+        results.authors = results.authors.filter((a) => { const y = lifeSpan(a); return y && y[0] < BOUNDS[era + 1] && y[1] >= BOUNDS[era]; });
+      }
       results.allowedIds = allowedIds;
       html = searchResultsHTML(results, views, c, limit);
       count_ = `${results.entries.length} 条目 · ${results.authors.length} 人物 · ${results.works.length} 作品`;
@@ -340,11 +357,14 @@ async function start() {
       html = items.length ? timelineHTML(items, c, { era: state.era, lane: state.lane, seen, focus: timelineFocus, fit, phone, narrowed: !!(state.q.trim() || state.illustrated), widen, pulse: leaving, mark: yearMark || yearQuery }) : "";
       if (!html) html = views.cards([]);
       timelineFocus = null;
+      const marked = yearMark || yearQuery;
+      const active = marked && items.filter((d) => d.years[0] <= marked.to && d.years[1] >= marked.from).length;
+      if (yearMark && items.length) count_ = `${yearMark.label}仍在进行 ${active} 个 · 共 ${items.length} 个条目`;
       if (eraOn) {
         const own = items.filter((d) => d.era === era).length;
-        stats = items.length
-          ? `这一时期 ${items.length} 个条目：本时代 ${own} 个，另有 ${items.length - own} 个跨时代并存${scopeNote(items.length, count({ scope: "all" }))}`
-          : `这一时期没有条目${scopeNote(0, count({ scope: "all" }))}`;
+        stats = !items.length ? `这一时期没有条目${scopeNote(0, count({ scope: "all" }))}`
+          : yearMark ? `${yearMark.label}仍在进行 ${active} 个；本时代范围共 ${items.length} 个（本时代 ${own}，跨时代并存 ${items.length - own}）${scopeNote(items.length, count({ scope: "all" }))}`
+            : `这一时期 ${items.length} 个条目：本时代 ${own} 个，另有 ${items.length - own} 个跨时代并存${scopeNote(items.length, count({ scope: "all" }))}`;
       }
       timeline = [prev, prevEra, prevLeft, leaving];
     } else if (state.view === "map" && !state.q) {
@@ -367,14 +387,14 @@ async function start() {
       html = (state.view === "saved" ? backupBar() : "") + views.cards(items, { headings });
       if (eraOn) stats = `${items.length} 个条目${scopeNote(items.length, count({ scope: "all" }))}`;
     }
-    const strip = eraOn && !nothingKept ? eraStepHTML(c, era, { counts: perEra, unit, stats }) : "";
-    const stripEnd = eraOn && tall && !nothingKept ? eraStepHTML(c, era, { counts: perEra, unit, bottom: true }) : "";
+    const strip = eraOn && !nothingKept ? eraStepHTML(c, era, { counts: perEra, carried, unit, stats }) : "";
+    const stripEnd = eraOn && tall && !nothingKept ? eraStepHTML(c, era, { counts: perEra, carried, unit, bottom: true }) : "";
     $("content").innerHTML = strip + html + stripEnd;
     const blank = $("content").querySelector(":scope > .empty");
     if (blank) blank.outerHTML = emptyState(blank);
     if (timeline) placeTimeline(...timeline);
     // A year typed while on the timeline: bring its marker into view once per query.
-    const markKey = state.view === "timeline" && !yearMark && yearQuery ? `${state.q}|${state.era}` : null;
+    const markKey = state.view === "timeline" && (yearMark || yearQuery) ? `${(yearMark || yearQuery).label}|${state.era}` : null;
     if (markKey && markKey !== markedQuery) centreOnMark();
     markedQuery = markKey;
     refreshArtComparison();
@@ -578,9 +598,9 @@ async function start() {
     if (!fromURL) syncURL();
     const openerData = Object.entries(browsePosition?.openerData || {});
     const usable = opener && opener !== document.body && opener.isConnected && opener.getClientRects().length ? opener : null;
-    const restoredOpener = usable || openerData.length
+    const restoredOpener = usable || (openerData.length
       ? [...$("content").querySelectorAll("button")].find((button) => openerData.every(([key, value]) => button.dataset[key] === value))
-      : null;
+      : null);
     (restoredOpener || $("content")).focus({ preventScroll: true });
     if (browsePosition) window.scrollTo({ left: browsePosition.x, top: browsePosition.y, behavior: "instant" });
     browsePosition = null;
@@ -627,7 +647,22 @@ async function start() {
     drawLight();
     if (!$("lightbox").open) $("lightbox").showModal();
   }
+  // The control that opened a person page, found again after the page underneath is redrawn.
+  function rememberOpener() {
+    const el = document.activeElement, data = el?.dataset ? { ...el.dataset } : {};
+    if (!el || el === document.body || !Object.keys(data).length) return null;
+    const root = el.closest("#detail, #lightbox") || $("content");
+    const same = (b) => Object.entries(data).every(([k, v]) => b.dataset[k] === v);
+    return { el, root, same, index: [...root.querySelectorAll("button, a")].filter(same).indexOf(el) };
+  }
+  function refocusOpener(o) {
+    if (!o) return;
+    const twins = [...o.root.querySelectorAll("button, a")].filter(o.same);
+    const target = o.el.isConnected && o.el.getClientRects().length ? o.el : twins[Math.min(Math.max(o.index, 0), twins.length - 1)];
+    target?.focus({ preventScroll: true });
+  }
   async function openPerson(name, { fromURL = false } = {}) {
+    if (!$("person").open) personOpener = fromURL ? null : rememberOpener();
     try { await c.ensureSearch(); }
     catch (error) { console.error(error); toast("人物资料未能加载，请重试。"); return; }
     const a = c.search.authors.find((x) => x.name === name);
@@ -647,7 +682,7 @@ async function start() {
   $("person").addEventListener("close", () => {
     if (!personName) return;
     personName = null;
-    if (history.state?.person) history.back();
+    if (history.state?.person) { personBack = true; history.back(); }
     else syncURL();
   });
   async function showInfo(sources) {
@@ -706,6 +741,7 @@ async function start() {
     }
     if (d.resultSection) { $(d.resultSection)?.scrollIntoView({ block: "start" }); return; }
     if (d.author || d.person) {
+      if ($("lightbox").open) $("lightbox").close();
       openPerson(d.author || d.person);
       return;
     }
@@ -722,6 +758,8 @@ async function start() {
       if (personalView() || state.view === "routes") state.view = "map";
       if (entry && !inScope(entry, state.level)) state.level = "all";
       await render();
+      const chip = document.querySelector(d.crumbLane ? "#lanes .on" : "#eras .on");
+      (chip?.offsetParent ? chip : $(d.crumbLane ? "laneSelect" : "eraSelect"))?.focus({ preventScroll: true });
       $("filterRow").scrollIntoView({ block: "start" });
       return;
     }
@@ -950,16 +988,22 @@ async function start() {
     input: $("search"),
     panel: $("quickResults"),
     recent: () => [...seen].reverse(),
-    // What the page shows under the current era and lane; "global" widens to everything.
-    scope: () => ({
-      ids: new Set(DATA.filter((d) => passes(d, { scope: "all", ignoreQuery: true })).map((d) => d.id)),
-      label: [state.era !== "all" && ERAS[+state.era][0], state.lane !== "all" && L[state.lane][1]].filter(Boolean).join(" · "),
-    }),
+    // What the page shows under the current view, era and lane; "global" widens to everything.
+    scope: (value) => {
+      const personal = personalView(), own = personal || state.view === "gallery" || state.view === "routes";
+      const at = (options) => { const keep = state.q; state.q = value; try { return count(options); } finally { state.q = keep; } };
+      return {
+        ids: new Set(DATA.filter((d) => passes(d, { scope: "all", ignoreQuery: true })).map((d) => d.id)),
+        label: [personal && titles[state.view], state.era !== "all" && ERAS[+state.era][0], state.lane !== "all" && L[state.lane][1]].filter(Boolean).join(" · "),
+        own: own && { unit: { saved: "个条目", recent: "个条目", gallery: "幅配图", routes: "条路线" }[state.view], here: at({}), all: at({ era: "all", lane: "all" }), leaves: personal },
+      };
+    },
     commit: async ({ global = false } = {}) => {
       if (global) {
         clearTimeout(searchTimer);
         const value = $("search").value;
         Object.assign(state, { q: value.trim() ? value : "", era: "all", lane: "all" });
+        if (personalView()) state.view = "index"; // the saved and recent lists hold only part of the results
         await render();
       } else commitSearch();
       $("search").blur();
@@ -1120,20 +1164,35 @@ async function start() {
   });
   window.addEventListener("popstate", (event) => {
     // Back first dismisses a picture, comparison or note window, leaving the page where it was.
+    const here = event.state?.idx, home = lastState?.idx;
     const overlays = ["info", "lightbox", "comparison", "artComparison"].map($).filter((d) => d.open);
     if (overlays.length) {
       overlays.forEach((d) => d.close());
-      history.pushState(lastState, "", lastHref);
+      // Back or Forward only dismisses the overlay: travel back to the entry the reader was on.
+      if (Number.isInteger(here) && Number.isInteger(home) && here !== home) history.go(home - here);
+      else history.pushState(lastState, "", lastHref);
       return;
     }
+    if (Number.isInteger(here) && here === home && location.href === lastHref) return; // the trip back above
     remember();
     readURL();
     const id = location.hash.slice(1), person = personFromHash(location.hash);
+    const closedPerson = personBack || $("person").open, opened = personOpener;
+    personBack = false;
+    if (!person && BYID[id] && $("detail").open && id === selected) {
+      closePerson({ fromURL: true });
+      detailHistory = (event.state?.trail || []).slice();
+      $("backDetail").hidden = !detailHistory.length;
+      return;
+    }
     render({ url: false });
     if (person) { openPerson(person, { fromURL: true }); return; }
     closePerson({ fromURL: true });
     if (BYID[id]) openNode(id, { fromURL: true, back: true, trail: event.state?.trail || [] });
-    else closeDetail({ fromURL: true });
+    else {
+      closeDetail({ fromURL: true });
+      if (closedPerson) refocusOpener(opened);
+    }
   });
   $("eraSelect").innerHTML = [["全部时代"], ...ERAS].map((e, i) => `<option value="${i ? i - 1 : "all"}">${e[0]}${e[1] ? ` · ${e[1]}` : ""}</option>`).join("");
   $("laneSelect").innerHTML = [["all", "全部分类"], ...LANES]
@@ -1146,8 +1205,19 @@ async function start() {
   readURL();
   const initial = location.hash.slice(1);
   await render({ url: false });
-  if (BYID[initial]) openNode(initial, { fromURL: true });
-  else if (personFromHash(location.hash)) openPerson(personFromHash(location.hash), { fromURL: true });
+  const person = personFromHash(location.hash);
+  if ((BYID[initial] || person) && !history.state?.dlg) {
+    // Put the page under a shared entry or person, so closing it goes back to that page.
+    const here = location.href, page = new URL(here);
+    page.hash = "";
+    page.searchParams.delete("route");
+    page.searchParams.delete("stop");
+    history.replaceState({ idx: 0 }, "", page);
+    history.pushState({ dlg: 1, person: !!person, trail: [], idx: 1 }, "", here);
+    remember();
+  }
+  if (BYID[initial]) openNode(initial, { fromURL: true, trail: history.state?.trail || null });
+  else if (person) openPerson(person, { fromURL: true });
 }
 if ("serviceWorker" in navigator)
   addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch((error) => console.warn("Offline reading unavailable", error)));
