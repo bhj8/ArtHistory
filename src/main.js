@@ -3,10 +3,13 @@ import { searchResultsHTML } from "./ui/search-results.js";
 import { setupArtComparison } from "./ui/art-comparison.js";
 import { SCOPES, inScope, levelRank, readScope } from "./learning.js";
 import { loadContent } from "./content.js";
-import { readLocal, saveProgress } from "./storage.js";
+import { readLocal, saveProgress, readNotes, saveNotes, backupJSON, mergeBackup } from "./storage.js";
 import { createViews } from "./ui/views.js";
 import { detailHTML, comparisonHTML } from "./ui/detail.js";
 import { esc, link, imageHTML, creditHTML } from "./ui/helpers.js";
+import { setupQuickSearch } from "./ui/quick-search.js";
+import { personHTML, personHash, personFromHash } from "./ui/person.js";
+import { timelineHTML, inTimeline } from "./ui/timeline.js";
 
 async function start() {
   const c = await loadContent(),
@@ -26,6 +29,9 @@ async function start() {
   const $ = (id) => document.getElementById(id);
   const saved = new Set(readLocal("art-atlas-saved").filter((id) => BYID[id]));
   const seen = new Set(readLocal("art-atlas-seen").filter((id) => BYID[id]));
+  const notes = readNotes();
+  const hasNote = (id) => !!notes[id]?.trim();
+  const kept = (id) => saved.has(id) || hasNote(id);
   const state = { view: "map", lane: "all", era: "all", q: "", sort: "time", illustrated: "", level: "core" };
   let selected = null,
     artIndex = 0,
@@ -38,16 +44,21 @@ async function start() {
     toastTimer,
     opener = null,
     browsePosition = null,
+    personName = null,
+    timelineFocus = null,
+    searchTimer,
+    composing = false,
     renderRequest = 0,
     detailRequest = 0;
-  const views = createViews(c, state, saved, seen);
+  const views = createViews(c, state, saved, seen, notes);
   const titles = {
     map: "全景地图",
+    timeline: "时间轴",
     index: "图解词典",
     recent: "最近读过",
     gallery: "作品图库",
     routes: "学习路线",
-    saved: "我的收藏",
+    saved: "收藏与笔记",
   };
   function readURL() {
     const p = new URLSearchParams(location.search);
@@ -72,8 +83,12 @@ async function start() {
         u.searchParams.set(k, v);
     }
     if (selected && routeActive !== null) { u.searchParams.set("route", routeActive); u.searchParams.set("stop", routePosition); }
-    u.hash = selected || "";
+    u.hash = personName ? personHash(personName) : selected || "";
     history[push ? "pushState" : "replaceState"]({}, "", u);
+  }
+  function backupBar() {
+    const count = Object.keys(notes).filter(hasNote).length;
+    return `<div class="backup-bar"><p>收藏 ${saved.size} 条 · 笔记 ${count} 条 · 读过 ${seen.size} 条。只保存在这个浏览器里，换设备或清理浏览数据前请先导出。</p><div><button data-export>导出备份</button><button data-import>导入备份</button></div></div>`;
   }
   function toast(text) {
     $("toast").textContent = text;
@@ -83,15 +98,19 @@ async function start() {
   }
   function persist() {
     saveProgress(saved, seen);
-    $("savedCount").textContent = saved.size;
+    $("savedCount").textContent = DATA.filter((d) => kept(d.id)).length;
   }
-  function hits(ignoreQuery = false, scope = state.level) {
+  // Searching and the personal lists always cover every entry; the core/all scope only shapes browsing.
+  const personalView = () => state.view === "saved" || state.view === "recent";
+  const browseScope = () => (state.q.trim() || personalView() ? "all" : state.level);
+  function hits(ignoreQuery = false, scope = browseScope()) {
     const matched = ignoreQuery || !state.q.trim() ? null : new Set(c.search.query(state.q).entries.map((d) => d.id));
     return DATA.filter(
       (d) =>
         inScope(d, scope) &&
         (state.lane === "all" || d.lane === state.lane) &&
-        (state.era === "all" || d.era === +state.era) &&
+        // The timeline zooms into an era by years, so it keeps entries that overlap it.
+        (state.era === "all" || (state.view === "timeline" ? inTimeline(d, state.era) : d.era === +state.era)) &&
         (!state.illustrated || ART[d.id].length > 0) &&
         (!matched || matched.has(d.id)),
     ).sort((a, b) =>
@@ -114,7 +133,7 @@ async function start() {
       const ids = new Set(views.matchingRoutes(items).flatMap((r) => r.ids));
       return items.filter((d) => ids.has(d.id));
     }
-    return items.filter((d) => state.view !== "saved" || saved.has(d.id));
+    return items.filter((d) => state.view !== "saved" || kept(d.id));
   }
   async function render({ url = true } = {}) {
     const request = ++renderRequest;
@@ -139,10 +158,10 @@ async function start() {
       )
       .join("");
     $("laneSelect").value = state.lane;
+    $("eraSelect").value = state.era;
+    // Search ignores the core/all scope, so the switch would only mislead while searching.
+    $("learningScopes").hidden = !!state.q.trim() || personalView();
     $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${DATA.filter((d) => inScope(d, scope)).length}</small></button>`).join("");
-    const outside = state.q && state.view !== "routes" && state.level !== "all" ? hits(false, "all").filter((d) => !inScope(d, state.level) && (state.view !== "saved" || saved.has(d.id)) && (state.view !== "recent" || seen.has(d.id))).length : 0;
-    $("scopeSearchHint").hidden = !outside;
-    $("scopeSearchHint").innerHTML = outside ? `另有 ${outside} 个搜索结果。<button data-level="all">查看全部 →</button>` : "";
     $("eras").innerHTML =
       `<button data-era="all" aria-pressed="${state.era === "all"}" class="${state.era === "all" ? "on" : ""}">全部时代</button>` +
       ERAS.map(
@@ -156,12 +175,11 @@ async function start() {
     $("viewTitle").textContent = state.q
       ? `${titles[state.view]} · 搜索结果`
       : titles[state.view];
-    const filtered = state.level !== "all" || state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
+    const filtered = browseScope() !== "all" || state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
     $("reset").hidden = !filtered;
     $("clearSearch").hidden = !state.q;
-    $("sort").hidden = ["map", "routes", "recent"].includes(state.view);
+    $("sort").hidden = ["map", "timeline", "routes", "recent"].includes(state.view);
     $("activeFilters").innerHTML = [
-      state.level !== "all" ? `<button data-remove="level">${SCOPES[state.level]} ×</button>` : "",
       state.lane !== "all"
         ? `<button data-remove="lane">${L[state.lane][1]} ×</button>`
         : "",
@@ -172,7 +190,7 @@ async function start() {
       state.illustrated ? '<button data-remove="illustrated">只看有图 ×</button>' : "",
     ].join("");
     let count = items.length + " 个条目";
-    if (state.q.trim() && !["routes", "saved", "recent", "gallery"].includes(state.view)) {
+    if (state.q.trim() && !["routes", "saved", "recent", "gallery", "timeline"].includes(state.view)) {
       const allowedIds = new Set(hits(true).map((d) => d.id));
       const results = c.search.query(state.q, allowedIds);
       results.allowedIds = allowedIds;
@@ -191,12 +209,15 @@ async function start() {
         works.sort((a, b) => BYID[a.entries[0]].era - BYID[b.entries[0]].era);
       $("content").innerHTML = views.gallery(works, limit);
       count = works.length + " 幅配图";
+    } else if (state.view === "timeline") {
+      $("content").innerHTML = timelineHTML(items, c, { era: state.era, lane: state.lane, seen, focus: timelineFocus }) || views.cards([]);
+      timelineFocus = null;
     } else if (state.view === "map" && !state.q) {
       $("content").innerHTML = views.map(items);
     } else if (state.view === "routes") {
       $("content").innerHTML = views.routes(items);
       count = views.matchingRoutes(items).length + " 条路线";
-    } else $("content").innerHTML = views.cards(items);
+    } else $("content").innerHTML = (state.view === "saved" ? backupBar() : "") + views.cards(items);
     refreshArtComparison();
     $("resultCount").textContent = count;
     if (url) syncURL();
@@ -234,7 +255,7 @@ async function start() {
     const d = BYID[selected];
     $("crumb").textContent = L[d.lane][1] + " / " + ERAS[d.era][0];
     $("backDetail").hidden = !detailHistory.length;
-    $("detailBody").innerHTML = detailHTML(d, c, { saved, compare, artIndex });
+    $("detailBody").innerHTML = detailHTML(d, c, { saved, compare, artIndex, note: notes[d.id] || "" });
     refreshArtComparison();
     const nav = readingNavigation({selected, sequence, route: ROUTES[routeActive], position: routePosition, BYID});
     $("detailNav").innerHTML = nav.bottom;
@@ -353,15 +374,42 @@ async function start() {
     lightIndex = 0;
   function drawLight() {
     const a = BYWORK[lightWorks[lightIndex]];
+    const artist = a.by?.[0] && a.by[0] !== personName
+      ? `<button class="text-link" data-person="${esc(a.by[0])}">${esc(a.artistZh || a.artist)}</button>`
+      : esc(a.artistZh || a.artist);
+    const entries = a.entries.filter((id) => id !== selected).map((id) => `<button data-node="${id}">${esc(BYID[id].zh)} →</button>`).join("");
     $("lightbox").innerHTML =
-      `<div class="light-head"><div><b>${esc(a.zh)}</b><small>${esc(a.artistZh || a.artist)} · ${esc(a.date)}</small></div><button data-close="lightbox" aria-label="关闭大图">关闭 ×</button></div><div class="light-stage">${imageHTML(a, "", true)}</div><div class="light-controls"><button data-zoom aria-pressed="false">放大细节 ＋</button><button data-light-step="-1" ${lightIndex === 0 ? "disabled" : ""}>← 上一幅</button><span>${lightIndex + 1} / ${lightWorks.length}</span><button data-light-step="1" ${lightIndex === lightWorks.length - 1 ? "disabled" : ""}>下一幅 →</button></div><div class="light-credit">${esc(a.title)}<br>${esc(a.museum || "")} · ${creditHTML(a)}</div>`;
+      `<div class="light-head"><div><b>${esc(a.zh)}</b><small>${artist} · ${esc(a.date)}</small>${entries ? `<span class="light-entries">所属条目 ${entries}</span>` : ""}</div><button data-close="lightbox" aria-label="关闭大图">关闭 ×</button></div><div class="light-stage">${imageHTML(a, "", true)}</div><div class="light-controls"><button data-zoom aria-pressed="false">放大细节 ＋</button><button data-light-step="-1" ${lightIndex === 0 ? "disabled" : ""}>← 上一幅</button><span>${lightIndex + 1} / ${lightWorks.length}</span><button data-light-step="1" ${lightIndex === lightWorks.length - 1 ? "disabled" : ""}>下一幅 →</button></div><div class="light-credit">${esc(a.title)}<br>${esc(a.museum || "")} · ${creditHTML(a)}</div>`;
   }
-  function showLight(id) {
-    lightWorks = (selected ? ART[selected] : [BYWORK[id]]).map((a) => a.id);
-    lightIndex = lightWorks.indexOf(id);
+  async function showLight(id, list) {
+    const ids = list || (selected ? ART[selected] : [BYWORK[id]]).map((a) => a.id);
+    try { await c.ensureWorks(ids); }
+    catch (error) { console.error(error); toast("作品资料未能加载，请重试。"); return; }
+    lightWorks = ids;
+    lightIndex = Math.max(0, lightWorks.indexOf(id));
     drawLight();
-    $("lightbox").showModal();
+    if (!$("lightbox").open) $("lightbox").showModal();
   }
+  async function openPerson(name, { fromURL = false } = {}) {
+    try { await c.ensureSearch(); }
+    catch (error) { console.error(error); toast("人物资料未能加载，请重试。"); return; }
+    const a = c.search.authors.find((x) => x.name === name);
+    if (!a) { toast("没有找到这位人物"); return; }
+    personName = a.name;
+    $("person").innerHTML = personHTML(a, c, { seen });
+    if (!$("person").open) $("person").showModal();
+    $("person").scrollTop = 0;
+    $("person").querySelector("[data-close]")?.focus({ preventScroll: true });
+    if (!fromURL) syncURL(true);
+  }
+  function closePerson({ fromURL = false } = {}) {
+    if (!$("person").open) return;
+    if (fromURL) personName = null;
+    $("person").close();
+  }
+  $("person").addEventListener("close", () => {
+    if (personName) { personName = null; syncURL(); }
+  });
   async function showInfo(sources) {
     if (sources) {
       try { await c.ensureSources(); }
@@ -393,14 +441,41 @@ async function start() {
     }
     const d = b.dataset;
     if (d.retrySearch !== undefined) { render(); return; }
+    if (d.export !== undefined) {
+      const url = URL.createObjectURL(new Blob([backupJSON(saved, seen, notes)], { type: "application/json" }));
+      const a = Object.assign(document.createElement("a"), { href: url, download: `art-history-atlas-backup-${new Date().toISOString().slice(0, 10)}.json` });
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      toast("备份已导出");
+      return;
+    }
+    if (d.import !== undefined) { $("importFile").click(); return; }
+    if (d.timelineFocus) {
+      const entry = BYID[d.timelineFocus];
+      closeDetail({ fromURL: true });
+      const long = entry.years[1] - entry.years[0] > 600;
+      Object.assign(state, { view: "timeline", era: long ? "all" : String(entry.era), lane: "all", q: "", level: "all" });
+      $("search").value = "";
+      timelineFocus = entry.id;
+      await render();
+      syncURL(true);
+      const bar = $("content").querySelector(`[data-tl="${entry.id}"]`);
+      bar?.scrollIntoView({ block: "center", inline: "center" });
+      bar?.focus({ preventScroll: true });
+      return;
+    }
     if (d.resultSection) { $(d.resultSection)?.scrollIntoView({ block: "start" }); return; }
-    if (d.author) {
-      closeDetail();
-      state.q = d.author; state.view = "index"; state.level = "all"; state.lane = "all"; state.era = "all";
-      $("search").value = state.q;
-      render(); window.scrollTo(0, 0); return;
+    if (d.author || d.person) {
+      openPerson(d.author || d.person);
+      return;
+    }
+    if (d.personWork) {
+      const a = c.search.authors.find((x) => x.name === personName);
+      showLight(d.personWork, a?.works);
+      return;
     }
     if (d.query) {
+      closePerson();
       state.q = d.query;
       state.view = "index";
       $("search").value = state.q;
@@ -413,10 +488,13 @@ async function start() {
       return;
     }
     if (d.node) {
+      if ($("lightbox").open) $("lightbox").close();
+      closePerson({ fromURL: true }); // the entry pushes its own history state
       openNode(d.node, { art: d.work, route: d.routeIndex !== undefined ? +d.routeIndex : undefined });
       return;
     }
     if (d.art) {
+      closePerson();
       const a = BYWORK[d.art];
       const id =
         a.entries.find(
@@ -573,18 +651,68 @@ async function start() {
       }
     }),
   );
-  $("search").oninput = (e) => {
-    state.q = e.target.value;
+  // Wait for the IME to settle (pinyin letters are not a query) and for a short pause in typing.
+  function commitSearch() {
+    clearTimeout(searchTimer);
+    if (state.q === $("search").value) return;
+    state.q = $("search").value;
     limit = 48;
     render();
+  }
+  const quick = setupQuickSearch(c, {
+    input: $("search"),
+    panel: $("quickResults"),
+    recent: () => [...seen].reverse(),
+    commit: () => {
+      commitSearch();
+      $("search").blur();
+      $("content").scrollIntoView({ block: "start" });
+    },
+  });
+  $("search").addEventListener("compositionstart", () => { composing = true; });
+  $("search").addEventListener("compositionend", () => { composing = false; quick.update(); clearTimeout(searchTimer); searchTimer = setTimeout(commitSearch, 160); });
+  $("search").oninput = (e) => {
+    $("clearSearch").hidden = !e.target.value;
+    if (composing || e.isComposing) return;
+    quick.update();
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(commitSearch, 160);
   };
   $("clearSearch").onclick = () => {
-    state.q = "";
     $("search").value = "";
-    render();
+    commitSearch();
     $("search").focus();
   };
   $("reset").onclick = reset;
+  $("importFile").onchange = async (e) => {
+    const file = e.target.files[0];
+    e.target.value = "";
+    if (!file) return;
+    try {
+      const added = mergeBackup(await file.text(), { saved, seen, notes, known: (id) => !!BYID[id] });
+      saveNotes(notes);
+      persist();
+      render();
+      toast(added ? `已导入 ${added} 项收藏或笔记` : "备份中的内容这里都已有");
+    } catch (error) {
+      console.error(error);
+      toast(error instanceof SyntaxError ? "文件无法读取，请选择导出的 JSON 备份" : error.message);
+    }
+  };
+  // Notes save quietly as you type; the list views pick them up on the next render.
+  let noteTimer;
+  document.addEventListener("input", (e) => {
+    const id = e.target.dataset?.note;
+    if (!id) return;
+    clearTimeout(noteTimer);
+    $("noteStatus").textContent = "正在保存…";
+    noteTimer = setTimeout(() => {
+      if (e.target.value.trim()) notes[id] = e.target.value;
+      else delete notes[id];
+      $("noteStatus").textContent = saveNotes(notes) ? "已保存在此浏览器" : "未能保存：浏览器禁止了本地存储";
+      $("savedCount").textContent = DATA.filter((d) => kept(d.id)).length;
+    }, 400);
+  });
   $("illustratedOnly").onchange = (e) => {
     state.illustrated = e.target.checked ? "yes" : "";
     limit = 48;
@@ -598,6 +726,11 @@ async function start() {
     state.lane = e.target.value;
     render();
   };
+  $("eraSelect").onchange = (e) => {
+    state.era = e.target.value;
+    limit = 48;
+    render();
+  };
   $("random").onclick = () => {
     const ds = currentItems();
     if (ds.length) openNode(ds[Math.floor(Math.random() * ds.length)].id);
@@ -609,14 +742,26 @@ async function start() {
     updateCompare();
   };
   $("sourcesBtn").onclick = () => showInfo(true);
+  const THEMES = { "": "◐ 自动", light: "☀ 浅色", dark: "☾ 深色" };
+  const showTheme = () => { $("themeBtn").textContent = THEMES[document.documentElement.dataset.theme || ""]; };
+  $("themeBtn").onclick = () => {
+    const order = Object.keys(THEMES), next = order[(order.indexOf(document.documentElement.dataset.theme || "") + 1) % order.length];
+    if (next) document.documentElement.dataset.theme = next;
+    else delete document.documentElement.dataset.theme;
+    try { next ? localStorage.setItem("art-atlas-theme", next) : localStorage.removeItem("art-atlas-theme"); } catch {}
+    showTheme();
+    toast(next ? `已切换为${THEMES[next].slice(2)}` : "配色跟随系统");
+  };
+  showTheme();
   $("aboutBtn").onclick = () => showInfo(false);
   document.addEventListener("keydown", (e) => {
     const typing = ["INPUT", "TEXTAREA", "SELECT"].includes(
       document.activeElement?.tagName,
     );
-    if (e.key === "/" && !typing && !document.querySelector("dialog[open]")) {
+    if (((e.key === "/" && !typing) || (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey))) && !document.querySelector("dialog[open]")) {
       e.preventDefault();
       $("search").focus();
+      $("search").select();
     }
     if ($("lightbox").open && ["ArrowLeft", "ArrowRight"].includes(e.key)) {
       e.preventDefault();
@@ -632,11 +777,14 @@ async function start() {
   });
   window.addEventListener("popstate", () => {
     readURL();
-    const id = location.hash.slice(1);
+    const id = location.hash.slice(1), person = personFromHash(location.hash);
     render({ url: false });
+    if (person) { openPerson(person, { fromURL: true }); return; }
+    closePerson({ fromURL: true });
     if (BYID[id]) openNode(id, { fromURL: true, back: true });
     else closeDetail({ fromURL: true });
   });
+  $("eraSelect").innerHTML = [["全部时代"], ...ERAS].map((e, i) => `<option value="${i ? i - 1 : "all"}">${e[0]}${e[1] ? ` · ${e[1]}` : ""}</option>`).join("");
   $("laneSelect").innerHTML = [["all", "全部分类"], ...LANES]
     .map((l) => `<option value="${l[0]}">${l[1]}</option>`)
     .join("");
@@ -646,7 +794,10 @@ async function start() {
   const initial = location.hash.slice(1);
   await render({ url: false });
   if (BYID[initial]) openNode(initial, { fromURL: true });
+  else if (personFromHash(location.hash)) openPerson(personFromHash(location.hash), { fromURL: true });
 }
+if ("serviceWorker" in navigator)
+  addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch((error) => console.warn("Offline reading unavailable", error)));
 start().catch((error) => {
   console.error(error);
   document.getElementById("content").innerHTML =

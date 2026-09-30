@@ -8,6 +8,9 @@ import { detailHTML } from "../src/ui/detail.js";
 import { creditHTML } from "../src/ui/helpers.js";
 import { linkedText } from "../src/ui/inline-links.js";
 import { searchResultsHTML } from "../src/ui/search-results.js";
+import { timelineHTML, contemporaries, inTimeline } from "../src/ui/timeline.js";
+import { personHTML, personHash, personFromHash } from "../src/ui/person.js";
+import { mergeBackup, backupJSON } from "../src/storage.js";
 
 const json = async (name) => JSON.parse(await readFile(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 const taxonomy = await json("taxonomy");
@@ -136,3 +139,44 @@ assert.deepEqual(c.BYWORK.renaissance.entries, ["renaissance"]);
 assert.ok(!c.BYWORK["met-435658"].entries.includes("proto"));
 assert.ok(!c.BYWORK["cma-159234"].entries.includes("proto"));
 assert.ok(!c.BYWORK["met-454662"].entries.includes("fatimid"));
+
+// People: anonymous and workshop credits never become people; shared credits join known makers.
+const people = new Map(c.search.authors.map((a) => [a.name, a]));
+for (const name of people.keys()) assert.ok(!/不详|未详|工坊|画工|追随者|模仿者|团队/.test(name), name);
+assert.equal(people.get("莫奈").life, "1840—1926");
+assert.equal(people.get("沈周").life, "1427—1509", "dates parsed from museum credits");
+assert.ok(people.get("朱莉娅·玛格丽特·卡梅伦").works.length >= 3, "multi-artist credit shared");
+assert.ok(!people.has("奥古斯都·韦尔比·诺斯莫尔·普金（设计）"));
+const monet = personHTML(people.get("莫奈"), c, { seen: new Set() });
+assert.ok(monet.includes('id="personTitle"') && monet.includes('data-person-work=') && monet.includes('data-node="impressionism"'));
+assert.equal(personFromHash("#" + personHash("伦勃朗")), "伦勃朗");
+assert.equal(personFromHash("#baroque"), null);
+assert.ok(detailHTML(c.BYID.impressionism, c, { saved: new Set(), compare: [] }).includes('data-person="莫奈"'), "captions link to people");
+
+// Timeline: every entry has a bar; zooming into an era keeps overlapping, not long-running, entries.
+const tl = timelineHTML(c.DATA, c);
+for (const d of c.DATA) assert.ok(tl.includes(`data-tl="${d.id}"`), d.id);
+const modern = c.DATA.filter((d) => inTimeline(d, "3"));
+assert.ok(modern.some((d) => d.id === "impressionism") && !modern.some((d) => d.id === "egypt"));
+const zoomed = timelineHTML(modern, c, { era: "3" });
+assert.ok(zoomed.includes('data-tl="ukiyoe"') && !zoomed.includes('data-tl="calligraphy"'));
+const peers = contemporaries(c.BYID.impressionism, c);
+assert.ok(peers.length >= 4 && peers.every((e) => e.lane !== "west" && e.years[0] <= 1886 && e.years[1] >= 1860));
+assert.deepEqual(contemporaries(c.BYID.calligraphy, c), [], "no contemporaries for millennia-long traditions");
+
+// Backups merge without losing local notes and refuse unrelated files.
+const known = (id) => !!c.BYID[id];
+const mine = { saved: new Set(["baroque"]), seen: new Set(), notes: { baroque: "光" } };
+const file = backupJSON(new Set(["pop"]), new Set(["pop"]), { baroque: "戏剧", pop: "广告", nope: "x" });
+assert.equal(mergeBackup(file, { ...mine, known }), 3);
+assert.ok(mine.saved.has("pop") && mine.seen.has("pop") && mine.notes.pop === "广告" && !mine.notes.nope);
+assert.ok(mine.notes.baroque.startsWith("光") && mine.notes.baroque.includes("戏剧"));
+assert.equal(mergeBackup(file, { ...mine, known }), 0, "importing twice adds nothing");
+assert.throws(() => mergeBackup('{"saved":[]}', { ...mine, known }), /备份/);
+
+// Route filtering runs one search per render, not one per route member.
+let queries = 0;
+const counted = { ...c, search: { ...c.search, query: (...args) => (queries++, c.search.query(...args)) } };
+createViews(counted, { ...state, q: "山水" }, new Set(), new Set()).matchingRoutes(c.DATA);
+assert.equal(queries, 1);
+console.log(`Passed people (${people.size}), timeline, backup and search-count checks.`);

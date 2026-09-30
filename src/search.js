@@ -19,11 +19,23 @@ export function compileSearch(entries, works, seeds = []) {
     works: works.filter((w) => s.aliases.some((a) => hasName(`${w.artistZh} ${w.artist}`, a))).map((w) => w.id),
     entries: entries.filter((d) => s.aliases.some((a) => hasName(d.people, a))).map((d) => d.id),
   }));
+  const byName = (name) => authors.find((a) => a.name === name || a.aliases.includes(name));
   for (const w of works) {
-    const name = w.artistZh;
-    if (!name || /佚名|工匠|作坊|工作室|归属|本站|中国|地区|王朝|文化|摄影|集体|原记录/.test(name) || authors.some((a) => a.works.includes(w.id))) continue;
-    let author = authors.find((a) => a.name === name);
-    if (!author) { author = { name, aliases: [name, w.artist].filter(Boolean), names: [name, w.artist].filter(Boolean).map(normalize), works: [], entries: [] }; authors.push(author); }
+    if (!w.artistZh || authors.some((a) => a.works.includes(w.id))) continue;
+    // Credits naming several makers join the people already known; anonymous, workshop
+    // and "follower of" credits never become people.
+    const names = w.artistZh.split(/[、；]/).map((n) => n.replace(/^(?:传为|可能为)/, "").replace(/（(?:设计|题字|制作|绘)）$/, "").trim());
+    const anonymous = /佚名|工匠|作坊|工作室|归属|本站|中国|地区|王朝|文化|摄影|集体|原记录|不详|未详|画工|画坊|工坊|雕刻师|雕刻者|复制者|追随者|模仿者|风格仿自|团队|群体|多位|公司|苏美尔|艺术家$|Workshop|Master|Toys/.test(w.artistZh);
+    if (names.length > 1) for (const n of names) byName(n)?.works.push(w.id);
+    if (anonymous || names.length > 1) continue;
+    let author = byName(names[0]);
+    if (!author) {
+      const dates = String(w.artist || "").match(/(active\s+|c\.\s*)?(\d{3,4})(?:\/\d+)?\s*[–-]\s*(c\.\s*|after\s+)?(\d{3,4})\)/);
+      author = { name: names[0], aliases: [...new Set([names[0], w.artist?.replace(/\s*\(.*$/, "").replace(/^(?:attributed to|possibly by)\s+/i, "")].filter(Boolean))], works: [], entries: [] };
+      if (dates) author.life = `${dates[1]?.startsWith("active") ? "活动于" : dates[1] ? "约" : ""}${dates[2]}—${dates[4]}${dates[3]?.startsWith("after") ? "后" : ""}`;
+      author.names = author.aliases.map(normalize);
+      authors.push(author);
+    }
     author.works.push(w.id);
   }
   const byWork = new Map(works.map((w) => [w.id, w]));

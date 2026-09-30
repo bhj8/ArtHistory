@@ -19,5 +19,5 @@ export function imageHTML(art, cls = "", eager = false, sizes = "(max-width: 600
   return `<img class="${cls}" src="${esc(src)}"${responsive} alt="${esc(art.zh)}" loading="${eager ? "eager" : "lazy"}" decoding="async"${art.width ? ` width="${art.width}" height="${art.height}"` : ""}>`;
 }
 export function empty(text = "没有符合条件的内容", action = true) {
-  return `<div class="empty"><span aria-hidden="true">⌕</span><h3>${text}</h3>${action ? "<button data-reset>清除筛选</button>" : "<p>在条目中点击「收藏」，即可保存在这里。</p>"}</div>`;
+  return `<div class="empty"><span aria-hidden="true">⌕</span><h3>${text}</h3>${action ? "<button data-reset>清除筛选</button>" : "<p>在条目中点击「收藏」或写下笔记，就会出现在这里。</p>"}</div>`;
 }
