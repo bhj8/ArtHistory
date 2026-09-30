@@ -9,7 +9,9 @@ import { detailHTML, comparisonHTML } from "./ui/detail.js";
 import { esc, link, imageHTML, creditHTML } from "./ui/helpers.js";
 import { setupQuickSearch } from "./ui/quick-search.js";
 import { personHTML, personHash, personFromHash } from "./ui/person.js";
-import { timelineHTML, inTimeline } from "./ui/timeline.js";
+import { timelineHTML, inTimeline, eraX } from "./ui/timeline.js";
+import { eraStepHTML } from "./ui/era.js";
+import { eraOfYear, workEra, workInEra, workMid } from "./eras.js";
 
 async function start() {
   const c = await loadContent(),
@@ -46,6 +48,7 @@ async function start() {
     browsePosition = null,
     personName = null,
     timelineFocus = null,
+    yearMark = null,
     searchTimer,
     composing = false,
     renderRequest = 0,
@@ -74,7 +77,12 @@ async function start() {
       : "time";
     $("search").value = state.q;
     $("sort").value = state.sort;
+    navKey = placeOf();
   }
+  // Changing view, lane or era is a step the reader can go Back from; typing a search,
+  // switching scope or sorting only refines the current place.
+  let navKey = "";
+  const placeOf = () => [state.view, state.lane, state.era].join("|");
   function syncURL(push = false) {
     const u = new URL(location.href);
     u.search = "";
@@ -84,7 +92,11 @@ async function start() {
     }
     if (selected && routeActive !== null) { u.searchParams.set("route", routeActive); u.searchParams.set("stop", routePosition); }
     u.hash = personName ? personHash(personName) : selected || "";
-    history[push ? "pushState" : "replaceState"]({}, "", u);
+    const moved = placeOf() !== navKey;
+    navKey = placeOf();
+    if (u.href === location.href && !push) return;
+    try { history[push || moved ? "pushState" : "replaceState"]({}, "", u); }
+    catch { history.replaceState({}, "", u); }
   }
   function backupBar() {
     const count = Object.keys(notes).filter(hasNote).length;
@@ -103,24 +115,34 @@ async function start() {
   // Searching and the personal lists always cover every entry; the core/all scope only shapes browsing.
   const personalView = () => state.view === "saved" || state.view === "recent";
   const browseScope = () => (state.q.trim() || personalView() ? "all" : state.level);
+  let matchKey = null, matchSet = null;
+  function matched() {
+    const q = state.q.trim();
+    if (!q) return null;
+    if (matchKey !== q + c.searchReady) { matchKey = q + c.searchReady; matchSet = new Set(c.search.query(q).entries.map((d) => d.id)); }
+    return matchSet;
+  }
+  // One predicate for every list and count, so a number next to a control always matches what it shows.
+  function passes(d, { scope = browseScope(), lane = state.lane, era = state.era, ignoreQuery = false } = {}) {
+    const m = ignoreQuery ? null : matched();
+    return inScope(d, scope) &&
+      (lane === "all" || d.lane === lane) &&
+      // The timeline zooms into an era by years, so it keeps entries that overlap it.
+      (era === "all" || (state.view === "timeline" ? inTimeline(d, era) : d.era === +era)) &&
+      (!state.illustrated || ART[d.id].length > 0) &&
+      (!m || m.has(d.id));
+  }
+  const inView = (d) => (state.view === "saved" ? kept(d.id) : state.view === "recent" ? seen.has(d.id) : true);
+  const count = (options) => DATA.reduce((n, d) => n + (inView(d) && passes(d, options) ? 1 : 0), 0);
   function hits(ignoreQuery = false, scope = browseScope()) {
-    const matched = ignoreQuery || !state.q.trim() ? null : new Set(c.search.query(state.q).entries.map((d) => d.id));
-    return DATA.filter(
-      (d) =>
-        inScope(d, scope) &&
-        (state.lane === "all" || d.lane === state.lane) &&
-        // The timeline zooms into an era by years, so it keeps entries that overlap it.
-        (state.era === "all" || (state.view === "timeline" ? inTimeline(d, state.era) : d.era === +state.era)) &&
-        (!state.illustrated || ART[d.id].length > 0) &&
-        (!matched || matched.has(d.id)),
-    ).sort((a, b) =>
+    return DATA.filter((d) => passes(d, { scope, ignoreQuery })).sort((a, b) =>
       state.sort === "priority"
         ? levelRank(a) - levelRank(b) || a.era - b.era
         : state.sort === "name"
         ? a.zh.localeCompare(b.zh, "zh-CN")
         : state.sort === "images"
           ? ART[b.id].length - ART[a.id].length || a.era - b.era
-          : a.era - b.era || levelRank(a) - levelRank(b),
+          : a.era - b.era || a.years[0] - b.years[0] || levelRank(a) - levelRank(b),
     );
   }
   function currentItems() {
@@ -135,6 +157,37 @@ async function start() {
     }
     return items.filter((d) => state.view !== "saved" || kept(d.id));
   }
+  // The "load more" limit belongs to one list; any change of filters starts a fresh list.
+  let shownKey = null;
+  const scrollbarWidth = (() => {
+    const probe = Object.assign(document.createElement("div"), { style: "position:absolute;top:-999px;width:100px;height:100px;overflow:scroll" });
+    document.body.append(probe);
+    const width = probe.offsetWidth - probe.clientWidth;
+    probe.remove();
+    return width;
+  })();
+  // Rebuilt controls lose keyboard focus; put it back on the equivalent control.
+  function focusKey(el) {
+    if (!el || el === document.body || !el.dataset) return null;
+    const key = ["eraDir", "era", "lane", "level", "view"].find((k) => el.dataset[k] !== undefined);
+    if (!key) return null;
+    const attr = `data-${key.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`)}`;
+    return { selector: `[${attr}="${el.dataset[key]}"]`, within: el.closest("#eras, #lanes, #learningScopes, #content, .tabs") };
+  }
+  function restoreFocus(key) {
+    if (!key || (document.activeElement && document.activeElement !== document.body)) return;
+    const root = key.within?.id ? $(key.within.id) : key.within?.classList.contains("tabs") ? document.querySelector(".tabs") : document;
+    const visible = (list) => [...list].find((el) => el.offsetParent);
+    // A control that disappeared (a strip link, a map header) hands focus to the chosen era or lane.
+    const target = visible((root || document).querySelectorAll(key.selector)) || visible(document.querySelectorAll(key.selector)) ||
+      visible(document.querySelectorAll(/lane/.test(key.selector) ? "#lanes .on" : "#eras .on, #eraSelect"));
+    target?.focus({ preventScroll: true });
+  }
+  function scopeNote(core, all, unit = "条") {
+    return browseScope() === "core" && all > core
+      ? ` · 核心 ${core} ${unit}，全部范围 ${all} ${unit} <button class="text-link" data-level="all">显示全部</button>`
+      : "";
+  }
   async function render({ url = true } = {}) {
     const request = ++renderRequest;
     if (state.q.trim() && !c.searchReady) {
@@ -148,26 +201,34 @@ async function start() {
       }
       if (request !== renderRequest) return;
     }
+    const listKey = JSON.stringify([state.view, state.lane, state.era, state.q, state.level, state.illustrated, state.sort]);
+    if (listKey !== shownKey) { limit = 48; shownKey = listKey; }
+    if (state.view !== "timeline") yearMark = null;
+    const focus = focusKey(document.activeElement);
     persist();
     const items = currentItems(),
-      ids = new Set(items.map((d) => d.id));
+      eraOn = state.era !== "all",
+      era = +state.era;
+    // Counts follow the other filters, so each number says what that choice would show.
     $("lanes").innerHTML = [["all", "全部分类", "", null], ...LANES]
-      .map(
-        (l) =>
-          `<button data-lane="${l[0]}" class="${state.lane === l[0] ? "on" : ""}" aria-pressed="${state.lane === l[0]}"><i style="--c:${l[3] || "#333"}"></i><span>${esc(l[1])}</span><small>${l[0] === "all" ? DATA.length : DATA.filter((d) => d.lane === l[0]).length}</small></button>`,
-      )
+      .map((l) => {
+        const n = count({ lane: l[0] });
+        return `<button data-lane="${l[0]}" class="${state.lane === l[0] ? "on" : ""}${n ? "" : " zero"}" aria-pressed="${state.lane === l[0]}"><i style="--c:${l[3] || "#333"}"></i><span>${esc(l[1])}</span><small>${n}</small></button>`;
+      })
       .join("");
     $("laneSelect").value = state.lane;
     $("eraSelect").value = state.era;
     // Search ignores the core/all scope, so the switch would only mislead while searching.
     $("learningScopes").hidden = !!state.q.trim() || personalView();
-    $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${DATA.filter((d) => inScope(d, scope)).length}</small></button>`).join("");
+    $("learningScopes").innerHTML = Object.entries(SCOPES).map(([scope, label]) => `<button data-level="${scope}" aria-pressed="${state.level === scope}" class="${state.level === scope ? "on" : ""}">${label}<small>${count({ scope })}</small></button>`).join("");
+    const perEra = ERAS.map((_, i) => count({ era: String(i) }));
     $("eras").innerHTML =
       `<button data-era="all" aria-pressed="${state.era === "all"}" class="${state.era === "all" ? "on" : ""}">全部时代</button>` +
       ERAS.map(
         (e, i) =>
-          `<button data-era="${i}" aria-pressed="${state.era == i}" class="${state.era == i ? "on" : ""}">${e[0]}<small>${e[1]}</small></button>`,
+          `<button data-era="${i}" aria-pressed="${state.era == i}" class="${state.era == i ? "on" : ""}${perEra[i] ? "" : " zero"}" title="${esc(`${e[0]} · ${e[1]} · ${perEra[i]} 条`)}">${e[0]}<small>${e[1]}</small></button>`,
       ).join("");
+    const tabsChanged = document.querySelector(".tabs .on")?.dataset.view !== state.view;
     document.querySelectorAll("[data-view]").forEach((b) => {
       b.classList.toggle("on", b.dataset.view === state.view);
       b.setAttribute("aria-pressed", b.dataset.view === state.view);
@@ -175,58 +236,154 @@ async function start() {
     $("viewTitle").textContent = state.q
       ? `${titles[state.view]} · 搜索结果`
       : titles[state.view];
-    const filtered = browseScope() !== "all" || state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
+    const filtered = state.lane !== "all" || state.era !== "all" || state.q || state.illustrated;
     $("reset").hidden = !filtered;
     $("clearSearch").hidden = !state.q;
     $("sort").hidden = ["map", "timeline", "routes", "recent"].includes(state.view);
+    // Lane and era already show in their own controls; only the search and image filter need a chip.
     $("activeFilters").innerHTML = [
-      state.lane !== "all"
-        ? `<button data-remove="lane">${L[state.lane][1]} ×</button>`
-        : "",
-      state.era !== "all"
-        ? `<button data-remove="era">${ERAS[+state.era][0]} ×</button>`
-        : "",
       state.q ? `<button data-remove="q">“${esc(state.q)}” ×</button>` : "",
       state.illustrated ? '<button data-remove="illustrated">只看有图 ×</button>' : "",
     ].join("");
-    let count = items.length + " 个条目";
+    let count_ = items.length + " 个条目", html, timeline = null, stats = eraOn ? `${items.length} 条` : "", counts = perEra, unit = "条", tall = items.length > 8;
     if (state.q.trim() && !["routes", "saved", "recent", "gallery", "timeline"].includes(state.view)) {
       const allowedIds = new Set(hits(true).map((d) => d.id));
       const results = c.search.query(state.q, allowedIds);
       results.allowedIds = allowedIds;
-      $("content").innerHTML = searchResultsHTML(results, views, c, limit);
-      count = `${results.entries.length} 条目 · ${results.authors.length} 人物 · ${results.works.length} 作品`;
+      html = searchResultsHTML(results, views, c, limit);
+      count_ = `${results.entries.length} 条目 · ${results.authors.length} 人物 · ${results.works.length} 作品`;
+      stats = `这一时期有 ${results.entries.length} 个相关条目`;
     } else if (state.view === "gallery") {
-      let works = WORKS.filter((a) => a.entries.some((id) => ids.has(id)));
+      // Works are placed by their own date when it is known, not by the era of their entry.
+      const base = new Set(DATA.filter((d) => passes(d, { era: "all" })).map((d) => d.id));
+      let works = WORKS.filter((a) => a.entries.some((id) => base.has(id)));
       // If a query directly names a work or its maker, show only those matches.
-      const exactWorks = state.q.trim() ? c.search.query(state.q, new Set(hits(true).map((d) => d.id))).works : [];
+      const exactWorks = state.q.trim() ? c.search.query(state.q, new Set(DATA.filter((d) => passes(d, { era: "all", ignoreQuery: true })).map((d) => d.id))).works : [];
       if (exactWorks.length) works = exactWorks;
+      counts = ERAS.map((_, i) => works.filter((w) => workInEra(w, i, BYID)).length);
+      if (eraOn) works = works.filter((w) => workInEra(w, era, BYID));
       if (state.sort === "priority")
         works.sort((a, b) => Math.min(...a.entries.map(id => levelRank(BYID[id]))) - Math.min(...b.entries.map(id => levelRank(BYID[id]))));
       else if (state.sort === "name")
         works.sort((a, b) => a.zh.localeCompare(b.zh, "zh-CN"));
+      else if (state.sort === "images")
+        works.sort((a, b) => ART[b.entries[0]].length - ART[a.entries[0]].length);
       else
-        works.sort((a, b) => BYID[a.entries[0]].era - BYID[b.entries[0]].era);
-      $("content").innerHTML = views.gallery(works, limit);
-      count = works.length + " 幅配图";
+        works.sort((a, b) => workMid(a, BYID) - workMid(b, BYID));
+      html = views.gallery(works, limit, { eraOf: !eraOn && state.sort === "time" ? (w) => workEra(w, BYID) : null });
+      count_ = works.length + " 幅配图";
+      unit = "幅";
+      stats = `${works.length} 幅作品，按作品本身的年代归入${browseScope() === "core" && count({ scope: "all" }) > items.length ? ' · 当前只看核心条目的配图 <button class="text-link" data-level="all">显示全部</button>' : ""}`;
+      tall = works.length > 8;
     } else if (state.view === "timeline") {
-      $("content").innerHTML = timelineHTML(items, c, { era: state.era, lane: state.lane, seen, focus: timelineFocus }) || views.cards([]);
+      const prev = $("content").querySelector(".tl-wrap"), prevEra = prev?.dataset.era,
+        prevLeft = prev?.querySelector(".timeline")?.scrollLeft || 0;
+      const leaving = state.era === "all" && prevEra && prevEra !== "all" ? +prevEra : null;
+      const phone = matchMedia("(max-width: 600px)").matches;
+      // Fill the width available now; leave room for a page scrollbar that the new content may add.
+      const pageScrollbar = document.documentElement.scrollHeight > innerHeight ? 0 : scrollbarWidth;
+      const fit = $("content").clientWidth - (phone ? 76 : 132) - 3 - pageScrollbar;
+      const widen = browseScope() === "core" ? (lane) => count({ scope: "all", lane }) - count({ lane }) : null;
+      html = timelineHTML(items, c, { era: state.era, lane: state.lane, seen, focus: timelineFocus, fit, phone, narrowed: !!(state.q.trim() || state.illustrated), widen, pulse: leaving, mark: yearMark });
+      if (!html) html = views.cards([]);
       timelineFocus = null;
+      if (eraOn) {
+        const own = items.filter((d) => d.era === era).length;
+        stats = `这一时期 ${items.length} 个条目：本时代 ${own} 个，另有 ${items.length - own} 个跨时代延续${scopeNote(items.length, count({ scope: "all" }))}`;
+      }
+      timeline = [prev, prevEra, prevLeft, leaving];
     } else if (state.view === "map" && !state.q) {
-      $("content").innerHTML = views.map(items);
+      const carry = eraOn ? DATA.filter((d) => d.era !== era && inTimeline(d, state.era) && passes(d, { era: "all" })) : [];
+      const widen = browseScope() === "core"
+        ? (lane, i) => count({ scope: "all", lane, era: String(i) }) - count({ lane, era: String(i) })
+        : null;
+      html = views.map(items, { carry, widen });
+      if (eraOn) stats = `本时代 ${items.length} 个条目${carry.length ? `，另有 ${carry.length} 个跨时代延续` : ""}${scopeNote(items.length, count({ scope: "all" }))}`;
     } else if (state.view === "routes") {
-      $("content").innerHTML = views.routes(items);
-      count = views.matchingRoutes(items).length + " 条路线";
-    } else $("content").innerHTML = (state.view === "saved" ? backupBar() : "") + views.cards(items);
+      html = views.routes(items);
+      const n = views.matchingRoutes(items).length;
+      count_ = n + " 条路线";
+      stats = `${n} 条路线经过这一时期${scopeNote(items.length, count({ scope: "all" }))}`;
+      tall = n > 3;
+    } else {
+      html = (state.view === "saved" ? backupBar() : "") + views.cards(items);
+      if (eraOn) stats = `${items.length} 个条目${scopeNote(items.length, count({ scope: "all" }))}`;
+    }
+    const strip = eraOn ? eraStepHTML(c, era, { counts, unit, stats }) : "";
+    const stripEnd = eraOn && tall ? eraStepHTML(c, era, { counts, unit, bottom: true }) : "";
+    $("content").innerHTML = strip + html + stripEnd;
+    const blank = $("content").querySelector(":scope > .empty");
+    if (blank) blank.outerHTML = emptyState(blank);
+    if (timeline) placeTimeline(...timeline);
     refreshArtComparison();
-    $("resultCount").textContent = count;
+    $("resultCount").textContent = count_;
+    if (tabsChanged) revealTab();
+    restoreFocus(focus);
     if (url) syncURL();
   }
+  // Keep the timeline where the reader was: same era keeps its scroll, leaving an era centres it.
+  function placeTimeline(prev, prevEra, prevLeft, leaving) {
+    const tl = $("content").querySelector(".timeline");
+    if (!tl || !prev) return;
+    if (prevEra === String(state.era)) tl.scrollLeft = prevLeft;
+    else if (leaving !== null) {
+      const seg = $("content").querySelector(`.tl-era[data-era="${leaving}"]`);
+      const lane = $("content").querySelector(".tl-corner")?.offsetWidth || 0;
+      tl.scrollLeft = seg ? seg.offsetLeft - (tl.clientWidth - lane - seg.offsetWidth) / 2 : eraX(leaving);
+    }
+    syncAxis(tl);
+  }
+  const syncAxis = (tl) => {
+    const strip = tl.parentElement?.querySelector(".tl-stick");
+    if (strip) strip.scrollLeft = tl.scrollLeft;
+  };
+  // Tabs scroll sideways on phones; keep the current one in view without moving the page.
+  function revealTab() {
+    const bar = document.querySelector(".tabs"), on = bar?.querySelector(".on");
+    if (on && bar.scrollWidth > bar.clientWidth) {
+      const left = on.offsetLeft - bar.offsetLeft, right = left + on.offsetWidth;
+      if (left < bar.scrollLeft) bar.scrollLeft = left - 12;
+      else if (right > bar.scrollLeft + bar.clientWidth) bar.scrollLeft = right - bar.clientWidth + 24;
+    }
+    markTabs();
+  }
+  const markTabs = () => {
+    const bar = document.querySelector(".tabs");
+    bar?.classList.toggle("more", bar.scrollLeft + bar.clientWidth < bar.scrollWidth - 4);
+  };
+  document.querySelector(".tabs")?.addEventListener("scroll", markTabs, { passive: true });
+  addEventListener("resize", markTabs);
+  // An empty result names what is missing and offers the nearest way out, not only a full reset.
+  function emptyState(el) {
+    const q = state.q.trim();
+    const what = { saved: "收藏或笔记", recent: "阅读记录", gallery: "作品", routes: "路线" }[state.view] || "条目";
+    if (personalView() && !q && state.era === "all" && state.lane === "all" && !state.illustrated)
+      return `<div class="empty"><span aria-hidden="true">${state.view === "saved" ? "☆" : "⌕"}</span><h3>还没有${what}</h3><p>${state.view === "saved" ? "在条目中点击「收藏」或写下笔记，就会出现在这里。" : "打开条目后会自动记录在这里。"}</p></div>`;
+    const where = [state.era !== "all" && ERAS[+state.era][0], state.lane !== "all" && L[state.lane][1]].filter(Boolean).join(" · ");
+    const core = browseScope() === "core";
+    const title = q
+      ? `${where ? `在「${esc(where)}」中` : ""}没有找到“${esc(q)}”`
+      : `${where ? `「${esc(where)}」` : "当前筛选"}${core ? "的核心范围" : ""}里没有${what}`;
+    const actions = [];
+    if (state.era !== "all") {
+      const near = ERAS.map((e, i) => ({ i, n: count({ era: String(i) }) }))
+        .filter((x) => x.n && x.i !== +state.era)
+        .sort((a, b) => Math.abs(a.i - state.era) - Math.abs(b.i - state.era) || a.i - b.i)
+        .slice(0, 3).sort((a, b) => a.i - b.i);
+      actions.push(...near.map((x) => `<button data-era="${x.i}">${esc(ERAS[x.i][0])} · ${x.n} 条</button>`));
+      const all = count({ era: "all" });
+      if (all) actions.push(`<button data-remove="era">全部时代 · ${all} 条</button>`);
+    }
+    if (core) { const n = count({ scope: "all" }); if (n) actions.push(`<button data-level="all">显示全部范围 · ${n} 条</button>`); }
+    if (state.lane !== "all") { const n = count({ lane: "all" }); if (n) actions.push(`<button data-remove="lane">全部分类 · ${n} 条</button>`); }
+    const suggestions = el.querySelector(".search-suggestions");
+    const active = [state.era !== "all", state.lane !== "all", !!q, !!state.illustrated].filter(Boolean).length;
+    return `<div class="empty"><span aria-hidden="true">⌕</span><h3>${title}</h3>${suggestions ? `<p>相近名称</p>${suggestions.outerHTML}` : ""}${actions.length ? `<p>${q ? "其他地方有结果：" : "可以换个范围看看："}</p><div class="empty-actions">${actions.join("")}</div>` : ""}${active >= 2 || !actions.length ? `<button class="text-link" data-reset>清除全部筛选</button>` : ""}</div>`;
+  }
   function reset() {
-    Object.assign(state, { lane: "all", era: "all", q: "", illustrated: "", level: "all" });
+    Object.assign(state, { lane: "all", era: "all", q: "", illustrated: "" });
     $("illustratedOnly").checked = false;
     $("search").value = "";
-    limit = 48;
     render();
   }
   function updateSave(id) {
@@ -253,7 +410,7 @@ async function start() {
   }
   function drawDetail() {
     const d = BYID[selected];
-    $("crumb").textContent = L[d.lane][1] + " / " + ERAS[d.era][0];
+    $("crumb").innerHTML = `<button class="text-link" data-crumb-lane="${d.lane}" title="浏览这一分类">${esc(L[d.lane][1])}</button> / <button class="text-link" data-crumb-era="${d.era}" title="浏览这一时代">${esc(ERAS[d.era][0])}</button>`;
     $("backDetail").hidden = !detailHistory.length;
     $("detailBody").innerHTML = detailHTML(d, c, { saved, compare, artIndex, note: notes[d.id] || "" });
     refreshArtComparison();
@@ -457,8 +614,8 @@ async function start() {
       Object.assign(state, { view: "timeline", era: long ? "all" : String(entry.era), lane: "all", q: "", level: "all" });
       $("search").value = "";
       timelineFocus = entry.id;
+      yearMark = null;
       await render();
-      syncURL(true);
       const bar = $("content").querySelector(`[data-tl="${entry.id}"]`);
       bar?.scrollIntoView({ block: "center", inline: "center" });
       bar?.focus({ preventScroll: true });
@@ -472,6 +629,40 @@ async function start() {
     if (d.personWork) {
       const a = c.search.authors.find((x) => x.name === personName);
       showLight(d.personWork, a?.works);
+      return;
+    }
+    if (d.crumbLane || d.crumbEra !== undefined) {
+      const entry = BYID[selected];
+      closeDetail({ fromURL: true });
+      if (d.crumbLane) state.lane = d.crumbLane;
+      else state.era = d.crumbEra;
+      if (personalView() || state.view === "routes") state.view = "map";
+      if (entry && !inScope(entry, state.level)) state.level = "all";
+      await render();
+      $("filterRow").scrollIntoView({ block: "start" });
+      return;
+    }
+    if (d.year) {
+      const [from, to] = d.year.split(":").map(Number), mid = (from + to) / 2;
+      closePerson({ fromURL: true });
+      closeDetail({ fromURL: true });
+      yearMark = { from, to, label: d.yearLabel || `${from}` };
+      Object.assign(state, { view: "timeline", era: eraOfYear(from) === eraOfYear(to) ? String(eraOfYear(mid)) : "all", q: "", lane: "all", level: "all" });
+      $("search").value = "";
+      await render();
+      const tl = $("content").querySelector(".timeline"), mark = $("content").querySelector(".tl-bars .tl-mark, .tl-axis .tl-mark");
+      if (tl && mark && tl.scrollWidth > tl.clientWidth) { tl.scrollLeft = mark.offsetLeft - (tl.clientWidth - (tl.querySelector(".tl-lane-name")?.offsetWidth || 0)) / 2; syncAxis(tl); }
+      $("content").scrollIntoView({ block: "start" });
+      return;
+    }
+    if (d.tlScroll) {
+      const tl = $("content").querySelector(".timeline");
+      tl?.scrollBy({ left: Number(d.tlScroll) * tl.clientWidth * 0.7, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      return;
+    }
+    if (d.top !== undefined) {
+      $("filterRow").scrollIntoView({ block: "start" });
+      document.querySelector(`#content .era-step:not(.bottom) [data-era-dir="${document.activeElement?.dataset.eraDir?.slice(1) || "next"}"]`)?.focus({ preventScroll: true });
       return;
     }
     if (d.query) {
@@ -505,27 +696,22 @@ async function start() {
     }
     if (d.view) {
       state.view = d.view;
-      limit = 48;
       render();
       return;
     }
     if (d.level) {
       state.level = d.level;
-      limit = 48;
       render();
       document.querySelector(`[data-level="${state.level}"]`)?.focus({ preventScroll: true });
       return;
     }
     if (d.lane) {
       state.lane = d.lane;
-      limit = 48;
       render();
       return;
     }
     if (d.era !== undefined) {
-      state.era = d.era;
-      limit = 48;
-      render();
+      stepEra(d.era, !!b.closest("#content"));
       return;
     }
     if (d.remove) {
@@ -726,11 +912,17 @@ async function start() {
     state.lane = e.target.value;
     render();
   };
-  $("eraSelect").onchange = (e) => {
-    state.era = e.target.value;
-    limit = 48;
-    render();
-  };
+  $("eraSelect").onchange = (e) => stepEra(e.target.value, false);
+  // Switching era from far down a page lands at the top of the new era, just under the filters.
+  async function stepEra(value, fromContent) {
+    if (String(value) === String(state.era)) return;
+    const dir = document.activeElement?.dataset?.eraDir;
+    state.era = String(value);
+    await render();
+    const top = $("filterRow").getBoundingClientRect().top;
+    if (fromContent && top < 0) $("filterRow").scrollIntoView({ block: "start" });
+    if (dir && dir !== "all") $("content").querySelector(`.era-step:not(.bottom) [data-era-dir="${dir.replace(/^b/, "")}"]`)?.focus({ preventScroll: true });
+  }
   $("random").onclick = () => {
     const ds = currentItems();
     if (ds.length) openNode(ds[Math.floor(Math.random() * ds.length)].id);
@@ -763,6 +955,10 @@ async function start() {
       $("search").focus();
       $("search").select();
     }
+    if (!typing && !e.metaKey && !e.ctrlKey && !e.altKey && ["[", "]"].includes(e.key) && !document.querySelector("dialog[open]")) {
+      const next = state.era === "all" ? (e.key === "]" ? 0 : ERAS.length - 1) : +state.era + (e.key === "]" ? 1 : -1);
+      if (next >= 0 && next < ERAS.length) { e.preventDefault(); stepEra(next, true); }
+    }
     if ($("lightbox").open && ["ArrowLeft", "ArrowRight"].includes(e.key)) {
       e.preventDefault();
       lightIndex = Math.max(
@@ -775,6 +971,14 @@ async function start() {
       drawLight();
     }
   });
+  document.addEventListener("scroll", (e) => { if (e.target.classList?.contains("timeline")) syncAxis(e.target); }, true);
+  let fittedWidth = 0;
+  new ResizeObserver(() => {
+    const width = $("content").clientWidth;
+    if (!fittedWidth || Math.abs(width - fittedWidth) < 24) { fittedWidth ||= width; return; }
+    fittedWidth = width;
+    if (state.view === "timeline" && state.era !== "all") render({ url: false });
+  }).observe($("content"));
   window.addEventListener("popstate", () => {
     readURL();
     const id = location.hash.slice(1), person = personFromHash(location.hash);
@@ -790,6 +994,8 @@ async function start() {
     .join("");
   $("stats").innerHTML =
     `<b>${DATA.length}</b> 条目 <span>·</span> <b>${WORKS.length}</b> 配图<br><b>${ROUTES.length}</b> 路线 <span>·</span> <b>${c.sourceCount}</b> 专题资料`;
+  // Every entry is illustrated, so the image filter would never change anything.
+  $("illustratedOnly").closest(".image-filter").hidden = DATA.every((d) => ART[d.id].length);
   readURL();
   const initial = location.hash.slice(1);
   await render({ url: false });

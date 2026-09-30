@@ -1,6 +1,6 @@
 import { esc, imageHTML } from "./helpers.js";
 
-const TOPICS = ["山水", "印象派", "浮世绘", "版画", "建筑", "陶瓷", "摄影", "包豪斯", "敦煌"];
+const TOPICS = ["山水", "印象派", "浮世绘", "版画", "建筑", "陶瓷", "摄影", "包豪斯", "敦煌", "1500", "19世纪"];
 
 // Typeahead under the header search box: jump straight to an entry, person or work.
 export function setupQuickSearch(c, { input, panel, recent, commit }) {
@@ -59,11 +59,16 @@ export function setupQuickSearch(c, { input, panel, recent, commit }) {
     }
     const r = c.search.query(value);
     const total = r.entries.length + r.authors.length + r.works.length;
-    if (!total) {
+    // A year or century also offers the timeline at that moment.
+    const when = r.years
+      ? option(`data-year="${r.years.from}:${r.years.to}" data-year-label="${esc(r.years.label)}"`, `<span class="quick-thumb"><i>⌛</i></span><span class="quick-text"><b>在时间轴上看 ${esc(r.years.label)}</b><small>${r.entries.length} 个条目在这一时期仍在进行</small></span><span class="quick-kind">时间轴</span>`, "quick-year")
+      : "";
+    if (!total && !when) {
       return show(`<p class="quick-hint">没有找到“${esc(value)}”。</p>${r.suggestions.length ? group("是不是要找", r.suggestions.map((s) => option(`data-query="${esc(s)}"`, `<span class="quick-text"><b>${esc(s)}</b></span>`)).join("")) : ""}`);
     }
     show(
-      group("条目", r.entries.slice(0, 5).map(entryOption).join("")) +
+      (when ? group("年代", when) : "") +
+      group(r.years ? "这一时期的条目" : "条目", r.entries.slice(0, 5).map(entryOption).join("")) +
         group("人物", r.authors.slice(0, 3).map(personOption).join("")) +
         group("作品", r.works.slice(0, 4).map(workOption).join("")) +
         option("data-quick-all", `<span class="quick-text"><b>查看全部 ${total} 个结果</b><small>${r.entries.length} 条目 · ${r.authors.length} 人物 · ${r.works.length} 作品</small></span><kbd>Enter</kbd>`, "quick-all"),
@@ -103,7 +108,7 @@ export function setupQuickSearch(c, { input, panel, recent, commit }) {
     if (!chosen) return;
     if (chosen.dataset.quickAll !== undefined) commit();
     close();
-    if (chosen.dataset.node || chosen.dataset.art || chosen.dataset.person) input.blur();
+    if (chosen.dataset.node || chosen.dataset.art || chosen.dataset.person || chosen.dataset.year) input.blur();
   });
   document.addEventListener("pointerdown", (e) => {
     if (open && !e.target.closest(".searchbox")) close();

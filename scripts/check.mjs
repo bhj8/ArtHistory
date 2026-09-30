@@ -13,6 +13,9 @@ const json = async (path) =>
 const taxonomy = await json("data/taxonomy.json");
 const lanes = new Set(taxonomy.lanes.map((lane) => lane[0]));
 check(lanes.size === taxonomy.lanes.length, "Duplicate lane IDs");
+// Eras: [name, range label, one-sentence summary shown when the reader steps into that era].
+for (const era of taxonomy.eras)
+  check(era.length === 3 && era.every((part) => typeof part === "string" && part.trim()), `${era[0]}: era needs a name, range and summary`);
 const entries = [];
 for (const lane of lanes) {
   const group = await json(`data/entries/${lane}.json`);

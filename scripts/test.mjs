@@ -8,7 +8,9 @@ import { detailHTML } from "../src/ui/detail.js";
 import { creditHTML } from "../src/ui/helpers.js";
 import { linkedText } from "../src/ui/inline-links.js";
 import { searchResultsHTML } from "../src/ui/search-results.js";
-import { timelineHTML, contemporaries, inTimeline } from "../src/ui/timeline.js";
+import { timelineHTML, timelineSplit, contemporaries, inTimeline } from "../src/ui/timeline.js";
+import { eraStepHTML } from "../src/ui/era.js";
+import { parseYearQuery, workEra, workInEra } from "../src/eras.js";
 import { personHTML, personHash, personFromHash } from "../src/ui/person.js";
 import { mergeBackup, backupJSON } from "../src/storage.js";
 import { checkEraConsistency } from "./era-consistency.mjs";
@@ -196,4 +198,45 @@ let queries = 0;
 const counted = { ...c, search: { ...c.search, query: (...args) => (queries++, c.search.query(...args)) } };
 createViews(counted, { ...state, q: "山水" }, new Set(), new Set()).matchingRoutes(c.DATA);
 assert.equal(queries, 1);
-console.log(`Passed people (${people.size}), timeline, era placement, backup and search-count checks.`);
+// Era switching: one era is a lane-by-lane card grid showing every entry, never a stretched table column.
+const eraState = { ...state, view: "map", era: "2", lane: "all", level: "all" };
+const eraViews = createViews(c, eraState, new Set(), new Set());
+const inEra2 = c.DATA.filter((d) => d.era === 2);
+const slice = eraViews.map(inEra2, { carry: c.DATA.filter((d) => d.era !== 2 && inTimeline(d, "2")) });
+assert.ok(slice.includes('class="era-slice"') && !slice.includes("map-table") && !slice.includes("另外"));
+for (const d of inEra2) assert.ok(slice.includes(`data-node="${d.id}"`), d.id);
+assert.ok(slice.includes('class="carry-chip core" data-node="calligraphy"'), "long traditions still active are listed");
+const coreSlice = eraViews.map(inEra2.filter((d) => d.level === "core"), { widen: (lane) => inEra2.filter((d) => d.lane === lane && d.level !== "core").length });
+assert.ok(coreSlice.includes('data-level="all"'), "core scope offers the rest of the era");
+assert.ok(!views.map(c.DATA).includes("▧"), "every entry is illustrated, so no picture marker");
+assert.ok(!eraStepHTML(c, 0).includes('data-era-dir="prev"') && eraStepHTML(c, 0).includes('data-era="1"'));
+assert.ok(!eraStepHTML(c, 6).includes('data-era-dir="next"') && eraStepHTML(c, 6).includes(c.ERAS[6][2]));
+
+// Zoomed timeline: an era's own entries always get a bar; traditions spanning it become chips; every lane stays.
+const era0 = timelineSplit(c.DATA.filter((d) => inTimeline(d, "0")), "0");
+assert.ok(era0.bars.some((d) => d.id === "prehistoric"));
+const era2 = timelineSplit(c.DATA.filter((d) => inTimeline(d, "2")), "2");
+assert.ok(["garden", "lacquer"].every((id) => era2.bars.some((d) => d.id === id)));
+assert.ok(era2.chips.some((d) => d.id === "calligraphy") && era2.chips.every((d) => d.era !== 2));
+const coreZoom = timelineHTML(c.DATA.filter((d) => d.level === "core" && inTimeline(d, "2")), c, { era: "2", fit: 700 });
+for (const [id] of c.LANES) assert.ok(coreZoom.includes(`data-lane="${id}"`), `lane ${id} kept in zoom`);
+assert.ok(!coreZoom.includes('style="width:1100px'), "zoom follows the width it is given");
+
+// Year search answers "what was happening then".
+assert.deepEqual(parseYearQuery("1500"), { from: 1500, to: 1500, label: "1500年" });
+assert.deepEqual(parseYearQuery("前5世纪"), { from: -500, to: -401, label: "前5世纪" });
+assert.equal(parseYearQuery("十六世纪").from, 1500);
+assert.equal(parseYearQuery("20"), null);
+const around1500 = c.search.query("1500");
+assert.ok(around1500.years && around1500.entries.some((d) => d.id === "renaissance") && around1500.entries.every((d) => d.years[0] <= 1500 && d.years[1] >= 1500));
+
+// Works are placed by their own date; broad dates defer to a fitting entry era.
+const byWork = (id) => c.BYWORK[id];
+assert.equal(workEra(byWork("cma-118676"), c.BYID), 4, "a 1900s toy stays with streamline design");
+assert.ok(c.WORKS.filter((w) => w.years).every((w) => [0, 1, 2, 3, 4, 5, 6].some((e) => workInEra(w, e, c.BYID))));
+
+// Routes under an era filter say which stops fall in it.
+const routeHTML = createViews(c, { ...state, view: "routes", era: "6" }, new Set(), new Set()).routes(c.DATA);
+assert.ok(routeHTML.includes('class="route-focus"') && routeHTML.includes('class="hit"'));
+assert.ok(!views.routes(c.DATA).includes('class="hit"'));
+console.log(`Passed people (${people.size}), timeline, era placement, era switching, backup and search-count checks.`);

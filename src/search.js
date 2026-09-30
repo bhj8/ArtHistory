@@ -1,3 +1,4 @@
+import { parseYearQuery } from "./eras.js";
 export function normalize(value) {
   return String(value || "").normalize("NFKD").replace(/\p{M}/gu, "").toLocaleLowerCase()
     .replace(/[·・’'“”"—–-]/g, " ").replace(/\s+/g, " ").trim();
@@ -54,7 +55,25 @@ export function hydrateSearch(compiled, entries, works) {
   const entryIndex = compiled.entries.map(r => ({...r, value: byEntry.get(r.id)}));
   const workIndex = compiled.works.map(r => ({...r, value: byWork.get(r.id)}));
   const vocabulary = [...entryIndex.map((r) => ({ label: r.value.zh, names: r.names })), ...authors.map((a) => ({ label: a.name, names: a.names })), ...workIndex.map((r) => ({ label: r.value.zh, names: [r.names[0]] }))];
+  // "1500", "16世纪": everything active at that time, rather than digits that happen to appear in text.
+  function queryYears(span, allowedIds) {
+    const overlaps = (y) => y && y[0] <= span.to && y[1] >= span.from;
+    const mid = (y) => (y[0] + y[1]) / 2, target = (span.from + span.to) / 2, width = span.to - span.from;
+    const near = (a, b) => Math.abs(mid(a) - target) - Math.abs(mid(b) - target);
+    const life = (a) => { const m = /(前)?(\d{3,4})\D{0,4}?(前)?(\d{3,4})/.exec(a.life || ""); return m && [m[1] ? -m[2] : +m[2], m[3] ? -m[4] : +m[4]]; };
+    return {
+      entries: entries.filter((d) => allowedIds.has(d.id) && overlaps(d.years))
+        .sort((a, b) => (a.level === "core" ? 0 : 1) - (b.level === "core" ? 0 : 1) || (a.years[1] - a.years[0]) - (b.years[1] - b.years[0])),
+      works: works.filter((w) => overlaps(w.years) && w.years[1] - w.years[0] <= Math.max(100, width * 2) && w.entries.some((id) => allowedIds.has(id)))
+        .sort((a, b) => near(a.years, b.years)),
+      authors: authors.filter((a) => overlaps(life(a)) && a.entries.some((id) => allowedIds.has(id))).sort((a, b) => near(life(a), life(b))),
+      suggestions: [],
+      years: span,
+    };
+  }
   function query(value, allowedIds = new Set(entries.map((d) => d.id))) {
+    const span = parseYearQuery(value);
+    if (span) return queryYears(span, allowedIds);
     const q = normalize(value), tokens = q.split(" ").filter(Boolean);
     const match = (text) => tokens.length > 0 && tokens.every((t) => text.includes(t));
     const rank = (record) => record.names.includes(q) ? 0 : record.names.some((n) => n.startsWith(q)) ? 1 : record.names.some(match) ? 2 : 3;
