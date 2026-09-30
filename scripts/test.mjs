@@ -11,6 +11,7 @@ import { searchResultsHTML } from "../src/ui/search-results.js";
 import { timelineHTML, contemporaries, inTimeline } from "../src/ui/timeline.js";
 import { personHTML, personHash, personFromHash } from "../src/ui/person.js";
 import { mergeBackup, backupJSON } from "../src/storage.js";
+import { checkEraConsistency } from "./era-consistency.mjs";
 
 const json = async (name) => JSON.parse(await readFile(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 const taxonomy = await json("taxonomy");
@@ -164,6 +165,22 @@ const peers = contemporaries(c.BYID.impressionism, c);
 assert.ok(peers.length >= 4 && peers.every((e) => e.lane !== "west" && e.years[0] <= 1886 && e.years[1] >= 1860));
 assert.deepEqual(contemporaries(c.BYID.calligraphy, c), [], "no contemporaries for millennia-long traditions");
 
+// Era placement follows the years; a start year on a boundary belongs to the later era.
+const bounds = [-50000, 500, 1400, 1750, 1900, 1945, 1980, 2026];
+assert.deepEqual(checkEraConsistency(c.DATA, bounds), []);
+const eraProblems = (d, warnings) => checkEraConsistency([{ id: "x", date: "", ...d }], bounds, { warnings });
+assert.equal(eraProblems({ era: 1, years: [220, 589] }).length, 1, "mostly before 500");
+assert.deepEqual(eraProblems({ era: 1, years: [220, 589], eraNote: "有意归入较晚时代的示例说明。" }), []);
+assert.deepEqual(eraProblems({ era: 3, years: [1890, 1910] }), [], "an even split may use either era");
+assert.deepEqual(eraProblems({ era: 2, years: [-475, 1911] }), [], "long traditions are placed by their peak");
+assert.match(eraProblems({ era: 1, years: [1400, 1520] })[0], /does not overlap/);
+const dateWarnings = [];
+assert.deepEqual(eraProblems({ era: 4, years: [1915, 1939], date: "约1920—1930年代" }, dateWarnings), []);
+assert.equal(dateWarnings.length, 1, "small date disagreements only warn");
+assert.match(eraProblems({ era: 2, years: [1500, 1900], date: "约13世纪以来" })[0], /disagrees/);
+assert.deepEqual(eraProblems({ era: 0, years: [-800, -27], date: "约前8—前1世纪" }, dateWarnings), []);
+assert.equal(dateWarnings.length, 1);
+
 // Backups merge without losing local notes and refuse unrelated files.
 const known = (id) => !!c.BYID[id];
 const mine = { saved: new Set(["baroque"]), seen: new Set(), notes: { baroque: "光" } };
@@ -179,4 +196,4 @@ let queries = 0;
 const counted = { ...c, search: { ...c.search, query: (...args) => (queries++, c.search.query(...args)) } };
 createViews(counted, { ...state, q: "山水" }, new Set(), new Set()).matchingRoutes(c.DATA);
 assert.equal(queries, 1);
-console.log(`Passed people (${people.size}), timeline, backup and search-count checks.`);
+console.log(`Passed people (${people.size}), timeline, era placement, backup and search-count checks.`);

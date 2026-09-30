@@ -2,6 +2,7 @@ import { readFile, readdir, stat } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { checkEraConsistency } from "./era-consistency.mjs";
 const root = new URL("../", import.meta.url);
 const errors = [];
 const check = (condition, message) => {
@@ -252,6 +253,10 @@ for (const path of [
     }
   }
 }
+// Era boundaries match taxonomy.json: era i covers [bound i, bound i + 1).
+const eraWarnings = [];
+errors.push(...checkEraConsistency(entries, [-50000, 500, 1400, 1750, 1900, 1945, 1980, 2026], { warnings: eraWarnings }));
+if (eraWarnings.length) console.warn(eraWarnings.map((w) => `Warning: ${w}`).join("\n"));
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
