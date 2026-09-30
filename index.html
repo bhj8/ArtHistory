@@ -7,9 +7,16 @@
       name="description"
       content="美术史交互图谱：流派、地域传统、设计、媒介、作品与学习路线。"
     />
-    <meta name="theme-color" content="#f5f3ed" />
+    <meta name="theme-color" content="#f5f3ed" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141916" media="(prefers-color-scheme: dark)" />
+    <script>
+      try { const t = localStorage.getItem("art-atlas-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch {}
+    </script>
     <title>美术史地图</title>
     <link rel="stylesheet" href="./src/styles/main.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
   </head>
   <body>
     <a class="skip" href="#content">跳到内容</a>
@@ -28,8 +35,12 @@
           aria-label="搜索流派、人物、作品"
         /><button id="clearSearch" aria-label="清空搜索" hidden>×</button
         ><kbd>/</kbd>
+        <div id="quickResults" class="quick-panel" role="listbox" aria-label="快速检索" hidden></div>
       </div>
-      <button id="sourcesBtn" class="quiet">资料来源 ↗</button>
+      <div class="header-actions">
+        <button id="themeBtn" class="quiet theme-toggle" title="切换配色：跟随系统 / 浅色 / 深色">◐ 自动</button
+        ><button id="sourcesBtn" class="quiet">资料来源 ↗</button>
+      </div>
     </header>
     <div class="workspace">
       <aside class="sidebar" aria-label="分类筛选">
@@ -42,6 +53,7 @@
         <div class="browsebar">
           <nav class="tabs" aria-label="浏览方式">
             <button data-view="map">全景地图</button
+            ><button data-view="timeline">时间轴</button
             ><button data-view="index">图解词典</button
             ><button data-view="gallery">作品图库</button
             ><button data-view="routes">学习路线</button
@@ -50,17 +62,15 @@
               收藏 <span id="savedCount">0</span>
             </button>
           </nav>
-          <label class="mobile-lane"
-            ><span class="sr-only">分类</span
-            ><select id="laneSelect" aria-label="分类筛选"></select
-          ></label>
         </div>
-
-        <div class="search-topics" aria-label="试试这些主题"><span>随手翻翻</span><button data-query="山水">山水</button><button data-query="印象">印象派</button><button data-query="版画">版画</button><button data-query="建筑">建筑</button><button data-query="陶瓷">陶瓷</button><button data-query="摄影">摄影</button></div>
-        <div class="era-bar" id="eras" aria-label="时代筛选"></div>
-        <section class="learning-filter" aria-label="条目筛选">
-          <div id="learningScopes" class="learning-scopes"></div>
-        </section>
+        <div class="filter-row" id="filterRow">
+          <div id="learningScopes" class="learning-scopes" role="group" aria-label="条目范围"></div>
+          <div class="era-bar" id="eras" role="group" aria-label="时代筛选"></div>
+          <div class="mobile-filters">
+            <select id="laneSelect" aria-label="分类筛选"></select
+            ><select id="eraSelect" aria-label="时代筛选"></select>
+          </div>
+        </div>
         <div class="resultbar">
           <div>
             <h2 id="viewTitle">全景地图</h2>
@@ -78,7 +88,6 @@
           </div>
         </div>
         <div id="activeFilters"></div>
-        <div id="scopeSearchHint" class="scope-search-hint" hidden></div>
         <div id="content" tabindex="-1">
           <div class="loading">正在载入图谱…</div>
         </div>
@@ -105,6 +114,7 @@
       <div id="detailBody"></div>
       <div class="detail-bottom" id="detailNav"></div>
     </dialog>
+    <dialog id="person" class="modal person" aria-labelledby="personTitle"></dialog>
     <dialog id="lightbox" aria-label="作品大图"></dialog>
     <dialog
       id="comparison"
@@ -119,6 +129,7 @@
       ><button id="clearCompare" aria-label="清空对照">清空 ×</button>
     </div>
     <div id="toast" role="status" aria-live="polite"></div>
+    <input id="importFile" type="file" accept="application/json,.json" hidden />
     <noscript>此图谱需要启用 JavaScript。</noscript>
     <script type="module" src="./src/main.js"></script>
   </body>

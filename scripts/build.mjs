@@ -17,6 +17,8 @@ async function files(path) {
 }
 const inputs = [
   "index.html",
+  "manifest.webmanifest",
+  "sw.js",
   ...(await files("src")),
   ...(await files("data")),
   ...(await files("assets")),
@@ -29,7 +31,7 @@ for (const path of inputs)
 const revision = hash.digest("hex").slice(0, 12);
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
-for (const path of ["index.html", "src", "data", "assets"])
+for (const path of ["index.html", "manifest.webmanifest", "sw.js", "src", "data", "assets"])
   await cp(new URL(path, root), new URL(path, dist), { recursive: true });
 // Each release loads one coherent module/data version, even for returning visitors.
 let html = await readFile(new URL("index.html", dist), "utf8");
@@ -41,6 +43,8 @@ const preloadModules = inputs.filter(p => p.startsWith("src/") && p.endsWith(".j
   .map(p => `    <link rel="modulepreload" href="./${p}?v=${revision}" />`).join("\n");
 html = html.replace("  </head>", `${preloadModules}\n    <link rel="preload" as="fetch" href="./data/catalog.json?v=${revision}" crossorigin />\n  </head>`);
 await writeFile(new URL("index.html", dist), html);
+const worker = await readFile(new URL("sw.js", dist), "utf8");
+await writeFile(new URL("sw.js", dist), worker.replace("__REVISION__", revision));
 for (const path of inputs.filter(
   (p) => p.startsWith("src/") && p.endsWith(".js"),
 )) {

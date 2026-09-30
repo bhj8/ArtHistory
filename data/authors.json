@@ -8,7 +8,9 @@
       "Van Gogh",
       "凡高",
       "梵谷"
-    ]
+    ],
+    "life": "1853—1890",
+    "note": "荷兰后印象派画家"
   },
   {
     "name": "莫奈",
@@ -17,7 +19,9 @@
       "克洛德·莫奈",
       "Claude Monet",
       "Monet"
-    ]
+    ],
+    "life": "1840—1926",
+    "note": "法国印象派画家"
   },
   {
     "name": "马奈",
@@ -27,7 +31,9 @@
       "Édouard Manet",
       "Edouard Manet",
       "Manet"
-    ]
+    ],
+    "life": "1832—1883",
+    "note": "法国画家，现代生活题材的开拓者"
   },
   {
     "name": "德加",
@@ -36,7 +42,9 @@
       "埃德加·德加",
       "Edgar Degas",
       "Degas"
-    ]
+    ],
+    "life": "1834—1917",
+    "note": "法国画家、雕塑家，常画芭蕾与城市生活"
   },
   {
     "name": "雷诺阿",
@@ -46,7 +54,9 @@
       "Pierre-Auguste Renoir",
       "Renoir",
       "雷諾瓦"
-    ]
+    ],
+    "life": "1841—1919",
+    "note": "法国印象派画家"
   },
   {
     "name": "莫里索",
@@ -55,7 +65,9 @@
       "贝尔特·莫里索",
       "Berthe Morisot",
       "Morisot"
-    ]
+    ],
+    "life": "1841—1895",
+    "note": "法国印象派女画家"
   },
   {
     "name": "毕沙罗",
@@ -64,7 +76,9 @@
       "卡米耶·毕沙罗",
       "Camille Pissarro",
       "Pissarro"
-    ]
+    ],
+    "life": "1830—1903",
+    "note": "法国印象派画家"
   },
   {
     "name": "塞尚",
@@ -74,7 +88,9 @@
       "Paul Cézanne",
       "Paul Cezanne",
       "Cezanne"
-    ]
+    ],
+    "life": "1839—1906",
+    "note": "法国后印象派画家"
   },
   {
     "name": "高更",
@@ -83,7 +99,9 @@
       "保罗·高更",
       "Paul Gauguin",
       "Gauguin"
-    ]
+    ],
+    "life": "1848—1903",
+    "note": "法国后印象派画家"
   },
   {
     "name": "修拉",
@@ -93,7 +111,9 @@
       "Georges Seurat",
       "Seurat",
       "秀拉"
-    ]
+    ],
+    "life": "1859—1891",
+    "note": "法国新印象派（点彩派）画家"
   },
   {
     "name": "毕加索",
@@ -103,7 +123,9 @@
       "Pablo Picasso",
       "Picasso",
       "畢卡索"
-    ]
+    ],
+    "life": "1881—1973",
+    "note": "西班牙画家、雕塑家，立体主义创立者之一"
   },
   {
     "name": "布拉克",
@@ -112,7 +134,9 @@
       "乔治·布拉克",
       "Georges Braque",
       "Braque"
-    ]
+    ],
+    "life": "1882—1963",
+    "note": "法国画家，立体主义创立者之一"
   },
   {
     "name": "胡安·格里斯",
@@ -121,7 +145,9 @@
       "格里斯",
       "Juan Gris",
       "Gris"
-    ]
+    ],
+    "life": "1887—1927",
+    "note": "西班牙立体主义画家"
   },
   {
     "name": "达利",
@@ -132,7 +158,9 @@
       "Salvador Dali",
       "Dali",
       "達利"
-    ]
+    ],
+    "life": "1904—1989",
+    "note": "西班牙超现实主义画家"
   },
   {
     "name": "马格利特",
@@ -142,7 +170,9 @@
       "René Magritte",
       "Rene Magritte",
       "Magritte"
-    ]
+    ],
+    "life": "1898—1967",
+    "note": "比利时超现实主义画家"
   },
   {
     "name": "米罗",
@@ -152,7 +182,9 @@
       "Joan Miró",
       "Joan Miro",
       "Miro"
-    ]
+    ],
+    "life": "1893—1983",
+    "note": "西班牙画家、雕塑家"
   },
   {
     "name": "马克斯·恩斯特",
@@ -161,7 +193,9 @@
       "恩斯特",
       "Max Ernst",
       "Ernst"
-    ]
+    ],
+    "life": "1891—1976",
+    "note": "德国达达与超现实主义艺术家"
   },
   {
     "name": "杜尚",
@@ -170,7 +204,9 @@
       "马塞尔·杜尚",
       "Marcel Duchamp",
       "Duchamp"
-    ]
+    ],
+    "life": "1887—1968",
+    "note": "法国艺术家，现成品艺术的开创者"
   },
   {
     "name": "汉娜·赫希",
@@ -179,7 +215,9 @@
       "赫希",
       "Hannah Höch",
       "Hannah Hoch"
-    ]
+    ],
+    "life": "1889—1978",
+    "note": "德国柏林达达艺术家，擅长照片拼贴"
   },
   {
     "name": "施维特斯",
@@ -188,7 +226,9 @@
       "库尔特·施维特斯",
       "Kurt Schwitters",
       "Schwitters"
-    ]
+    ],
+    "life": "1887—1948",
+    "note": "德国拼贴与装置艺术家"
   },
   {
     "name": "波洛克",
@@ -197,7 +237,9 @@
       "杰克逊·波洛克",
       "Jackson Pollock",
       "Pollock"
-    ]
+    ],
+    "life": "1912—1956",
+    "note": "美国抽象表现主义画家"
   },
   {
     "name": "罗斯科",
@@ -206,7 +248,9 @@
       "马克·罗斯科",
       "Mark Rothko",
       "Rothko"
-    ]
+    ],
+    "life": "1903—1970",
+    "note": "美国色域绘画画家"
   },
   {
     "name": "德·库宁",
@@ -215,7 +259,9 @@
       "威廉·德·库宁",
       "Willem de Kooning",
       "de Kooning"
-    ]
+    ],
+    "life": "1904—1997",
+    "note": "荷兰裔美国抽象表现主义画家"
   },
   {
     "name": "李·克拉斯纳",
@@ -223,7 +269,9 @@
       "李·克拉斯纳",
       "Lee Krasner",
       "Krasner"
-    ]
+    ],
+    "life": "1908—1984",
+    "note": "美国抽象表现主义画家"
   },
   {
     "name": "纽曼",
@@ -232,7 +280,9 @@
       "巴尼特·纽曼",
       "Barnett Newman",
       "Newman"
-    ]
+    ],
+    "life": "1905—1970",
+    "note": "美国色域绘画画家"
   },
   {
     "name": "沃霍尔",
@@ -242,7 +292,9 @@
       "Andy Warhol",
       "Warhol",
       "安迪沃荷"
-    ]
+    ],
+    "life": "1928—1987",
+    "note": "美国波普艺术家"
   },
   {
     "name": "利希滕斯坦",
@@ -251,7 +303,9 @@
       "罗伊·利希滕斯坦",
       "Roy Lichtenstein",
       "Lichtenstein"
-    ]
+    ],
+    "life": "1923—1997",
+    "note": "美国波普艺术家"
   },
   {
     "name": "奥尔登堡",
@@ -260,7 +314,9 @@
       "克拉斯·奥尔登堡",
       "Claes Oldenburg",
       "Oldenburg"
-    ]
+    ],
+    "life": "1929—2022",
+    "note": "瑞典裔美国波普雕塑家"
   },
   {
     "name": "科苏斯",
@@ -269,7 +325,9 @@
       "约瑟夫·科苏斯",
       "Joseph Kosuth",
       "Kosuth"
-    ]
+    ],
+    "life": "1945—",
+    "note": "美国观念艺术家"
   },
   {
     "name": "索尔·勒维特",
@@ -278,7 +336,9 @@
       "勒维特",
       "Sol LeWitt",
       "LeWitt"
-    ]
+    ],
+    "life": "1928—2007",
+    "note": "美国观念与极简艺术家"
   },
   {
     "name": "朱迪·芝加哥",
@@ -286,7 +346,9 @@
       "朱迪·芝加哥",
       "朱迪芝加哥",
       "Judy Chicago"
-    ]
+    ],
+    "life": "1939—",
+    "note": "美国女性主义艺术家"
   },
   {
     "name": "芭芭拉·克鲁格",
@@ -295,7 +357,9 @@
       "克鲁格",
       "Barbara Kruger",
       "Kruger"
-    ]
+    ],
+    "life": "1945—",
+    "note": "美国图文艺术家"
   },
   {
     "name": "雪莉·莱文",
@@ -303,7 +367,9 @@
       "雪莉·莱文",
       "Sherrie Levine",
       "Levine"
-    ]
+    ],
+    "life": "1947—",
+    "note": "美国挪用艺术家"
   },
   {
     "name": "安娜·门迭塔",
@@ -312,7 +378,9 @@
       "门迭塔",
       "Ana Mendieta",
       "Mendieta"
-    ]
+    ],
+    "life": "1948—1985",
+    "note": "古巴裔美国行为与大地艺术家"
   },
   {
     "name": "艾尔·安纳祖",
@@ -320,8 +388,11 @@
       "艾尔·安纳祖",
       "安纳祖",
       "El Anatsui",
-      "Anatsui"
-    ]
+      "Anatsui",
+      "埃尔·阿纳祖"
+    ],
+    "life": "1944—",
+    "note": "加纳雕塑家"
   },
   {
     "name": "尹卡·肖尼巴雷",
@@ -330,7 +401,9 @@
       "肖尼巴雷",
       "Yinka Shonibare",
       "Shonibare"
-    ]
+    ],
+    "life": "1962—",
+    "note": "英国—尼日利亚艺术家"
   },
   {
     "name": "达·芬奇",
@@ -340,7 +413,9 @@
       "列奥纳多·达·芬奇",
       "Leonardo da Vinci",
       "da Vinci"
-    ]
+    ],
+    "life": "1452—1519",
+    "note": "意大利文艺复兴画家、工程师"
   },
   {
     "name": "米开朗琪罗",
@@ -349,7 +424,9 @@
       "Michelangelo",
       "Michelangelo Buonarroti",
       "米開朗基羅"
-    ]
+    ],
+    "life": "1475—1564",
+    "note": "意大利文艺复兴雕塑家、画家、建筑师"
   },
   {
     "name": "拉斐尔",
@@ -358,7 +435,9 @@
       "Raphael",
       "Raffaello Sanzio",
       "拉斐爾"
-    ]
+    ],
+    "life": "1483—1520",
+    "note": "意大利文艺复兴画家"
   },
   {
     "name": "波提切利",
@@ -367,7 +446,9 @@
       "桑德罗·波提切利",
       "Sandro Botticelli",
       "Botticelli"
-    ]
+    ],
+    "life": "约1445—1510",
+    "note": "意大利文艺复兴画家"
   },
   {
     "name": "提香",
@@ -375,7 +456,9 @@
       "提香",
       "Titian",
       "Tiziano Vecellio"
-    ]
+    ],
+    "life": "约1488/90—1576",
+    "note": "威尼斯画派画家"
   },
   {
     "name": "卡拉瓦乔",
@@ -383,7 +466,9 @@
       "卡拉瓦乔",
       "Caravaggio",
       "Michelangelo Merisi"
-    ]
+    ],
+    "life": "1571—1610",
+    "note": "意大利巴洛克画家"
   },
   {
     "name": "贝尔尼尼",
@@ -391,7 +476,9 @@
       "贝尔尼尼",
       "Bernini",
       "Gian Lorenzo Bernini"
-    ]
+    ],
+    "life": "1598—1680",
+    "note": "意大利巴洛克雕塑家、建筑师"
   },
   {
     "name": "鲁本斯",
@@ -400,7 +487,9 @@
       "彼得·保罗·鲁本斯",
       "Peter Paul Rubens",
       "Rubens"
-    ]
+    ],
+    "life": "1577—1640",
+    "note": "佛兰德斯巴洛克画家"
   },
   {
     "name": "伦勃朗",
@@ -409,7 +498,9 @@
       "Rembrandt",
       "Rembrandt van Rijn",
       "林布蘭"
-    ]
+    ],
+    "life": "1606—1669",
+    "note": "荷兰黄金时代画家、版画家"
   },
   {
     "name": "委拉斯开兹",
@@ -418,7 +509,9 @@
       "Diego Velázquez",
       "Diego Velazquez",
       "Velazquez"
-    ]
+    ],
+    "life": "1599—1660",
+    "note": "西班牙宫廷画家"
   },
   {
     "name": "葛饰北斋",
@@ -428,7 +521,9 @@
       "Hokusai",
       "Katsushika Hokusai",
       "葛飾北齋"
-    ]
+    ],
+    "life": "1760—1849",
+    "note": "日本浮世绘画家"
   },
   {
     "name": "歌川广重",
@@ -437,7 +532,9 @@
       "广重",
       "Hiroshige",
       "Utagawa Hiroshige"
-    ]
+    ],
+    "life": "1797—1858",
+    "note": "日本浮世绘风景画家"
   },
   {
     "name": "喜多川歌麿",
@@ -446,21 +543,27 @@
       "歌麿",
       "Utamaro",
       "Kitagawa Utamaro"
-    ]
+    ],
+    "life": "约1753—1806",
+    "note": "日本浮世绘美人画画家"
   },
   {
     "name": "郭熙",
     "aliases": [
       "郭熙",
       "Guo Xi"
-    ]
+    ],
+    "life": "约1000—约1090",
+    "note": "北宋山水画家"
   },
   {
     "name": "范宽",
     "aliases": [
       "范宽",
       "Fan Kuan"
-    ]
+    ],
+    "life": "活动于约10世纪末—11世纪初",
+    "note": "北宋山水画家"
   },
   {
     "name": "赵孟頫",
@@ -468,35 +571,45 @@
       "赵孟頫",
       "赵孟俯",
       "Zhao Mengfu"
-    ]
+    ],
+    "life": "1254—1322",
+    "note": "元代书画家"
   },
   {
     "name": "倪瓒",
     "aliases": [
       "倪瓒",
       "Ni Zan"
-    ]
+    ],
+    "life": "1301—1374",
+    "note": "元代画家，元四家之一"
   },
   {
     "name": "黄公望",
     "aliases": [
       "黄公望",
       "Huang Gongwang"
-    ]
+    ],
+    "life": "1269—1354",
+    "note": "元代画家，元四家之一"
   },
   {
     "name": "王羲之",
     "aliases": [
       "王羲之",
       "Wang Xizhi"
-    ]
+    ],
+    "life": "303—361",
+    "note": "东晋书法家"
   },
   {
     "name": "颜真卿",
     "aliases": [
       "颜真卿",
       "Yan Zhenqing"
-    ]
+    ],
+    "life": "709—785",
+    "note": "唐代书法家"
   },
   {
     "name": "苏轼",
@@ -504,42 +617,54 @@
       "苏轼",
       "苏东坡",
       "Su Shi"
-    ]
+    ],
+    "life": "1037—1101",
+    "note": "北宋文学家、书画家"
   },
   {
     "name": "徐悲鸿",
     "aliases": [
       "徐悲鸿",
       "Xu Beihong"
-    ]
+    ],
+    "life": "1895—1953",
+    "note": "中国画家、美术教育家"
   },
   {
     "name": "齐白石",
     "aliases": [
       "齐白石",
       "Qi Baishi"
-    ]
+    ],
+    "life": "1864—1957",
+    "note": "中国画家、篆刻家"
   },
   {
     "name": "林风眠",
     "aliases": [
       "林风眠",
       "Lin Fengmian"
-    ]
+    ],
+    "life": "1900—1991",
+    "note": "中国画家、美术教育家"
   },
   {
     "name": "李桦",
     "aliases": [
       "李桦",
       "Li Hua"
-    ]
+    ],
+    "life": "1907—1994",
+    "note": "中国版画家"
   },
   {
     "name": "徐冰",
     "aliases": [
       "徐冰",
       "Xu Bing"
-    ]
+    ],
+    "life": "1955—",
+    "note": "中国当代艺术家"
   },
   {
     "name": "威廉·莫里斯",
@@ -547,7 +672,9 @@
       "威廉·莫里斯",
       "莫里斯",
       "William Morris"
-    ]
+    ],
+    "life": "1834—1896",
+    "note": "英国设计师、工艺美术运动代表"
   },
   {
     "name": "阿尔丰斯·慕夏",
@@ -556,7 +683,9 @@
       "慕夏",
       "Alphonse Mucha",
       "Mucha"
-    ]
+    ],
+    "life": "1860—1939",
+    "note": "捷克新艺术运动画家、设计师"
   },
   {
     "name": "格罗皮乌斯",
@@ -565,7 +694,9 @@
       "瓦尔特·格罗皮乌斯",
       "Walter Gropius",
       "Gropius"
-    ]
+    ],
+    "life": "1883—1969",
+    "note": "德国建筑师、包豪斯创办人"
   },
   {
     "name": "勒·柯布西耶",
@@ -574,7 +705,9 @@
       "勒柯布西耶",
       "Le Corbusier",
       "Corbusier"
-    ]
+    ],
+    "life": "1887—1965",
+    "note": "瑞士裔法国现代主义建筑师"
   },
   {
     "name": "密斯·凡·德·罗",
@@ -583,7 +716,9 @@
       "密斯",
       "Ludwig Mies van der Rohe",
       "Mies van der Rohe"
-    ]
+    ],
+    "life": "1886—1969",
+    "note": "德裔美国现代主义建筑师"
   },
   {
     "name": "马塞尔·布鲁尔",
@@ -592,7 +727,9 @@
       "布鲁尔",
       "Marcel Breuer",
       "Breuer"
-    ]
+    ],
+    "life": "1902—1981",
+    "note": "匈牙利裔建筑师、家具设计师"
   },
   {
     "name": "玛丽安娜·布兰特",
@@ -600,7 +737,9 @@
       "玛丽安娜·布兰特",
       "布兰特",
       "Marianne Brandt"
-    ]
+    ],
+    "life": "1893—1983",
+    "note": "德国包豪斯金属设计师"
   },
   {
     "name": "埃托雷·索特萨斯",
@@ -609,7 +748,9 @@
       "索特萨斯",
       "Ettore Sottsass",
       "Sottsass"
-    ]
+    ],
+    "life": "1917—2007",
+    "note": "意大利设计师、孟菲斯发起人"
   },
   {
     "name": "迈克尔·格雷夫斯",
@@ -617,7 +758,9 @@
       "迈克尔·格雷夫斯",
       "格雷夫斯",
       "Michael Graves"
-    ]
+    ],
+    "life": "1934—2015",
+    "note": "美国后现代建筑师、设计师"
   },
   {
     "name": "阿明·霍夫曼",
@@ -625,7 +768,9 @@
       "阿明·霍夫曼",
       "Armin Hofmann",
       "Hofmann"
-    ]
+    ],
+    "life": "1920—2020",
+    "note": "瑞士平面设计师、教育家"
   },
   {
     "name": "约瑟夫·米勒-布罗克曼",
@@ -634,6 +779,852 @@
       "米勒-布罗克曼",
       "Josef Müller-Brockmann",
       "Josef Muller-Brockmann"
-    ]
+    ],
+    "life": "1914—1996",
+    "note": "瑞士平面设计师"
+  },
+  {
+    "name": "安德烈·德兰",
+    "aliases": [
+      "安德烈·德兰",
+      "André Derain",
+      "Andre Derain"
+    ],
+    "life": "1880—1954",
+    "note": "法国野兽派画家"
+  },
+  {
+    "name": "古斯塔夫·莫罗",
+    "aliases": [
+      "古斯塔夫·莫罗",
+      "Gustave Moreau"
+    ],
+    "life": "1826—1898",
+    "note": "法国象征主义画家"
+  },
+  {
+    "name": "埃米尔·加莱",
+    "aliases": [
+      "埃米尔·加莱",
+      "Émile Gallé",
+      "Emile Gallé",
+      "Emile Galle"
+    ],
+    "life": "1846—1904",
+    "note": "法国新艺术运动玻璃与家具设计师"
+  },
+  {
+    "name": "马远",
+    "aliases": [
+      "马远",
+      "Ma Yuan"
+    ],
+    "life": "活动于约1190—1225",
+    "note": "南宋宫廷画家"
+  },
+  {
+    "name": "文徵明",
+    "aliases": [
+      "文徵明",
+      "Wen Zhengming"
+    ],
+    "life": "1470—1559",
+    "note": "明代吴门画家、书法家"
+  },
+  {
+    "name": "髡残",
+    "aliases": [
+      "髡残",
+      "Kuncan"
+    ],
+    "life": "1612—1673",
+    "note": "清初画僧"
+  },
+  {
+    "name": "雅克-路易·大卫",
+    "aliases": [
+      "雅克-路易·大卫",
+      "Jacques-Louis David",
+      "Jacques Louis David"
+    ],
+    "life": "1748—1825",
+    "note": "法国新古典主义画家"
+  },
+  {
+    "name": "奥拉斯·韦尔内",
+    "aliases": [
+      "奥拉斯·韦尔内",
+      "Horace Vernet"
+    ],
+    "life": "1789—1863",
+    "note": "法国历史与战争画家"
+  },
+  {
+    "name": "弗拉·菲利波·利皮",
+    "aliases": [
+      "弗拉·菲利波·利皮",
+      "Fra Filippo Lippi"
+    ],
+    "life": "约1406—1469",
+    "note": "意大利文艺复兴画家"
+  },
+  {
+    "name": "丁托列托",
+    "aliases": [
+      "丁托列托",
+      "Tintoretto",
+      "Jacopo Tintoretto"
+    ],
+    "life": "1518/19—1594",
+    "note": "威尼斯画派画家"
+  },
+  {
+    "name": "杜乔",
+    "aliases": [
+      "杜乔",
+      "Duccio",
+      "Duccio di Buoninsegna"
+    ],
+    "life": "约1255—1319",
+    "note": "锡耶纳画派画家"
+  },
+  {
+    "name": "乔托",
+    "aliases": [
+      "乔托",
+      "Giotto",
+      "Giotto di Bondone"
+    ],
+    "life": "约1267—1337",
+    "note": "意大利画家、建筑师"
+  },
+  {
+    "name": "约阿希姆·帕蒂尼尔",
+    "aliases": [
+      "约阿希姆·帕蒂尼尔",
+      "Joachim Patinir",
+      "帕蒂尼尔"
+    ],
+    "life": "约1480—1524",
+    "note": "尼德兰风景画家"
+  },
+  {
+    "name": "老彼得·勃鲁盖尔",
+    "aliases": [
+      "老彼得·勃鲁盖尔",
+      "Pieter Bruegel the Elder",
+      "勃鲁盖尔"
+    ],
+    "life": "约1525/30—1569",
+    "note": "尼德兰画家"
+  },
+  {
+    "name": "亨德里克·霍尔齐厄斯",
+    "aliases": [
+      "亨德里克·霍尔齐厄斯",
+      "Hendrick Goltzius",
+      "霍尔齐厄斯"
+    ],
+    "life": "1558—1617",
+    "note": "荷兰版画家、画家"
+  },
+  {
+    "name": "卡米耶·柯罗",
+    "aliases": [
+      "卡米耶·柯罗",
+      "Camille Corot",
+      "柯罗"
+    ],
+    "life": "1796—1875",
+    "note": "法国风景画家"
+  },
+  {
+    "name": "托马斯·科尔",
+    "aliases": [
+      "托马斯·科尔",
+      "Thomas Cole"
+    ],
+    "life": "1801—1848",
+    "note": "美国哈德逊河画派创始人"
+  },
+  {
+    "name": "阿舍·布朗·杜兰德",
+    "aliases": [
+      "阿舍·布朗·杜兰德",
+      "Asher Brown Durand"
+    ],
+    "life": "1796—1886",
+    "note": "美国哈德逊河画派画家"
+  },
+  {
+    "name": "西奥多·罗宾逊",
+    "aliases": [
+      "西奥多·罗宾逊",
+      "Theodore Robinson"
+    ],
+    "life": "1852—1896",
+    "note": "美国印象派画家"
+  },
+  {
+    "name": "朱利安·奥尔登·韦尔",
+    "aliases": [
+      "朱利安·奥尔登·韦尔",
+      "Julian Alden Weir"
+    ],
+    "life": "1852—1919",
+    "note": "美国印象派画家"
+  },
+  {
+    "name": "夏昶",
+    "aliases": [
+      "夏昶",
+      "Xia Chang"
+    ],
+    "life": "1388—1470",
+    "note": "明代画家，以墨竹著称"
+  },
+  {
+    "name": "韩干",
+    "aliases": [
+      "韩干",
+      "Han Gan"
+    ],
+    "life": "活动于8世纪",
+    "note": "唐代画家，以画马著称"
+  },
+  {
+    "name": "宋徽宗赵佶",
+    "aliases": [
+      "宋徽宗赵佶",
+      "宋徽宗",
+      "赵佶",
+      "Emperor Huizong"
+    ],
+    "life": "1082—1135",
+    "note": "北宋皇帝、书画家"
+  },
+  {
+    "name": "米友仁",
+    "aliases": [
+      "米友仁",
+      "Mi Youren"
+    ],
+    "life": "1074—1153",
+    "note": "宋代画家、书法家"
+  },
+  {
+    "name": "董其昌",
+    "aliases": [
+      "董其昌",
+      "Dong Qichang"
+    ],
+    "life": "1555—1636",
+    "note": "明代书画家、理论家"
+  },
+  {
+    "name": "黄庭坚",
+    "aliases": [
+      "黄庭坚",
+      "Huang Tingjian"
+    ],
+    "life": "1045—1105",
+    "note": "北宋诗人、书法家"
+  },
+  {
+    "name": "李公麟",
+    "aliases": [
+      "李公麟",
+      "Li Gonglin"
+    ],
+    "life": "约1049—1106",
+    "note": "北宋画家"
+  },
+  {
+    "name": "狩野探幽",
+    "aliases": [
+      "狩野探幽",
+      "Kano Tan'yū",
+      "Kano Tanyu"
+    ],
+    "life": "1602—1674",
+    "note": "日本江户时代狩野派画家"
+  },
+  {
+    "name": "本阿弥光悦",
+    "aliases": [
+      "本阿弥光悦",
+      "Hon'ami Kōetsu",
+      "Honami Koetsu"
+    ],
+    "life": "1558—1637",
+    "note": "日本书法家、工艺家，琳派先驱"
+  },
+  {
+    "name": "尾形光琳",
+    "aliases": [
+      "尾形光琳",
+      "Ogata Kōrin",
+      "Ogata Korin"
+    ],
+    "life": "1658—1716",
+    "note": "日本琳派画家"
+  },
+  {
+    "name": "狩野山雪",
+    "aliases": [
+      "狩野山雪",
+      "Kano Sansetsu"
+    ],
+    "life": "1590—1651",
+    "note": "日本狩野派画家"
+  },
+  {
+    "name": "奥村政信",
+    "aliases": [
+      "奥村政信",
+      "Okumura Masanobu"
+    ],
+    "life": "1686—1764",
+    "note": "日本浮世绘画家"
+  },
+  {
+    "name": "罗莎·博纳尔",
+    "aliases": [
+      "罗莎·博纳尔",
+      "Rosa Bonheur"
+    ],
+    "life": "1822—1899",
+    "note": "法国动物画画家"
+  },
+  {
+    "name": "亚历山大·加德纳",
+    "aliases": [
+      "亚历山大·加德纳",
+      "Alexander Gardner"
+    ],
+    "life": "1821—1882",
+    "note": "苏格兰裔美国摄影师"
+  },
+  {
+    "name": "泰奥多尔·籍里柯",
+    "aliases": [
+      "泰奥多尔·籍里柯",
+      "Théodore Géricault",
+      "Theodore Gericault",
+      "籍里柯"
+    ],
+    "life": "1791—1824",
+    "note": "法国浪漫主义画家"
+  },
+  {
+    "name": "尼古拉·普桑",
+    "aliases": [
+      "尼古拉·普桑",
+      "Nicolas Poussin",
+      "普桑"
+    ],
+    "life": "1594—1665",
+    "note": "法国古典主义画家"
+  },
+  {
+    "name": "路易斯·康福特·蒂芙尼",
+    "aliases": [
+      "路易斯·康福特·蒂芙尼",
+      "Louis Comfort Tiffany",
+      "Louis C. Tiffany"
+    ],
+    "life": "1848—1933",
+    "note": "美国设计师、玻璃艺术家"
+  },
+  {
+    "name": "埃米尔-雅克·吕尔曼",
+    "aliases": [
+      "埃米尔-雅克·吕尔曼",
+      "Émile-Jacques Ruhlmann",
+      "Emile-Jacques Ruhlmann"
+    ],
+    "life": "1879—1933",
+    "note": "法国装饰艺术家具设计师"
+  },
+  {
+    "name": "拉乌尔·杜飞",
+    "aliases": [
+      "拉乌尔·杜飞",
+      "Raoul Dufy"
+    ],
+    "life": "1877—1953",
+    "note": "法国画家、设计师"
+  },
+  {
+    "name": "乔治·富凯",
+    "aliases": [
+      "乔治·富凯",
+      "Georges Fouquet"
+    ],
+    "life": "1862—1957",
+    "note": "法国珠宝设计师"
+  },
+  {
+    "name": "阿尼哥",
+    "aliases": [
+      "阿尼哥",
+      "Aniko",
+      "Araniko"
+    ],
+    "life": "1245—1306",
+    "note": "尼泊尔工匠、艺术家，元代入华"
+  },
+  {
+    "name": "岛本昭三",
+    "aliases": [
+      "岛本昭三",
+      "Shozo Shimamoto",
+      "Shōzō Shimamoto"
+    ],
+    "life": "1928—2013",
+    "note": "日本具体派艺术家"
+  },
+  {
+    "name": "李禹焕",
+    "aliases": [
+      "李禹焕",
+      "Lee Ufan"
+    ],
+    "life": "1936—",
+    "note": "韩国艺术家，物派代表"
+  },
+  {
+    "name": "任颐",
+    "aliases": [
+      "任颐",
+      "任伯年",
+      "Ren Yi",
+      "Ren Bonian"
+    ],
+    "life": "1840—1896",
+    "note": "清末海上画派画家"
+  },
+  {
+    "name": "高剑父",
+    "aliases": [
+      "高剑父",
+      "Gao Jianfu"
+    ],
+    "life": "1879—1951",
+    "note": "岭南画派创始人之一"
+  },
+  {
+    "name": "彼得·贝伦斯",
+    "aliases": [
+      "彼得·贝伦斯",
+      "Peter Behrens",
+      "贝伦斯"
+    ],
+    "life": "1868—1940",
+    "note": "德国建筑师、工业设计先驱"
+  },
+  {
+    "name": "埃尔·利西茨基",
+    "aliases": [
+      "埃尔·利西茨基",
+      "El Lissitzky",
+      "利西茨基"
+    ],
+    "life": "1890—1941",
+    "note": "俄国构成主义艺术家、设计师"
+  },
+  {
+    "name": "亚历山大·罗德琴科",
+    "aliases": [
+      "亚历山大·罗德琴科",
+      "Alexander Rodchenko",
+      "罗德琴科"
+    ],
+    "life": "1891—1956",
+    "note": "俄国构成主义艺术家"
+  },
+  {
+    "name": "伊姆斯夫妇",
+    "aliases": [
+      "伊姆斯夫妇",
+      "查尔斯与蕾·伊姆斯",
+      "Charles and Ray Eames",
+      "Eames"
+    ],
+    "life": "1907—1978；1912—1988",
+    "note": "美国设计师夫妇"
+  },
+  {
+    "name": "阿尔瓦·阿尔托",
+    "aliases": [
+      "阿尔瓦·阿尔托",
+      "Alvar Aalto",
+      "阿尔托"
+    ],
+    "life": "1898—1976",
+    "note": "芬兰建筑师、设计师"
+  },
+  {
+    "name": "马克斯·比尔",
+    "aliases": [
+      "马克斯·比尔",
+      "Max Bill"
+    ],
+    "life": "1908—1994",
+    "note": "瑞士艺术家、设计师"
+  },
+  {
+    "name": "汉斯·古格洛特",
+    "aliases": [
+      "汉斯·古格洛特",
+      "Hans Gugelot"
+    ],
+    "life": "1920—1965",
+    "note": "荷兰裔工业设计师"
+  },
+  {
+    "name": "迪特·拉姆斯",
+    "aliases": [
+      "迪特·拉姆斯",
+      "Dieter Rams"
+    ],
+    "life": "1932—",
+    "note": "德国工业设计师"
+  },
+  {
+    "name": "奥托·艾舍",
+    "aliases": [
+      "奥托·艾舍",
+      "Otl Aicher",
+      "艾舍"
+    ],
+    "life": "1922—1991",
+    "note": "德国平面设计师"
+  },
+  {
+    "name": "克洛德·佩罗",
+    "aliases": [
+      "克洛德·佩罗",
+      "Claude Perrault"
+    ],
+    "life": "1613—1688",
+    "note": "法国建筑师"
+  },
+  {
+    "name": "查尔斯·伦尼·麦金托什",
+    "aliases": [
+      "查尔斯·伦尼·麦金托什",
+      "Charles Rennie Mackintosh",
+      "麦金托什"
+    ],
+    "life": "1868—1928",
+    "note": "苏格兰建筑师、设计师"
+  },
+  {
+    "name": "黑川纪章",
+    "aliases": [
+      "黑川纪章",
+      "Kisho Kurokawa"
+    ],
+    "life": "1934—2007",
+    "note": "日本新陈代谢派建筑师"
+  },
+  {
+    "name": "扎哈·哈迪德",
+    "aliases": [
+      "扎哈·哈迪德",
+      "Zaha Hadid"
+    ],
+    "life": "1950—2016",
+    "note": "伊拉克裔英国建筑师"
+  },
+  {
+    "name": "汉斯·韦格纳",
+    "aliases": [
+      "汉斯·韦格纳",
+      "Hans Wegner",
+      "Hans J. Wegner"
+    ],
+    "life": "1914—2007",
+    "note": "丹麦家具设计师"
+  },
+  {
+    "name": "拉斯洛·莫霍利-纳吉",
+    "aliases": [
+      "拉斯洛·莫霍利-纳吉",
+      "László Moholy-Nagy",
+      "Laszlo Moholy-Nagy",
+      "莫霍利-纳吉"
+    ],
+    "life": "1895—1946",
+    "note": "匈牙利艺术家、包豪斯教师"
+  },
+  {
+    "name": "白南准",
+    "aliases": [
+      "白南准",
+      "Nam June Paik"
+    ],
+    "life": "1932—2006",
+    "note": "韩裔美国录像艺术先驱"
+  },
+  {
+    "name": "薇拉·莫尔纳",
+    "aliases": [
+      "薇拉·莫尔纳",
+      "Vera Molnár",
+      "Vera Molnar"
+    ],
+    "life": "1924—2023",
+    "note": "匈牙利裔法国计算机艺术先驱"
+  },
+  {
+    "name": "卡济米尔·马列维奇",
+    "aliases": [
+      "卡济米尔·马列维奇",
+      "Kazimir Malevich",
+      "马列维奇"
+    ],
+    "life": "1879—1935",
+    "note": "俄国至上主义创始人"
+  },
+  {
+    "name": "本·沙恩",
+    "aliases": [
+      "本·沙恩",
+      "Ben Shahn"
+    ],
+    "life": "1898—1969",
+    "note": "美国社会现实主义画家"
+  },
+  {
+    "name": "维克多·瓦萨雷里",
+    "aliases": [
+      "维克多·瓦萨雷里",
+      "Victor Vasarely",
+      "瓦萨雷里"
+    ],
+    "life": "1906—1997",
+    "note": "匈牙利裔法国欧普艺术家"
+  },
+  {
+    "name": "唐纳德·贾德",
+    "aliases": [
+      "唐纳德·贾德",
+      "Donald Judd"
+    ],
+    "life": "1928—1994",
+    "note": "美国极简主义艺术家"
+  },
+  {
+    "name": "罗伯特·史密森",
+    "aliases": [
+      "罗伯特·史密森",
+      "Robert Smithson"
+    ],
+    "life": "1938—1973",
+    "note": "美国大地艺术家"
+  },
+  {
+    "name": "玛丽娜·阿布拉莫维奇",
+    "aliases": [
+      "玛丽娜·阿布拉莫维奇",
+      "Marina Abramović",
+      "Marina Abramovic"
+    ],
+    "life": "1946—",
+    "note": "塞尔维亚行为艺术家"
+  },
+  {
+    "name": "安塞尔姆·基弗",
+    "aliases": [
+      "安塞尔姆·基弗",
+      "Anselm Kiefer",
+      "基弗"
+    ],
+    "life": "1945—",
+    "note": "德国艺术家"
+  },
+  {
+    "name": "罗伯特·德劳内",
+    "aliases": [
+      "罗伯特·德劳内",
+      "Robert Delaunay"
+    ],
+    "life": "1885—1941",
+    "note": "法国画家，奥费主义代表"
+  },
+  {
+    "name": "埃尔斯沃思·凯利",
+    "aliases": [
+      "埃尔斯沃思·凯利",
+      "Ellsworth Kelly"
+    ],
+    "life": "1923—2015",
+    "note": "美国硬边绘画艺术家"
+  },
+  {
+    "name": "马里奥·梅尔茨",
+    "aliases": [
+      "马里奥·梅尔茨",
+      "Mario Merz"
+    ],
+    "life": "1925—2003",
+    "note": "意大利贫穷艺术艺术家"
+  },
+  {
+    "name": "詹姆斯·特瑞尔",
+    "aliases": [
+      "詹姆斯·特瑞尔",
+      "James Turrell"
+    ],
+    "life": "1943—",
+    "note": "美国光与空间艺术家"
+  },
+  {
+    "name": "草间弥生",
+    "aliases": [
+      "草间弥生",
+      "Yayoi Kusama"
+    ],
+    "life": "1929—",
+    "note": "日本艺术家"
+  },
+  {
+    "name": "莉吉娅·克拉克",
+    "aliases": [
+      "莉吉娅·克拉克",
+      "Lygia Clark"
+    ],
+    "life": "1920—1988",
+    "note": "巴西艺术家"
+  },
+  {
+    "name": "阿伦·道格拉斯",
+    "aliases": [
+      "阿伦·道格拉斯",
+      "Aaron Douglas"
+    ],
+    "life": "1899—1979",
+    "note": "美国哈莱姆文艺复兴画家"
+  },
+  {
+    "name": "阿奇博尔德·莫特利",
+    "aliases": [
+      "阿奇博尔德·莫特利",
+      "Archibald Motley",
+      "Archibald J. Motley Jr."
+    ],
+    "life": "1891—1981",
+    "note": "美国画家"
+  },
+  {
+    "name": "朴栖甫",
+    "aliases": [
+      "朴栖甫",
+      "Park Seo-Bo",
+      "Park Seo-bo"
+    ],
+    "life": "1931—2023",
+    "note": "韩国单色画代表"
+  },
+  {
+    "name": "汉斯·诺伊堡",
+    "aliases": [
+      "汉斯·诺伊堡",
+      "Hans Neuburg"
+    ],
+    "life": "1904—1983",
+    "note": "瑞士平面设计师"
+  },
+  {
+    "name": "奥托·纽拉特",
+    "aliases": [
+      "奥托·纽拉特",
+      "Otto Neurath"
+    ],
+    "life": "1882—1945",
+    "note": "奥地利哲学家，Isotype 创建者"
+  },
+  {
+    "name": "艾普丽尔·格雷曼",
+    "aliases": [
+      "艾普丽尔·格雷曼",
+      "April Greiman"
+    ],
+    "life": "1948—",
+    "note": "美国平面设计师"
+  },
+  {
+    "name": "奥托·迪克斯",
+    "aliases": [
+      "奥托·迪克斯",
+      "Otto Dix"
+    ],
+    "life": "1891—1969",
+    "note": "德国新客观主义画家"
+  },
+  {
+    "name": "迭戈·里维拉",
+    "aliases": [
+      "迭戈·里维拉",
+      "Diego Rivera"
+    ],
+    "life": "1886—1957",
+    "note": "墨西哥壁画运动画家"
+  },
+  {
+    "name": "伦佐·皮亚诺",
+    "aliases": [
+      "伦佐·皮亚诺",
+      "Renzo Piano"
+    ],
+    "life": "1937—",
+    "note": "意大利建筑师"
+  },
+  {
+    "name": "理查德·罗杰斯",
+    "aliases": [
+      "理查德·罗杰斯",
+      "Richard Rogers"
+    ],
+    "life": "1933—2021",
+    "note": "英国建筑师"
+  },
+  {
+    "name": "里克力·提拉瓦尼",
+    "aliases": [
+      "里克力·提拉瓦尼",
+      "Rirkrit Tiravanija"
+    ],
+    "life": "1961—",
+    "note": "泰国艺术家，关系美学代表"
+  },
+  {
+    "name": "傅抱石",
+    "aliases": [
+      "傅抱石",
+      "Fu Baoshi"
+    ],
+    "life": "1904—1965",
+    "note": "中国画家"
+  },
+  {
+    "name": "克利福德·波瑟姆·加帕贾里",
+    "aliases": [
+      "克利福德·波瑟姆·加帕贾里",
+      "Clifford Possum Tjapaltjarri"
+    ],
+    "life": "约1932—2002",
+    "note": "澳大利亚原住民画家"
+  },
+  {
+    "name": "拉尔夫·戈因斯",
+    "aliases": [
+      "拉尔夫·戈因斯",
+      "Ralph Goings"
+    ],
+    "life": "1928—2016",
+    "note": "美国照相写实主义画家"
   }
 ]

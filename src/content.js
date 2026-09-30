@@ -70,6 +70,13 @@ export function indexContent({
     }),
   );
   const search = deferSearch ? {authors: [], query: () => ({entries: [], works: [], authors: [], suggestions: []})} : createSearch(DATA, WORKS, authors);
+  // The published catalogue carries `by`; when indexing full sources, derive it the same way.
+  for (const a of search.authors)
+    for (const id of a.works) {
+      const w = BYWORK[id];
+      w.by ??= [];
+      if (!w.by.includes(a.name)) w.by.push(a.name);
+    }
   return {
     DATA,
     BYID,

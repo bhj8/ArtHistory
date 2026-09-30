@@ -22,7 +22,7 @@ export function linkedText(text, currentId, terms, authors = []) {
     used.add(target.id || target.author);
     result += target.id
       ? `<a class="term-link" href="?view=index&amp;level=all#${target.id}" data-node="${target.id}">${esc(target.name)}</a>`
-      : `<a class="term-link" href="?view=index&amp;level=all&amp;q=${encodeURIComponent(target.author)}" data-author="${esc(target.author)}">${esc(target.name)}</a>`;
+      : `<a class="term-link" href="#person=${encodeURIComponent(target.author)}" data-author="${esc(target.author)}">${esc(target.name)}</a>`;
     i += target.name.length;
   }
   return result;

@@ -57,6 +57,13 @@ for (const entry of entries) {
       entry.era < taxonomy.eras.length,
     `${entry.id}: invalid era`,
   );
+  // Timeline years: [start, end], negative for BCE; `ongoing` marks traditions that continue.
+  check(
+    Array.isArray(entry.years) && entry.years.length === 2 && entry.years.every(Number.isInteger) &&
+      entry.years[0] < entry.years[1] && entry.years[1] <= new Date().getFullYear(),
+    `${entry.id}: invalid years`,
+  );
+  check(entry.ongoing === undefined || entry.ongoing === true, `${entry.id}: ongoing must be true or absent`);
   check(
     !entry.source || sources[entry.source],
     `${entry.id}: unknown source ${entry.source}`,
@@ -102,7 +109,11 @@ for (const entry of entries) {
 }
 const authors = await json("data/authors.json");
 check(new Set(authors.map((a) => a.name)).size === authors.length, "Duplicate author names");
-for (const author of authors) check(author.name && author.aliases?.length && author.aliases.every((s) => typeof s === "string" && s.trim()), "Invalid author aliases");
+for (const author of authors) {
+  check(author.name && author.aliases?.length && author.aliases.every((s) => typeof s === "string" && s.trim()), "Invalid author aliases");
+  check(author.aliases?.includes(author.name), `${author.name}: aliases must include the name`);
+  for (const key of ["life", "note"]) check(author[key] === undefined || (typeof author[key] === "string" && author[key].trim()), `${author.name}: invalid ${key}`);
+}
 const usedImages = new Set();
 for (const [id, art] of Object.entries(artworks)) {
   check(
@@ -210,6 +221,7 @@ async function files(dir) {
 for (const path of [
   ...(await files("src")),
   ...(await files("scripts")),
+  "sw.js",
 ].filter((p) => /\.(js|mjs)$/.test(p))) {
   const filename = fileURLToPath(new URL(path, root));
   const result = spawnSync(process.execPath, ["--check", filename], {

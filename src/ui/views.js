@@ -1,18 +1,18 @@
 import { artworkPickButton } from "./art-comparison.js";
 import { levelBadge, levelRank } from "../learning.js";
 import { esc, imageHTML, empty } from "./helpers.js";
-export function createViews(c, state, saved, seen) {
+export function createViews(c, state, saved, seen, notes = {}) {
   const { ART, LANES, ERAS, ROUTES, BYID, L } = c;
   const node = (d) =>
     `<button class="map-node node-${d.level}" data-node="${d.id}" title="${esc(d.en)}"><span>${esc(d.zh)}</span>${levelBadge(d)}${ART[d.id].length ? '<i aria-label="有配图">▧</i>' : ""}${seen.has(d.id) ? '<i aria-label="已读">·</i>' : ""}</button>`;
   function cards(items) {
     if (!items.length)
       return empty(
-        state.view === "saved" ? "还没有符合条件的收藏" : state.view === "recent" ? "还没有符合条件的阅读记录" : "没有符合条件的条目",
+        state.view === "saved" ? "还没有符合条件的收藏或笔记" : state.view === "recent" ? "还没有符合条件的阅读记录" : "没有符合条件的条目",
         state.view !== "saved" ||
           !!(state.q || state.lane !== "all" || state.era !== "all"),
       );
-    return `<div class="entry-list visual-dictionary">${items.map((d) => `<article class="entry-card entry-${d.level}" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${levelBadge(d)} ${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 幅配图` : ""}${seen.has(d.id) ? " · 已读" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button>${ART[d.id].length > 1 ? `<div class="entry-preview" aria-label="${esc(d.zh)}的更多配图">${ART[d.id].slice(1, 4).map((a) => `<button data-node="${d.id}" data-work="${a.id}" aria-label="查看${esc(a.zh)}">${imageHTML(a, "", false, "90px")}<span>${esc(a.zh)}</span></button>`).join("")}</div>` : ""}<button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
+    return `<div class="entry-list visual-dictionary">${items.map((d) => `<article class="entry-card entry-${d.level}" style="--c:${L[d.lane][3]}"><button class="entry-open" data-node="${d.id}"><div class="entry-thumb">${ART[d.id].length ? imageHTML(ART[d.id][0]) : `<span>${esc(d.zh.slice(0, 1))}</span>`}</div><div class="entry-copy"><div class="meta">${levelBadge(d)} ${esc(L[d.lane][1])} · ${esc(d.date)}</div><h3>${esc(d.zh)} <span>${esc(d.en)}</span></h3><p>${esc(d.hook)}</p><div class="entry-tags">${esc(d.kind)}${ART[d.id].length ? ` · ${ART[d.id].length} 幅配图` : ""}${seen.has(d.id) ? " · 已读" : ""}${notes[d.id]?.trim() ? " · ✎ 有笔记" : ""}</div></div><span class="open-arrow" aria-hidden="true">↗</span></button>${ART[d.id].length > 1 ? `<div class="entry-preview" aria-label="${esc(d.zh)}的更多配图">${ART[d.id].slice(1, 4).map((a) => `<button data-node="${d.id}" data-work="${a.id}" aria-label="查看${esc(a.zh)}">${imageHTML(a, "", false, "90px")}<span>${esc(a.zh)}</span></button>`).join("")}</div>` : ""}<button class="quick-save ${saved.has(d.id) ? "on" : ""}" data-save="${d.id}" aria-label="${saved.has(d.id) ? "取消收藏" : "收藏"}${esc(d.zh)}" aria-pressed="${saved.has(d.id)}">${saved.has(d.id) ? "★" : "☆"}</button></article>`).join("")}</div>`;
   }
   function map(items) {
     if (!items.length) return empty();
@@ -60,13 +60,12 @@ export function createViews(c, state, saved, seen) {
   function matchingRoutes(items) {
     const ids = new Set(items.map((d) => d.id));
     const words = state.q.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
+    // One search per render: querying per route member made typing lag in this view.
+    const matched = words.length ? new Set(c.search.query(state.q).entries.map((d) => d.id)) : null;
     return ROUTES.filter((r) => {
       const members = r.ids.filter((id) => ids.has(id));
       const text = `${r.title} ${r.desc}`.toLocaleLowerCase();
-      return members.length && (
-        words.every((w) => text.includes(w)) ||
-        members.some(id => c.search.query(state.q).entries.some(d => d.id === id))
-      );
+      return members.length && (!matched || words.every((w) => text.includes(w)) || members.some((id) => matched.has(id)));
     });
   }
   function routes(items) {
