@@ -15,7 +15,7 @@ export async function prepareContent(root) {
     entries: entries.map(d => pick(d, ["id", "lane", "era", "level", "zh", "en", "date", "years", "ongoing", "kind", "hook", "aliases", "featuredWorks"])),
     artworks: Object.fromEntries(works.map(w => {
       const by = search.authors.filter(a => a.works.includes(w.id)).map(a => a.name);
-      return [w.id, {...pick(w, ["entries", "zh", "artist", "artistZh", "date", "image", "width", "height", "previews", "kind"]), ...(by.length ? {by} : {})}];
+      return [w.id, {...pick(w, ["entries", "zh", "artist", "artistZh", "date", "years", "image", "width", "height", "previews", "kind"]), ...(by.length ? {by} : {})}];
     })),
     routes: await json("routes"),
     sourceCount: Object.keys(sources).length,

@@ -70,5 +70,8 @@ const worker = (await read("sw.js")).toString();
 assert.match(worker, /const REVISION = "[0-9a-f]{12}"/, "service worker carries the release revision");
 assert.ok(JSON.parse(await read("manifest.webmanifest")).icons.every(i => i.src.startsWith("assets/icons/")));
 assert.ok(c.DATA.every(d => Array.isArray(d.years)), "timeline years ship in the catalogue");
+const catalogWorks = Object.values(catalog.artworks);
+const datedWorks = catalogWorks.filter(w => Array.isArray(w.years) && w.years.length === 2 && w.years.every(Number.isInteger));
+assert.ok(datedWorks.length >= catalogWorks.length * 0.9, `artwork years ship in the catalogue: ${datedWorks.length}/${catalogWorks.length}`);
 assert.ok(c.BYWORK["met-436535"].by.includes("梵高"), "works link to people from the catalogue");
 console.log(`Built-site checks passed; catalogue ${catalogBytes} B gzip, ${paths.length} previews ${previewBytes} B, catalogue indexing ${startupMs.toFixed(1)} ms.`);

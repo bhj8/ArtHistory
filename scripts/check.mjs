@@ -144,6 +144,14 @@ for (const [id, art] of Object.entries(artworks)) {
     art.zh && (art.artist || art.artistZh) && art.date && art.credit,
     `${id}: incomplete artwork metadata`,
   );
+  // Creation years [start, end] (negative for BCE) let the gallery filter and sort by the work's own date.
+  // Omit them only when `date` is a photo date or too vague; the UI then falls back to the entry's era.
+  check(
+    art.years === undefined ||
+      (Array.isArray(art.years) && art.years.length === 2 && art.years.every(Number.isInteger) &&
+        art.years[0] <= art.years[1] && art.years[0] >= -50000 && art.years[1] <= new Date().getFullYear()),
+    `${id}: invalid years`,
+  );
   check(safeURL(art.url), `${id}: missing original artwork link`);
   check(
     /^assets\/artworks\/[a-z0-9-]+\.(webp|svg)$/.test(art.image),
@@ -172,6 +180,11 @@ for (const [id, art] of Object.entries(artworks)) {
 }
 for (const entry of entries)
   check(Object.values(artworks).some((art) => art.entries.includes(entry.id)), `${entry.id}: missing illustration`);
+const undated = Object.keys(artworks).filter((id) => artworks[id].years === undefined);
+check(
+  undated.length <= Object.keys(artworks).length * 0.1,
+  `${undated.length} artworks lack years (at most 10% may): ${undated.join(", ")}`,
+);
 for (const name of await readdir(new URL("assets/artworks/", root)))
   check(usedImages.has(name), `Unused artwork: ${name}`);
 const relationships = await json("data/relationships.json");
@@ -244,5 +257,5 @@ if (errors.length) {
   process.exitCode = 1;
 } else
   console.log(
-    `Validated ${entries.length} entries, ${Object.keys(artworks).length} images, ${relationships.length} relationships and ${routes.length} routes.`,
+    `Validated ${entries.length} entries, ${Object.keys(artworks).length} images (${Object.keys(artworks).length - undated.length} dated), ${relationships.length} relationships and ${routes.length} routes.`,
   );
