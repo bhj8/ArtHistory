@@ -2253,7 +2253,7 @@
     "date": "before 1200",
     "years": [
       1074,
-      1200
+      1153
     ],
     "url": "https://www.metmuseum.org/art/collection/search/40007",
     "credit": "Ex coll.: C. C. Wang Family, Purchase, Gift of J. Pierpont Morgan, by exchange, 1973",
@@ -5998,8 +5998,8 @@
     "artist": "Boysen Toys (Danish)",
     "date": "1900s",
     "years": [
-      1900,
-      1999
+      1930,
+      1939
     ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/1939.678.a",
@@ -6028,8 +6028,8 @@
     "artist": "Boysen Toys (Danish)",
     "date": "1900s",
     "years": [
-      1900,
-      1999
+      1930,
+      1939
     ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/1939.678",
@@ -10162,6 +10162,10 @@
     "title": "Tapestry with golden lions and palmettes",
     "artist": "Central Asia",
     "date": "1200s or earlier",
+    "years": [
+      1100,
+      1299
+    ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/1991.3",
     "credit": "Purchase from the J. H. Wade Fund",
@@ -11107,8 +11111,8 @@
     "artist": "Ma Yuan (Chinese, c. 1150–after 1255)",
     "date": "1127–1279",
     "years": [
-      1127,
-      1279
+      1150,
+      1255
     ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/1997.88",
@@ -12114,6 +12118,10 @@
     "title": "Raja Sansar Chand attacking Kangra Fort",
     "artist": "Northern India, Pahari kingdom of Kangra",
     "date": "after 1782",
+    "years": [
+      1782,
+      1823
+    ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/2018.120",
     "credit": "Purchase and partial gift from the Catherine and Ralph Benkaim Collection; Severance and Greta Millikin Purchase Fund",
@@ -13332,8 +13340,8 @@
     "artist": "Umberto Boccioni (Italian, 1882–1916)",
     "date": "early 1900s",
     "years": [
-      1900,
-      1933
+      1909,
+      1916
     ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/1971.38",
@@ -13585,7 +13593,7 @@
     "date": "1500s",
     "years": [
       1500,
-      1599
+      1532
     ],
     "museum": "克利夫兰艺术博物馆",
     "url": "https://clevelandart.org/art/1916.812",
@@ -15685,7 +15693,11 @@
     "zh": "文字广场：罗塞塔石碑的放大转写",
     "artist": "约瑟夫·科苏斯",
     "artistZh": "约瑟夫·科苏斯",
-    "date": "照片上传于2006",
+    "date": "作品1990—1991；照片2006",
+    "years": [
+      1990,
+      1991
+    ],
     "entries": [
       "conceptual"
     ],
@@ -16166,6 +16178,10 @@
     "artist": "草间弥生",
     "artistZh": "草间弥生",
     "date": "照片摄于2009",
+    "years": [
+      2000,
+      2009
+    ],
     "entries": [
       "installation"
     ],
@@ -16546,7 +16562,11 @@
     "zh": "《泉》的再制作",
     "artist": "雪莉·莱文",
     "artistZh": "雪莉·莱文",
-    "date": "照片记录2020",
+    "date": "作品1991；照片2020",
+    "years": [
+      1991,
+      1991
+    ],
     "entries": [
       "appropriation",
       "postmodernart",

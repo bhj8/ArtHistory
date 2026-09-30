@@ -10,7 +10,8 @@ import { linkedText } from "../src/ui/inline-links.js";
 import { searchResultsHTML } from "../src/ui/search-results.js";
 import { timelineHTML, timelineSplit, contemporaries, inTimeline } from "../src/ui/timeline.js";
 import { eraStepHTML } from "../src/ui/era.js";
-import { parseYearQuery, workEra, workInEra } from "../src/eras.js";
+import { parseYearQuery, workEra, workInEra, spanLabel } from "../src/eras.js";
+import { lifeSpan } from "../src/search.js";
 import { personHTML, personHash, personFromHash } from "../src/ui/person.js";
 import { mergeBackup, backupJSON } from "../src/storage.js";
 import { checkEraConsistency } from "./era-consistency.mjs";
@@ -230,7 +231,20 @@ assert.equal(parseYearQuery("20"), null);
 const around1500 = c.search.query("1500");
 assert.ok(around1500.years && around1500.entries.some((d) => d.id === "renaissance") && around1500.entries.every((d) => d.years[0] <= 1500 && d.years[1] >= 1500));
 
+assert.equal(parseYearQuery("1500s").label, "16世纪");
+assert.deepEqual([parseYearQuery("20世纪60年代").from, parseYearQuery("约1500年前后").from, parseYearQuery("2030年代")], [1960, 1500, null]);
+assert.deepEqual([parseYearQuery("前500—300").from, parseYearQuery("前500—300").to], [-500, -300]);
+// People are found by their lives, living artists and "active" dates included.
+for (const [a, name] of [["1960年代", "草间弥生"], ["16世纪", "提香"], ["1550", "丁托列托"], ["11世纪", "范宽"]])
+  assert.ok(c.search.query(a).authors.some((p) => p.name === name), `${a} → ${name}`);
+assert.ok(c.search.authors.filter((p) => p.life).every((p) => lifeSpan(p)), "every life date parses");
+assert.ok(!c.search.authors.find((p) => p.name === "拉斐尔").entries.includes("netart"), "Raphael is not Rafael Lozano-Hemmer");
+// Chips say "今" only when a tradition really reaches the present.
+assert.equal(spanLabel(c.BYID.icons), "500—1500");
+assert.ok(spanLabel(c.BYID.calligraphy).endsWith("今"));
+
 // Works are placed by their own date; broad dates defer to a fitting entry era.
+assert.equal(workEra(c.BYWORK["met-310542"], c.BYID), 0, "a 400–500 CE whistle stays in antiquity");
 const byWork = (id) => c.BYWORK[id];
 assert.equal(workEra(byWork("cma-118676"), c.BYID), 4, "a 1900s toy stays with streamline design");
 assert.ok(c.WORKS.filter((w) => w.years).every((w) => [0, 1, 2, 3, 4, 5, 6].some((e) => workInEra(w, e, c.BYID))));

@@ -1,10 +1,11 @@
 import { esc, imageHTML } from "./helpers.js";
 
-const TOPICS = ["山水", "印象派", "浮世绘", "版画", "建筑", "陶瓷", "摄影", "包豪斯", "敦煌", "1500", "19世纪"];
+const TOPICS = ["山水", "印象派", "浮世绘", "版画", "建筑", "陶瓷", "摄影", "包豪斯", "敦煌"];
+const YEARS = [["1500:1500", "1500年"], ["1800:1899", "19世纪"], ["1960:1969", "1960年代"]];
 
 // Typeahead under the header search box: jump straight to an entry, person or work.
-export function setupQuickSearch(c, { input, panel, recent, commit }) {
-  let active = -1, request = 0, open = false;
+export function setupQuickSearch(c, { input, panel, recent, commit, scope = () => ({ label: "" }) }) {
+  let active = -1, request = 0, open = false, globalDefault = false;
   const options = () => [...panel.querySelectorAll('[role="option"]')];
   const option = (attrs, body, cls = "") =>
     `<button type="button" role="option" tabindex="-1" class="quick-option ${cls}" ${attrs}>${body}</button>`;
@@ -45,12 +46,13 @@ export function setupQuickSearch(c, { input, panel, recent, commit }) {
     const ids = recent().slice(0, 5);
     show(
       group("最近读过", ids.map((id) => entryOption(c.BYID[id])).join("")) +
-        `<div class="quick-group quick-topics" role="presentation"><div class="quick-label">随手翻翻</div><div>${TOPICS.map((t) => `<button type="button" role="option" tabindex="-1" class="quick-option quick-chip" data-query="${t}">${t}</button>`).join("")}</div></div>` +
+        `<div class="quick-group quick-topics" role="presentation"><div class="quick-label">随手翻翻</div><div>${TOPICS.map((t) => `<button type="button" role="option" tabindex="-1" class="quick-option quick-chip" data-topic="${t}">${t}</button>`).join("")}${YEARS.map(([y, label]) => `<button type="button" role="option" tabindex="-1" class="quick-option quick-chip quick-when" data-year="${y}" data-year-label="${label}">⌛ ${label}</button>`).join("")}</div></div>` +
         `<p class="quick-hint"><kbd>↑</kbd><kbd>↓</kbd> 选择 · <kbd>Enter</kbd> 打开 · <kbd>Esc</kbd> 关闭</p>`,
     );
   }
   async function update() {
     const value = input.value.trim(), mine = ++request;
+    globalDefault = false;
     if (!value) return idle();
     if (!c.searchReady) {
       show('<p class="quick-hint">正在加载搜索…</p>');
@@ -64,14 +66,25 @@ export function setupQuickSearch(c, { input, panel, recent, commit }) {
       ? option(`data-year="${r.years.from}:${r.years.to}" data-year-label="${esc(r.years.label)}"`, `<span class="quick-thumb"><i>⌛</i></span><span class="quick-text"><b>在时间轴上看 ${esc(r.years.label)}</b><small>${r.entries.length} 个条目在这一时期仍在进行</small></span><span class="quick-kind">时间轴</span>`, "quick-year")
       : "";
     if (!total && !when) {
-      return show(`<p class="quick-hint">没有找到“${esc(value)}”。</p>${r.suggestions.length ? group("是不是要找", r.suggestions.map((s) => option(`data-query="${esc(s)}"`, `<span class="quick-text"><b>${esc(s)}</b></span>`)).join("")) : ""}`);
+      const numeric = /\d|世纪|年代/.test(value) ? '<p class="quick-hint">也可以按年代检索：1500、16世纪、前5世纪、1960年代。</p>' : "";
+      return show(`<p class="quick-hint">没有找到“${esc(value)}”。</p>${r.suggestions.length ? group("是不是要找", r.suggestions.map((s) => option(`data-query="${esc(s)}"`, `<span class="quick-text"><b>${esc(s)}</b></span>`)).join("")) : ""}${numeric}`);
     }
+    // The page applies the chosen era and lane; say so, and offer everything when that is more.
+    const where = scope();
+    const inScope = where.label ? c.search.query(value, where.ids) : r;
+    const shown = inScope.entries.length + inScope.authors.length + inScope.works.length;
+    const allRow = (global, n, res, text) => option(`data-quick-all${global ? '="global"' : ""}`, `<span class="quick-text"><b>${text}</b><small>${res.entries.length} 条目 · ${res.authors.length} 人物 · ${res.works.length} 作品</small></span>${global === !shown ? "<kbd>Enter</kbd>" : ""}`, "quick-all");
+    const rows = !where.label
+      ? allRow(false, total, r, `查看全部 ${total} 个结果`)
+      : (shown ? allRow(false, shown, inScope, `在「${esc(where.label)}」中查看 ${shown} 个结果`) : "") +
+        (total > shown ? allRow(true, total, r, `在全部时代与分类中查看 ${total} 个结果`) : "");
+    globalDefault = !!where.label && !shown && total > 0;
     show(
       (when ? group("年代", when) : "") +
       group(r.years ? "这一时期的条目" : "条目", r.entries.slice(0, 5).map(entryOption).join("")) +
         group("人物", r.authors.slice(0, 3).map(personOption).join("")) +
         group("作品", r.works.slice(0, 4).map(workOption).join("")) +
-        option("data-quick-all", `<span class="quick-text"><b>查看全部 ${total} 个结果</b><small>${r.entries.length} 条目 · ${r.authors.length} 人物 · ${r.works.length} 作品</small></span><kbd>Enter</kbd>`, "quick-all"),
+        rows,
     );
   }
   function close() {
@@ -95,7 +108,7 @@ export function setupQuickSearch(c, { input, panel, recent, commit }) {
       e.preventDefault();
       const chosen = options()[active];
       if (chosen) chosen.click();
-      else { close(); commit(); }
+      else { close(); commit({ global: globalDefault }); }
     } else if (e.key === "Escape" && open) {
       e.preventDefault();
       e.stopPropagation();
@@ -106,9 +119,9 @@ export function setupQuickSearch(c, { input, panel, recent, commit }) {
   panel.addEventListener("click", (e) => {
     const chosen = e.target.closest('[role="option"]');
     if (!chosen) return;
-    if (chosen.dataset.quickAll !== undefined) commit();
+    if (chosen.dataset.quickAll !== undefined) commit({ global: chosen.dataset.quickAll === "global" });
     close();
-    if (chosen.dataset.node || chosen.dataset.art || chosen.dataset.person || chosen.dataset.year) input.blur();
+    if (chosen.dataset.node || chosen.dataset.art || chosen.dataset.person || chosen.dataset.year || chosen.dataset.topic) input.blur();
   });
   document.addEventListener("pointerdown", (e) => {
     if (open && !e.target.closest(".searchbox")) close();

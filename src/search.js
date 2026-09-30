@@ -1,4 +1,15 @@
 import { parseYearQuery } from "./eras.js";
+// "1840—1926", "1929—" (living), "约1488/90—1576", "前470—前399", "活动于8世纪" → [from, to].
+export function lifeSpan(a) {
+  const text = a.life || "", spans = [], now = new Date().getFullYear();
+  for (const m of text.matchAll(/(前)?(\d{3,4})(?:\/\d{1,4})?\s*[—–-]\s*(?:约)?(?:(前)?(\d{3,4})(?!\d)|(?=$|[；;\s后]))/g))
+    spans.push([m[1] ? -m[2] : +m[2], m[4] ? (m[3] ? -m[4] : +m[4]) : now]);
+  if (!spans.length) for (const m of text.matchAll(/(前)?(\d{1,2})世纪/g)) {
+    const s = parseYearQuery(`${m[1] || ""}${m[2]}世纪`);
+    if (s) spans.push([s.from, s.to]);
+  }
+  return spans.length ? [Math.min(...spans.map((s) => s[0])), Math.max(...spans.map((s) => s[1]))] : null;
+}
 export function normalize(value) {
   return String(value || "").normalize("NFKD").replace(/\p{M}/gu, "").toLocaleLowerCase()
     .replace(/[·・’'“”"—–-]/g, " ").replace(/\s+/g, " ").trim();
@@ -16,9 +27,17 @@ function distance(a, b, max = 2) {
 }
 export function compileSearch(entries, works, seeds = []) {
   const hasName = (value, name) => normalize(value).includes(normalize(name));
+  // A name in an entry's people list must be the whole name, or its last part: "拉斐尔" is not
+  // "拉斐尔·洛萨诺-赫默", and "罗斯科" is not "奥罗斯科".
+  const reEsc = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const personIn = (people, alias) => {
+    const name = normalize(alias), lead = new RegExp(`^${reEsc(name)}(?:及|与|和|等|（|\\(|$)`);
+    return String(people || "").split(/[；;、,，]/).map(normalize).filter(Boolean)
+      .some((part) => part === name || lead.test(part) || part.endsWith(` ${name}`));
+  };
   const authors = seeds.map((s) => ({ ...s, names: [s.name, ...s.aliases].map(normalize),
     works: works.filter((w) => s.aliases.some((a) => hasName(`${w.artistZh} ${w.artist}`, a))).map((w) => w.id),
-    entries: entries.filter((d) => s.aliases.some((a) => hasName(d.people, a))).map((d) => d.id),
+    entries: entries.filter((d) => s.aliases.some((a) => personIn(d.people, a))).map((d) => d.id),
   }));
   const byName = (name) => authors.find((a) => a.name === name || a.aliases.includes(name));
   for (const w of works) {
@@ -60,13 +79,15 @@ export function hydrateSearch(compiled, entries, works) {
     const overlaps = (y) => y && y[0] <= span.to && y[1] >= span.from;
     const mid = (y) => (y[0] + y[1]) / 2, target = (span.from + span.to) / 2, width = span.to - span.from;
     const near = (a, b) => Math.abs(mid(a) - target) - Math.abs(mid(b) - target);
-    const life = (a) => { const m = /(前)?(\d{3,4})\D{0,4}?(前)?(\d{3,4})/.exec(a.life || ""); return m && [m[1] ? -m[2] : +m[2], m[3] ? -m[4] : +m[4]]; };
+    const life = lifeSpan;
     return {
       entries: entries.filter((d) => allowedIds.has(d.id) && overlaps(d.years))
         .sort((a, b) => (a.level === "core" ? 0 : 1) - (b.level === "core" ? 0 : 1) || (a.years[1] - a.years[0]) - (b.years[1] - b.years[0])),
       works: works.filter((w) => overlaps(w.years) && w.years[1] - w.years[0] <= Math.max(100, width * 2) && w.entries.some((id) => allowedIds.has(id)))
         .sort((a, b) => near(a.years, b.years)),
-      authors: authors.filter((a) => overlaps(life(a)) && a.entries.some((id) => allowedIds.has(id))).sort((a, b) => near(life(a), life(b))),
+      // Adults at the time first; people who were children then go last.
+      authors: authors.filter((a) => overlaps(life(a)) && a.entries.some((id) => allowedIds.has(id)))
+        .sort((a, b) => (life(a)[0] + 15 > span.to) - (life(b)[0] + 15 > span.to) || near(life(a), life(b))),
       suggestions: [],
       years: span,
     };

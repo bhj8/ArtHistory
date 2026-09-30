@@ -1,6 +1,6 @@
 import { esc } from "./helpers.js";
 import { levelRank } from "../learning.js";
-import { BOUNDS, yearLabel } from "../eras.js";
+import { BOUNDS, yearLabel, spanLabel, spanTitle } from "../eras.js";
 
 export { yearLabel };
 // Each era gets its own width so that the dense modern decades and the long ancient millennia
@@ -8,7 +8,7 @@ export { yearLabel };
 const WIDTHS = [300, 250, 270, 270, 250, 270, 250];
 const TICKS = [[-3000, -2000, -1000, 0], [600, 800, 1000, 1200], [1500, 1600, 1700], [1800, 1850], [1910, 1920, 1930, 1940], [1950, 1960, 1970], [1990, 2000, 2010, 2020]];
 const ROW = 30, GAP = 6;
-export const ZOOM_MIN = { desktop: 400, phone: 240 };
+export const ZOOM_MIN = { desktop: 400, phone: 160 };
 
 // Left edge of an era in the all-eras view, used to return to where the reader was.
 export const eraX = (i) => WIDTHS.slice(0, i).reduce((a, b) => a + b, 0);
@@ -78,10 +78,16 @@ export function timelineHTML(items, c, { era = "all", lane = "all", seen = new S
   const eraHead = (s) => zoom
     ? `<div class="tl-era" style="left:${s.x}px;width:${s.w}px"><b>${esc(c.ERAS[s.era][0])}</b><small>${esc(c.ERAS[s.era][1])}</small></div>`
     : `<button class="tl-era${pulse === s.era ? " from" : ""}" data-era="${s.era}" style="left:${s.x}px;width:${s.w}px" title="放大这个时代"><b>${esc(c.ERAS[s.era][0])}</b><small>${esc(c.ERAS[s.era][1])}</small></button>`;
-  const ticks = segments.flatMap((s) => (zoom ? niceTicks(s.from, s.to, s.w) : TICKS[s.era]).map((y) => `<span class="tl-tick" style="left:${x(y)}px">${yearLabel(y)}</span>`)).join("");
-  const markX = mark && [x(Math.max(from, mark.from)), x(Math.min(to, mark.to))];
-  const markHTML = (label) => markX && mark.to >= from && mark.from <= to
-    ? `<i class="tl-mark" style="left:${markX[0]}px;width:${Math.max(2, markX[1] - markX[0])}px">${label ? `<span>${esc(mark.label)}</span>` : ""}</i>` : "";
+  const markX = mark && mark.from <= to ? [x(Math.max(from, mark.from)), x(Math.min(to, Math.max(from, mark.to)))] : null;
+  const markMid = markX && (markX[0] + markX[1]) / 2;
+  const ticks = segments.flatMap((s) => (zoom ? niceTicks(s.from, s.to, s.w) : TICKS[s.era]).filter((y) => !markX || Math.abs(x(y) - markMid) > 40).map((y) => `<span class="tl-tick" style="left:${x(y)}px">${yearLabel(y)}</span>`)).join("");
+  // The year a reader searched for: a line or band, labelled in the tick row and kept inside the axis.
+  const markHTML = (label) => {
+    if (!markX) return "";
+    const side = markMid < 40 ? " start" : markMid > total - 40 ? " end" : "";
+    const text = `${mark.to < from ? "← " : ""}${esc(mark.label)}`;
+    return `<i class="tl-mark${side}" style="left:${markX[0].toFixed(1)}px;width:${Math.max(2, markX[1] - markX[0]).toFixed(1)}px">${label ? `<span>${text}</span>` : ""}</i>`;
+  };
   const corner = zoom
     ? `<button data-era="all" title="返回全部时代">← 全部</button>`
     : `<span>年代</span><span class="tl-pan"><button data-tl-scroll="-1" aria-label="时间轴向左">‹</button><button data-tl-scroll="1" aria-label="时间轴向右">›</button></span>`;
@@ -96,13 +102,13 @@ export function timelineHTML(items, c, { era = "all", lane = "all", seen = new S
     if (!n && narrowed) return "";
     const name = `<h3 class="tl-lane-name"><button data-lane="${l[0]}">${esc(l[1])}<small>${n}</small></button></h3>`;
     const chipRow = ambient.length
-      ? `<div class="tl-ambient"><span>贯穿本时代</span>${ambient.map((d) => `<button data-node="${d.id}" class="${d.level === "core" ? "core" : ""}" title="${esc(`${d.zh} · ${d.date}`)}">${esc(d.zh)}<small>${yearLabel(d.years[0])}—${d.ongoing ? "今" : yearLabel(d.years[1])}</small></button>`).join("")}</div>`
+      ? `<div class="tl-ambient"><span>贯穿本时代</span>${ambient.map((d) => `<button data-node="${d.id}" class="${d.level === "core" ? "core" : ""}" title="${esc(spanTitle(d))}">${esc(d.zh)}<small>${spanLabel(d)}</small></button>`).join("")}</div>`
       : "";
     if (!group.length) {
       const more = widen?.(l[0]) || 0;
-      const note = ambient.length ? "" : more
-        ? `<div class="tl-empty">核心范围在这一时期没有条目 <button data-level="all">看全部 ${more} 条</button></div>`
-        : `<div class="tl-empty">这一时期暂无收录条目</div>`;
+      const note = more
+        ? `<div class="tl-empty">核心范围在这一时期没有${ambient.length ? "本时代" : ""}条目 <button data-level="all">看全部 ${more} 条</button></div>`
+        : ambient.length ? "" : `<div class="tl-empty">这一时期暂无收录条目</div>`;
       return `<section class="tl-lane tl-lane-empty" style="--c:${l[3]}">${name}<div class="tl-track" style="width:${total}px">${chipRow}${note}</div></section>`;
     }
     const { bars, rows } = pack(group, x, total, from, to);
@@ -119,18 +125,19 @@ export function timelineHTML(items, c, { era = "all", lane = "all", seen = new S
     return `<section class="tl-lane" style="--c:${l[3]}">${name}<div class="tl-track" style="width:${total}px">${chipRow}<div class="tl-bars" style="height:${rows * ROW + 8}px">${grid}${bars.map(({ d, left, right, width, row, flip, clipped, cont }) => {
       const long = d.years[1] - d.years[0] > 600;
       const cls = ["tl-bar", d.level === "core" && "core", long && "long", d.ongoing && "ongoing", clipped && "clipped", cont && "cont", flip && "flip", seen.has(d.id) && "seen", focus === d.id && "focus"].filter(Boolean).join(" ");
-      const place = flip ? `right:${(total - right).toFixed(1)}px` : `left:${left.toFixed(1)}px`;
+      const place = flip ? `right:${(total - right).toFixed(1)}px` : `left:${left.toFixed(1)}px${zoom ? `;max-width:${Math.max(width, total - left).toFixed(1)}px` : ""}`;
       return `<button class="${cls}" data-node="${d.id}" data-tl="${d.id}" style="${place};top:${row * ROW + 4}px;--w:${width.toFixed(1)}px" title="${esc(`${d.zh} · ${d.date}`)}"><span>${clipped ? "← " : ""}${esc(d.zh)}${cont ? " →" : ""}</span></button>`;
     }).join("")}</div></div></section>`;
   }).join("");
+  const legend = "条形为大致活跃期，深色为核心条目，“·”表示已读；虚线框是跨越六百年以上的长期传统，末端渐隐表示此后仍在延续";
   const note = zoom
-    ? "条形为大致活跃期；“←”表示起点更早，“→”表示延续到下一时代，虚线表示延续至今的传统。“贯穿本时代”列出横跨多个时代的长期传统。"
-    : "条形为大致活跃期；虚线表示延续至今的传统，“←”表示起点更早。点击时代标题可放大该时代。";
+    ? `${legend}；“←”表示起点更早，“→”表示延续到下一时代。“贯穿本时代”列出横跨多个时代的长期传统。`
+    : `${legend}；“←”表示起点更早。点击时代标题可放大该时代。`;
   return `<div class="tl-wrap${zoom ? " zoom" : ""}" data-era="${era}">${head}<div class="timeline" role="region" aria-label="时间轴${zoom ? "" : "，可横向滚动"}" tabindex="0"><div class="tl-inner" style="${width}">${body}</div></div></div><p class="tl-note">${note}</p>`;
 }
 
 function niceTicks(from, to, width = 1100) {
-  const span = to - from, room = Math.max(2, Math.floor(width / 80));
+  const span = to - from, room = Math.max(4, Math.floor(width / (width < 400 ? 56 : 80)));
   const step = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000].find((s) => span / s <= room) || 2000;
   const ticks = [];
   for (let y = Math.ceil(from / step) * step; y < to; y += step) if (y > from) ticks.push(y);

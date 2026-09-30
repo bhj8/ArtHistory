@@ -9,22 +9,29 @@ export function eraOfYear(year) {
   return BOUNDS.length - 2;
 }
 
+// "1200—1600", "200—今" only when the data reaches the present; "…" marks a tradition that went on.
+export const spanLabel = (d) =>
+  `${yearLabel(d.years[0])}—${d.years[1] >= BOUNDS.at(-1) - 1 ? "今" : `${yearLabel(d.years[1])}${d.ongoing ? "…" : ""}`}`;
+export const spanTitle = (d) => `${d.zh} · ${d.date}${d.ongoing && d.years[1] < BOUNDS.at(-1) - 1 ? "（此后仍延续）" : ""}`;
+
 // Works carry their own creation dates when known. Broad dates ("1900s", a dynasty) defer to the
-// era of their entry when that era fits the range; otherwise the midpoint decides.
+// era of their entry when that era holds at least a third of the range; otherwise the midpoint decides.
 function workEras(w, BYID) {
   const own = w.entries.map((id) => BYID[id]?.era).filter((e) => e !== undefined);
-  if (!w.years) return own;
+  if (!w.years) return own.length ? [Math.min(...own)] : [];
   const [a, b] = w.years;
   if (b - a >= 50) {
-    const fit = own.filter((e) => BOUNDS[e] <= b && (e === BOUNDS.length - 2 || BOUNDS[e + 1] > a));
-    if (fit.length) return fit;
+    const share = (e) => (Math.min(b, e === BOUNDS.length - 2 ? Infinity : BOUNDS[e + 1]) - Math.max(a, e === 0 ? -Infinity : BOUNDS[e])) / (b - a);
+    const fit = own.filter((e) => share(e) >= 1 / 3);
+    if (fit.length) return [Math.min(...fit)];
   }
   return [eraOfYear((a + b) / 2)];
 }
-export const workEra = (w, BYID) => Math.min(...workEras(w, BYID));
+export const workEra = (w, BYID) => workEras(w, BYID)[0] ?? 0;
 export const workInEra = (w, era, BYID) => workEras(w, BYID).includes(era);
+// Sort key: the work's own midpoint, or its entry's when the work has no date.
 export const workMid = (w, BYID) => {
-  const years = w.years && w.years[1] - w.years[0] < 50 ? w.years : BYID[w.entries[0]]?.years || w.years;
+  const years = w.years || BYID[w.entries[0]]?.years;
   return years ? (years[0] + years[1]) / 2 : 0;
 };
 
@@ -40,14 +47,24 @@ function chineseNumber(text) {
 // "1500", "1500年", "公元前500年", "16世纪", "十六世纪下半叶", "1960年代", "1400—1500"
 // become a year range, so a reader can ask what was happening at a given time.
 export function parseYearQuery(value) {
-  const q = String(value || "").trim().replace(/\s+/g, "").replace(/^公元(?!前)/, "");
+  const q = String(value || "").trim().replace(/\s+/g, "").replace(/^(?:大约|约|c\.?|ca\.?)/i, "").replace(/(?:前后|左右|上下)$/, "").replace(/^公元(?!前)/, "");
+  const now = BOUNDS.at(-1);
   let m = /^(公元前|前|BCE?|-)?(\d{1,5})年?$/i.exec(q);
   if (m) {
     const y = m[1] ? -m[2] : +m[2];
-    return y > BOUNDS.at(-1) || (!m[1] && m[2].length < 3) ? null : { from: y, to: y, label: `${yearLabel(y)}年` };
+    return y > now || (!m[1] && m[2].length < 3) ? null : { from: y, to: y, label: `${yearLabel(y)}年` };
   }
-  m = /^(\d{3})0年代$/.exec(q);
-  if (m) return { from: m[1] * 10, to: m[1] * 10 + 9, label: `${m[1]}0年代` };
+  m = /^(\d{2})00s$/i.exec(q); // English "1500s" usually means the whole century
+  if (m && m[1] * 100 <= now) return { from: m[1] * 100, to: Math.min(m[1] * 100 + 99, now), label: `${+m[1] + 1}世纪` };
+  m = /^(\d{3})0(?:年代|s)$/i.exec(q);
+  if (m) return m[1] * 10 > now ? null : { from: m[1] * 10, to: Math.min(m[1] * 10 + 9, now), label: `${m[1]}0年代` };
+  m = /^(\d{1,2}|[一二三四五六七八九十]{1,3})世纪([1-9一二三四五六七八九])0?年代$/.exec(q.replace(/十年代$/, "0年代"));
+  if (m) {
+    const n = chineseNumber(m[1]), d = /\d/.test(m[2]) ? +m[2] : DIGITS[m[2]];
+    if (!n || n > 21 || !d) return null;
+    const from = (n - 1) * 100 + d * 10;
+    return from > now ? null : { from, to: Math.min(from + 9, now), label: q };
+  }
   m = /^(公元前|前)?(\d{1,2}|[一二三四五六七八九十]{1,3})世纪(初|初期|上半叶|前期|中叶|中期|下半叶|后期|晚期|末|末期)?$/.exec(q);
   if (m) {
     const n = chineseNumber(m[2]);
@@ -59,12 +76,13 @@ export function parseYearQuery(value) {
     else if (/中/.test(part)) { from += 30; to = from + 39; }
     else if (/下半|后期/.test(part)) from += 50;
     else if (/晚|末/.test(part)) from += 70;
-    return { from, to: Math.min(to, BOUNDS.at(-1)), label: q };
+    return from > now ? null : { from, to: Math.min(to, now), label: q };
   }
+  // "前500—300" reads as 500–300 BCE, following Chinese usage; "前500—800" spans the era change.
   m = /^(前)?(\d{3,4})[-—–~至到](前)?(\d{3,4})年?$/.exec(q);
   if (m) {
-    const from = m[1] ? -m[2] : +m[2], to = m[3] ? -m[4] : +m[4];
-    return from < to && to <= BOUNDS.at(-1) ? { from, to, label: `${yearLabel(from)}—${yearLabel(to)}` } : null;
+    const from = m[1] ? -m[2] : +m[2], to = m[3] || (m[1] && +m[4] < +m[2]) ? -m[4] : +m[4];
+    return from < to && to <= now ? { from, to, label: `${yearLabel(from)}—${yearLabel(to)}` } : null;
   }
   return null;
 }
